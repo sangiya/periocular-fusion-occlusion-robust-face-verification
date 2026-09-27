@@ -115,9 +115,14 @@ python .\run_seed_sweep.py
 python .\code\verify_results.py
 ```
 
-A **CUDA-capable GPU is required for training.** On a CPU-only machine you can
-run steps 0, 1 and protocol freezing, and `verify_results.py`, but not the 15
-training runs. See `ENVIRONMENT.md` for the hardware the reported results used.
+The **reported results were produced entirely on CPU** (Intel Core i7-13620H, no
+NVIDIA GPU, `torch 2.14.0+cpu`); all 45 ROF metric files record `device: cpu`.
+A GPU is **not** required to reproduce this work — it is only an option for
+running the 15 training runs faster. Expect roughly 63 hours on the reference
+CPU; a single modern GPU cuts that substantially. A GPU is also **not** required
+to check the results: `verify_results.py` runs in seconds from the shipped files.
+
+See `ENVIRONMENT.md` for the exact hardware, package versions, and runtimes.
 
 ---
 
@@ -311,7 +316,12 @@ Verified during packaging:
 - All 45 ROF results record `device: cpu`.
 - `submission_ieee_10page/` compiles standalone to 10 pages.
 - All 17 Python modules compile under Python 3.11.
-- Zero person overlap across train / val / test (128 / 27 / 28 persons).
+  - Person-disjointness is enforced by the split code. The split assigns
+    **128 / 27 / 28** persons to train / val / test over all 7,752 images; the
+    complete-case filter that follows removes one validation person whose crops
+    all failed, so the **training manifest that `train.py` actually consumes**
+    holds **128 / 26 / 28** persons over 7,295 images (5,194 training rows). Both
+    numbers are correct for their artifact; the manuscript reports the latter.
 
 Corrections applied for Windows portability:
 

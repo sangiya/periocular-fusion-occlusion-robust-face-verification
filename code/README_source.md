@@ -49,7 +49,8 @@ the raw MFR2 pair file.
 **Person-disjointness.** Steps 2-3 merge the `..._wearing_mask` and
 `..._wearing_sunglasses` identity folders of one person into a single
 `person_id`, then split *by person*. No person may appear in more than one of
-train / val / test. Reported split: 128 / 27 / 28 persons.
+train / val / test. The split is 128 / 27 / 28 persons; after the complete-case
+filter the training manifest holds 128 / 26 / 28.
 
 **Training classes collapse per person.** `build_training_manifest.py` sets
 `identity = person_id`. Without this, a person's neutral, masked and sunglasses

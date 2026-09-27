@@ -1,0 +1,38 @@
+{
+  "audit": "ROF-training vs MFR2 identity overlap",
+  "purpose": "Quantify how many MFR2 identities also appear in the ROF training split, so the manuscript's cross-dataset claim is evidence-based.",
+  "method": "Exact normalised name match. 'aggressive' strips all non-alphanumeric characters (joe_biden -> joebiden); 'light' only collapses spaces, underscores and hyphens and trims.",
+  "rof_training_persons": 128,
+  "mfr2_identities": 53,
+  "results": {
+    "aggressive_normalisation": {
+      "intersection_count": 1,
+      "pairs": [
+        {
+          "rof_person": "joe_biden",
+          "mfr2_identity": "JoeBiden"
+        }
+      ]
+    },
+    "light_normalisation": {
+      "intersection_count": 0,
+      "note": "The single match depends on the normalisation chosen; under strict name matching the two sets are disjoint."
+    }
+  },
+  "evaluated_pair_impact": {
+    "total_pairs": 820,
+    "affected_pairs": 18,
+    "genuine": 6,
+    "impostor": 12,
+    "fraction_of_pairs": 0.02195
+  },
+  "context_all_rof_splits": {
+    "note": "Across train+val+test (182 persons) the intersection is 2.",
+    "intersection_count": 2,
+    "pairs": [
+      "joe_biden",
+      "justin_trudeau"
+    ]
+  },
+  "conclusion": "MFR2 is not fully identity-disjoint from ROF training, but the overlap is small: one identity, 18 of 820 pairs (2.2%). The manuscript previously described this as 'substantial overlap', which the evidence does not support."
+}

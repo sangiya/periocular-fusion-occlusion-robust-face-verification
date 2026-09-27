@@ -69,7 +69,9 @@ Held constant across all 15 runs:
 
 - Seeds: `123`, `7`, `42`
 - Variants: `frozen_whole`, `whole_lora`, `peri_lora`, `fixed_fusion`, `gated_fusion`
-- Split seed: `42` (person-disjoint, 128 / 27 / 28 persons)
+- Split seed: `42` (person-disjoint). The split is 128 / 27 / 28 persons over
+  7,752 images; the complete-case filter drops one validation person, so the
+  training manifest holds 128 / 26 / 28 persons over 7,295 images.
 - Training manifest: 7,295 complete cases from 7,752 attempted
 
 ## 4. Runtime
