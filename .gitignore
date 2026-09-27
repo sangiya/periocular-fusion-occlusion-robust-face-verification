@@ -25,6 +25,12 @@ Thumbs.db
 # Release archives (rebuild from the folder itself)
 publication_release_*.zip
 
+# Transient journal submission package. These files are handed to the IEEE
+# editorial system and are not part of the reproduction artifact. They stay on
+# disk; they are simply not tracked. The public-facing paper lives in
+# document/arXiv_Preprint_10Page_Final.pdf, which IS tracked.
+submission_ieee_10page/
+
 # Never commit secrets
 .env
 *.key
