@@ -1,0 +1,21 @@
+{
+  "manifest": "work/crop_manifest_training_person_disjoint.csv",
+  "conditions": {
+    "masked": {
+      "file": "rof_masked_pairs.csv",
+      "eligible_identities": 9,
+      "pairs": 522,
+      "genuine": 58,
+      "impostor": 464,
+      "far_resolution": 0.0021551724137931034
+    },
+    "sunglasses": {
+      "file": "rof_sunglasses_pairs.csv",
+      "eligible_identities": 24,
+      "pairs": 7848,
+      "genuine": 327,
+      "impostor": 7521,
+      "far_resolution": 0.00013296104241457252
+    }
+  }
+}

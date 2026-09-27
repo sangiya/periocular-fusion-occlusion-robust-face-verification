@@ -1,0 +1,40 @@
+{
+  "auc": 0.876829502145596,
+  "eer": 0.2023633677991138,
+  "eer_threshold": 0.344433103998502,
+  "tar_far_1e-2": 0.13441654357459376,
+  "tar_far_1e-2_threshold": 0.9342272281646729,
+  "tar_far_1e-3": 0.03101920236336775,
+  "tar_far_1e-3_threshold": 0.9641377329826355,
+  "n_pairs": 18956,
+  "n_genuine": 677,
+  "n_impostor": 18279,
+  "identity_bootstrap_ci": {
+    "auc": [
+      0.8429300118332954,
+      0.9071727938949492
+    ],
+    "eer": [
+      0.1688826429980276,
+      0.23109943369163
+    ],
+    "tar_far_1e-2": [
+      0.06813443825253376,
+      0.21135904906589317
+    ],
+    "tar_far_1e-3": [
+      0.008012820512820484,
+      0.06966216078851015
+    ]
+  },
+  "variant": "peri_lora",
+  "condition": "neutral",
+  "device": "cpu",
+  "eligible_identities": 28,
+  "far_resolution": 5.470758794244762e-05,
+  "tar_far_1e-3_supported": true,
+  "checkpoint": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\work\\seed_sweep\\checkpoints\\seed123_peri_lora.pt",
+  "checkpoint_sha256": "c870d7e35a1903bad0ccb52bcbe63b4a9117850a5e0753ce936907497d3e5178",
+  "pairs": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\Final Results\\neutral_eval\\rof_neutral_pairs.csv",
+  "pairs_sha256": "666040b51fb57f7bff81a9981716819caa57907908ee38915e065d066ad77e5c"
+}

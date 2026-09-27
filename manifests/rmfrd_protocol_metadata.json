@@ -1,0 +1,15 @@
+{
+  "protocol_version": 2,
+  "sampling": "uniform_without_replacement_per_probe",
+  "seed": 42,
+  "pairs_sha256": "f14151ced177eca3aeb07646cf24262038da2a3422bd3a2788aa1b27ea95c298",
+  "eligible_identities": 341,
+  "masked_probes": 1074,
+  "impostors_per_probe": 20,
+  "genuine_pairs": 1074,
+  "impostor_pairs": 21480,
+  "total_pairs": 22554,
+  "far_resolution": 4.6554934823091246e-05,
+  "crop_rows": 1775,
+  "valid_crops": 1480
+}

@@ -1,0 +1,16 @@
+{
+  "reference": "frozen_whole",
+  "candidate": "fixed_fusion",
+  "condition": "sunglasses",
+  "auc_delta_candidate_minus_reference": 0.023224675292463415,
+  "auc_delta_95_ci": [
+    0.004455262191075557,
+    0.046913469898224286
+  ],
+  "eer_delta_candidate_minus_reference": -0.026459247440499933,
+  "eer_delta_95_ci": [
+    -0.08170164095884098,
+    0.011831317058694515
+  ],
+  "paired_probe_identity_bootstrap_iterations": 5000
+}

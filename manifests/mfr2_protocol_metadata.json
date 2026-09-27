@@ -1,0 +1,10 @@
+{
+  "official_pairs": 848,
+  "included_pairs": 820,
+  "excluded_pairs": 28,
+  "included_genuine": 412,
+  "included_impostor": 408,
+  "far_resolution": 0.0024509803921568627,
+  "source_pairs_sha256": "00507beded1f1b702a09adc25dba9458cc73ac4ef47a54b4ae99056ed09498a2",
+  "crop_manifest_sha256": "3d4375ebda67cadc1bd5f8cadce0f262abd13471106afe2b35607d4e460f2f5f"
+}

@@ -1,0 +1,46 @@
+# Exact environment used to produce the reported results.
+#
+# This is the authoritative lock file. It was captured from the interpreter that
+# trained and evaluated every run reported in the manuscript, on Windows
+# 10/11 (build 26200), Python 3.11.9.
+#
+# Install with:
+#   pip install -r requirements-used.txt
+#
+# Note on torch: the reported runs used the CPU build. On a CUDA machine,
+# install the matching wheel first, then the rest of this file:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# Differences from requirements-colab.txt (which is a convenience list for a
+# hosted GPU runtime, not a lock file):
+#   * transformers 5.17.0 here, vs ">=4.36,<5" there
+#   * scikit-learn 1.9.0 here, vs "==1.5.2" there
+#   * Pillow 12.3.0 here, vs ">=10,<12" there
+#   * timm, seaborn and requests are NOT required. The backbone is loaded with
+#     transformers.AutoModel for "facebook/dinov2-base", not via timm, and the
+#     pipeline does not use seaborn or make network calls at training time.
+
+# --- deep learning ---
+torch==2.14.0
+torchvision==0.29.0
+transformers==5.17.0
+peft==0.20.0
+accelerate==1.15.0
+safetensors==0.8.0
+huggingface_hub==1.30.0
+
+# --- MediaPipe crop generation ---
+# mediapipe 0.10.21 requires the Protobuf 4.x API. Do not upgrade to 5.x.
+mediapipe==0.10.21
+protobuf==4.25.9
+opencv-python-headless==4.10.0.84
+
+# --- data and metrics ---
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.17.1
+scikit-learn==1.9.0
+Pillow==12.3.0
+tqdm==4.70.0
+matplotlib==3.11.1
+PyYAML==6.0.3

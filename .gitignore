@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Datasets (never redistribute; obtain from official sources)
+data/
+
+# Regenerable intermediates: crops, checkpoints, logs, per-run scratch.
+# The frozen manifests under manifests/ and the results under results/ ARE
+# part of the artifact and are deliberately not ignored.
+work/
+
+# Local build / editor noise
+.ipynb_checkpoints/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+*.swp
+
+# Release archives (rebuild from the folder itself)
+publication_release_*.zip
+
+# Never commit secrets
+.env
+*.key
+*.pem

@@ -1,0 +1,40 @@
+{
+  "auc": 0.8177392984542212,
+  "eer": 0.28879310344827586,
+  "eer_threshold": 0.17887567915022373,
+  "tar_far_1e-2": 0.22413793103448276,
+  "tar_far_1e-2_threshold": 0.7353038787841797,
+  "tar_far_1e-3": 0.0,
+  "tar_far_1e-3_threshold": Infinity,
+  "n_pairs": 522,
+  "n_genuine": 58,
+  "n_impostor": 464,
+  "identity_bootstrap_ci": {
+    "auc": [
+      0.7160608304771582,
+      0.9463938078703703
+    ],
+    "eer": [
+      0.12465277777777779,
+      0.36132214443996774
+    ],
+    "tar_far_1e-2": [
+      0.0,
+      0.5583905919661731
+    ],
+    "tar_far_1e-3": [
+      0.0,
+      0.4510154061624649
+    ]
+  },
+  "variant": "frozen_whole",
+  "condition": "masked",
+  "device": "cpu",
+  "eligible_identities": 9,
+  "far_resolution": 0.0021551724137931034,
+  "tar_far_1e-3_supported": false,
+  "checkpoint": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\work\\seed_sweep\\checkpoints\\seed7_frozen_whole.pt",
+  "checkpoint_sha256": "b3ede4b9efdf9c330366e4426f9cb26675d46820c194c4eb7c7a50158a86b5d1",
+  "pairs": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\work\\protocol_v2\\rof_masked_pairs.csv",
+  "pairs_sha256": "7b580a6864573a90d07986481cba1854f1608c0b8b3bf8c035d209f81252a874"
+}

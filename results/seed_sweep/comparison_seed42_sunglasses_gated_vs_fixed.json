@@ -1,0 +1,16 @@
+{
+  "reference": "fixed_fusion",
+  "candidate": "gated_fusion",
+  "condition": "sunglasses",
+  "auc_delta_candidate_minus_reference": 0.009075099405660203,
+  "auc_delta_95_ci": [
+    -0.0014698441962254334,
+    0.021762064477582572
+  ],
+  "eer_delta_candidate_minus_reference": -0.010238000265922087,
+  "eer_delta_95_ci": [
+    -0.02432707750116783,
+    0.00680726860009205
+  ],
+  "paired_probe_identity_bootstrap_iterations": 5000
+}

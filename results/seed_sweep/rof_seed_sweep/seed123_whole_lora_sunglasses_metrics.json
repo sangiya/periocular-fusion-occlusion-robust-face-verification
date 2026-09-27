@@ -1,0 +1,40 @@
+{
+  "auc": 0.8999307545396844,
+  "eer": 0.1646057705092408,
+  "eer_threshold": 0.367093651191048,
+  "tar_far_1e-2": 0.19571865443425074,
+  "tar_far_1e-2_threshold": 0.9169297218322754,
+  "tar_far_1e-3": 0.033639143730886834,
+  "tar_far_1e-3_threshold": 0.96388179063797,
+  "n_pairs": 7848,
+  "n_genuine": 327,
+  "n_impostor": 7521,
+  "identity_bootstrap_ci": {
+    "auc": [
+      0.8697466528675155,
+      0.9278693792211161
+    ],
+    "eer": [
+      0.1373150231742657,
+      0.19065286275197413
+    ],
+    "tar_far_1e-2": [
+      0.12863037184293738,
+      0.25088790316517556
+    ],
+    "tar_far_1e-3": [
+      0.0,
+      0.08152090900210464
+    ]
+  },
+  "variant": "whole_lora",
+  "condition": "sunglasses",
+  "device": "cpu",
+  "eligible_identities": 24,
+  "far_resolution": 0.00013296104241457252,
+  "tar_far_1e-3_supported": true,
+  "checkpoint": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\work\\seed_sweep\\checkpoints\\seed123_whole_lora.pt",
+  "checkpoint_sha256": "c78eddf35a7910c61bca2d1d8d6a10728605d758e3ef96bf794d24c2c7b94e5a",
+  "pairs": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\work\\protocol_v2\\rof_sunglasses_pairs.csv",
+  "pairs_sha256": "b41783c6722282c6270d64bb97873aaf5bf7774379df1a335fc942ad882ab089"
+}

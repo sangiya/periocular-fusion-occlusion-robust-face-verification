@@ -1,0 +1,40 @@
+{
+  "auc": 0.9460123380560447,
+  "eer": 0.1107828655834564,
+  "eer_threshold": 0.557634554126046,
+  "tar_far_1e-2": 0.15805022156573112,
+  "tar_far_1e-2_threshold": 0.9207108020782471,
+  "tar_far_1e-3": 0.026587887740029514,
+  "tar_far_1e-3_threshold": 0.9555362462997437,
+  "n_pairs": 18956,
+  "n_genuine": 677,
+  "n_impostor": 18279,
+  "identity_bootstrap_ci": {
+    "auc": [
+      0.9282253915716583,
+      0.9602135083569474
+    ],
+    "eer": [
+      0.09252190080568169,
+      0.130486277644551
+    ],
+    "tar_far_1e-2": [
+      0.09877360605909617,
+      0.25474106344950836
+    ],
+    "tar_far_1e-3": [
+      0.007341874765847997,
+      0.06200451859869884
+    ]
+  },
+  "variant": "gated_fusion",
+  "condition": "neutral",
+  "device": "cpu",
+  "eligible_identities": 28,
+  "far_resolution": 5.470758794244762e-05,
+  "tar_far_1e-3_supported": true,
+  "checkpoint": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\work\\seed_sweep\\checkpoints\\seed42_gated_fusion.pt",
+  "checkpoint_sha256": "72d8deca18e63e6cc484193c788940020934ce146adb1e52b05f7029d0655f82",
+  "pairs": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\Final Results\\neutral_eval\\rof_neutral_pairs.csv",
+  "pairs_sha256": "666040b51fb57f7bff81a9981716819caa57907908ee38915e065d066ad77e5c"
+}

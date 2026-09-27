@@ -1,0 +1,16 @@
+{
+  "reference": "fixed_fusion",
+  "candidate": "gated_fusion",
+  "condition": "neutral",
+  "auc_delta_candidate_minus_reference": 0.00327494005397877,
+  "auc_delta_95_ci": [
+    -0.00382946318170784,
+    0.009308898635702816
+  ],
+  "eer_delta_candidate_minus_reference": -0.0149351715082882,
+  "eer_delta_95_ci": [
+    -0.023140784544740552,
+    -0.00016946738997958324
+  ],
+  "paired_probe_identity_bootstrap_iterations": 5000
+}

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, manifests, or results, please cite the associated manuscript."
+title: "Parameter-Efficient Periocular Fusion for Cross-Condition and Cross-Dataset Occlusion-Robust Face Verification"
+type: software
+authors:
+  - family-names: "Pararajasingham"
+    given-names: "Sangiya"
+license: Apache-2.0
+version: "1.1.0"
+date-released: "2026-09-27"
+abstract: >-
+  Final research implementation, frozen protocol manifests, and complete
+  result files for a five-model ablation of parameter-efficient whole-face +
+  periocular fusion (DINOv2 + LoRA + learned gating) for occlusion-robust
+  face verification. Includes masked, sunglasses, and neutral protocols on
+  ROF, cross-dataset evaluation on MFR2 and RMFRD, three training seeds, and
+  identity-aware paired bootstrap comparisons.
+keywords:
+  - face verification
+  - occlusion robust recognition
+  - periocular
+  - LoRA
+  - DINOv2
+  - biometrics
