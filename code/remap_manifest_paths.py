@@ -1,4 +1,4 @@
-﻿"""Rewrite absolute dataset/crop paths in a manifest to a new project root.
+"""Rewrite absolute dataset/crop paths in a manifest to a new project root.
 
 Every manifest in this bundle was produced on the machine that ran the study, so
 its path columns contain absolute paths such as::
