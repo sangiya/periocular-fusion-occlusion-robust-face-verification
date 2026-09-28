@@ -43,6 +43,26 @@ being applied**, and the corrections below were made to the manuscript sources
    prose, editing, restructuring, consistency checking), and the fact that no
    experimental result was generated or modified by AI and that the authors
    take full responsibility.
+7. **ROF author-name encoding.** The surname was stored as `Erak` + U+00C4
+   U+00B1, a mojibake artifact of a double-encoded `ı`, in both the Related Work
+   text and the bibliography entry of all three manuscripts. Replaced with the
+   correct U+0131 dotless i. Verified: 2 correct occurrences, 0 mojibake.
+8. **MFR2 claim strength.** The audit establishes that *one* training identity
+   appears in MFR2 (18 of 820 pairs, 2.2%), which makes the protocol not
+   strictly identity-disjoint but does **not** demonstrate that the model
+   memorised that identity, nor that any part of the reported AUC is caused by
+   memorisation. The previous wording asserted "a combination of generalization
+   and memorization", which is an unsupported causal claim. It was replaced
+   throughout with a contamination caveat: the protocol is not strictly
+   identity-disjoint, and the results are reported with that caveat rather than
+   interpreted as fully unseen-identity generalization. The word "memorization"
+   no longer appears in any of the three manuscripts.
+9. **Author identity.** The manuscript previously read
+   `\author{Author Names Omitted for Double-Anonymous Review}`. The author
+   elected a named submission, so all three manuscripts now carry
+   `Pararajasingham Sangiya`, affiliation "Independent Researcher", and ORCID
+   0009-0005-3407-2154. T-BIOM's double-anonymous option is optional; a named
+   version is required for arXiv in any case.
 
 ## Numerical audit (independently recomputed, not read from verify_results.py)
 - `python code/verify_results.py`: **PASS**.
