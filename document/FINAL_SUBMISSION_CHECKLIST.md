@@ -91,17 +91,27 @@ For arXiv, use `document/arXiv_Preprint_10Page_Final.pdf`. Share the code, manif
 |---|---|
 | File | `publication_release.zip` |
 | Entries | 244 files |
-| SHA-256 | `89a2b17dd6219aecdf7d878ea5ba3336a9165c736e0c6abc4af3008987e4706c` |
-| Size | 13.49 MB |
+| SHA-256 | `942f1e5b97bcd43ac1f37d89e02f3f796fb72cb856208842874466f173e076c4` |
+| Size | 13.5 MB |
 
-The archive excludes `.git/` internals, `__pycache__`, and any editor or download
-duplicates. All entry names use forward slashes, so the archive extracts
+The archive is built **deterministically**: every entry carries a fixed
+timestamp and entries are written in sorted order, so rebuilding it from the
+same inputs yields byte-identical output and therefore the same hash. Verify it
+with:
+
+```powershell
+Get-FileHash .\publication_release.zip -Algorithm SHA256
+```
+
+The archive excludes `.git/` internals, `__pycache__`, and any editor or
+download duplicates. All entry names use forward slashes, so it extracts
 correctly on Linux and macOS as well as Windows.
 
-> An earlier archive produced during a separate audit was discarded: it embedded
-> 499 `.git/` entries, including the full commit history, and the SHA-256 quoted
-> in that audit did not match the file on disk. Use the hash above, computed from
-> the archive shipped in this package.
+> Two earlier archives were discarded. One embedded 499 `.git/` entries,
+> including the full commit history, and the SHA-256 quoted in that audit did
+> not match the file on disk. A second was built with normal ZIP timestamps,
+> which produced a different digest on every rebuild and therefore made any
+> recorded hash unverifiable. The archive above is the reproducible one.
 
 ## Author and manuscript identity
 
