@@ -155,6 +155,30 @@ percentage is not evidence of authorship.
 detector degrades clarity, and "the text was tuned to pass a detector" is a
 worse position to be asked about than a 90% score.
 
+### 5.1 A third check, at editor level
+
+After both detector results were reported, the manuscript was scanned for
+constructions a human IEEE editor would mark down regardless of any automated
+tool: empty framing, throat-clearing, stock phrasing, and filler.
+
+| Construction | Occurrences |
+|---|---|
+| "It is important/worth/essential to note..." | 0 |
+| "In order to", "due to the fact that", "in the event that" | 0 |
+| "very large/important", "a large number of", "plays an important role" | 0 |
+| "basically", "essentially", "actually", "really", "quite" | 0 |
+| "has been shown", "it is well known that", "as can be seen" | 0 |
+| "make use of", "carries out", "the case of" | 0 |
+| Sentences opening with a discourse connector | 4 of 313 (1.3%) |
+
+A naive scan also matched "rather" 17 times. Each occurrence was read in
+context and every one is contrastive technical prose — "rather than assuming
+that either is uniformly reliable", "rather than a calibrated reliability
+estimator" — which is precise, not filler. No change was warranted.
+
+Nothing in the manuscript required editing for style at editor level. The three
+sentence changes recorded in section 4 were the complete set.
+
 ---
 
 ## 5a. Spelling and grammar, measured on the source
