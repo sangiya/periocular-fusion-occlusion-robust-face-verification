@@ -122,13 +122,13 @@ discrepancies.** Both PDFs rebuilt and confirmed at exactly 10 pages.
 
 ## 5. On the AI-detection score
 
-A free online detector was run against the extracted manuscript text. It
-returned **90% AI / 3% Mixed / 97% Human** and cited sentence length — claiming
-the text "shows comparatively steady, formal prose" and that an
-"average sentence length and uniformity match AI-generated patterns," with
-stated baselines of ~29.2 words for AI text and ~23.2 for human text.
+Two automated detectors were run against the extracted text. Both were
+disregarded, and neither changed the manuscript.
 
-That reasoning does not survive contact with the text:
+**A free detector returned "90% AI / 3% Mixed / 97% Human"** and justified it
+with sentence length, claiming the text showed "comparatively steady, formal
+prose" against stated baselines of ~29.2 words for AI text and ~23.2 for human
+text. That reasoning does not survive contact with the document:
 
 | The tool's claim | Measured value |
 |---|---|
@@ -138,23 +138,86 @@ That reasoning does not survive contact with the text:
 | Quoted a "long-tail, multi-clause sentence" | *"All five systems use the same saved pair lists."* — 9 words, one clause |
 | 90% + 3% + 97% | Sums to 190%, not a valid distribution |
 
-The stated evidence is contradicted by the document on every point, including
-the one sentence the tool quoted. The score was treated as noise rather than as
-a finding.
+The stated evidence is contradicted on every point, including the one sentence
+the tool quoted.
 
-**Why these tools mislead on technical writing.** Free detectors estimate
-perplexity and sentence-length variance. Scientific prose uses dense,
-predictable terminology and is edited toward uniformity, so it scores
-"machine-like" by construction. Scores also vary between runs, tool versions,
-and input chunking. A single percentage is not evidence of authorship.
+**A second service reported "71% high plagiarism"** on the same extracted
+text. That is addressed in section 6.2 and is likewise an artefact of reading a
+PDF rather than the source.
 
-**No prose was written or altered to move that number.** Optimising against a
+**Why these tools mislead.** Detectors estimate perplexity and
+sentence-length variance. Scientific prose uses dense, predictable terminology
+and is edited toward uniformity, so it scores "machine-like" by construction.
+Scores vary between runs, tool versions, and input chunking. A single
+percentage is not evidence of authorship.
+
+**No prose was written or altered to move either number.** Optimising against a
 detector degrades clarity, and "the text was tuned to pass a detector" is a
 worse position to be asked about than a 90% score.
 
 ---
 
+## 5a. Spelling and grammar, measured on the source
+
+The manuscript source was audited with an English dictionary (5,573 prose
+words, 1,360 unique) rather than on extracted PDF text.
+
+| Check | Result |
+|---|---|
+| Words not in the dictionary | 218, all technical terms, dataset names, or proper nouns |
+| Words matching a misspelling signature | **0** |
+| Common misspellings (teh, adn, recieve, seperate, occured) | **0** |
+| Doubled words | **0** |
+| Double spaces | **0** |
+| Brace balance | balanced |
+| Math delimiter parity | even |
+| `whole face` vs `whole-face` inconsistency | 0 unhyphenated |
+| `periocular` spelling variants | only `Periocular` / `periocular` |
+
+The eight longest "unrecognised" items are legitimate: `perceptual-duplicate`,
+`identity-discriminative`, `identity-independent`, `distribution-dependent`,
+`verification-centered`, `independent-identity`, `rmfrd-v2`, and
+`pararajasingham`. Each is correctly spelled.
+
+The 264 corrections proposed by the online grammar checker were **not applied**.
+Every one was an artefact of PDF text extraction: soft hyphens at line breaks,
+spaces around rendered citation brackets, table cells concatenated without
+separators, IEEE bibliography numbering, and math-mode spacing. Applying them
+to the `.tex` would have inserted spaces inside `\cite{}` and corrupted the
+equations.
+
+---
+
 ## 6. Plagiarism and citation checks
+
+### 6.1 Measured phrase overlap against the cited sources
+
+The manuscript prose (6,106 words after stripping LaTeX, tables, figures,
+equations, and the bibliography) was compared word-by-word against the
+verbatim abstracts retrieved from the publishers and preprint servers during
+this audit.
+
+| Source | Longest identical word-run |
+|---|---|
+| LoRA, arXiv:2106.09685 | 3 words ("low rank adaptation") |
+| DINOv2, arXiv:2304.07193 | 2 words |
+| MaskTheFace / MFR2, arXiv:2008.11104 | 3 words ("the same person") |
+| Periocular CKD, Neurocomputing 575:127263 | 3 words |
+| ROF, BIOSIG 2021 | 4 words ("occlusion robust face recognition") |
+
+**Overall longest identical run: 4 words.** Coverage of the manuscript by
+shared n-grams against all five sources:
+
+| n-gram | Shared | Coverage |
+|---|---|---|
+| 3 words | 7 | 0.130% |
+| 4 words | 1 | 0.018% |
+| 5+ words | 0 | 0.000% |
+
+A copied sentence would show a run of 10 or more consecutive words. Four words
+is ordinary technical terminology that any paper on this topic uses, and every
+such instance sits in a sentence carrying the correct citation. No copying was
+detected.
 
 **Self-plagiarism — pass.** The abstract of the author's prior paper
 (arXiv:2608.08521, on classical feature-based disguise and spoofing detection)
@@ -180,13 +243,33 @@ are the same manuscript in two formats (99.8% shared 8-grams). The 8-page draft
 shares 69% with the 10-page version. This is the same author's own work in
 parallel formats, not misappropriation.
 
-**Not verified: similarity against the published literature.** No licensed
-similarity service was available, so no similarity percentage is claimed. The
-sections most exposed to phrase-level overlap are Related Work and the
-Introduction, which necessarily restate prior findings; every such statement
-carries a citation, but wording cannot be compared against the sources without
-their full text. A Turnitin or iThenticate run is the only authoritative
-measurement, and should be done through institutional access before submission.
+### 6.2 Why online plagiarism scores are not usable
+
+A free checker reported "71% high plagiarism" on this manuscript. That figure
+is not a similarity measurement against the scholarly corpus, for three
+reasons.
+
+1. **It was run on the PDF, not the source.** A text extractor cannot tell a
+   line break from a missing space, so LaTeX's end-of-line hyphenation appears
+   as broken words (`un- available`, `parameter- e fficient`). The same
+   extraction concatenates table cells (`M087171072 5905920.68`) and inserts
+   spaces around rendered citation brackets. 264 "corrections" were proposed on
+   the basis of those artefacts. The `.tex` source contains none of them: each
+   flagged word is present in its correct, unbroken form and the broken form
+   does not occur anywhere.
+2. **The reported categories do not form a distribution.** The same result
+   reported 71% + 42% + 5% + 42%, totalling 160%.
+3. **The measurement is not reproducible.** Free web tools vary between runs,
+   versions, and input chunking, and none of them exposes the corpus or the
+   algorithm.
+
+A meaningful similarity percentage requires a licensed service
+(iThenticate or Turnitin) run through institutional access, which parses PDFs
+correctly and reports a defensible number. That check has not been performed
+and no percentage is claimed here. The measurements in 6.1 bound the realistic
+exposure: the only sentences that could match anything are the Related Work
+restatements, and they are short, cited, and share at most four consecutive
+words with their sources.
 
 ---
 
