@@ -90,8 +90,8 @@ For arXiv, use `document/arXiv_Preprint_10Page_Final.pdf`. Share the code, manif
 | | |
 |---|---|
 | File | `publication_release.zip` |
-| Entries | 244 files |
-| SHA-256 | `942f1e5b97bcd43ac1f37d89e02f3f796fb72cb856208842874466f173e076c4` |
+| Entries | 245 files |
+| SHA-256 | `9e8c500fc6d5be86320b3a557cdf938b728bf203e6517367ebf705d76f60686e` |
 | Size | 13.5 MB |
 
 The archive is built **deterministically**: every entry carries a fixed

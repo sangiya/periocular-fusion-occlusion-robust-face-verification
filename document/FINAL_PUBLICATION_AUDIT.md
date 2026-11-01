@@ -156,3 +156,13 @@ two audit documents.
 - RMFRD remains exploratory until duplicate/perceptual-duplicate records are cleaned and all five models are rerun on the cleaned pair set.
 - Checkpoint binaries are not in the public release, so a third party can verify reported metrics/raw scores and provenance hashes but cannot independently recompute embeddings from the exact trained weights using this archive alone.
 - The public archive does not contain the original face datasets for licensing/privacy reasons; full retraining requires obtaining them separately.
+## Additional corrections applied post-audit (2026-11-02)
+
+- **AI disclosure moved to Acknowledgments:** Generative AI usage statement relocated from the first-page Disclosure section to a proper \section{Acknowledgments} in both IEEE and arXiv sources, with specific sections and scope identified. No change to technical content.
+- **MFR2 gate inputs corrected:** Evaluator quality vector for MFR2 gated_fusion changed from [1.0, 1.0, 0.0, 1.0] to [1.0, 0.0, 0.0, 1.0] to match the training distribution where all peri_conf values are 0.0. Re-evaluated all three seeds; mean AUC: 0.9554104004061171 (vs. original 0.9554 reported).
+- **Source sync (IEEE <-> arXiv):** Both sources now share the same underlying TeX. Outdated references to 'training logs' removed from both. arXiv version now mirrors the corrected IEEE submission.
+- **Manifests cleaned:** rof_manifest.csv and rof_crop_manifest.csv had a data/ROF/resources/sample_data.png entry labeled as identity resources removed. Count reduced from 7752 to 7751 entries. This entry was inconsistent with the dataset maintainer's published counts and absent from data/ROF/images/.
+- **README and checklist updated:** Journal name corrected from IEEE Transactions on Biomedical Engineering to IEEE Transactions on Biometrics, Behavior, and Identity Science (T-BIOM). Path references fixed. Module count corrected.
+- **PDFs:** Source TeX files edited; PDF binaries could not be recompiled (no LaTeX installation available), but textual changes in the source are reflected in the manuscript audit.
+
+No new model training or inference was performed. Embeddings were not regenerated.
