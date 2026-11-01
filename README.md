@@ -1,6 +1,6 @@
 # Parameter-Efficient Periocular Fusion for Cross-Condition and Cross-Dataset Occlusion-Robust Face Verification
 
-Reproduction package for the IEEE Transactions on Biomedical Engineering
+Reproduction package for the IEEE Transactions on Biometrics, Behavior, and Identity Science (T-BIOM)
 submission. This bundle contains the manuscript, the full source code needed to
 reproduce the reported results, the frozen evaluation protocols, and the exact
 result files the paper cites.
@@ -61,7 +61,7 @@ estimator. All training ran on CPU with no GPU.
 | `submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex` | Canonical LaTeX source | **Submit with the PDF** |
 | `submission_ieee_10page/fig_*.png` (5 files) | Figures referenced by the source | **Submit with the source** |
 | `document/arXiv_Preprint_10Page_Final.pdf` | 10-page preprint, arXiv title page | **Post to arXiv** |
-| `document/IEEE_TBIOM_Submission_10Page_Final.pdf` | Same PDF, kept next to the preprint | Convenience copy |
+| `submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf` | Same PDF, kept next to the preprint | Convenience copy |
 
 The IEEE PDF and the arXiv PDF are the **same 10-page manuscript** with different
 title pages, so every number, table, and figure is identical between them. There

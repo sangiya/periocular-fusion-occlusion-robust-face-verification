@@ -200,7 +200,7 @@ def evaluate_mfr2(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
             images[image_key] = {
                 "face_path": face_path,
                 "peri_path": peri_path,
-                "quality": [1.0, 1.0, 0.0, 1.0],  # MFR2 has no measured quality descriptors
+                "quality": [1.0, 0.0, 0.0, 1.0],  # MFR2: match training distribution (all peri_conf=0 in training)
             }
 
     for image_key, row in images.items():
