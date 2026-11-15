@@ -6,8 +6,8 @@ authors:
   - family-names: "Pararajasingham"
     given-names: "Sangiya"
 license: Apache-2.0
-version: "1.1.0"
-date-released: "2026-09-27"
+version: "1.3.0"
+date-released: "2026-11-15"
 abstract: >-
   Final research implementation, frozen protocol manifests, and complete
   result files for a five-model ablation of parameter-efficient whole-face +

@@ -1,0 +1,55 @@
+{
+  "protocols": {
+    "masked": {
+      "portable_file": "manifests/rof_masked_pairs.csv",
+      "portable_sha256": "55e9cf17d8719d843acf2d5f8878eb869736202e87c6296a376cadacf235c887",
+      "recorded_original_hashes": [
+        "7b580a6864573a90d07986481cba1854f1608c0b8b3bf8c035d209f81252a874"
+      ],
+      "canonical_logical_sha256": "d1a28ec4751a16038cafc39a280b094e6d3440fd3d27bb85fdc57a7ca703abdd",
+      "original_file_verified_locally": true,
+      "transformation": "Known absolute dataset root removed; slash normalization; logical rows preserved"
+    },
+    "sunglasses": {
+      "portable_file": "manifests/rof_sunglasses_pairs.csv",
+      "portable_sha256": "4c534461009eaef9eba6b3b569c07f8d038c4822af8c40b32e8a840d4aea8fe2",
+      "recorded_original_hashes": [
+        "b41783c6722282c6270d64bb97873aaf5bf7774379df1a335fc942ad882ab089"
+      ],
+      "canonical_logical_sha256": "d139596d342da47709c076e404ee5a41338217022c70c7e4db6324f16ef51daa",
+      "original_file_verified_locally": true,
+      "transformation": "Known absolute dataset root removed; slash normalization; logical rows preserved"
+    },
+    "neutral": {
+      "portable_file": "manifests/rof_neutral_pairs.csv",
+      "portable_sha256": "3894f14cd3b47d44362eb000cca8c822af777af118d4db13ae5a0fc0ee3e7680",
+      "recorded_original_hashes": [
+        "666040b51fb57f7bff81a9981716819caa57907908ee38915e065d066ad77e5c"
+      ],
+      "canonical_logical_sha256": "1b1430c036c9e9497570cbd62bacc7467e48ad9ae147ac2c814303960f2b7393",
+      "original_file_verified_locally": true,
+      "transformation": "Known absolute dataset root removed; slash normalization; logical rows preserved"
+    },
+    "mfr2": {
+      "portable_file": "manifests/mfr2_official_complete_pairs.csv",
+      "portable_sha256": "d9aea8c2abea683c2aa004d10aa27e0706ed3dd274a87b8852a581e41229ce20",
+      "recorded_original_hashes": [
+        "6707afd877f97f4c4639b26a6a50d3c344485e4f270638c4c548ef6f6ceba111"
+      ],
+      "canonical_logical_sha256": "c29d94f7d1d41212027dd20992024f96cfa26bb91b93aa423b183c101efb98c8",
+      "original_file_verified_locally": true,
+      "transformation": "Known absolute dataset root removed; slash normalization; logical rows preserved"
+    },
+    "rmfrd": {
+      "portable_file": "manifests/rmfrd_pairs.csv",
+      "portable_sha256": "067553d7484e20fac057e9ecadc0137f97bd612913111ab70f679a011333aa6a",
+      "recorded_original_hashes": [
+        "f14151ced177eca3aeb07646cf24262038da2a3422bd3a2788aa1b27ea95c298"
+      ],
+      "canonical_logical_sha256": "d3ef428a439000ef18b5aa3d3292a7c481285fee97740f6b663f018f4edc8974",
+      "original_file_verified_locally": true,
+      "transformation": "Known absolute dataset root removed; slash normalization; logical rows preserved"
+    }
+  },
+  "note": "Checkpoint binaries are not shipped; recorded checkpoint hashes alone do not regenerate embeddings."
+}

@@ -7,6 +7,8 @@ import csv
 import hashlib
 import json
 import random
+import os
+import time
 from pathlib import Path
 
 import numpy as np
@@ -64,6 +66,7 @@ def identity_bootstrap(scores: np.ndarray, labels: np.ndarray, subjects: np.ndar
 def evaluate_standard(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
                       batch_size: int = 8, bootstrap: int = 1000, seed: int = 42) -> dict:
     """Standard ROF/neutral protocol with probe/enroll columns."""
+    started = time.time()
     random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -140,7 +143,7 @@ def evaluate_standard(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
         for i, pair in enumerate(pairs):
             w.writerow([pair["enroll_image_id"], pair["probe_image_id"],
                         pair["enroll_identity"], pair["probe_identity"],
-                        f"{scores[i]:.6f}", labels[i]])
+                        f"{scores[i]:.10f}", labels[i]])
 
     meta = {
         "checkpoint": str(checkpoint_path),
@@ -149,6 +152,12 @@ def evaluate_standard(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
         "pairs_sha256": sha256(str(pairs_path)),
         "variant": variant,
         "seed": seed,
+        "training_seed": checkpoint.get("seed"),
+        "bootstrap_seed": seed,
+        "device": str(device),
+        "evaluator_sha256": sha256(__file__),
+        "raw_scores_sha256": sha256(str(raw_path)),
+        "elapsed_seconds": time.time() - started,
         "batch_size": batch_size,
         "bootstrap": bootstrap,
         "num_pairs": len(pairs),
@@ -175,6 +184,7 @@ def evaluate_mfr2(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
     comparisons into self-comparisons. Each face/periocular image pair is therefore
     keyed by its concrete paths.
     """
+    started = time.time()
     random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -222,13 +232,19 @@ def evaluate_mfr2(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
                             v2.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
     embeddings = {}
 
-    for image_key, row in images.items():
-        face = transform(Image.open(row["face_path"]).convert("RGB")).unsqueeze(0).to(device)
-        peri = transform(Image.open(row["peri_path"]).convert("RGB")).unsqueeze(0).to(device)
-        quality = torch.tensor(row["quality"], dtype=torch.float32).unsqueeze(0).to(device)
-        with torch.no_grad():
-            emb = model(face, peri, quality)
-        embeddings[image_key] = emb.squeeze(0).cpu()
+    image_keys = list(images)
+    for start in range(0, len(image_keys), batch_size):
+        keys = image_keys[start:start + batch_size]
+        def load_rgb(path):
+            with Image.open(path) as im:
+                return transform(im.convert("RGB"))
+        face = torch.stack([load_rgb(images[k]["face_path"]) for k in keys]).to(device)
+        peri = torch.stack([load_rgb(images[k]["peri_path"]) for k in keys]).to(device)
+        quality = torch.tensor([images[k]["quality"] for k in keys], dtype=torch.float32, device=device)
+        with torch.inference_mode():
+            emb = model(face, peri, quality).cpu()
+        embeddings.update({k: emb[i] for i, k in enumerate(keys)})
+        print(f"embedded {min(start + batch_size, len(image_keys))}/{len(image_keys)}", flush=True)
 
     scores = []
     labels = []
@@ -270,7 +286,7 @@ def evaluate_mfr2(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
         for i, pair in enumerate(pairs):
             w.writerow([pair["identity1"], pair["identity2"],
                         pair["face_path1"], pair["face_path2"],
-                        f"{scores[i]:.6f}", labels[i]])
+                        f"{scores[i]:.10f}", labels[i]])
 
     meta = {
         "checkpoint": str(checkpoint_path),
@@ -279,6 +295,12 @@ def evaluate_mfr2(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
         "pairs_sha256": sha256(str(pairs_path)),
         "variant": variant,
         "seed": seed,
+        "training_seed": checkpoint.get("seed"),
+        "bootstrap_seed": seed,
+        "device": str(device),
+        "evaluator_sha256": sha256(__file__),
+        "raw_scores_sha256": sha256(str(raw_path)),
+        "elapsed_seconds": time.time() - started,
         "batch_size": batch_size,
         "bootstrap": bootstrap,
         "num_pairs": len(pairs),
@@ -287,6 +309,8 @@ def evaluate_mfr2(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
         "num_identities": len(np.unique(subjects)),
         "num_unique_images": len(images),
         "embedding_cache_key": "(face_path, peri_path)",
+        "quality_vector": [1.0, 0.0, 0.0, 1.0],
+        "quality_policy": "constant matching archived complete-case training manifest",
         "metrics": metrics,
     }
     meta_path = Path(str(out_prefix) + "_metrics.json")
@@ -299,58 +323,60 @@ def evaluate_mfr2(checkpoint_path: Path, pairs_path: Path, out_prefix: Path,
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate all seed-sweep checkpoints on cross-dataset protocols")
-    parser.add_argument("--root", required=True, help="Project root (data_plan)")
+    parser = argparse.ArgumentParser(description="Evaluate final checkpoints; missing inputs and failed evaluations are errors")
+    parser.add_argument("--root", type=Path, required=True)
+    parser.add_argument("--dataset-root", type=Path, help="Root for relative image/crop paths; defaults to --root")
+    parser.add_argument("--checkpoint-root", type=Path)
+    parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--bootstrap", type=int, default=1000)
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--protocol", choices=["all", "mfr2", "rmfrd", "neutral"], default="all",
-                        help="Evaluate all protocols or rerun only one protocol")
-    parser.add_argument("--overwrite", action="store_true", help="Overwrite existing metric/raw-score outputs")
+    parser.add_argument("--seed", type=int, default=42, help="Bootstrap RNG seed, not training seed")
+    parser.add_argument("--seeds", type=int, nargs="+", default=SEEDS)
+    parser.add_argument("--variants", choices=VARIANTS, nargs="+", default=VARIANTS)
+    parser.add_argument("--protocol", choices=["all", "mfr2", "rmfrd", "neutral"], default="all")
+    parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
-
-    root = Path(args.root).resolve()
-    ckpt_dir = root / "work" / "seed_sweep" / "checkpoints"
-    out_dir = root / "Final Results" / "seed_sweep" / "cross_dataset"
+    if args.batch_size < 1 or args.bootstrap < 0:
+        parser.error("--batch-size must be positive and --bootstrap nonnegative")
+    root = args.root.resolve()
+    data_root = (args.dataset_root or root).resolve()
+    ckpt_dir = (args.checkpoint_root or root / "work/seed_sweep/checkpoints").resolve()
+    out_dir = (args.output_dir or root / "Final Results/seed_sweep/cross_dataset").resolve()
+    selected = list(PAIR_FILES) if args.protocol == "all" else [args.protocol]
+    paths = {}
+    for cond in selected:
+        candidates = [root / PAIR_FILES[cond], root / "manifests" / Path(PAIR_FILES[cond]).name]
+        paths[cond] = next((p for p in candidates if p.is_file()), candidates[0])
+    missing = [str(p) for p in paths.values() if not p.is_file()]
+    missing += [str(ckpt_dir / f"seed{s}_{v}.pt") for s in args.seeds for v in args.variants
+                if not (ckpt_dir / f"seed{s}_{v}.pt").is_file()]
+    if missing:
+        raise SystemExit("Missing required inputs (no evaluation performed):\n" + "\n".join(missing))
+    if not data_root.is_dir():
+        raise SystemExit(f"Dataset root is not a directory: {data_root}")
+    os.chdir(data_root)
     out_dir.mkdir(parents=True, exist_ok=True)
-
-    total = len(SEEDS) * len(VARIANTS) * len(PAIR_FILES)
-    done = 0
-    for seed in SEEDS:
-        for variant in VARIANTS:
-            ckpt = ckpt_dir / f"seed{seed}_{variant}.pt"
-            if not ckpt.is_file():
-                print(f"  SKIP missing checkpoint: {ckpt.name}")
-                continue
-            for cond, pairs_rel in PAIR_FILES.items():
-                if args.protocol != "all" and cond != args.protocol:
-                    continue
-                pairs_path = root / pairs_rel
-                if not pairs_path.is_file():
-                    print(f"  SKIP missing pairs: {pairs_rel}")
-                    continue
-                out_prefix = out_dir / f"seed{seed}_{variant}_{cond}"
-                meta_path = Path(str(out_prefix) + "_metrics.json")
-                if meta_path.is_file() and not args.overwrite:
-                    print(f"  SKIP exists: {meta_path.name}")
-                    done += 1
-                    continue
-                print(f"[{done+1}/{total}] seed={seed} variant={variant} cond={cond}")
-                try:
-                    if cond == "mfr2":
-                        evaluate_mfr2(ckpt, pairs_path, out_prefix,
-                                      batch_size=args.batch_size,
-                                      bootstrap=args.bootstrap,
-                                      seed=args.seed)
-                    else:
-                        evaluate_standard(ckpt, pairs_path, out_prefix,
-                                          batch_size=args.batch_size,
-                                          bootstrap=args.bootstrap,
-                                          seed=args.seed)
-                except Exception as e:
-                    print(f"  ERROR: {e}")
-                done += 1
-    print("Done.")
+    completed = 0
+    for training_seed in args.seeds:
+        for variant in args.variants:
+            ckpt = ckpt_dir / f"seed{training_seed}_{variant}.pt"
+            for cond in selected:
+                prefix = out_dir / f"seed{training_seed}_{variant}_{cond}"
+                meta_path = Path(str(prefix) + "_metrics.json")
+                raw_path = Path(str(prefix) + "_raw_scores.csv")
+                if (meta_path.exists() or raw_path.exists()) and not args.overwrite:
+                    raise SystemExit(f"Refusing to reuse possibly stale outputs: {prefix}; choose a new --output-dir or --overwrite")
+                print(f"training_seed={training_seed} variant={variant} protocol={cond}", flush=True)
+                fn = evaluate_mfr2 if cond == "mfr2" else evaluate_standard
+                meta = fn(ckpt, paths[cond], prefix, batch_size=args.batch_size,
+                          bootstrap=args.bootstrap, seed=args.seed)
+                if meta["variant"] != variant or meta["training_seed"] != training_seed:
+                    raise RuntimeError(f"Checkpoint variant/seed disagrees with filename: {ckpt}")
+                completed += 1
+    expected = len(args.seeds) * len(args.variants) * len(selected)
+    if completed != expected:
+        raise RuntimeError(f"Only {completed}/{expected} evaluations completed")
+    print(f"SUCCESS: {completed}/{expected} evaluations completed", flush=True)
 
 
 if __name__ == "__main__":

@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import random
 from collections import defaultdict
 from pathlib import Path
@@ -217,11 +218,23 @@ def read_rows(path, split="train"):
         newline="",
         encoding="utf-8",
     ) as f:
-        rows = [
-            row
-            for row in csv.DictReader(f)
-            if row.get("split") == split
-        ]
+        all_rows = list(csv.DictReader(f))
+        seen_hashes = set()
+        for row in all_rows:
+            content_hash = row.get("sha256", "")
+            if not content_hash or content_hash in seen_hashes:
+                raise ValueError(
+                    "Training requires a content-unique, audited manifest. "
+                    "Use the current audited manifest in manifests/cpu_followup/; historical checkpoints "
+                    "must not be reused as clean-trained models."
+                )
+            seen_hashes.add(content_hash)
+        identity_splits = {}
+        for row in all_rows:
+            identity_splits.setdefault(row["identity"], set()).add(row["split"])
+        if any(len(splits) != 1 for splits in identity_splits.values()):
+            raise ValueError("Identity occurs in multiple splits")
+        rows = [row for row in all_rows if row.get("split") == split]
 
     if not rows:
         raise ValueError(
@@ -491,6 +504,9 @@ def main():
             weights_only=False,
         )
 
+        if ckpt.get("manifest_sha256") != hashlib.sha256(Path(args.manifest).read_bytes()).hexdigest():
+            raise ValueError("Resume manifest hash differs or is absent; do not reuse historical checkpoints for cleaned training")
+
         resume_variant = ckpt.get("variant")
         resume_seed = ckpt.get("seed")
 
@@ -684,6 +700,7 @@ def main():
             "id_to_label": id_to_label,
             "epoch": epoch_num,
             "seed": args.seed,
+            "manifest_sha256": hashlib.sha256(Path(args.manifest).read_bytes()).hexdigest(),
         }
 
         torch.save(

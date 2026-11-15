@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-15",
+  "syntax_files": 49,
+  "regression_tests": 21,
+  "regression_status": "passed",
+  "test_logs": [
+    "document/build_logs/completed_release_tests.txt",
+    "document/build_logs/completed_cpu_tests.txt"
+  ],
+  "new_model_training_performed": true,
+  "new_models_fully_trained_and_evaluated": 15,
+  "new_raw_score_files": 120,
+  "epochs_per_model": 5,
+  "optimizer_steps_per_model": 1380,
+  "device": "cpu",
+  "historical_results_separate": true,
+  "scope": "Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json."
+}

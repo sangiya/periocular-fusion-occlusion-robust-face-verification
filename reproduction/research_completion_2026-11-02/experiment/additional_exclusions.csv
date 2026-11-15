@@ -1,0 +1,3 @@
+face_path,identity,condition,split,person_id,source_identity,sha256,path,peri_path,peri_conf,crop_status,crop_failure_reason,exclusion_reason
+data/ROF/images/neutral/harrison_ford/000011.jpg,harrison_ford,neutral,train,harrison_ford,harrison_ford,8eb8cabe65ae11f328d5dc8577686b949ec1783392c700ed57b3fed0d29da43a,data/ROF/images/neutral/harrison_ford/000011.jpg,work/periocular_person_disjoint/peri_003062.jpg,0.0,valid,,visually_confirmed_cross_split_near_duplicate
+data/ROF/images/neutral/mark_hamill/000002.jpg,mark_hamill,neutral,test,mark_hamill,mark_hamill,c1c38b59852a76d6f83089f31734d234576a2d7d26016b712840fca67b7c90b4,data/ROF/images/neutral/mark_hamill/000002.jpg,work/periocular_person_disjoint/peri_000986.jpg,0.0,valid,,visually_confirmed_cross_split_near_duplicate

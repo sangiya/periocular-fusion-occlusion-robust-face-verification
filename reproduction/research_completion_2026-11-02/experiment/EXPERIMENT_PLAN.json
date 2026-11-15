@@ -1,0 +1,84 @@
+{
+  "status": "protocol frozen; training not yet completed",
+  "manifest_sha256": "e1be6e7ce28e795a8b4a0d66cce8c704964b589607b0622ae9eea600682d8560",
+  "rows_by_split": {
+    "train": 4405,
+    "test": 922,
+    "val": 844
+  },
+  "seeds": [
+    7,
+    42,
+    123
+  ],
+  "variants": [
+    "frozen_whole",
+    "whole_lora",
+    "peri_lora",
+    "fixed_fusion",
+    "gated_fusion"
+  ],
+  "epochs": 5,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "max_batches": 0,
+  "selection": "fixed final epoch; no selection on test scores",
+  "quality_vector": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "threshold_calibration": "per-condition validation identities only; report actual test FAR and TAR",
+  "gate_controls": [
+    "learned",
+    "constant_0.5_same_branches",
+    "validation_mean_gate_same_branches",
+    "permuted_gate_same_branches",
+    "face_branch",
+    "peri_branch"
+  ],
+  "pair_counts": {
+    "val_masked": {
+      "pairs": 300,
+      "genuine": 30,
+      "eligible_identities": 10
+    },
+    "val_sunglasses": {
+      "pairs": 5148,
+      "genuine": 234,
+      "eligible_identities": 22
+    },
+    "val_neutral": {
+      "pairs": 14404,
+      "genuine": 554,
+      "eligible_identities": 26
+    },
+    "test_masked": {
+      "pairs": 423,
+      "genuine": 47,
+      "eligible_identities": 9
+    },
+    "test_sunglasses": {
+      "pairs": 6648,
+      "genuine": 277,
+      "eligible_identities": 24
+    },
+    "test_neutral": {
+      "pairs": 15960,
+      "genuine": 570,
+      "eligible_identities": 28
+    }
+  },
+  "unresolved": "Full semantic identity validation and unknown pretraining identity overlap are not certified.",
+  "input_hashes": {
+    "additional_exclusions.csv": "2ead2c1f513a424bc03cd91de9476d832f23b151b1eaa02c007a4415fecac72b",
+    "test_masked_pairs.csv": "f3ec74417c41a5b636bde39f086fabd2852e92e2cb507c5df3549653d267914c",
+    "test_neutral_pairs.csv": "ab60700bb870e3cc2e831522c05bbab86f6580574e6f0fcf08fdb5e06d9822ae",
+    "test_sunglasses_pairs.csv": "1b01ead9f7e82f7082f4da6d2f3dac75457c44ae3e593f3de7b82aa8d77e4107",
+    "training_manifest.csv": "e1be6e7ce28e795a8b4a0d66cce8c704964b589607b0622ae9eea600682d8560",
+    "val_masked_pairs.csv": "3fc8c43cd0db2643cba056786f50b73e1ca42157d2e997c4df044a2ce45fe638",
+    "val_neutral_pairs.csv": "2492a9c23f8127ed3be29ecfb42581990fbfa28ccfc2d1ca1f83fed2fae08939",
+    "val_sunglasses_pairs.csv": "215fa15f2146310f0abebf1c787be6de97c06b11f06585a32a8039c5f40d5995"
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "status": "complete",
+  "seed": 7,
+  "variant": "whole_lora",
+  "device": "cpu",
+  "elapsed_seconds": 1464.8910000000033,
+  "signature": {
+    "checkpoint_sha256": "1a8b00a6625d5a729f27d3584d38592200ee60276ae54b5be4c4f160883fa960",
+    "evaluator_sha256": "3e352c3a7ce353d8bccf60176f24264df08b15401242f3a5f3c7c181f5eea594",
+    "model_code_sha256": "6cac4721350d7f27961d4cff1c77d94e4629b7c83f44f7873bb8bdb22308e7d4",
+    "metrics_code_sha256": "f0fc88db009bab0820a8489dc69b576acf9492bd4732dcda96496f209b3b24cf",
+    "common_code_sha256": "9005b6628af759cc4cbede17160add5b60ae45391cceef4db17867ef019e1a73",
+    "pairs_sha256": {
+      "test_masked": "f3ec74417c41a5b636bde39f086fabd2852e92e2cb507c5df3549653d267914c",
+      "test_neutral": "ab60700bb870e3cc2e831522c05bbab86f6580574e6f0fcf08fdb5e06d9822ae",
+      "test_sunglasses": "1b01ead9f7e82f7082f4da6d2f3dac75457c44ae3e593f3de7b82aa8d77e4107",
+      "val_masked": "3fc8c43cd0db2643cba056786f50b73e1ca42157d2e997c4df044a2ce45fe638",
+      "val_neutral": "2492a9c23f8127ed3be29ecfb42581990fbfa28ccfc2d1ca1f83fed2fae08939",
+      "val_sunglasses": "215fa15f2146310f0abebf1c787be6de97c06b11f06585a32a8039c5f40d5995",
+      "mfr2": "21a57f13ac36fce61681295f183e1ba53147341ad8b9bfbc805af12d69de5f17",
+      "rmfrd": "2e9ebd27bde42e58b4bef456959376bd10268811f3f4d531a854d47b8e2ac3e9"
+    },
+    "quality_vector": [
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "training_status": "new full clean-manifest five-epoch training",
+  "image_provenance_sha256": "880a18b6e4ed5d31e1250df86707f50135975b0f99b02d72290efd5b51e86470",
+  "protocols": {
+    "test_masked": {
+      "metrics": {
+        "auc": 0.8851290176550475,
+        "eer": 0.1675531914893617,
+        "eer_threshold": 0.2330687384,
+        "tar_far_1e-2": 0.2978723404255319,
+        "tar_far_1e-2_threshold": 0.7956895448,
+        "tar_far_1e-3": 0.08510638297872342,
+        "tar_far_1e-3_threshold": 0.928287887,
+        "n_pairs": 423,
+        "n_genuine": 47,
+        "n_impostor": 376
+      },
+      "pairs_sha256": "f3ec74417c41a5b636bde39f086fabd2852e92e2cb507c5df3549653d267914c",
+      "raw_scores": "test_masked_raw_scores.csv",
+      "raw_scores_sha256": "5189ec1ba61f5172f2285336869fb854b2d55a91fb461d9f9564b51dc43abc53",
+      "far_resolution": 0.0026595744680851063,
+      "identity_bootstrap_auc": {
+        "method": "two-endpoint identity node resampling sensitivity; same-identity edge weight count, different-identity edge weight product",
+        "conditional_on": "fixed trained checkpoint and frozen protocol; not a population security guarantee",
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "seed": 42,
+        "auc_ci_95": [
+          0.7652647311946092,
+          0.9579837122677549
+        ],
+        "identities": 9
+      },
+      "validation_calibrated": {
+        "0.01": {
+          "calibration_protocol": "val_masked",
+          "validation": {
+            "threshold": 0.7478549322000001,
+            "far": 0.007407407407407408,
+            "tar": 0.43333333333333335,
+            "false_accepts": 2,
+            "true_accepts": 13,
+            "impostors": 270,
+            "genuine": 30
+          },
+          "test": {
+            "threshold": 0.7478549322000001,
+            "far": 0.023936170212765957,
+            "tar": 0.3617021276595745,
+            "false_accepts": 9,
+            "true_accepts": 17,
+            "impostors": 376,
+            "genuine": 47
+          },
+          "validation_far_resolution": 0.003703703703703704
+        },
+        "0.001": {
+          "calibration_protocol": "val_masked",
+          "validation": {
+            "threshold": 0.7771540191000001,
+            "far": 0.0,
+            "tar": 0.4,
+            "false_accepts": 0,
+            "true_accepts": 12,
+            "impostors": 270,
+            "genuine": 30
+          },
+          "test": {
+            "threshold": 0.7771540191000001,
+            "far": 0.015957446808510637,
+            "tar": 0.3191489361702128,
+            "false_accepts": 6,
+            "true_accepts": 15,
+            "impostors": 376,
+            "genuine": 47
+          },
+          "validation_far_resolution": 0.003703703703703704
+        }
+      }
+    },
+    "test_neutral": {
+      "metrics": {
+        "auc": 0.9430480033742576,
+        "eer": 0.12248213125406107,
+        "eer_threshold": 0.5744176979962963,
+        "tar_far_1e-2": 0.26315789473684204,
+        "tar_far_1e-2_threshold": 0.9361661557,
+        "tar_far_1e-3": 0.021052631578947323,
+        "tar_far_1e-3_threshold": 0.9792152944,
+        "n_pairs": 15960,
+        "n_genuine": 570,
+        "n_impostor": 15390
+      },
+      "pairs_sha256": "ab60700bb870e3cc2e831522c05bbab86f6580574e6f0fcf08fdb5e06d9822ae",
+      "raw_scores": "test_neutral_raw_scores.csv",
+      "raw_scores_sha256": "65e4d9392749a60ce672d096557952c232d21e63d676af8bd0e2b6bcb19d5e96",
+      "far_resolution": 6.49772579597141e-05,
+      "identity_bootstrap_auc": {
+        "method": "two-endpoint identity node resampling sensitivity; same-identity edge weight count, different-identity edge weight product",
+        "conditional_on": "fixed trained checkpoint and frozen protocol; not a population security guarantee",
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "seed": 42,
+        "auc_ci_95": [
+          0.918043405127456,
+          0.9624064667566018
+        ],
+        "identities": 28
+      },
+      "validation_calibrated": {
+        "0.01": {
+          "calibration_protocol": "val_neutral",
+          "validation": {
+            "threshold": 0.8960348749000001,
+            "far": 0.00996389891696751,
+            "tar": 0.30324909747292417,
+            "false_accepts": 138,
+            "true_accepts": 168,
+            "impostors": 13850,
+            "genuine": 554
+          },
+          "test": {
+            "threshold": 0.8960348749000001,
+            "far": 0.025341130604288498,
+            "tar": 0.4614035087719298,
+            "false_accepts": 390,
+            "true_accepts": 263,
+            "impostors": 15390,
+            "genuine": 570
+          },
+          "validation_far_resolution": 7.220216606498195e-05
+        },
+        "0.001": {
+          "calibration_protocol": "val_neutral",
+          "validation": {
+            "threshold": 0.9823598540000001,
+            "far": 0.0009386281588447653,
+            "tar": 0.023465703971119134,
+            "false_accepts": 13,
+            "true_accepts": 13,
+            "impostors": 13850,
+            "genuine": 554
+          },
+          "test": {
+            "threshold": 0.9823598540000001,
+            "far": 0.0005847953216374269,
+            "tar": 0.010526315789473684,
+            "false_accepts": 9,
+            "true_accepts": 6,
+            "impostors": 15390,
+            "genuine": 570
+          },
+          "validation_far_resolution": 7.220216606498195e-05
+        }
+      }
+    },
+    "test_sunglasses": {
+      "metrics": {
+        "auc": 0.8892749014459133,
+        "eer": 0.16528017579657825,
+        "eer_threshold": 0.3937745452782609,
+        "tar_far_1e-2": 0.1732851985559567,
+        "tar_far_1e-2_threshold": 0.9275737009,
+        "tar_far_1e-3": 0.03610108303249093,
+        "tar_far_1e-3_threshold": 0.9698253198,
+        "n_pairs": 6648,
+        "n_genuine": 277,
+        "n_impostor": 6371
+      },
+      "pairs_sha256": "1b01ead9f7e82f7082f4da6d2f3dac75457c44ae3e593f3de7b82aa8d77e4107",
+      "raw_scores": "test_sunglasses_raw_scores.csv",
+      "raw_scores_sha256": "65386f694a44ff673c61a547ee6d8c43945740c022fc91c311c6565ae005bc09",
+      "far_resolution": 0.0001569612305760477,
+      "identity_bootstrap_auc": {
+        "method": "two-endpoint identity node resampling sensitivity; same-identity edge weight count, different-identity edge weight product",
+        "conditional_on": "fixed trained checkpoint and frozen protocol; not a population security guarantee",
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "seed": 42,
+        "auc_ci_95": [
+          0.8526477003333367,
+          0.9295531265383403
+        ],
+        "identities": 24
+      },
+      "validation_calibrated": {
+        "0.01": {
+          "calibration_protocol": "val_sunglasses",
+          "validation": {
+            "threshold": 0.9499379354000002,
+            "far": 0.009971509971509971,
+            "tar": 0.1794871794871795,
+            "false_accepts": 49,
+            "true_accepts": 42,
+            "impostors": 4914,
+            "genuine": 234
+          },
+          "test": {
+            "threshold": 0.9499379354000002,
+            "far": 0.004394914456129336,
+            "tar": 0.10469314079422383,
+            "false_accepts": 28,
+            "true_accepts": 29,
+            "impostors": 6371,
+            "genuine": 277
+          },
+          "validation_far_resolution": 0.0002035002035002035
+        },
+        "0.001": {
+          "calibration_protocol": "val_sunglasses",
+          "validation": {
+            "threshold": 0.9769387740000001,
+            "far": 0.000814000814000814,
+            "tar": 0.008547008547008548,
+            "false_accepts": 4,
+            "true_accepts": 2,
+            "impostors": 4914,
+            "genuine": 234
+          },
+          "test": {
+            "threshold": 0.9769387740000001,
+            "far": 0.0003139224611520954,
+            "tar": 0.018050541516245487,
+            "false_accepts": 2,
+            "true_accepts": 5,
+            "impostors": 6371,
+            "genuine": 277
+          },
+          "validation_far_resolution": 0.0002035002035002035
+        }
+      }
+    },
+    "val_masked": {
+      "metrics": {
+        "auc": 0.9301234567901235,
+        "eer": 0.1333333333333333,
+        "eer_threshold": 0.37307892517272734,
+        "tar_far_1e-2": 0.43333333333333335,
+        "tar_far_1e-2_threshold": 0.7571758812,
+        "tar_far_1e-3": 0.4,
+        "tar_far_1e-3_threshold": 0.7802928576,
+        "n_pairs": 300,
+        "n_genuine": 30,
+        "n_impostor": 270
+      },
+      "pairs_sha256": "3fc8c43cd0db2643cba056786f50b73e1ca42157d2e997c4df044a2ce45fe638",
+      "raw_scores": "val_masked_raw_scores.csv",
+      "raw_scores_sha256": "6cc41a74ab89e86e73260e37135079674323968436f0e794e43faba107edfbf0",
+      "far_resolution": 0.003703703703703704
+    },
+    "val_neutral": {
+      "metrics": {
+        "auc": 0.9432875444747096,
+        "eer": 0.12743682310469315,
+        "eer_threshold": 0.40995237086,
+        "tar_far_1e-2": 0.30324909747292417,
+        "tar_far_1e-2_threshold": 0.8976505429,
+        "tar_far_1e-3": 0.023465703971119134,
+        "tar_far_1e-3_threshold": 0.9828459348,
+        "n_pairs": 14404,
+        "n_genuine": 554,
+        "n_impostor": 13850
+      },
+      "pairs_sha256": "2492a9c23f8127ed3be29ecfb42581990fbfa28ccfc2d1ca1f83fed2fae08939",
+      "raw_scores": "val_neutral_raw_scores.csv",
+      "raw_scores_sha256": "ecfadb2f8568f12ae48154208146509d9a378088e73c8999f7b67f7afe03aa24",
+      "far_resolution": 7.220216606498195e-05
+    },
+    "val_sunglasses": {
+      "metrics": {
+        "auc": 0.9184381620279056,
+        "eer": 0.1581196581196581,
+        "eer_threshold": 0.324166791308,
+        "tar_far_1e-2": 0.17948717948717952,
+        "tar_far_1e-2_threshold": 0.9509366514,
+        "tar_far_1e-3": 0.008547008547008517,
+        "tar_far_1e-3_threshold": 0.97804578,
+        "n_pairs": 5148,
+        "n_genuine": 234,
+        "n_impostor": 4914
+      },
+      "pairs_sha256": "215fa15f2146310f0abebf1c787be6de97c06b11f06585a32a8039c5f40d5995",
+      "raw_scores": "val_sunglasses_raw_scores.csv",
+      "raw_scores_sha256": "01524c8e21596d654355ffa4dbe6311ed763a9f213c679cb6f0cc0fa626a524a",
+      "far_resolution": 0.0002035002035002035
+    },
+    "mfr2": {
+      "metrics": {
+        "auc": 0.9510747872816838,
+        "eer": 0.12121212121212122,
+        "eer_threshold": 0.6209246480121212,
+        "tar_far_1e-2": 0.28817733990147776,
+        "tar_far_1e-2_threshold": 0.8923584792,
+        "tar_far_1e-3": 0.009852216748768461,
+        "tar_far_1e-3_threshold": 0.963368199,
+        "n_pairs": 802,
+        "n_genuine": 406,
+        "n_impostor": 396
+      },
+      "pairs_sha256": "21a57f13ac36fce61681295f183e1ba53147341ad8b9bfbc805af12d69de5f17",
+      "raw_scores": "mfr2_raw_scores.csv",
+      "raw_scores_sha256": "9672e67c4b01a30c03707dc59d1de06ffbfd411b4827b970b8e4c4fa85ce6fa0",
+      "far_resolution": 0.0025252525252525255,
+      "identity_bootstrap_auc": {
+        "method": "two-endpoint identity node resampling sensitivity; same-identity edge weight count, different-identity edge weight product",
+        "conditional_on": "fixed trained checkpoint and frozen protocol; not a population security guarantee",
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "seed": 42,
+        "auc_ci_95": [
+          0.918214808288544,
+          0.9772132237310749
+        ],
+        "identities": 52
+      },
+      "transferred_rof_validation_thresholds": {
+        "0.01": {
+          "threshold": 0.7478549322000001,
+          "far": 0.050505050505050504,
+          "tar": 0.7142857142857143,
+          "false_accepts": 20,
+          "true_accepts": 290,
+          "impostors": 396,
+          "genuine": 406
+        },
+        "0.001": {
+          "threshold": 0.7771540191000001,
+          "far": 0.04040404040404041,
+          "tar": 0.6280788177339901,
+          "false_accepts": 16,
+          "true_accepts": 255,
+          "impostors": 396,
+          "genuine": 406
+        }
+      }
+    },
+    "rmfrd": {
+      "metrics": {
+        "auc": 0.6951104187317392,
+        "eer": 0.361271676300578,
+        "eer_threshold": 0.71593331124,
+        "tar_far_1e-2": 0.042389210019267765,
+        "tar_far_1e-2_threshold": 0.9272743715,
+        "tar_far_1e-3": 0.005780346820809301,
+        "tar_far_1e-3_threshold": 0.9516100891,
+        "n_pairs": 21798,
+        "n_genuine": 1038,
+        "n_impostor": 20760
+      },
+      "pairs_sha256": "2e9ebd27bde42e58b4bef456959376bd10268811f3f4d531a854d47b8e2ac3e9",
+      "raw_scores": "rmfrd_raw_scores.csv",
+      "raw_scores_sha256": "a1015a2321d906e6396b25805031e6112c8c427628c7e53c90cb9c5104799446",
+      "far_resolution": 4.816955684007707e-05,
+      "identity_bootstrap_auc": {
+        "method": "two-endpoint identity node resampling sensitivity; same-identity edge weight count, different-identity edge weight product",
+        "conditional_on": "fixed trained checkpoint and frozen protocol; not a population security guarantee",
+        "requested_replicates": 1000,
+        "valid_replicates": 1000,
+        "seed": 42,
+        "auc_ci_95": [
+          0.6777114652034669,
+          0.7138787383431643
+        ],
+        "identities": 341
+      },
+      "transferred_rof_validation_thresholds": {
+        "0.01": {
+          "threshold": 0.7478549322000001,
+          "far": 0.3083815028901734,
+          "tar": 0.5828516377649325,
+          "false_accepts": 6402,
+          "true_accepts": 605,
+          "impostors": 20760,
+          "genuine": 1038
+        },
+        "0.001": {
+          "threshold": 0.7771540191000001,
+          "far": 0.2571772639691715,
+          "tar": 0.5028901734104047,
+          "false_accepts": 5339,
+          "true_accepts": 522,
+          "impostors": 20760,
+          "genuine": 1038
+        }
+      }
+    }
+  },
+  "gate_controls": null,
+  "gate_validation_mean": null,
+  "gate_permutation_policy": "seed 42, within the unique image endpoints of each protocol separately",
+  "constant_quality_fold_max_absolute_error": null,
+  "limitations": [
+    "unknown pretraining identity overlap",
+    "remaining semantic labels not independently certified",
+    "retrospective ROC metrics distinct from validation-calibrated operating points",
+    "very low FAR claims limited by finite and dependent impostor pairs"
+  ]
+}

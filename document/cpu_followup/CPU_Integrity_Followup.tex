@@ -1,0 +1,47 @@
+\documentclass[10pt,journal,onecolumn,compsoc]{IEEEtran}
+\usepackage{booktabs,amsmath,url}
+\begin{document}
+\title{Completed CPU Experiment: Integrity and Results Record}
+\author{Pararajasingham Sangiya}
+\maketitle
+All fifteen new models completed five full CPU epochs and evaluation on eight protocols. This report supersedes the interim follow-up; historical score reevaluations remain separate. The frozen manifest has 6,171 rows (4,405/844/922 training/validation/test), with known exact conflicts and the confirmed cross-split near-duplicate photograph excluded before these runs. Each full run has 1,380 optimizer steps. Semantic labels, unknown aliases, exhaustive perceptual duplicates, and pretraining overlap remain limitations.
+
+\section{Completed three-seed results}
+\begin{tabular}{llrr}
+\toprule
+Protocol & Variant & Mean AUC & Seed SD\\
+\midrule
+test\_masked & frozen\_whole & 0.830315 & 0.024009\\
+test\_masked & whole\_lora & 0.885186 & 0.005234\\
+test\_masked & peri\_lora & 0.922061 & 0.004552\\
+test\_masked & fixed\_fusion & 0.913441 & 0.006606\\
+test\_masked & gated\_fusion & 0.898936 & 0.001884\\
+test\_sunglasses & frozen\_whole & 0.877989 & 0.003140\\
+test\_sunglasses & whole\_lora & 0.891257 & 0.001719\\
+test\_sunglasses & peri\_lora & 0.790531 & 0.013856\\
+test\_sunglasses & fixed\_fusion & 0.894972 & 0.002127\\
+test\_sunglasses & gated\_fusion & 0.892374 & 0.005800\\
+test\_neutral & frozen\_whole & 0.932790 & 0.001199\\
+test\_neutral & whole\_lora & 0.941304 & 0.001512\\
+test\_neutral & peri\_lora & 0.887455 & 0.005384\\
+test\_neutral & fixed\_fusion & 0.942830 & 0.001371\\
+test\_neutral & gated\_fusion & 0.945826 & 0.002609\\
+mfr2 & frozen\_whole & 0.841164 & 0.005662\\
+mfr2 & whole\_lora & 0.935973 & 0.014746\\
+mfr2 & peri\_lora & 0.906825 & 0.010288\\
+mfr2 & fixed\_fusion & 0.939767 & 0.004923\\
+mfr2 & gated\_fusion & 0.954794 & 0.002203\\
+rmfrd & frozen\_whole & 0.695724 & 0.004475\\
+rmfrd & whole\_lora & 0.704538 & 0.010296\\
+rmfrd & peri\_lora & 0.713228 & 0.004494\\
+rmfrd & fixed\_fusion & 0.724015 & 0.009870\\
+rmfrd & gated\_fusion & 0.717452 & 0.012143\\
+\bottomrule
+\end{tabular}
+
+\section{Interpretation and calibration}
+Periocular LoRA leads masked AUC; fixed fusion leads sunglasses and exploratory RMFRD; learned gating leads neutral and retained MFR2. Same-branch equal and validation-mean weighting can match or exceed learned gating on ROF. The auxiliary vector is constant, so quality-aware reliability is not established. ROC-constrained TAR is retrospective. Separate thresholds are calibrated on validation identities, with actual test FAR/TAR and acceptance counts saved in every evaluation report. External thresholds transfer from ROF masked validation; external labels do not calibrate them. Masked test FAR resolution is $1/376$, precluding a population security claim at $10^{-3}$.
+
+\section{Reproduction and limitations}
+The release ships 120 raw-score CSVs, fifteen evaluation reports, completion records, ten paired AUC contrasts, frozen manifests, source signatures, gate controls, and image ledgers. Exact executed sources are preserved under reproduction/. Checkpoint and pretrained weight binaries, image data, and embedding caches are excluded. Score-level verification recomputes metrics, pair alignment, thresholds, counts, seed summaries, and table values without those binaries. Historical training and post-hoc score filters are not new clean-trained results. The diagnostic SFace baseline has higher AUC with unmatched pretraining/alignment. Author scientific review and any required licensed similarity screening remain separate from arithmetic verification. No journal-readiness or detector-clearance claim is made.
+\end{document}

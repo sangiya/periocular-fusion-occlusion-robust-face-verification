@@ -1,0 +1,35 @@
+{
+  "variant": "frozen_whole",
+  "seed": 7,
+  "next_epoch": 6,
+  "next_batch": 0,
+  "batches_per_epoch": 276,
+  "epochs": 5,
+  "complete": true,
+  "optimizer_steps": 1380,
+  "elapsed_seconds": 6661.938000000002,
+  "mean_loss_this_epoch": null,
+  "signature": {
+    "manifest_sha256": "e1be6e7ce28e795a8b4a0d66cce8c704964b589607b0622ae9eea600682d8560",
+    "trainer_sha256": "b323e271dd93d207dd2f968b1f905309e19e85dee8ad0f02a6f6fe936783be75",
+    "model_code_sha256": "6cac4721350d7f27961d4cff1c77d94e4629b7c83f44f7873bb8bdb22308e7d4",
+    "seed": 7,
+    "variant": "frozen_whole",
+    "epochs": 5,
+    "batch_size": 16,
+    "max_batches": 0,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "torch_version": "2.14.0+cpu",
+    "threads": 8,
+    "device": "cpu",
+    "quality_vector": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "sampler": "uniform replacement, n_train draws per epoch",
+    "peri_optimization": "unused whole-face forward skipped; no target/test data used"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "official_repository": "https://github.com/ekremerakin/RealWorldOccludedFaces",
+  "official_tree_sha": "c927509a039ad9e74d15705f1af99a6a7ae7d3b7",
+  "local_annotations_matching_upstream": 437,
+  "local_annotation_mismatches": [],
+  "missing_official_annotations": [],
+  "image_acquisition_log_available": false,
+  "interpretation": "Annotation snapshot verified separately from reconstructed JPEG origin. URL availability, converter behavior, and labels remain distinct issues."
+}

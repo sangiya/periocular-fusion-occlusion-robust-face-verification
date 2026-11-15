@@ -1,0 +1,82 @@
+{
+  "status": "Clean training inputs require NEW training; archived checkpoints are NOT retrained.",
+  "rof_training": {
+    "input_rows": 7295,
+    "kept_rows": 6173,
+    "excluded_rows": 1122,
+    "conflicting_hash_groups": 1,
+    "exclusions_by_reason": {
+      "repeated_image_content": 1118,
+      "cross_identity_or_split_content_conflict": 4
+    },
+    "rows_by_split": {
+      "train": 4406,
+      "test": 923,
+      "val": 844
+    },
+    "persons_by_split": {
+      "train": 128,
+      "val": 26,
+      "test": 28
+    }
+  },
+  "protocols": {
+    "masked": {
+      "input_pairs": 522,
+      "retained_pairs": 423,
+      "removed_pairs": 99,
+      "genuine": 47,
+      "kind": "post-hoc unique-probe sensitivity; not a clean-trained model"
+    },
+    "sunglasses": {
+      "input_pairs": 7848,
+      "retained_pairs": 6672,
+      "removed_pairs": 1176,
+      "genuine": 278,
+      "kind": "post-hoc unique-probe sensitivity; not a clean-trained model"
+    },
+    "neutral": {
+      "input_pairs": 18956,
+      "retained_pairs": 15988,
+      "removed_pairs": 2968,
+      "genuine": 571,
+      "kind": "post-hoc unique-probe sensitivity; not a clean-trained model"
+    },
+    "mfr2": {
+      "input_pairs": 820,
+      "retained_pairs": 802,
+      "removed_pairs": 18,
+      "genuine": 406,
+      "kind": "known-name-overlap-excluded sensitivity; no claim that all aliases are resolved"
+    },
+    "rmfrd": {
+      "input_pairs": 22554,
+      "retained_pairs": 21798,
+      "removed_pairs": 756,
+      "genuine": 1038,
+      "duplicate_groups": 36,
+      "kind": "known exact-conflict exclusion sensitivity; other label/perceptual issues remain"
+    }
+  },
+  "inputs": {
+    "rof_manifest.csv": "bc9173dfe5fd400c3b2243c27f6ac74d4c12c835b3fc66b48477de4775093a56",
+    "crop_manifest_training_person_disjoint.csv": "1b6fca40a672307c6d3cc5bc71dded09045b912982bffb32d71e2589139e2bc5",
+    "mfr2_official_complete_pairs.csv": "d9aea8c2abea683c2aa004d10aa27e0706ed3dd274a87b8852a581e41229ce20",
+    "rmfrd_pairs.csv": "067553d7484e20fac057e9ecadc0137f97bd612913111ab70f679a011333aa6a"
+  },
+  "output_hashes": {
+    "mfr2_excluded_overlap_pairs.csv": "27dc4567a427cc4651c3d8137b61a358eaab9da3515abc3c4d8e15aa07be0366",
+    "mfr2_official_complete_pairs.csv": "21a57f13ac36fce61681295f183e1ba53147341ad8b9bfbc805af12d69de5f17",
+    "rmfrd_content_hashes.csv": "a5517213d67c6fbfb3950c6e2793073ce66598de3965d1ed672b88c9c9547295",
+    "rmfrd_excluded_pairs.csv": "e4615aa99f1df6ea6a65200a5778a6940a66b08796dd08f1c591468842c58ed2",
+    "rmfrd_pairs.csv": "2e9ebd27bde42e58b4bef456959376bd10268811f3f4d531a854d47b8e2ac3e9",
+    "rof_masked_excluded_pairs.csv": "959a5d46fe433c5c3dcdb04cd7d312d1fc3feb1272d3f27584a66cf4526c1c9f",
+    "rof_masked_pairs.csv": "2b68489f8d5f456f39f4d512ec2a6471f48859c1f22e8eca88241b3137e69023",
+    "rof_neutral_excluded_pairs.csv": "5ed3f32ef382795f95c29ec90dd79b3e11d02e2d6391569702bc6d34b82ef2e5",
+    "rof_neutral_pairs.csv": "85f7cb70786e72ecedf69c7c7fc2d3f17da25398ae6027235ebaabd0f3b67f34",
+    "rof_sunglasses_excluded_pairs.csv": "e40c61804e6d99c4371d2652a908c00696543ed7feba83d0c9bd46fcca1f3485",
+    "rof_sunglasses_pairs.csv": "3f792404a4ac14f5b2c3210bcc373d450965bcad9d10b72a056ddc5803ef2d53",
+    "rof_training_clean.csv": "fadd1dc4c823073bfc763dd04626eaa88486078766ba7763a25698704428e4dd",
+    "rof_training_exclusions.csv": "bdc8d51ee6ee9e410129110a46a5ce0bb6b0835e9f8dadb9b6f29bafcb29adbd"
+  }
+}

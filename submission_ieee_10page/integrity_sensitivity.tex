@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Post-hoc sensitivity mean AUC over three seeds. Unique-probe ROF, known-name-overlap-excluded MFR2, and exact-conflict-excluded RMFRD. Archived models are not retrained; MFR2 gating uses corrected quality inputs. SDs and exclusion ledgers are in the artifact.}
+\label{tab:sensitivity}
+\resizebox{\columnwidth}{!}{\begin{tabular}{lrrrrr}
+\toprule
+Variant & Masked & Sunglasses & Neutral & MFR2 & RMFRD\\
+\midrule
+Frozen + projection & 0.8311 & 0.8755 & 0.9330 & 0.8436 & 0.6944\\
+Whole LoRA & 0.8765 & 0.8950 & 0.9417 & 0.9394 & 0.7076\\
+Periocular LoRA & 0.9062 & 0.7896 & 0.8847 & 0.9010 & 0.7154\\
+Fixed fusion & 0.9111 & 0.8930 & 0.9427 & 0.9383 & 0.7190\\
+Learned gating & 0.9054 & 0.8990 & 0.9452 & 0.9552 & 0.7063\\
+\bottomrule
+\end{tabular}}
+\end{table}

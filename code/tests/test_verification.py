@@ -1,0 +1,41 @@
+﻿"""Standard-library regression checks for metric validity and unsafe input rejection."""
+from pathlib import Path
+import ast,csv,importlib.util,os,sys,unittest
+ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT/"code"))
+from verify_results import score_metrics,align
+
+class ArtifactGuards(unittest.TestCase):
+    def test_perfect_and_reversed_scores(self):
+        good=[{"score":s,"label":y} for s,y in [(.9,1),(.8,1),(.2,0),(.1,0)]]
+        self.assertEqual(score_metrics(good)["auc"],1)
+        self.assertEqual(score_metrics(good)["eer"],0)
+        reverse=[{"score":-r["score"],"label":r["label"]} for r in good]
+        self.assertEqual(score_metrics(reverse)["auc"],0)
+    def test_ties(self):
+        tied=[{"score":s,"label":y} for s,y in [(.9,1),(.9,0),(.1,1),(.1,0)]]
+        self.assertAlmostEqual(score_metrics(tied)["auc"],.5)
+        self.assertAlmostEqual(score_metrics(tied)["eer"],.5)
+    def test_invalid_scores_and_labels_are_errors(self):
+        for rs in [[],[{"score":float("nan"),"label":0},{"score":.2,"label":1}],
+                   [{"score":.5,"label":2},{"score":.2,"label":1}],
+                   [{"score":.5,"label":1}]]:
+            with self.subTest(rows=rs),self.assertRaises(ValueError):score_metrics(rs)
+    def test_pair_id_mismatch_is_error(self):
+        with self.assertRaises(ValueError):
+            align([{"label":"1","pair_id":"wrong"}],[{"label":"1","pair_id":"actual"}])
+    def test_archived_training_input_is_rejected_before_loading_images(self):
+        tree=ast.parse((ROOT/"code/train.py").read_text(encoding="utf-8"))
+        fn=next(x for x in tree.body if isinstance(x,ast.FunctionDef) and x.name=="read_rows")
+        namespace={"Path":Path,"csv":csv}
+        exec(compile(ast.Module(body=[fn],type_ignores=[]),"<trainer input guard>","exec"),namespace)
+        with self.assertRaisesRegex(ValueError,"content-unique"):
+            namespace["read_rows"](ROOT/"manifests/crop_manifest_training_person_disjoint.csv")
+    def test_clean_manifest_has_unique_content_and_no_label_split_overlap(self):
+        with (ROOT/"manifests/cleaned/rof_training_clean.csv").open(encoding="utf-8") as f:rs=list(csv.DictReader(f))
+        self.assertEqual(len(rs),len({r["sha256"] for r in rs}))
+        ids={}
+        for r in rs:ids.setdefault(r["identity"],set()).add(r["split"])
+        self.assertTrue(all(len(x)==1 for x in ids.values()))
+if __name__=="__main__":unittest.main()
+

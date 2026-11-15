@@ -1,0 +1,32 @@
+{
+  "scope": "ROF bytes, decoded pixels, and perceptual candidates; no automatic identity certification",
+  "raw_rows": 7751,
+  "clean_rows": 6173,
+  "decode_failures": 56,
+  "recorded_sha256_mismatches": 0,
+  "clean_decoded_pixel_duplicate_groups": 0,
+  "clean_pixel_cross_identity_groups": 0,
+  "clean_pixel_cross_split_groups": 0,
+  "cross_identity_perceptual_candidates": 33,
+  "cross_split_perceptual_candidates": 14,
+  "annotation_files": 437,
+  "annotation_read_failures": 0,
+  "annotation_counts": {
+    "masked": {
+      "identities": 73,
+      "records": 464,
+      "faces": 515
+    },
+    "sunglasses": {
+      "identities": 182,
+      "records": 2720,
+      "faces": 2963
+    },
+    "neutral": {
+      "identities": 182,
+      "records": 6970,
+      "faces": 6659
+    }
+  },
+  "pixel_duplicate_groups": []
+}

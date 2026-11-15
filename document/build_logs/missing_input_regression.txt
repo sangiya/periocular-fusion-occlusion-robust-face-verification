@@ -1,0 +1,13 @@
+python.exe : Missing required inputs (no evaluation performed):
+At line:3 char:1
++ & manus/data_plan/.venv/Scripts/python.exe manus/data_plan/publicatio ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Missing require...ion performed)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+D:\Sangiya\NIV-2026\Thesis\Claude\2026- Latest 
+Research\manus\data_plan\publication_repair_2026-11-02\intentionally_missing_checkpoints\seed7_gated_fusion.pt
+D:\Sangiya\NIV-2026\Thesis\Claude\2026- Latest 
+Research\manus\data_plan\publication_repair_2026-11-02\intentionally_missing_checkpoints\seed42_gated_fusion.pt
+D:\Sangiya\NIV-2026\Thesis\Claude\2026- Latest 
+Research\manus\data_plan\publication_repair_2026-11-02\intentionally_missing_checkpoints\seed123_gated_fusion.pt

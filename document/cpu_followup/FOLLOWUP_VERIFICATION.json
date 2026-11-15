@@ -1,0 +1,7 @@
+{
+  "score_files_checked": 53,
+  "expected_score_files": 53,
+  "failures": [],
+  "scope": "Completed historical reevaluations and SFace baseline, not the still-running clean training sweep.",
+  "verifier_sha256": "ebf9a7dedc45c5435c769b79eced977bc0535df4651abf34df62a687224df8db"
+}

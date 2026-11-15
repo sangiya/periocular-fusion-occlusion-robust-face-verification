@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-15",
+  "compiler": "Tectonic 0.17.0",
+  "flags": [
+    "--only-cached",
+    "--untrusted",
+    "--keep-logs"
+  ],
+  "inputs": {
+    "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex": "215876d7a18ffd6ef8d21dcb1e6215e31fbecf084673abb431082993bfebc139",
+    "document/arXiv_Preprint_10Page_Final.tex": "d7069321829e77bb5051b1942434133d76c080a5185213fd23cf3dcb5ec3a527",
+    "document/cpu_followup/CPU_Integrity_Followup.tex": "d72c283d244a7054b5a85b87967d3ede1ab12a91e9c44d7147c660b9bbd0e08f",
+    "submission_ieee_10page/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
+    "submission_ieee_10page/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
+    "submission_ieee_10page/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
+    "submission_ieee_10page/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
+    "submission_ieee_10page/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d"
+  },
+  "pdfs": [
+    {
+      "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf",
+      "sha256": "e5515e6aa92206231aded9377b348465d4817a75890f7ebf88ed1b7e483434fa",
+      "pages": 10,
+      "source": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
+      "source_sha256": "215876d7a18ffd6ef8d21dcb1e6215e31fbecf084673abb431082993bfebc139",
+      "log": "document/build_logs/IEEE_TBIOM_Submission_10Page_Final.log",
+      "overfull_boxes": 0,
+      "underfull_messages": 4,
+      "undefined_references_or_citations": false
+    },
+    {
+      "file": "document/arXiv_Preprint_10Page_Final.pdf",
+      "sha256": "4afd560eb1e1555c13c33f7090cdb45bbc698260d6abdece704e4e902f24b248",
+      "pages": 10,
+      "source": "document/arXiv_Preprint_10Page_Final.tex",
+      "source_sha256": "d7069321829e77bb5051b1942434133d76c080a5185213fd23cf3dcb5ec3a527",
+      "log": "document/build_logs/arXiv_Preprint_10Page_Final.log",
+      "overfull_boxes": 0,
+      "underfull_messages": 4,
+      "undefined_references_or_citations": false
+    }
+  ],
+  "supplement": {
+    "file": "document/cpu_followup/CPU_Integrity_Followup.pdf",
+    "sha256": "3cbc3a5aacdc401134ac8fa65969512dd1509766bbe2408140826306e21dd4bd",
+    "pages": 2,
+    "source": "document/cpu_followup/CPU_Integrity_Followup.tex",
+    "source_sha256": "d72c283d244a7054b5a85b87967d3ede1ab12a91e9c44d7147c660b9bbd0e08f",
+    "log": "document/build_logs/CPU_Integrity_Followup.log",
+    "overfull_boxes": 0,
+    "underfull_messages": 0,
+    "undefined_references_or_citations": false
+  },
+  "shared_substantive_tex": true,
+  "visual_inspection": "Both 10-page manuscripts rendered and checked in page contact sheets; tables, plots, and margins inspected. Completed supplement separately rendered.",
+  "note": "No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain."
+}

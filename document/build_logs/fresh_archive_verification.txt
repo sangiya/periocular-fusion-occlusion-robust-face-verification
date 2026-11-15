@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "archived_metrics": 90,
+    "raw_files": 75,
+    "table_numbers": 160,
+    "correction_runs": 3,
+    "sensitivity_runs": 75,
+    "sensitivity_table_numbers": 25
+  },
+  "failures": [],
+  "scope": "Artifact arithmetic, raw-score alignment, table values, recorded provenance mappings, corrected inference and clean input checks; not publication approval."
+}
+RESULT: ALL CHECKS PASSED

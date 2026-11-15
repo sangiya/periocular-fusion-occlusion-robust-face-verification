@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "archived_metrics": 90,
+    "raw_files": 75,
+    "table_numbers": 200,
+    "correction_runs": 3,
+    "sensitivity_runs": 75,
+    "completed_cpu": {
+      "models": 15,
+      "raw_score_files": 120,
+      "calibrated_operating_points": 150,
+      "paired_point_comparisons": 10,
+      "sface_score_files": 8,
+      "auxiliary_manuscript_tables": 5
+    },
+    "sensitivity_table_numbers": 25
+  },
+  "failures": [],
+  "scope": "Artifact arithmetic, raw-score alignment, table values, recorded provenance mappings, corrected inference and clean input checks; not publication approval."
+}
