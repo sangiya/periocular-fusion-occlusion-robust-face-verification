@@ -1,0 +1,23 @@
+Loading offline CPU evaluation runtime.
+Loading CPU research runtime (offline cached DINOv2).
+python.exe : test_bootstrap_tracks_both_endpoints 
+(test_cpu_evaluation.NumericalGuards.test_bootstrap_tracks_both_endpoints) ... ok
+At line:20 char:1
++ & manus/data_plan/.venv/Scripts/python.exe -m unittest discover -s ma ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_bootstrap_...dpoints) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_constant_quality_gate_fold (test_cpu_evaluation.NumericalGuards.test_constant_quality_gate_fold) ... ok
+test_optimizer_and_all_rng_states_resume_identically 
+(test_cpu_evaluation.NumericalGuards.test_optimizer_and_all_rng_states_resume_identically) ... ok
+test_perfect_roc_has_finite_approximate_eer_threshold 
+(test_cpu_evaluation.NumericalGuards.test_perfect_roc_has_finite_approximate_eer_threshold) ... ok
+test_reject_all_roc_threshold_is_valid_strict_json 
+(test_cpu_evaluation.NumericalGuards.test_reject_all_roc_threshold_is_valid_strict_json) ... ok
+test_weighted_auc_handles_ties (test_cpu_evaluation.NumericalGuards.test_weighted_auc_handles_ties) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.262s
+
+OK
