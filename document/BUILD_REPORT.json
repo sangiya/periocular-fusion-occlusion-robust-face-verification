@@ -53,7 +53,7 @@
     "undefined_references_or_citations": false
   },
   "shared_substantive_tex": true,
-  "visual_inspection": "Both current ten-page PDFs rendered and inspected in contact sheets; additional SFace-control page inspected in detail. Current 55-page thesis rendered and title checked. Scientific tables/plots unchanged and compile checks show no overfull boxes or undefined references.",
+  "visual_inspection": "Both 10-page manuscripts rendered and checked in page contact sheets; tables, plots, and margins inspected. Completed supplement separately rendered.",
   "note": "No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain.",
   "thesis": {
     "file": "document/thesis/Research_Thesis_Draft.pdf",
@@ -64,5 +64,5 @@
     "overfull_boxes": 0,
     "status": "Generic research thesis draft; institution-specific template and author declarations remain pending."
   },
-  "recheck": "Scientific strengthening revision: original 15-model experiment unchanged, additional shared-crop inference and identity-deletion controls; 38 references."
+  "last_recheck": "Full final validation rerun; fresh compilations text-identical to distributed PDFs."
 }

@@ -171,11 +171,11 @@
       "bytes": 9418
     },
     "document/build_logs/completed_cpu_tests.txt": {
-      "sha256": "f4cd121aa6da4abc82447e229d79a8a06c6985d6826074f83b082b46087a5001",
+      "sha256": "31b19b813f8e7eabddaa7b09dd5d3fd5a2fa622bf94eccb0231e618d40af7d23",
       "bytes": 2167
     },
     "document/build_logs/completed_release_tests.txt": {
-      "sha256": "f828b9710dfab3d8e86e60f0c85e41c304546395d9a27d5061bdbb4f2eaeae73",
+      "sha256": "94f40a2a8296ebcb1f6d6304356dedd02a21cd1507380a73ba7f0697f57e3ca8",
       "bytes": 851
     },
     "document/build_logs/CPU_Integrity_Followup.log": {
@@ -211,8 +211,8 @@
       "bytes": 1252
     },
     "document/BUILD_REPORT.json": {
-      "sha256": "7aea3647fc966854f7844bcaa31fc898404b59852e7990741cfcbcb5a7116258",
-      "bytes": 3999
+      "sha256": "ff85709ea84c898635e4fb9a849de8335af8ddb66bd48d1d6922e5dbb543b11f",
+      "bytes": 3811
     },
     "document/COMPREHENSIVE_RECHECK_2026-11-16.md": {
       "sha256": "30acadd03784632079ae97dafce94375a5590ff4eb08fe69d95801606f77e0be",
@@ -267,7 +267,7 @@
       "bytes": 17555
     },
     "document/CURRENT_READINESS_RECHECK.md": {
-      "sha256": "e37e6d4c5a4bbfbc47be62d62243555b76a04411d76ef19201b3640b61fa430c",
+      "sha256": "d3a37202df234f0a47468438c41ff960d1f58b5417856b3051e2b342b9e41e9c",
       "bytes": 1885
     },
     "document/FIGURE_DATA_AUDIT.json": {
@@ -317,6 +317,10 @@
     "document/FINAL_PUBLICATION_AUDIT.md": {
       "sha256": "d40593219c620de8dbeffc233c42cf58d4336bb98ed3d4971b5cbd2961136d9f",
       "bytes": 3838
+    },
+    "document/FINAL_RECHECK_2026-11-16.json": {
+      "sha256": "ed2b1ab5ad8ae94459f06b23b61797d85ec9cdf6479cdc7ca0705954519905b8",
+      "bytes": 4879
     },
     "document/FINAL_SUBMISSION_CHECKLIST.md": {
       "sha256": "461e9768106359670bffbd36f2ec68cd76b5c0f9d2ef97b2495555ad02f8615e",
@@ -499,8 +503,8 @@
       "bytes": 3177
     },
     "document/TEST_REPORT.json": {
-      "sha256": "4cb506898ff4457abf32ab8cbc01dae87e9dd15d05282524cf420a914650c8a7",
-      "bytes": 801
+      "sha256": "c8a61e4075d474618e1f3d4e9ed842bb6924c46d770d2a9ceb98f9129d589698",
+      "bytes": 735
     },
     "document/TEXT_INTEGRITY_RECHECK.json": {
       "sha256": "70ac21be17fc98e39d0be150d0625c92bcfe17016b74600546ac9c1bbec81221",
@@ -2779,16 +2783,16 @@
       "bytes": 2371
     },
     "tools/package_release.py": {
-      "sha256": "6af78011d97e046ba67118b5f161f840f5168c3134f0eceacef30ea4425208e0",
-      "bytes": 3665
+      "sha256": "38fcb88a072b4a16d6f2b7641b22c897e008dc8b8bbccbdbc07afce3ea7e134c",
+      "bytes": 3693
     },
     "tools/polish_academic_manuscript.py": {
       "sha256": "b05d96b3c73a4014718c3b32bcdfc6cd1760cc038c8b37d877a09601e897158b",
       "bytes": 15086
     },
     "tools/prepare_final_publication.py": {
-      "sha256": "bc0f6c37d8ee9044dfb4f3e552144310d296f3137eeeff4b89aee0fb80707fdc",
-      "bytes": 9874
+      "sha256": "325755036aa62a767467a7a2f0b1b39055794bb1c10f026bf1443ab7f4a69fda",
+      "bytes": 10007
     },
     "tools/prepare_submission_review.py": {
       "sha256": "9fea239177e9805084a376bedf6e87be10adf55f9ea2d6f6d88b2fe576c5b21e",

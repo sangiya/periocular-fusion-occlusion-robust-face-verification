@@ -55,6 +55,7 @@ def main():
         'audit/NOVELTY_COMPARISON.md':'document/submission_preparation/NOVELTY_COMPARISON.md',
         'audit/MASKED_IDENTITY_SENSITIVITY.json':'results/strengthening/MASKED_IDENTITY_SENSITIVITY.json',
         'audit/SHARED_CROP_SFACE_REPORT.json':'results/shared_crop_sface/REPORT.json',
+        'audit/FINAL_RECHECK.json':'document/FINAL_RECHECK_2026-11-16.json',
     }
     items={name:(ROOT/rel).read_bytes() for name,rel in mapping.items()}
     source=ROOT/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex'
@@ -113,7 +114,8 @@ The complete code/raw-score release remains in the sibling `publication_release`
     items['DELIVERY_MANIFEST.json']=(json.dumps(manifest,indent=2)+'\n').encode('utf-8')
     DEST.mkdir(parents=True,exist_ok=True)
     for name,data in items.items():
-        path=DEST/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
+        path=DEST/name;path.parent.mkdir(parents=True,exist_ok=True)
+        if not path.exists() or path.read_bytes()!=data:path.write_bytes(data)
     data=archive(items);output=DEST.with_suffix('.zip');output.write_bytes(data)
     output.with_suffix('.zip.sha256').write_text(digest(data)+'  '+output.name+'\n',encoding='ascii')
     with zipfile.ZipFile(io.BytesIO(data)) as z:

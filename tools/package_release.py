@@ -43,7 +43,7 @@ def main():
     payloads={}
     for p in sorted(root.rglob("*")):
         rel=p.relative_to(root)
-        if p.is_file() and not any(x in rel.parts for x in [".git","__pycache__","data","work"]) and rel.as_posix()!="RELEASE_MANIFEST.json":
+        if p.is_file() and not any(x in rel.parts for x in [".git","__pycache__","data","work"]) and rel.as_posix() not in {"RELEASE_MANIFEST.json","verify_output.txt"}:
             data=p.read_bytes()
             payloads[rel.as_posix()]=data
             files[rel.as_posix()]={"sha256":hashlib.sha256(data).hexdigest(),"bytes":len(data)}

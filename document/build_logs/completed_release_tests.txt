@@ -6,6 +6,6 @@ test_perfect_and_reversed_scores (test_verification.ArtifactGuards.test_perfect_
 test_ties (test_verification.ArtifactGuards.test_ties) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.095s
+Ran 6 tests in 0.061s
 
 OK

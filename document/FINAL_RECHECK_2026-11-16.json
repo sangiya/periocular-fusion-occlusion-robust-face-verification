@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-16",
+  "status": "all_executed_checks_passed",
+  "training": "15 previously completed models: five variants times three seeds. No redundant retraining performed.",
+  "checks": {
+    "archived_metrics": 90,
+    "raw_files": 75,
+    "table_numbers": 200,
+    "correction_runs": 3,
+    "sensitivity_runs": 75,
+    "completed_cpu": {
+      "models": 15,
+      "raw_score_files": 120,
+      "calibrated_operating_points": 150,
+      "paired_point_comparisons": 10,
+      "sface_score_files": 8,
+      "auxiliary_manuscript_tables": 5
+    },
+    "strengthening": {
+      "shared_crop_score_files": 8,
+      "shared_crop_images": 3402,
+      "calibrated_operating_points": 20,
+      "masked_identity_subsets": 9,
+      "per_seed_subset_aucs": 135
+    },
+    "sensitivity_table_numbers": 25,
+    "thesis_pages": 55
+  },
+  "regression_tests": 21,
+  "syntax_files": 61,
+  "references_reviewed": 38,
+  "current_image_files_rehashed": 11209,
+  "image_check_scope": "Training whole-face manifest plus frozen-evaluation whole-face/periocular ledgers and shared-crop ledger. Does not certify semantic labels, consent or all training periocular crop bytes.",
+  "fresh_compilations": [
+    {
+      "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf",
+      "pages": 10,
+      "source_sha256": "a74701fb3bfcac668edba0aa0684a5c4d1eb1de596623c1c2af7c3400fd872f2",
+      "distributed_pdf_sha256": "5990503432bfabdfe0aad295f113f512b25bdd7d386706bf19c4cde13ef923fe",
+      "fresh_build_pdf_sha256": "bed7b096f264e08f867e3e3dd321b1f649e231556a3818edc2314cf7a278db95",
+      "extracted_page_text_identical": true,
+      "overfull_boxes": 0,
+      "missing_characters": 0,
+      "undefined_references": false
+    },
+    {
+      "file": "document/arXiv_Preprint_10Page_Final.pdf",
+      "pages": 10,
+      "source_sha256": "8816ea043ab800d5b9a249fe628ebeff03afdb4ee1286cab5cdc78179ac7fb39",
+      "distributed_pdf_sha256": "566436ff4b2f1d7782f29c945fe81597f23cc2e607633d9263892cb7b824511e",
+      "fresh_build_pdf_sha256": "e5f386099dbe22e7ab91223f36550109d2329bd15cc1e6c358b5682dac855149",
+      "extracted_page_text_identical": true,
+      "overfull_boxes": 0,
+      "missing_characters": 0,
+      "undefined_references": false
+    },
+    {
+      "file": "document/cpu_followup/CPU_Integrity_Followup.pdf",
+      "pages": 2,
+      "source_sha256": "d72c283d244a7054b5a85b87967d3ede1ab12a91e9c44d7147c660b9bbd0e08f",
+      "distributed_pdf_sha256": "3cbc3a5aacdc401134ac8fa65969512dd1509766bbe2408140826306e21dd4bd",
+      "fresh_build_pdf_sha256": "51554c36ca45b7d14b1ee3bd2217b3bd5fa7c159192e1b73e4180efe28f3068e",
+      "extracted_page_text_identical": true,
+      "overfull_boxes": 0,
+      "missing_characters": 0,
+      "undefined_references": false
+    },
+    {
+      "file": "document/thesis/Research_Thesis_Draft.pdf",
+      "pages": 55,
+      "source_sha256": "70b5587b4ed4a4314a8b5e1623b441917fc6d0787c57d129ec5e87a3c0fb9f86",
+      "distributed_pdf_sha256": "420613155fcd20949a73aa3784644f8b4de95c56efb66da203f5b0e2fe37c003",
+      "fresh_build_pdf_sha256": "76bfebcc354d768a6657206c217bb250939b78b490118001b46a1a4cb2430d49",
+      "extracted_page_text_identical": true,
+      "overfull_boxes": 0,
+      "missing_characters": 0,
+      "undefined_references": false
+    }
+  ],
+  "report_sha256": {
+    "VERIFICATION_REPORT.json": "48bf2efcb00a0248a92f3d0d3e30528d31c04941a5f10736b50e246f363ee32f",
+    "TEST_REPORT.json": "c8a61e4075d474618e1f3d4e9ed842bb6924c46d770d2a9ceb98f9129d589698",
+    "BUILD_REPORT.json": "ff85709ea84c898635e4fb9a849de8335af8ddb66bd48d1d6922e5dbb543b11f",
+    "FIGURE_DATA_AUDIT.json": "92e4971f7afa3db61fdee4534c52cc4ebfb1e3459547c3568579bcb341fe966e",
+    "PAIRED_INTERVAL_AUDIT.json": "f38c2c8daf350cd91e980b9fc67fc079d15b67de3f3e5eb368ce3e55e80d3c1b",
+    "TEXT_INTEGRITY_RECHECK.json": "70ac21be17fc98e39d0be150d0625c92bcfe17016b74600546ac9c1bbec81221",
+    "submission_preparation/REFERENCE_RELEVANCE_AUDIT.json": "0393dfec51f4034237275d084d212e8134a0d934028ccff020eb87e35617a4a4",
+    "thesis/THESIS_SOURCE_RECORD.json": "29ea8d6efe584bcff6f212e23a4bdcc6b6ea9338b82423be9a532dfa6deb522c"
+  },
+  "remaining": [
+    "Factual ethics/consent and dataset permissions",
+    "Author scientific approval and submission declarations",
+    "Any required licensed similarity screening",
+    "Broader independent identities and fully controlled comparisons remain scientific limitations"
+  ],
+  "scope": "Numerical consistency, independent AUC/figure/interval checks, frozen-source hash mappings, current recorded image bytes, citation linkage, regression tests, PDF compilations and source bindings. No licensed plagiarism report, AI-detector clearance, journal novelty/acceptance guarantee, or repeated neural inference claimed."
+}

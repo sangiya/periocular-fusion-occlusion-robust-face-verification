@@ -15,5 +15,5 @@
   "device": "cpu",
   "historical_results_separate": true,
   "scope": "Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json.",
-  "recheck": "Scientific strengthening revision: original 15-model experiment unchanged, additional shared-crop inference and identity-deletion controls; 38 references."
+  "last_recheck": "Full final validation rerun; fresh compilations text-identical to distributed PDFs."
 }
