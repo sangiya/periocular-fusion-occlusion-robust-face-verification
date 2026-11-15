@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-15",
+  "purpose": "Clear, precise academic prose grounded in verified measurements",
+  "revised": [
+    "Abstract",
+    "Introduction",
+    "Research Questions",
+    "Method terminology",
+    "Discussion",
+    "Conclusion"
+  ],
+  "measured_table_blocks_preserved": [
+    "rofmasked",
+    "rofsunglasses",
+    "rofneutral",
+    "mfr2",
+    "rmfrd",
+    "calibration",
+    "gatecontrols",
+    "gatedistribution",
+    "sface",
+    "paired"
+  ],
+  "reference_keys_preserved": 35,
+  "experimental_code_modified": false,
+  "ai_disclosure_retained": true,
+  "ethics_or_permission_claims_invented": false,
+  "journal_source_sha256": "417e8cca78b8630981c155aa7c345f4eaa6826a82c1b0a9399a3b5ee4bf62f44",
+  "historical_source_sha256": "f2e8b046e10351f42aa9aac21b8c6639cc3ccb0f195e92e3cc04631364a0219e"
+}

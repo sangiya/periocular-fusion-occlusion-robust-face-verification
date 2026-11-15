@@ -11,6 +11,9 @@
 - [x] All artifact checks and 21 regression tests pass.
 - [ ] Complete factual ethics-review/consent explanation; do not infer exemption from public availability.
 - [ ] Establish and approve the journal-level novelty argument; see submission_preparation/SCIENTIFIC_READINESS_REVIEW.md.
+- [x] Academic prose revision complete; measured tables preserved.
+- [x] Extended 54-page thesis draft compiled, checked, and linked to the shared results.
+- [ ] Apply the actual university thesis template and confirm institutional front matter, if a degree submission is intended.
 - [ ] Author approves the scientific contribution, label review, citations, and interpretation.
 - [ ] Obtain and review licensed similarity screening if required by the institution/journal.
 - [ ] Confirm current journal formatting, submission declarations, and dataset rights at submission.

@@ -35,6 +35,17 @@ def main():
         'inputs':inputs,'pdfs':pdfs[:2],'supplement':pdfs[2], 'shared_substantive_tex':True,
         'visual_inspection':'Both 10-page manuscripts rendered and checked in page contact sheets; tables, plots, and margins inspected. Completed supplement separately rendered.',
         'note':'No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain.'}
+    thesis=ROOT/'document/thesis/THESIS_SOURCE_RECORD.json'
+    if thesis.exists():
+        record=json.loads(thesis.read_text())
+        assert record['pdf_sha256']==sha(thesis.parent/'Research_Thesis_Draft.pdf')
+        assert record['journal_source_sha256']==sha(ROOT/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex')
+        assert len(PdfReader(thesis.parent/'Research_Thesis_Draft.pdf').pages)==record['pages']
+        build['thesis']={'file':'document/thesis/Research_Thesis_Draft.pdf','sha256':record['pdf_sha256'],
+            'pages':record['pages'],'source':'document/thesis/Research_Thesis_Draft.tex',
+            'source_sha256':record['thesis_source_sha256'],'overfull_boxes':record['overfull_boxes'],
+            'status':'Generic research thesis draft; institution-specific template and author declarations remain pending.'}
+        inputs['document/thesis/Research_Thesis_Draft.tex']=record['thesis_source_sha256']
     (ROOT/'document/BUILD_REPORT.json').write_text(json.dumps(build,indent=2)+'\n',encoding='utf-8')
     files=[p for folder in ['code','tools','reproduction'] for p in (ROOT/folder).rglob('*.py')]+[ROOT/'run_seed_sweep.py']
     for p in files:ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p))

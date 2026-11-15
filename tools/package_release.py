@@ -29,6 +29,16 @@ def main():
         arxiv[name]=(root/'submission_ieee_10page'/name).read_bytes()
     if len(set(figures))!=5:raise SystemExit('Expected five referenced vector figures')
     zip_bytes(root/"arxiv_source.zip",arxiv)
+    thesis=root/'document/thesis/Research_Thesis_Draft.tex'
+    if thesis.exists():
+        thesis_text=thesis.read_text(encoding='utf-8').replace('\\graphicspath{{../figures/}}','\\graphicspath{{./}}')
+        thesis_files={thesis.name:thesis_text.encode('utf-8')}
+        for figure in re.findall(r'\\includegraphics(?:\[[^]]*\])?\{([^}]+)\}',thesis_text):
+            name=Path(figure).name
+            candidate=thesis.parent/name
+            if not candidate.exists():candidate=root/'document/figures'/name
+            thesis_files[name]=candidate.read_bytes()
+        zip_bytes(thesis.parent/'thesis_source.zip',thesis_files)
     files={}
     payloads={}
     for p in sorted(root.rglob("*")):

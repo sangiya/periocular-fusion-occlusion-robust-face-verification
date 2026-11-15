@@ -7,22 +7,23 @@
     "--keep-logs"
   ],
   "inputs": {
-    "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex": "f2e8b046e10351f42aa9aac21b8c6639cc3ccb0f195e92e3cc04631364a0219e",
-    "document/arXiv_Preprint_10Page_Final.tex": "e6c3f2003c5dbda0ff57963453a720e29e0902dcd5c79099d31759ce0291c7a5",
+    "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex": "417e8cca78b8630981c155aa7c345f4eaa6826a82c1b0a9399a3b5ee4bf62f44",
+    "document/arXiv_Preprint_10Page_Final.tex": "e68c36c2138d647c60093f1812c9ba5f36b69810f7f5cc5f84a56d55fbd8f8a9",
     "document/cpu_followup/CPU_Integrity_Followup.tex": "d72c283d244a7054b5a85b87967d3ede1ab12a91e9c44d7147c660b9bbd0e08f",
     "submission_ieee_10page/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
     "submission_ieee_10page/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
     "submission_ieee_10page/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
     "submission_ieee_10page/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
-    "submission_ieee_10page/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d"
+    "submission_ieee_10page/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
+    "document/thesis/Research_Thesis_Draft.tex": "e03d8c7b5f5cb9dcb08da87950d910ea2750e0b3fad8f5c997c489cb413114bd"
   },
   "pdfs": [
     {
       "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf",
-      "sha256": "88c7432b7b1ccddd149035a88a8b56c3c0ae41650381526331b1ecdcd6bc504d",
+      "sha256": "b932e3d299975afc973ba8d2ae3a26db44a2ecb780dbadea5b29e410d93f1ad5",
       "pages": 10,
       "source": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
-      "source_sha256": "f2e8b046e10351f42aa9aac21b8c6639cc3ccb0f195e92e3cc04631364a0219e",
+      "source_sha256": "417e8cca78b8630981c155aa7c345f4eaa6826a82c1b0a9399a3b5ee4bf62f44",
       "log": "document/build_logs/IEEE_TBIOM_Submission_10Page_Final.log",
       "overfull_boxes": 0,
       "underfull_messages": 4,
@@ -30,10 +31,10 @@
     },
     {
       "file": "document/arXiv_Preprint_10Page_Final.pdf",
-      "sha256": "cc9882a02c71013a66661d1218084d3ff79648d81aba3673a9c97f1cbd1b71d4",
+      "sha256": "9a016eddae98b1e2eff8d8ecf0d999de49e2fa4ac2d8c9ee60079ea810e2af61",
       "pages": 10,
       "source": "document/arXiv_Preprint_10Page_Final.tex",
-      "source_sha256": "e6c3f2003c5dbda0ff57963453a720e29e0902dcd5c79099d31759ce0291c7a5",
+      "source_sha256": "e68c36c2138d647c60093f1812c9ba5f36b69810f7f5cc5f84a56d55fbd8f8a9",
       "log": "document/build_logs/arXiv_Preprint_10Page_Final.log",
       "overfull_boxes": 0,
       "underfull_messages": 4,
@@ -53,5 +54,14 @@
   },
   "shared_substantive_tex": true,
   "visual_inspection": "Both 10-page manuscripts rendered and checked in page contact sheets; tables, plots, and margins inspected. Completed supplement separately rendered.",
-  "note": "No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain."
+  "note": "No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain.",
+  "thesis": {
+    "file": "document/thesis/Research_Thesis_Draft.pdf",
+    "sha256": "cf3cc321227a4338dad354c9e387e3bae5a2ab42d9f13c353fd5043f5b55a8d8",
+    "pages": 54,
+    "source": "document/thesis/Research_Thesis_Draft.tex",
+    "source_sha256": "e03d8c7b5f5cb9dcb08da87950d910ea2750e0b3fad8f5c997c489cb413114bd",
+    "overfull_boxes": 0,
+    "status": "Generic research thesis draft; institution-specific template and author declarations remain pending."
+  }
 }

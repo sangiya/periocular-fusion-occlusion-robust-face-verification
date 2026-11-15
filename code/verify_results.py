@@ -204,6 +204,19 @@ def verify(root,results):
         check(record["file"]+" compiled binding",lambda record=record:(
             require(digest(root/record["file"])==record["sha256"],"PDF hash differs from successful build"),
             require(record["pages"]==10,"Expected ten-page manuscript")))
+    thesis_path=root/"document/thesis/THESIS_SOURCE_RECORD.json"
+    if thesis_path.exists():
+        def thesis_binding():
+            record=json.loads(thesis_path.read_text())
+            require(record['journal_source_sha256']==digest(root/record['journal_source']),'Thesis cites stale journal source')
+            require(record['thesis_source_sha256']==digest(root/'document/thesis/Research_Thesis_Draft.tex'),'Thesis source changed since checking')
+            require(record['pdf_sha256']==digest(root/'document/thesis/Research_Thesis_Draft.pdf'),'Thesis PDF changed since compilation')
+            require(record['method_diagram_sha256']==digest(root/'document/thesis/fig_gated_architecture.pdf'),'Thesis method diagram changed since checking')
+            require(record['summary_sha256']==digest(root/'results/cpu_clean/RESULTS_SUMMARY.json'),'Thesis results summary changed')
+            require(record['overfull_boxes']==0 and record['missing_characters']==0,'Thesis layout issues remain')
+            require(record['verified_measured_table_blocks']==10 and record['verified_register_rows']==25,'Incomplete thesis numerical checking')
+            counts['thesis_pages']=record['pages']
+        check('thesis source/result/PDF bindings',thesis_binding)
     return {"counts":counts,"failures":failures,"scope":"Artifact arithmetic, raw-score alignment, table values, recorded provenance mappings, corrected inference and clean input checks; not publication approval."}
 
 def main():

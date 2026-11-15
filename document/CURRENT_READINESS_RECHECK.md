@@ -11,3 +11,5 @@ Training and evaluation are complete. Current IEEE/arXiv text, figures, and metr
 Submission readiness still requires author scientific review and any required licensed similarity screening. No automated pass certifies novelty, semantic image labels, journal acceptance, or AI-detector clearance. Matched strong face-recognition baselines and broader independent identities remain substantive limitations, not pending CPU jobs.
 
 The targeted submission review and prepared author materials are in [submission_preparation](submission_preparation/SCIENTIFIC_READINESS_REVIEW.md). Journal-level novelty and the factual ethics/consent declaration remain unresolved; downloading data from online sources does not establish review or consent. The author reports no previous submission.
+
+The academic-writing revision adds an extended thesis draft under document/thesis/. Ten measured table blocks and all 35 bibliography keys are retained. The thesis shares the completed experiment and adds explanatory appendices; it does not introduce new measurements or institutional declarations.
