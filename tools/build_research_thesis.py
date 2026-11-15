@@ -27,7 +27,7 @@ def main():
     body=body.replace('The constant auxiliary vector also changes how the method should be described.',
         r'\enlargethispage{\baselineskip}'+'\nThe constant auxiliary vector also changes how the method should be described.',1)
     bibliography=r'\begin{thebibliography}{00}'+text.split(r'\begin{thebibliography}{00}',1)[1].split(r'\end{thebibliography}')[0]+r'\end{thebibliography}'
-    acknowledgment=text.split(r'\section{Acknowledgments}')[1].split(r'\bibliographystyle')[0].strip()
+    acknowledgment=text.split(r'\section{Acknowledgments}')[1].split(r'\bibliographystyle')[0].strip().replace('Sections~1--11','Chapters~1--11')
     intro=r'''\documentclass[12pt,a4paper,oneside]{report}
 \usepackage[OT1]{fontenc}
 \renewcommand{\rmdefault}{ptm}

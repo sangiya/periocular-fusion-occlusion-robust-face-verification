@@ -14,3 +14,6 @@ The subsequent [reference relevance review](submission_preparation/REFERENCE_REL
 
 
 The later [scientific strengthening revision](SCIENTIFIC_STRENGTHENING_REPORT.md) supersedes the earlier bibliography count and thesis pagination: 38 references, a 55-page thesis, shared-crop SFace and masked identity-deletion controls. The original ten measurement tables remain unchanged.
+
+
+Acknowledgment revision, 16 November 2026: condensed the factual disclosure and kept the paragraph together on page 10. Abstract and Sections 1-11 identify prose scope; experimental/verification scripts identify code scope. The thesis uses Chapters 1-11. No author-review completion, editing-only assistance, or human-only authorship is asserted. Policy checked at https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/ .

@@ -35,9 +35,9 @@
     {
       "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf",
       "pages": 10,
-      "source_sha256": "a74701fb3bfcac668edba0aa0684a5c4d1eb1de596623c1c2af7c3400fd872f2",
-      "distributed_pdf_sha256": "5990503432bfabdfe0aad295f113f512b25bdd7d386706bf19c4cde13ef923fe",
-      "fresh_build_pdf_sha256": "bed7b096f264e08f867e3e3dd321b1f649e231556a3818edc2314cf7a278db95",
+      "source_sha256": "199dc51e9500b9dc36e1ee283cfd115c340302661179542cee145640a75f1338",
+      "distributed_pdf_sha256": "a4da689f43bbfeeda6107477cba0d6034aff60d0c9ceddd64f995d8ca2beceb5",
+      "fresh_build_pdf_sha256": "a4da689f43bbfeeda6107477cba0d6034aff60d0c9ceddd64f995d8ca2beceb5",
       "extracted_page_text_identical": true,
       "overfull_boxes": 0,
       "missing_characters": 0,
@@ -46,9 +46,9 @@
     {
       "file": "document/arXiv_Preprint_10Page_Final.pdf",
       "pages": 10,
-      "source_sha256": "8816ea043ab800d5b9a249fe628ebeff03afdb4ee1286cab5cdc78179ac7fb39",
-      "distributed_pdf_sha256": "566436ff4b2f1d7782f29c945fe81597f23cc2e607633d9263892cb7b824511e",
-      "fresh_build_pdf_sha256": "e5f386099dbe22e7ab91223f36550109d2329bd15cc1e6c358b5682dac855149",
+      "source_sha256": "f914bdcfb15768755c1d6f55442b4a7d1722ddda6952a9c7e2896b8d9ab5a6e2",
+      "distributed_pdf_sha256": "1c659b1acb7b735ce89bf1b8de8eea36d4ee6b077e31a8c53b5d8d8d14bfe314",
+      "fresh_build_pdf_sha256": "1c659b1acb7b735ce89bf1b8de8eea36d4ee6b077e31a8c53b5d8d8d14bfe314",
       "extracted_page_text_identical": true,
       "overfull_boxes": 0,
       "missing_characters": 0,
@@ -68,9 +68,9 @@
     {
       "file": "document/thesis/Research_Thesis_Draft.pdf",
       "pages": 55,
-      "source_sha256": "70b5587b4ed4a4314a8b5e1623b441917fc6d0787c57d129ec5e87a3c0fb9f86",
-      "distributed_pdf_sha256": "420613155fcd20949a73aa3784644f8b4de95c56efb66da203f5b0e2fe37c003",
-      "fresh_build_pdf_sha256": "76bfebcc354d768a6657206c217bb250939b78b490118001b46a1a4cb2430d49",
+      "source_sha256": "02e25ceea2a98b7f51e174ef079fb6117e7139d86e41987b79df7d905481cf77",
+      "distributed_pdf_sha256": "155609de1d1d977a6a1de107fd956f454f8f33faad21ba272ecb8aedb68ed78c",
+      "fresh_build_pdf_sha256": "155609de1d1d977a6a1de107fd956f454f8f33faad21ba272ecb8aedb68ed78c",
       "extracted_page_text_identical": true,
       "overfull_boxes": 0,
       "missing_characters": 0,
@@ -80,12 +80,12 @@
   "report_sha256": {
     "VERIFICATION_REPORT.json": "48bf2efcb00a0248a92f3d0d3e30528d31c04941a5f10736b50e246f363ee32f",
     "TEST_REPORT.json": "c8a61e4075d474618e1f3d4e9ed842bb6924c46d770d2a9ceb98f9129d589698",
-    "BUILD_REPORT.json": "ff85709ea84c898635e4fb9a849de8335af8ddb66bd48d1d6922e5dbb543b11f",
+    "BUILD_REPORT.json": "ca004d30f8c45cef72d4c36095afb19a8cce6fa737ee98f30357c2fda2d59400",
     "FIGURE_DATA_AUDIT.json": "92e4971f7afa3db61fdee4534c52cc4ebfb1e3459547c3568579bcb341fe966e",
     "PAIRED_INTERVAL_AUDIT.json": "f38c2c8daf350cd91e980b9fc67fc079d15b67de3f3e5eb368ce3e55e80d3c1b",
-    "TEXT_INTEGRITY_RECHECK.json": "70ac21be17fc98e39d0be150d0625c92bcfe17016b74600546ac9c1bbec81221",
-    "submission_preparation/REFERENCE_RELEVANCE_AUDIT.json": "0393dfec51f4034237275d084d212e8134a0d934028ccff020eb87e35617a4a4",
-    "thesis/THESIS_SOURCE_RECORD.json": "29ea8d6efe584bcff6f212e23a4bdcc6b6ea9338b82423be9a532dfa6deb522c"
+    "TEXT_INTEGRITY_RECHECK.json": "f4977c5770cf82e01f8ad6a995de269341752cb98dd6dfcc1decccf696c4b4ca",
+    "submission_preparation/REFERENCE_RELEVANCE_AUDIT.json": "886be791fd7fc3451214fc2436d183ef60132feae074884c52bc8c0ef068c341",
+    "thesis/THESIS_SOURCE_RECORD.json": "f8a08ba1fa53f7b7225ceee019378030261e604cdbfdab5319e5cc55651f7bbf"
   },
   "remaining": [
     "Factual ethics/consent and dataset permissions",
@@ -93,5 +93,6 @@
     "Any required licensed similarity screening",
     "Broader independent identities and fully controlled comparisons remain scientific limitations"
   ],
-  "scope": "Numerical consistency, independent AUC/figure/interval checks, frozen-source hash mappings, current recorded image bytes, citation linkage, regression tests, PDF compilations and source bindings. No licensed plagiarism report, AI-detector clearance, journal novelty/acceptance guarantee, or repeated neural inference claimed."
+  "scope": "Numerical consistency, independent AUC/figure/interval checks, frozen-source hash mappings, current recorded image bytes, citation linkage, regression tests, PDF compilations and source bindings. No licensed plagiarism report, AI-detector clearance, journal novelty/acceptance guarantee, or repeated neural inference claimed.",
+  "last_editorial_recheck": "2026-11-16: concise factual AI disclosure; paragraph complete on one IEEE/arXiv page; numerical verification rerun. Original image-hash and regression checks retained from full final recheck; no experimental code or measurements changed."
 }

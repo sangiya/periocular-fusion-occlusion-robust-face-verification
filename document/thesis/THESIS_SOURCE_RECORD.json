@@ -1,14 +1,14 @@
 {
   "date": "2026-11-15",
   "journal_source": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
-  "journal_source_sha256": "a74701fb3bfcac668edba0aa0684a5c4d1eb1de596623c1c2af7c3400fd872f2",
+  "journal_source_sha256": "199dc51e9500b9dc36e1ee283cfd115c340302661179542cee145640a75f1338",
   "summary_sha256": "d798dab3932511d31d0ca29c344b461d26c64afbc37571cec660027e3e8ce2b1",
-  "thesis_source_sha256": "70b5587b4ed4a4314a8b5e1623b441917fc6d0787c57d129ec5e87a3c0fb9f86",
+  "thesis_source_sha256": "02e25ceea2a98b7f51e174ef079fb6117e7139d86e41987b79df7d905481cf77",
   "new_experiments": false,
   "institutional_approval_claimed": false,
   "measured_tables_shared_with_journal": true,
   "method_diagram_sha256": "7d7ccffd3d4b8a3b454f174a24da127e223d6f2a3a0476bee2d4dd51873a062d",
-  "pdf_sha256": "420613155fcd20949a73aa3784644f8b4de95c56efb66da203f5b0e2fe37c003",
+  "pdf_sha256": "155609de1d1d977a6a1de107fd956f454f8f33faad21ba272ecb8aedb68ed78c",
   "pages": 55,
   "overfull_boxes": 0,
   "missing_characters": 0,
@@ -18,7 +18,5 @@
   "references": 38,
   "compiler": "Tectonic 0.17.0; cached report class and fonts",
   "layout": "A4, 12-point Times, 1.25 line spacing; generic draft, not an institutional template",
-  "scope": "Shared measurement tables, register arithmetic, provenance bindings, PDF structure and compilation; no institution or publication approval.",
-  "last_checked": "2026-11-16; scientific strengthening revision",
-  "visual_inspection": "55 pages rendered; new title checked. Ten shared tables and 25 register rows verified; no overfull boxes, missing characters or undefined references."
+  "scope": "Shared measurement tables, register arithmetic, provenance bindings, PDF structure and compilation; no institution or publication approval."
 }

@@ -651,13 +651,16 @@ File: fig_auc_cross_dataset.pdf Graphic file (type pdf)
 [6]
 File: fig_rof_masked_scores.pdf Graphic file (type pdf)
 <use fig_rof_masked_scores.pdf>
- [7] [8] [9]
-Underfull \hbox (badness 1509) in paragraph at lines 482--483
+ [7] [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \hbox (badness 1509) in paragraph at lines 484--485
 []\TU/phv/b/n/8.03 M. E. Erakın, U. Demir, and H. K. Ekenel, “On rec-
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 482--483
+Underfull \hbox (badness 2310) in paragraph at lines 484--485
 \TU/phv/b/n/8.03 Biometrics Special Interest Group (BIOSIG), 2021, doi:
  []
 
@@ -669,5 +672,5 @@ Package rerunfilecheck Info: File `IEEE_TBIOM_Submission_10Page_Final.out' has
 not changed.
 (rerunfilecheck)             Checksum: B1B4C70FDCD67D1FFE197FB34BEAC0C7;7212.
  )
-Output written on IEEE_TBIOM_Submission_10Page_Final.xdv (10 pages, 580512 byte
+Output written on IEEE_TBIOM_Submission_10Page_Final.xdv (10 pages, 577716 byte
 s).

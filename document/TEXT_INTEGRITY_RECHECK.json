@@ -4,7 +4,7 @@
   "documents": [
     {
       "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
-      "sha256": "a74701fb3bfcac668edba0aa0684a5c4d1eb1de596623c1c2af7c3400fd872f2",
+      "sha256": "199dc51e9500b9dc36e1ee283cfd115c340302661179542cee145640a75f1338",
       "bibliography_keys": 38,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
@@ -13,11 +13,11 @@
       "duplicate_long_paragraphs": [],
       "ai_assistance_disclosed": true,
       "bibliography_order_matches_first_citation": true,
-      "last_checked": "2026-11-16; scientific strengthening revision"
+      "last_checked": "2026-11-16; concise acknowledgment with substantive AI assistance retained"
     },
     {
       "file": "document/arXiv_Preprint_10Page_Final.tex",
-      "sha256": "8816ea043ab800d5b9a249fe628ebeff03afdb4ee1286cab5cdc78179ac7fb39",
+      "sha256": "f914bdcfb15768755c1d6f55442b4a7d1722ddda6952a9c7e2896b8d9ab5a6e2",
       "bibliography_keys": 38,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
@@ -26,11 +26,11 @@
       "duplicate_long_paragraphs": [],
       "ai_assistance_disclosed": true,
       "bibliography_order_matches_first_citation": true,
-      "last_checked": "2026-11-16; scientific strengthening revision"
+      "last_checked": "2026-11-16; concise acknowledgment with substantive AI assistance retained"
     },
     {
       "file": "document/thesis/Research_Thesis_Draft.tex",
-      "sha256": "70b5587b4ed4a4314a8b5e1623b441917fc6d0787c57d129ec5e87a3c0fb9f86",
+      "sha256": "02e25ceea2a98b7f51e174ef079fb6117e7139d86e41987b79df7d905481cf77",
       "bibliography_keys": 38,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
@@ -39,7 +39,7 @@
       "duplicate_long_paragraphs": [],
       "ai_assistance_disclosed": true,
       "bibliography_order_matches_first_citation": true,
-      "last_checked": "2026-11-16; scientific strengthening revision"
+      "last_checked": "2026-11-16; concise acknowledgment with substantive AI assistance retained"
     }
   ],
   "web_phrase_checks": {

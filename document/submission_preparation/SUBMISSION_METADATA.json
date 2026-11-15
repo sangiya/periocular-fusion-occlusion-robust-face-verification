@@ -13,7 +13,7 @@
   "prior_public_thesis_or_preprint": "Not established; disclose any such version at submission.",
   "corresponding_author_email": "Not provided",
   "license_and_access_choices": "Author selection at submission",
-  "ai_assistance": "Disclosed in manuscript Acknowledgments; ChatGPT, named sections and implementation/checking assistance.",
+  "ai_assistance": "OpenAI ChatGPT disclosed in Acknowledgments: drafting/revision in Abstract and Sections 1-11; developing/checking training, evaluation, verification, data-cleaning and figure-generation scripts; author retains responsibility.",
   "dataset_acquisition_author_statement": "Author identifies Kaggle and GitHub; local workflow/logs identify sangiyaparara/tbiom-dataset and sangiyaparara/research-dataset mounts. Original dataset pages are documented; individual download history is not fully established.",
   "dataset_source_trace": "DATASET_SOURCE_TRACE.md",
   "thesis_draft": "../thesis/Research_Thesis_Draft.pdf",
