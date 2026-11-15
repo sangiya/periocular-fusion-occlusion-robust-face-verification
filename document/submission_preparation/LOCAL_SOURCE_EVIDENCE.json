@@ -1,0 +1,91 @@
+[
+  {
+    "file": "manus/data_plan/KAGGLE_FULL_WORKFLOW.md",
+    "sha256": "1825459bd89d4f93e43d4ba9f90b09d5de3239fb31dd06ca8fc5c2ff46a6de82",
+    "start_line": 30,
+    "end_line": 45,
+    "lines": [
+      "The current Kaggle dataset is mounted at:",
+      "",
+      "```text",
+      "/kaggle/input/datasets/sangiyaparara/tbiom-dataset",
+      "```",
+      "",
+      "The ROF images are under:",
+      "",
+      "```text",
+      "/kaggle/input/datasets/sangiyaparara/tbiom-dataset/data/data/ROF",
+      "```",
+      "",
+      "The research package is under:",
+      "",
+      "```text",
+      "/kaggle/input/datasets/sangiyaparara/tbiom-dataset/rof_tbiom_plan (2)/rof_tbiom_plan"
+    ]
+  },
+  {
+    "file": "manus/data_plan/FINAL_FULL_GUIDE.md",
+    "sha256": "2dc910f090d47b521f1fc31365d3bef7dda2aba2909ca4c7fd2dafb66a7203d7",
+    "start_line": 73,
+    "end_line": 103,
+    "lines": [
+      "Use the [official ROF repository](https://github.com/ekremerakin/RealWorldOccludedFaces). The repository describes neutral, sunglasses, and masked images and provides `download.py` for obtaining JPG images from the provided pickle files [2].",
+      "",
+      "Use ROF for:",
+      "",
+      "- training;",
+      "- validation;",
+      "- identity-disjoint in-domain testing;",
+      "- neutral-to-masked evaluation;",
+      "- neutral-to-sunglasses evaluation.",
+      "",
+      "Do not assume that your downloaded counts will exactly match the counts in the paper or repository. Report the actual local counts.",
+      "",
+      "### 5.2 MFR2: small external test",
+      "",
+      "Use the [official MFR2 page](https://sites.google.com/view/masktheface/mfr2-dataset). It reports 53 identities and 269 aligned images, containing masked and unmasked faces. It provides `mfr2_labels.txt` and an official `pairs.txt` containing 848 positive and negative pairs [3].",
+      "",
+      "Use MFR2 as:",
+      "",
+      "- an external masked-face verification test;",
+      "- a no-fine-tuning transfer benchmark;",
+      "- a predefined-pair evaluation.",
+      "",
+      "Do not use MFR2 as the main training set. It is small and internet-collected.",
+      "",
+      "### 5.3 RMFRD: larger external test",
+      "",
+      "Use the [official RMFRD repository](https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset). The repository provides access instructions for real and simulated masked-face datasets [4].",
+      "",
+      "Use RMFRD as an external test set only after checking:",
+      "",
+      "- the exact downloaded subset;"
+    ]
+  },
+  {
+    "file": "manus/script_window1.txt",
+    "sha256": "cfc78a551334ac5bd18c3e4a9c86ef8470ef40c1770cb70b90302fd6de3d56a5",
+    "start_line": 7328,
+    "end_line": 7332,
+    "lines": [
+      "/kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/MitchMcConnell/MitchMcConnell_0003.png /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/MitchMcConnell/MitchMcConnell_0004.png      1 MitchMcConnell MitchMcConnell",
+      "          /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/ImranKhan/ImranKhan_0002.png       /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/SimonCowell/SimonCowell_0003.png      0      ImranKhan    SimonCowell",
+      "          /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/RoyCooper/RoyCooper_0003.png /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/ZuzanaCaputova/ZuzanaCaputova_0005.png      0      RoyCooper ZuzanaCaputova",
+      "/kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/UddhavThackery/UddhavThackery_0001.png       /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/RonDesantis/RonDesantis_0001.png      0 UddhavThackery    RonDesantis",
+      "        /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/TsaiIngwen/TsaiIngwen_0001.png         /kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/mfr2/TsaiIngwen/TsaiIngwen_0003.png      1     TsaiIngwen     TsaiIngwen"
+    ]
+  },
+  {
+    "file": "manus/script_window1.txt",
+    "sha256": "cfc78a551334ac5bd18c3e4a9c86ef8470ef40c1770cb70b90302fd6de3d56a5",
+    "start_line": 8367,
+    "end_line": 8371,
+    "lines": [
+      "/kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/RMFRD/AFDB_face_dataset/aidai/0_0_aidai_0014.jpg    aidai   neutral  test  RMFRD",
+      "/kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/RMFRD/AFDB_face_dataset/aidai/0_0_aidai_0029.jpg    aidai   neutral  test  RMFRD",
+      "/kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/RMFRD/AFDB_face_dataset/aidai/0_0_aidai_0043.jpg    aidai   neutral  test  RMFRD",
+      "/kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/RMFRD/AFDB_face_dataset/aidai/0_0_aidai_0074.jpg    aidai   neutral  test  RMFRD",
+      "/kaggle/input/datasets/sangiyaparara/research-dataset/data_plan/data/RMFRD/AFDB_face_dataset/aidai/0_0_aidai_0080.jpg    aidai   neutral  test  RMFRD"
+    ]
+  }
+]

@@ -6,7 +6,7 @@ Please consider "Parameter-Efficient Periocular Fusion for Cross-Condition and C
 
 The paper presents a controlled study of frozen and LoRA-adapted whole-face/periocular representations, fixed fusion, and embedding-conditioned learned fusion. Fifteen models were trained on CPU using three seeds and a manifest that excludes known content conflicts. Results include validation-calibrated acceptance counts, two-endpoint identity-resampling sensitivities, and same-branch gate controls. The conclusions are condition-dependent, and the paper explicitly reports negative gate findings and a stronger unmatched face-recognition diagnostic.
 
-The accompanying artifact contains frozen protocols, raw scores, executed source snapshots, and provenance. Dataset images and model/checkpoint binaries are excluded. Exact known MFR2 training-name overlap and RMFRD cross-label content conflicts are removed; remaining semantic labels, unknown identity aliases and pretraining overlap are disclosed as limitations.
+The accompanying artifact contains frozen protocols, raw scores, executed source snapshots, and provenance. Local workflow/log records identify Kaggle-hosted execution copies; the source trace distinguishes those copies from the original dataset repositories. Dataset images and model/checkpoint binaries are excluded. Exact known MFR2 training-name overlap and RMFRD cross-label content conflicts are removed; remaining semantic labels, unknown identity aliases and pretraining overlap are disclosed as limitations.
 
 The author has confirmed that this manuscript has not been submitted elsewhere. AI assistance is disclosed in the manuscript acknowledgments.
 

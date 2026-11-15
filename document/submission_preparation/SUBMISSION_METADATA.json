@@ -14,5 +14,6 @@
   "corresponding_author_email": "Not provided",
   "license_and_access_choices": "Author selection at submission",
   "ai_assistance": "Disclosed in manuscript Acknowledgments; ChatGPT, named sections and implementation/checking assistance.",
-  "dataset_acquisition_author_statement": "Author reports downloading all datasets from online sources described as ethical; this is not evidence of IRB approval or individual consent."
+  "dataset_acquisition_author_statement": "Author identifies Kaggle and GitHub; local workflow/logs identify sangiyaparara/tbiom-dataset and sangiyaparara/research-dataset mounts. Original dataset pages are documented; individual download history is not fully established.",
+  "dataset_source_trace": "DATASET_SOURCE_TRACE.md"
 }
