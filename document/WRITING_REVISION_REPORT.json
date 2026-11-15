@@ -25,6 +25,11 @@
   "experimental_code_modified": false,
   "ai_disclosure_retained": true,
   "ethics_or_permission_claims_invented": false,
-  "journal_source_sha256": "417e8cca78b8630981c155aa7c345f4eaa6826a82c1b0a9399a3b5ee4bf62f44",
-  "historical_source_sha256": "f2e8b046e10351f42aa9aac21b8c6639cc3ccb0f195e92e3cc04631364a0219e"
+  "journal_source_sha256": "3a538a96a51ecc9955bbf5b35eb65d2199c6608fb3df5523ea7afa4419e1f0bf",
+  "historical_source_sha256": "f2e8b046e10351f42aa9aac21b8c6639cc3ccb0f195e92e3cc04631364a0219e",
+  "last_checked": "2026-11-16",
+  "citation_corrections": [
+    "umr final journal title and DOI",
+    "Ross-Jain matching-score fusion attribution"
+  ]
 }

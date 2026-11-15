@@ -19,3 +19,5 @@
 - [ ] Confirm current journal formatting, submission declarations, and dataset rights at submission.
 
 Compilation, arithmetic checks, and regression outcomes are recorded separately in BUILD_REPORT.json, VERIFICATION_REPORT.json, and TEST_REPORT.json. A checked artifact task does not imply journal acceptance or detector clearance.
+
+- [x] 16 November independent AUC/figure/paired-interval and citation-linkage recheck completed; see COMPREHENSIVE_RECHECK_2026-11-16.md.

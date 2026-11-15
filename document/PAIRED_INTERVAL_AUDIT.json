@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-16",
+  "status": "passed",
+  "comparisons": [
+    {
+      "condition": "test_masked",
+      "contrast": "gated_fusion minus fixed_fusion",
+      "ci95": [
+        -0.055987272527351695,
+        0.014392672987358635
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "test_masked",
+      "contrast": "whole_lora minus frozen_whole",
+      "ci95": [
+        -0.04242430990168314,
+        0.16967916400311195
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "test_sunglasses",
+      "contrast": "gated_fusion minus fixed_fusion",
+      "ci95": [
+        -0.0099170811212312,
+        0.006145945437608688
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "test_sunglasses",
+      "contrast": "whole_lora minus frozen_whole",
+      "ci95": [
+        -0.002974119158069643,
+        0.03660196611441428
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "test_neutral",
+      "contrast": "gated_fusion minus fixed_fusion",
+      "ci95": [
+        -0.004580426087812292,
+        0.01058327643998899
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "test_neutral",
+      "contrast": "whole_lora minus frozen_whole",
+      "ci95": [
+        -0.011693954657371691,
+        0.027374628576596855
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "mfr2",
+      "contrast": "gated_fusion minus fixed_fusion",
+      "ci95": [
+        0.00441164445212993,
+        0.028265326365548897
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "mfr2",
+      "contrast": "whole_lora minus frozen_whole",
+      "ci95": [
+        0.05125106373382822,
+        0.14735909925559382
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "rmfrd",
+      "contrast": "gated_fusion minus fixed_fusion",
+      "ci95": [
+        -0.013547986731740439,
+        0.00039893556318463006
+      ],
+      "valid_replicates": 1000
+    },
+    {
+      "condition": "rmfrd",
+      "contrast": "whole_lora minus frozen_whole",
+      "ci95": [
+        -0.006662201605452267,
+        0.02631727506738006
+      ],
+      "valid_replicates": 1000
+    }
+  ],
+  "scope": "Independent NumPy midrank reconstruction from raw scores with the recorded two-endpoint multinomial resampling rule and shared three-seed weights. Conditional sensitivity intervals, not population confidence or corrected multiple-testing inference."
+}

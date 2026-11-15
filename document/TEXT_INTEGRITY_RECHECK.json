@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-16",
+  "scope": "Mechanical text integrity and citation linkage, plus separately recorded human-readable prose review. This is not external plagiarism screening or AI authorship detection.",
+  "documents": [
+    {
+      "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
+      "sha256": "3a538a96a51ecc9955bbf5b35eb65d2199c6608fb3df5523ea7afa4419e1f0bf",
+      "bibliography_keys": 35,
+      "missing_citations": [],
+      "uncited_bibliography_keys": [],
+      "undefined_labels": [],
+      "prompt_residue": [],
+      "duplicate_long_paragraphs": [],
+      "ai_assistance_disclosed": true
+    },
+    {
+      "file": "document/arXiv_Preprint_10Page_Final.tex",
+      "sha256": "2645a2320e511a3f2deee5ee6b0332af96c7090ffb7f009ee7fe8e02c109f3f1",
+      "bibliography_keys": 35,
+      "missing_citations": [],
+      "uncited_bibliography_keys": [],
+      "undefined_labels": [],
+      "prompt_residue": [],
+      "duplicate_long_paragraphs": [],
+      "ai_assistance_disclosed": true
+    },
+    {
+      "file": "document/thesis/Research_Thesis_Draft.tex",
+      "sha256": "70b1aaea291e75e262e72ba8bf0452a8bceded044648cc9e1e0c1c077229fa54",
+      "bibliography_keys": 35,
+      "missing_citations": [],
+      "uncited_bibliography_keys": [],
+      "undefined_labels": [],
+      "prompt_residue": [],
+      "duplicate_long_paragraphs": [],
+      "ai_assistance_disclosed": true
+    }
+  ],
+  "web_phrase_checks": {
+    "sample_size": 3,
+    "result": "No exact matching passage identified in returned search results. Search results included an unrelated generic result; it was not treated as a match.",
+    "sentences": [
+      "Masks and sunglasses remove different sources of facial identity information",
+      "A learned model can acquire useful branch representations without learning the best weights",
+      "Combining periocular and whole-face representations is consequently plausible"
+    ],
+    "limitation": "A few web-indexed phrase searches do not cover paywalled literature, unpublished work, institutional repositories or a licensed similarity database; no percentage or clearance inferred."
+  },
+  "licensed_similarity_report": null,
+  "ai_authorship_percentage": null
+}

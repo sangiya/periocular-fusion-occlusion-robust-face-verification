@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-15",
-  "syntax_files": 54,
+  "date": "2026-11-16",
+  "syntax_files": 56,
   "regression_tests": 21,
   "regression_status": "passed",
   "test_logs": [
@@ -14,5 +14,6 @@
   "optimizer_steps_per_model": 1380,
   "device": "cpu",
   "historical_results_separate": true,
-  "scope": "Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json."
+  "scope": "Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json.",
+  "recheck": "Citation corrections rebuilt and checked; existing 21 regression tests passed, 56 Python files parsed."
 }

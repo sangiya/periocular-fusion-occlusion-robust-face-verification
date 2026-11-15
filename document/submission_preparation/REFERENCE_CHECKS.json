@@ -1,6 +1,6 @@
 {
-  "checked_on": "2026-11-15",
-  "scope": "Targeted core and newly cited references; not all bibliography entries",
+  "checked_on": "2026-11-16",
+  "scope": "35 bibliography keys mapped to source evidence, including earlier targeted checks and a broader bibliographic identity check. Metadata/abstract checks vary by accessible source; not all fields or full-text claims are independently certified. Earlier limited and blocked records retain their explicit limits.",
   "sources": [
     {
       "key": "fbr2024",
@@ -41,6 +41,172 @@
       "key": "rmfrd",
       "url": "https://doi.org/10.1109/TBIOM.2023.3242085",
       "checked": "DOI resolved to IEEE document 10036007; publisher page blocked by robot check, so full metadata not certified in this check"
+    },
+    {
+      "key": "dino",
+      "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "mae",
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "simclr",
+      "url": "https://proceedings.mlr.press/v119/chen20j.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "clip",
+      "url": "https://proceedings.mlr.press/v139/radford21a.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "lora",
+      "url": "https://openreview.net/pdf?id=nZeVKeeFYf9",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "vpt",
+      "url": "https://researchprofiles.ku.dk/en/publications/visual-prompt-tuning-2/",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "prompt",
+      "url": "https://aclanthology.org/2021.emnlp-main.243/",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "sphereface",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Liu_SphereFace_Deep_Hypersphere_CVPR_2017_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "cosface",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_CosFace_Large_Margin_CVPR_2018_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "arcface",
+      "url": "https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "magface",
+      "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Meng_MagFace_A_Universal_Representation_for_Face_Recognition_and_Quality_Assessment_CVPR_2021_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "adaface",
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Kim_AdaFace_Quality_Adaptive_Margin_for_Face_Recognition_CVPR_2022_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "rof",
+      "url": "https://research.itu.edu.tr/tr/publications/on-recognizing-occluded-faces-in-the-wild-2/",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "mfr2",
+      "url": "https://arxiv.org/abs/2008.11104",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "llecnn",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Ge_Detecting_Masked_Faces_CVPR_2017_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "from2022",
+      "url": "https://doi.org/10.1109/TPAMI.2021.3098962",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity corroborated in PubMed indexed record; full publisher text not reviewed."
+    },
+    {
+      "key": "masklearn",
+      "url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Song_Occlusion_Robust_Face_Recognition_Based_on_Mask_Learning_With_Pairwise_ICCV_2019_paper.pdf",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "umr",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S003132032100649X",
+      "checked_on": "2026-11-16",
+      "checked": "Corrected final journal title and added DOI 10.1016/j.patcog.2021.108473; earlier title had been combined with final journal metadata. Publisher search extract and author preprint arXiv:2103.01716 confirm final title."
+    },
+    {
+      "key": "focusface",
+      "url": "https://github.com/NetoPedro/FocusFace",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "beyondmasks",
+      "url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/b05e6948-e660-4956-a90c-b6aa8e2e6c78/content",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "hsu2022",
+      "url": "https://live-researchdirectory.ucalgary.ca/biometric-technologies/publications",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "mfr2021",
+      "url": "https://www-igd.igd.fraunhofer.de/files/media/biblio/2021/2021_boutros_mfr_2021.pdf",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "insightfacemfr",
+      "url": "https://openaccess.thecvf.com/content/ICCV2021W/MFR/html/Deng_Masked_Face_Recognition_Challenge_The_InsightFace_Track_Report_ICCVW_2021_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "surveyocc",
+      "url": "https://www.danzeng.org/files/2021Survey.pdf",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "fusionRossJain",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167865503000795",
+      "checked_on": "2026-11-16",
+      "checked": "Metadata confirmed; narrowed prose to matching-score fusion, directly supported by publisher abstract."
+    },
+    {
+      "key": "quality",
+      "url": "https://bidalab.eps.uam.es/static/files/2012_Sec%26Pri_BiometricQ.pdf",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "adaptformer",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/69e2f49ab0837b71b0e0cb7c555990f8-Abstract-Conference.html",
+      "checked_on": "2026-11-16",
+      "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
     }
+  ],
+  "corrections": [
+    "umr final journal title and DOI",
+    "fusionRossJain matching-score attribution"
   ]
 }

@@ -1,0 +1,635 @@
+{
+  "date": "2026-11-16",
+  "status": "passed",
+  "independent_auc_library": "scikit-learn",
+  "raw_score_files": [
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/test_masked_raw_scores.csv",
+      "sha256": "9665de15a9b821d93f3fd35f86193b6cd03a5f2d2045c2170870f10320df3fc3",
+      "auc": 0.9206654594839294
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/test_neutral_raw_scores.csv",
+      "sha256": "124b0028e0502858e2aab779bc6205a1c5dec1f67f9b93e81c37a953affb0cd3",
+      "auc": 0.9425343410508076
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/test_sunglasses_raw_scores.csv",
+      "sha256": "f3445ba46762d05adcc6862741473be9b5d00c41265ea4eafe78c291cc322edb",
+      "auc": 0.8953130923232357
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/val_masked_raw_scores.csv",
+      "sha256": "b3bab432cbd56843976217f9ecfc3653655b191620c3878a155b4a54bbef2400",
+      "auc": 0.9355555555555556
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/val_neutral_raw_scores.csv",
+      "sha256": "75e6bb5c2ec3bccfed1442ac397c53fb67e13ae92aeb0b8a870217521f9f68ec",
+      "auc": 0.933186018324232
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/val_sunglasses_raw_scores.csv",
+      "sha256": "30cf6d20d81e14525b62702b17d9963628b08b7bf18bc1f56ee11babe41c7fd1",
+      "auc": 0.9084796969412354
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/mfr2_raw_scores.csv",
+      "sha256": "90d8fa03a86e4fac1a2670a5640d216f3ce3e0fa12709fe6d3d56f27ea008120",
+      "auc": 0.9408307210031348
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_fixed_fusion/rmfrd_raw_scores.csv",
+      "sha256": "5625824808b1dd2c3f77d0c114fb6eb563ca3d63cbc72f5c572679774c5bd738",
+      "auc": 0.7353771982580997
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/test_masked_raw_scores.csv",
+      "sha256": "d26091ab11b4f8b2cda04aca0dc1b6c5eca9440351f9c39cb98bc3db809b512e",
+      "auc": 0.8473291081937528
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/test_neutral_raw_scores.csv",
+      "sha256": "49ce5b7f4f2882493e5ea10f6ef45374076922af0164c223dfff55bd5b729042",
+      "auc": 0.9339246263807668
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/test_sunglasses_raw_scores.csv",
+      "sha256": "3c52a3874f76be0da4bfa5ad86cd8522f7d9847540c490093086bff83019d67f",
+      "auc": 0.8815090037381704
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/val_masked_raw_scores.csv",
+      "sha256": "3a1e06d4b3533072f707355454f783ae080903375ee94b2a0b906434315cf4b2",
+      "auc": 0.8965432098765432
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/val_neutral_raw_scores.csv",
+      "sha256": "8b1ead967ecd39e263aac7e0ee2579e36f59e25e726269b4191713e49c1d7946",
+      "auc": 0.935414380481956
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/val_sunglasses_raw_scores.csv",
+      "sha256": "65dbf6e7859bc2d7f595187f8704ba5220c96b641f6c2bd163c41efa47e1ee13",
+      "auc": 0.8905734183511961
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/mfr2_raw_scores.csv",
+      "sha256": "741e2e1d9dcef6af8862c18d0a0c03000832c1d233a3e918bd71ccd4a78f520b",
+      "auc": 0.8476949295914813
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_frozen_whole/rmfrd_raw_scores.csv",
+      "sha256": "ebcc183b82de44a9cc180f08f008debb614ff4f5a077fd507f3f72a6d8545e35",
+      "auc": 0.6923000638548267
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/test_masked_raw_scores.csv",
+      "sha256": "1c5ba5e1f776a44f9209382c847de95225609bab535562e4e99cbfe7af13b56d",
+      "auc": 0.8981439565414214
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/test_neutral_raw_scores.csv",
+      "sha256": "d56ec03ee017cd628eae6deb5f42d4354db02ad4aaee46d696242cf017290de6",
+      "auc": 0.9442755035737492
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/test_sunglasses_raw_scores.csv",
+      "sha256": "d0a534531c78dbb4cfcf4f43b345b2d35c33a91bb7eef8f5c77cf951d57acaee",
+      "auc": 0.8878769831938154
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/val_masked_raw_scores.csv",
+      "sha256": "51d76665bb9c87533a5d3e58a2fe07e43f8cd003c9762955ee98de1835f37ed0",
+      "auc": 0.9420987654320988
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/val_neutral_raw_scores.csv",
+      "sha256": "8d822b648039d7ddbc75342afab190e2f5e292276e539132a623c5c44bd65927",
+      "auc": 0.9403749560140234
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/val_sunglasses_raw_scores.csv",
+      "sha256": "ed45af177e32a975e19268a87758ceeffd37fe30f32358a9ae716843c5ec3e10",
+      "auc": 0.9077778821368565
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/mfr2_raw_scores.csv",
+      "sha256": "c941c3da62ac08b50e7163ef85082784a2ead031107075305fbeef3d2fece474",
+      "auc": 0.9540354281733593
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_gated_fusion/rmfrd_raw_scores.csv",
+      "sha256": "953c9a645f99ab1b4c29843905ada0ce630e6d77e8764aeb603c7825d7d80553",
+      "auc": 0.7313937429694722
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/test_masked_raw_scores.csv",
+      "sha256": "5f74a68e19e1ee9defa974d223a54bfdf777b74027918c019e892d45ac8a85e9",
+      "auc": 0.9170439112720687
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/test_neutral_raw_scores.csv",
+      "sha256": "42a94d2ebc0d1b54eeed2181bcaa259028d29a14dab5bdb7bd051871dfe9c6c2",
+      "auc": 0.8812638646649111
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/test_sunglasses_raw_scores.csv",
+      "sha256": "1dc0f25ecfb1d3e54527e47e5b8ccfe5281304e8872d560b149bacc61d835cb3",
+      "auc": 0.7868647815830646
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/val_masked_raw_scores.csv",
+      "sha256": "826a2344b2b108ce56fa95cca04d4112ad0a3e378ceed4c68c7d3bc57c46bb58",
+      "auc": 0.8903703703703705
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/val_neutral_raw_scores.csv",
+      "sha256": "25f903d1ff6a1028406bd17fb3fa9d92b82acb17a6122cd455b8e9568c1e2f37",
+      "auc": 0.8925096117504463
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/val_sunglasses_raw_scores.csv",
+      "sha256": "7d9f56ec86271dddc20c2605103afc2644b03a678429f0db15687823afbdaaf2",
+      "auc": 0.8443397375021306
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/mfr2_raw_scores.csv",
+      "sha256": "44e2c7cc701b9dd20935b6fdc9b24af8ea41de5c3b65b11144f57d43e2705e3d",
+      "auc": 0.9087114992287406
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_peri_lora/rmfrd_raw_scores.csv",
+      "sha256": "89d9645db1169c7bc2a9a9af332535d44248497366d493261b6fb569209bb69a",
+      "auc": 0.7102917181774645
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/test_masked_raw_scores.csv",
+      "sha256": "f1c59f9e69503843a4cf82a93e521c8062efb2e9ecb790fce508bb75c41fda64",
+      "auc": 0.8904481665912178
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/test_neutral_raw_scores.csv",
+      "sha256": "f48b4ce9577bbf93abcd8677d2bdbf7314b772008e19e64cd6c4873bd2fe7193",
+      "auc": 0.9403675204906352
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/test_sunglasses_raw_scores.csv",
+      "sha256": "514b8827f24479ed2a6697d7ec17fb95c74635d6f290cea72ef93b7a05c5cf0a",
+      "auc": 0.8921585682415865
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/val_masked_raw_scores.csv",
+      "sha256": "7aef01c2fdcb02f4b1ca7ef393a9f40f90c843ae4cd9ad72ea85a49c4699344b",
+      "auc": 0.9333333333333333
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/val_neutral_raw_scores.csv",
+      "sha256": "bbcb345a6607a9947236b5012391b68d23a17f03c4981362a4ec5ecb2448b320",
+      "auc": 0.9412731822387885
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/val_sunglasses_raw_scores.csv",
+      "sha256": "23d53834da4cc69fc43b8310d382b42614092f29243da2f5167460c70074162c",
+      "auc": 0.9135332853281571
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/mfr2_raw_scores.csv",
+      "sha256": "ce78d9b80f3a02af0ee362f1ab2db911aa373ebbaa31444c321fe09556cce57e",
+      "auc": 0.9352328705776982
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed123_whole_lora/rmfrd_raw_scores.csv",
+      "sha256": "96fa6560d00ec51c1f236781a96e7aee4994b2e5d1ed350218e1243cc1813a22",
+      "auc": 0.7155251224193555
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/test_masked_raw_scores.csv",
+      "sha256": "e2906d6278d1c84db9fcb52aa5233d71ed072b3814f0922dca15cc9998fcff78",
+      "auc": 0.9119511090991399
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/test_neutral_raw_scores.csv",
+      "sha256": "04fae0a432d401c6172c34e6d6ecf2640ba08cc34a912a770aee68f3b9baa153",
+      "auc": 0.9416311571651678
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/test_sunglasses_raw_scores.csv",
+      "sha256": "6a1c8c7eee7ed0bd8f66ec91b9b085312d951c833ab83e911b22ca69c95325d8",
+      "auc": 0.8926951829901624
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/val_masked_raw_scores.csv",
+      "sha256": "c9c3d7b6e8e993c14c0f54aff392c61eb223d5b751dd6b588b24c19da990cb32",
+      "auc": 0.9401234567901234
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/val_neutral_raw_scores.csv",
+      "sha256": "2cd2501516dbb46b3566fb8b05378a19d10b3c071e0a39a96775b71e782512b1",
+      "auc": 0.9447560896140964
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/val_sunglasses_raw_scores.csv",
+      "sha256": "c9db3c921887b24fc7483a277dc3b8894acff9ec8a1622e6978eb639cc4b9169",
+      "auc": 0.9134071847747062
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/mfr2_raw_scores.csv",
+      "sha256": "36823a10bf488f05efa5de81aef5013d02fcf0b0356d22387e7666d4050a162c",
+      "auc": 0.944071254416082
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_fixed_fusion/rmfrd_raw_scores.csv",
+      "sha256": "be24afb8a31a57e30bd7b7a29b940de7119d7b05bf78aaaad9cbdbe97ac34e58",
+      "auc": 0.7175691729686183
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/test_masked_raw_scores.csv",
+      "sha256": "26365e0606fe34ae45951be1adf5f84c8a18160c37fa3f7ca15e9c4b3299922e",
+      "auc": 0.8407650520597555
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/test_neutral_raw_scores.csv",
+      "sha256": "2c92ba0943c7c166d2fc003e1313b599fd4f8b7d5e725c3697fa4b2b71f4a6df",
+      "auc": 0.9315355152012585
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/test_sunglasses_raw_scores.csv",
+      "sha256": "f0731fd4b706b730b8a98648de367a179c37eda684bc988ea4b2b0e23a07923c",
+      "auc": 0.8754742127430987
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/val_masked_raw_scores.csv",
+      "sha256": "ecdd56932448adcc5c1a1fe3961700768fdb4845840ed483b668d151789094fd",
+      "auc": 0.8766666666666667
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/val_neutral_raw_scores.csv",
+      "sha256": "2122bc43d0c226449a0951773697faa26b3ac76385cc23c8e0eda9a124fe227c",
+      "auc": 0.9317217740358927
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/val_sunglasses_raw_scores.csv",
+      "sha256": "670596fb39137bf5464955f53cd5f3daa6048a7842b20878ac91116dd7affb22",
+      "auc": 0.8887619186764486
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/mfr2_raw_scores.csv",
+      "sha256": "b7dbc7608d3cf27e66d6d8542e9a76488b39e0d6783cf69e6f2618fd0976d857",
+      "auc": 0.838159924366821
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_frozen_whole/rmfrd_raw_scores.csv",
+      "sha256": "733e58edaba20ac040a891ca7aef2b0f0ebb655e1885c50bf0a8fce8ceeaf501",
+      "auc": 0.7007875119263739
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/test_masked_raw_scores.csv",
+      "sha256": "a04c36025f941f2f5970f89207101705036852ac847c5d938204d4da5b110153",
+      "auc": 0.8975780896333182
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/test_neutral_raw_scores.csv",
+      "sha256": "5c972cdb268dc5125a783c63aef26969f05df1c8d46fbf6c96635d5ddbdf84a2",
+      "auc": 0.9488378190440363
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/test_sunglasses_raw_scores.csv",
+      "sha256": "9ac84f52c12ce7cfd4da7a1ce60c36d9ffd3b698c4d42ff3d003194a28f3a61b",
+      "auc": 0.898920367391276
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/val_masked_raw_scores.csv",
+      "sha256": "bf52f0c77342fb2dc2fabc3b436968675a46ce331f1104f2118c399dd38a83dd",
+      "auc": 0.9355555555555556
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/val_neutral_raw_scores.csv",
+      "sha256": "80df1471ee106624d59b12b3231ad31b14e4a825616302e89fbc234c68e39a46",
+      "auc": 0.949048338959194
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/val_sunglasses_raw_scores.csv",
+      "sha256": "77e74874f0da5ce1d3f195db20575f45c6bcfc08fe23e5b47c69d7a1552ad1aa",
+      "auc": 0.9140133370902602
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/mfr2_raw_scores.csv",
+      "sha256": "39b5745016aa480764694b8ac06a693591a7285e815e0add5de6ce662aa472ea",
+      "auc": 0.9572759615863063
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_gated_fusion/rmfrd_raw_scores.csv",
+      "sha256": "baff907a5906ee529e9bc05a62840e9a8f1b8c0fd93e4b57e0a28bffd59212af",
+      "auc": 0.7091875772661965
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/test_masked_raw_scores.csv",
+      "sha256": "c8dbb7be48e86855192ed9f24f13df41a7409d72334648d84823d877ef55a375",
+      "auc": 0.9259280217292892
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/test_neutral_raw_scores.csv",
+      "sha256": "78ed8967668b51b88608ab00b606473710df0620bbb60306a08057c4773aac7a",
+      "auc": 0.8910391801465978
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/test_sunglasses_raw_scores.csv",
+      "sha256": "4b7f726bee352bb9ea694e47cb2b03a90afc767eac2fb333181cd5891d58d0d2",
+      "auc": 0.8058514240123483
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/val_masked_raw_scores.csv",
+      "sha256": "770491e8f25e028a809eba52c60918408196c90b63649b4cee892103669c4ffc",
+      "auc": 0.8598765432098765
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/val_neutral_raw_scores.csv",
+      "sha256": "0a916ca79e2d224db2b68677f02a8746e0cdf262410196fe8c286d770d70c820",
+      "auc": 0.8894269441801668
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/val_sunglasses_raw_scores.csv",
+      "sha256": "cc78a67f57ff77383588b0286f4c6f09ecbcf13374a32bdc6caa435e5e4d882b",
+      "auc": 0.8426473811089197
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/mfr2_raw_scores.csv",
+      "sha256": "ecd1248ca67e11b2e58b72d70677b038aa1d8c481f1827dc60ef975db841ce5a",
+      "auc": 0.9160384634522566
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_peri_lora/rmfrd_raw_scores.csv",
+      "sha256": "a9730fd256bf56d98b7c29872cae672995417085e1d8d1685ed7eed79688e19b",
+      "auc": 0.7184020236782607
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/test_masked_raw_scores.csv",
+      "sha256": "6afcd21dd6fa1269f15504fe6adb5a8a45dce7d9ad67900f138c54e3d2efb2bc",
+      "auc": 0.8799796287913083
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/test_neutral_raw_scores.csv",
+      "sha256": "6fc642147346f4d51b7817278ca4b3a71fbac497032098eb87b1783523d2d987",
+      "auc": 0.9404951951027666
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/test_sunglasses_raw_scores.csv",
+      "sha256": "6792b43f2e923c3d54b848529b8d9f4158220825305b5c275235f17f8593fb93",
+      "auc": 0.8923381953538341
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/val_masked_raw_scores.csv",
+      "sha256": "ecc4d52524fffe970940c4f5e308a86463bb2b38592dda30d51a51fe02ba0c39",
+      "auc": 0.9281481481481481
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/val_neutral_raw_scores.csv",
+      "sha256": "ed526fdf7aee166878606acb7f387b5458626352488e8720771216d272c0b0b7",
+      "auc": 0.920628966883447
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/val_sunglasses_raw_scores.csv",
+      "sha256": "abc0b6de0d7a6cb04f4e7284944ee76c98b38e077ba54494e7339d1296a01d65",
+      "auc": 0.8979950881660284
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/mfr2_raw_scores.csv",
+      "sha256": "b4e31fdecc4a753c8894798da442de6b1a34a1e3e1f98a898bd3c4c98ea103e5",
+      "auc": 0.921611434542469
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed42_whole_lora/rmfrd_raw_scores.csv",
+      "sha256": "a023d3905497d37a2776e305047788da8e72e0c5c118dedf42dfa68ae54db4b4",
+      "auc": 0.7029796908238386
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/test_masked_raw_scores.csv",
+      "sha256": "d6c38da147460f76c24b4fc490def90b0355f3e00c2ab9d2e0c40d23591b6103",
+      "auc": 0.9077071072883658
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/test_neutral_raw_scores.csv",
+      "sha256": "559bc5849f68ea5ac473901fea9e76c73b4d4857949fc670a8452b1882550dea",
+      "auc": 0.9443248634907607
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/test_sunglasses_raw_scores.csv",
+      "sha256": "57ac035bd3f4813ea966786c9578ff40d216a0958a35143ca6f0359b0ba588c6",
+      "auc": 0.896908203745877
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/val_masked_raw_scores.csv",
+      "sha256": "8b2ee35531df22513a411e2ef2074dfac8882049e8ba6c557c0a325247e3e0d7",
+      "auc": 0.9295061728395062
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/val_neutral_raw_scores.csv",
+      "sha256": "090ce792e82b997bb4273ddc7909152960cc552dc919690ccd50bcb0edfce166",
+      "auc": 0.9336697989026314
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/val_sunglasses_raw_scores.csv",
+      "sha256": "bdeb1f005010efeddb57aa7672619a3f03a49549e74e98cb74b573e700d1ce4e",
+      "auc": 0.9037183139747244
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/mfr2_raw_scores.csv",
+      "sha256": "6f6b2a9d7f76de3da933dbaf82eda90e39a781c78d45c3b42b992fb9eda1cb5c",
+      "auc": 0.9343994128476887
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_fixed_fusion/rmfrd_raw_scores.csv",
+      "sha256": "04e48efeb3ebf8a6c06926ed56450504d1b2926fe6d81f5691bf851e5cf6aa36",
+      "auc": 0.7190983475707322
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/test_masked_raw_scores.csv",
+      "sha256": "1abdb0bc51545b80f73a50cab936cbe7e4bc93a3ea34e85217b75fe86214f8b0",
+      "auc": 0.8028519692168402
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/test_neutral_raw_scores.csv",
+      "sha256": "375bdb589cc929015f5a5baa98c90c3c3dc101e301b66c4ad789dc9058236ea2",
+      "auc": 0.9329093852239435
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/test_sunglasses_raw_scores.csv",
+      "sha256": "8c184d756ec29d03f900469a35bf9e9a2fa11309b26bba00fa5e3db38ac8ff7a",
+      "auc": 0.8769843271094712
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/val_masked_raw_scores.csv",
+      "sha256": "2d13e4eb4ac00f0dabba8a405dfd77ef5001d71194a894f6007f8ef99de68fd8",
+      "auc": 0.8654320987654321
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/val_neutral_raw_scores.csv",
+      "sha256": "2fa48059ed56e35776c2e0f424a56410c328159cb4398694f2b4bd21897e54cb",
+      "auc": 0.9310808169010414
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/val_sunglasses_raw_scores.csv",
+      "sha256": "94d5705d400fd7739b80b3274d2d778c6025c765fe975bfd944fe344da3cdf63",
+      "auc": 0.8911673954408997
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/mfr2_raw_scores.csv",
+      "sha256": "ebbfdd2288a89ab68e579e4272d78014aacadbce15df19c9f39a31bafdb61189",
+      "auc": 0.8376374583271136
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_frozen_whole/rmfrd_raw_scores.csv",
+      "sha256": "9bc204b27f2579fcc0a55139b6ce645ba1ae84509c00499ce29990d0452b18ef",
+      "auc": 0.6940829871436474
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/test_masked_raw_scores.csv",
+      "sha256": "a9eb0a1c86f94dfed82e1448803624b50c9a76c5bcb174dab881b8ca7b4d7897",
+      "auc": 0.9010864644635581
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/test_neutral_raw_scores.csv",
+      "sha256": "e5c92de6c23f12231820efcabcc266737c52be749142710a1389c8f673158fb4",
+      "auc": 0.9443638498455365
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/test_sunglasses_raw_scores.csv",
+      "sha256": "c54df493aba4a7ec51910d15673ea179e39270087ffe7d261a799353b251ddeb",
+      "auc": 0.8903254650613934
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/val_masked_raw_scores.csv",
+      "sha256": "c07575ff2693414a981fb4c6f8c6e161facf677d5576da98be8ceb78905e8fe3",
+      "auc": 0.9575308641975309
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/val_neutral_raw_scores.csv",
+      "sha256": "562c1559a28025e274fd440394dfc5a759013a02961fe8bc55ebfc6be0fbf7bd",
+      "auc": 0.9466794823339285
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/val_sunglasses_raw_scores.csv",
+      "sha256": "8ac35ec9ed33536c8f888c1ea893a92375e90296abc67279fd462b1afcf38c84",
+      "auc": 0.918600788258908
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/mfr2_raw_scores.csv",
+      "sha256": "6126bf72dd78cacd413ab175860b4fb05ef116e0b37c01f7e0e3b3caf4d57190",
+      "auc": 0.953071353933423
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_gated_fusion/rmfrd_raw_scores.csv",
+      "sha256": "0bcf42b99679af14eb8b986e36d0de97523401354b80d9ffc4b8ac53d2208de4",
+      "auc": 0.7117731872839795
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/test_masked_raw_scores.csv",
+      "sha256": "943f680c35eb11a45514c4c85ee9bb048f10d28885d61675f094586997670cc1",
+      "auc": 0.9232118605703938
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/test_neutral_raw_scores.csv",
+      "sha256": "0d7f6b07fa46320d3fd142e733ea92d76dc5d8dffa27a9af34eaa1f9e7dc3807",
+      "auc": 0.8900612154167094
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/test_sunglasses_raw_scores.csv",
+      "sha256": "9b84628246cb89cce974e719f2c5b6730a41908f64198a293c554742d589c1fe",
+      "auc": 0.7788767582349397
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/val_masked_raw_scores.csv",
+      "sha256": "8e5a6227f4a72e01beb3055658c83456e3e8188de564cf85cb13477c492b8848",
+      "auc": 0.8904938271604939
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/val_neutral_raw_scores.csv",
+      "sha256": "9be200fd547c525d0e6d231c65c23c0bc48e80a06b3564733ae87d897b30a995",
+      "auc": 0.9009662578686024
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/val_sunglasses_raw_scores.csv",
+      "sha256": "add15a6fd4ef54dfd67a555d8ec939a4afc1949544be36153742888f17eff754",
+      "auc": 0.8543303799714056
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/mfr2_raw_scores.csv",
+      "sha256": "b96f28984387be5fc060833ac388111adad888bad07d7a53bb7e2ea6aed9141b",
+      "auc": 0.8957244862417276
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_peri_lora/rmfrd_raw_scores.csv",
+      "sha256": "8ff6be8ad2b44c363a8140b2bf8e7cd684bf042dad1601b2945960f887ca9b61",
+      "auc": 0.7109903159700179
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/test_masked_raw_scores.csv",
+      "sha256": "5189ec1ba61f5172f2285336869fb854b2d55a91fb461d9f9564b51dc43abc53",
+      "auc": 0.8851290176550475
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/test_neutral_raw_scores.csv",
+      "sha256": "65e4d9392749a60ce672d096557952c232d21e63d676af8bd0e2b6bcb19d5e96",
+      "auc": 0.9430480033742576
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/test_sunglasses_raw_scores.csv",
+      "sha256": "65386f694a44ff673c61a547ee6d8c43945740c022fc91c311c6565ae005bc09",
+      "auc": 0.8892749014459133
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/val_masked_raw_scores.csv",
+      "sha256": "6cc41a74ab89e86e73260e37135079674323968436f0e794e43faba107edfbf0",
+      "auc": 0.9301234567901235
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/val_neutral_raw_scores.csv",
+      "sha256": "ecfadb2f8568f12ae48154208146509d9a378088e73c8999f7b67f7afe03aa24",
+      "auc": 0.9432875444747096
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/val_sunglasses_raw_scores.csv",
+      "sha256": "01524c8e21596d654355ffa4dbe6311ed763a9f213c679cb6f0cc0fa626a524a",
+      "auc": 0.9184381620279056
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/mfr2_raw_scores.csv",
+      "sha256": "9672e67c4b01a30c03707dc59d1de06ffbfd411b4827b970b8e4c4fa85ce6fa0",
+      "auc": 0.9510747872816838
+    },
+    {
+      "file": "results/cpu_clean/evaluation/seed7_whole_lora/rmfrd_raw_scores.csv",
+      "sha256": "a1015a2321d906e6396b25805031e6112c8c427628c7e53c90cb9c5104799446",
+      "auc": 0.6951104187317392
+    }
+  ],
+  "figures": [
+    {
+      "file": "submission_ieee_10page/fig_rof_masked_roc.pdf",
+      "sha256": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
+      "recreated_pdf_byte_identical": true
+    },
+    {
+      "file": "submission_ieee_10page/fig_rof_sunglasses_roc.pdf",
+      "sha256": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
+      "recreated_pdf_byte_identical": true
+    },
+    {
+      "file": "submission_ieee_10page/fig_mfr2_roc.pdf",
+      "sha256": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
+      "recreated_pdf_byte_identical": true
+    },
+    {
+      "file": "submission_ieee_10page/fig_auc_cross_dataset.pdf",
+      "sha256": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
+      "recreated_pdf_byte_identical": true
+    },
+    {
+      "file": "submission_ieee_10page/fig_rof_masked_scores.pdf",
+      "sha256": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
+      "recreated_pdf_byte_identical": true
+    }
+  ],
+  "scope": "Independent library AUC/ROC checks; plotted means/error bars and histogram inputs; exact regenerated PDF bytes. Does not validate semantic image labels, unseen identities, or repeat neural inference."
+}
