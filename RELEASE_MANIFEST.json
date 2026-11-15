@@ -2722,6 +2722,10 @@
       "sha256": "2801edda4b5b93b01101d41645e9c7acf93013cad6f5eef929ea22493efdbea5",
       "bytes": 14828
     },
+    "tools/prepare_final_publication.py": {
+      "sha256": "bae4008aa32cf65cc1a1b51d2f29ab5469bd296351bb9fc8ecd7ac309055c65d",
+      "bytes": 8899
+    },
     "tools/prepare_submission_review.py": {
       "sha256": "9fea239177e9805084a376bedf6e87be10adf55f9ea2d6f6d88b2fe576c5b21e",
       "bytes": 13186
