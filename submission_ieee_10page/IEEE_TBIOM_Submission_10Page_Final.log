@@ -647,12 +647,12 @@ File: fig_auc_cross_dataset.pdf Graphic file (type pdf)
 File: fig_rof_masked_scores.pdf Graphic file (type pdf)
 <use fig_rof_masked_scores.pdf>
  [6] [7] [8] [9]
-Underfull \hbox (badness 1509) in paragraph at lines 470--471
+Underfull \hbox (badness 1509) in paragraph at lines 476--477
 []\TU/phv/b/n/8.03 M. E. Erakın, U. Demir, and H. K. Ekenel, “On rec-
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 470--471
+Underfull \hbox (badness 2310) in paragraph at lines 476--477
 \TU/phv/b/n/8.03 Biometrics Special Interest Group (BIOSIG), 2021, doi:
  []
 
@@ -662,7 +662,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `IEEE_TBIOM_Submission_10Page_Final.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 4E754E922F0AF2FDC5B993F2EA981C6F;7237.
+(rerunfilecheck)             Checksum: B1B4C70FDCD67D1FFE197FB34BEAC0C7;7212.
  )
-Output written on IEEE_TBIOM_Submission_10Page_Final.xdv (10 pages, 552000 byte
+Output written on IEEE_TBIOM_Submission_10Page_Final.xdv (10 pages, 554428 byte
 s).

@@ -1,0 +1,474 @@
+{
+  "date": "2026-11-16",
+  "journal_source_sha256": "58675d61c9f0ac4ed2a8ca9e83479cf9c09e5a768a5ab382dfb09787a443a804",
+  "references_reviewed": 35,
+  "counts": {
+    "direct": 22,
+    "context": 13
+  },
+  "all_references_cited": true,
+  "bibliography_order_matches_first_citation": true,
+  "references": [
+    {
+      "number": 1,
+      "key": "dinov2",
+      "title": "DINOv2: Learning robust visual features without supervision",
+      "role": "Executed component",
+      "relevance": "direct",
+      "reason": "Backbone actually used; transferable self-supervised visual features.",
+      "disposition": "Retain; also cited at introduction of the experimental system.",
+      "source_url": "https://arxiv.org/abs/2304.07193",
+      "citation_lines": [
+        26,
+        48
+      ]
+    },
+    {
+      "number": 2,
+      "key": "lora",
+      "title": "LoRA: Low-rank adaptation of large language models",
+      "role": "Executed component",
+      "relevance": "direct",
+      "reason": "Low-rank adaptation mechanism actually used, despite its original language-model experiments.",
+      "disposition": "Retain; explicitly distinguish original language-model work from our visual adaptation.",
+      "source_url": "https://arxiv.org/abs/2106.09685",
+      "citation_lines": [
+        26,
+        51
+      ]
+    },
+    {
+      "number": 3,
+      "key": "sphereface",
+      "title": "SphereFace: Deep hypersphere embedding for face recognition",
+      "role": "Face-embedding background",
+      "relevance": "context",
+      "reason": "Multiplicative angular-margin face-recognition loss.",
+      "disposition": "Retain as background; replace priority claim with its specific mechanism.",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Liu_SphereFace_Deep_Hypersphere_CVPR_2017_paper.html",
+      "citation_lines": [
+        37
+      ]
+    },
+    {
+      "number": 4,
+      "key": "cosface",
+      "title": "CosFace: Large margin cosine loss for deep face recognition",
+      "role": "Face-embedding background",
+      "relevance": "context",
+      "reason": "Additive cosine-margin face-recognition loss.",
+      "disposition": "Retain as background; not used as a loss or baseline here.",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_CosFace_Large_Margin_CVPR_2018_paper.html",
+      "citation_lines": [
+        37
+      ]
+    },
+    {
+      "number": 5,
+      "key": "arcface",
+      "title": "ArcFace: Additive angular margin loss for deep face recognition",
+      "role": "Face-embedding background",
+      "relevance": "context",
+      "reason": "Additive angular-margin face-recognition loss.",
+      "disposition": "Retain as background; not a matched experimental baseline here.",
+      "source_url": "https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.html",
+      "citation_lines": [
+        37
+      ]
+    },
+    {
+      "number": 6,
+      "key": "adaface",
+      "title": "AdaFace: Quality adaptive margin for face recognition",
+      "role": "Face-embedding background",
+      "relevance": "context",
+      "reason": "Quality-adaptive face-recognition margin.",
+      "disposition": "Retain to distinguish training-margin adaptation from inference fusion.",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Kim_AdaFace_Quality_Adaptive_Margin_for_Face_Recognition_CVPR_2022_paper.html",
+      "citation_lines": [
+        37,
+        54
+      ]
+    },
+    {
+      "number": 7,
+      "key": "magface",
+      "title": "MagFace: A universal representation for face recognition and quality assessment",
+      "role": "Face-embedding background",
+      "relevance": "context",
+      "reason": "Magnitude-aware face embeddings connect feature magnitude and image quality.",
+      "disposition": "Retain with more precise magnitude-aware description; no claim that our gate estimates MagFace quality.",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Meng_MagFace_A_Universal_Representation_for_Face_Recognition_and_Quality_Assessment_CVPR_2021_paper.html",
+      "citation_lines": [
+        37,
+        54
+      ]
+    },
+    {
+      "number": 8,
+      "key": "mfr2",
+      "title": "Masked face recognition for secure authentication",
+      "role": "Dataset",
+      "relevance": "direct",
+      "reason": "Introduces MaskTheFace and MFR2, an external evaluation dataset in this study.",
+      "disposition": "Retain; our retained pair protocol differs from the original protocol.",
+      "source_url": "https://arxiv.org/abs/2008.11104",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 9,
+      "key": "llecnn",
+      "title": "Detecting masked faces in the wild with LLE-CNNs",
+      "role": "Detection background",
+      "relevance": "context",
+      "reason": "MAFA and LLE-CNNs address masked-face localization/detection.",
+      "disposition": "Retain only as detection context; explicitly distinguish localization from identity verification.",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Ge_Detecting_Masked_Faces_CVPR_2017_paper.html",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 10,
+      "key": "rmfrd",
+      "title": "Masked face recognition dataset and application",
+      "role": "Dataset",
+      "relevance": "direct",
+      "reason": "Original dataset family and maintainer-requested journal citation for RMFRD.",
+      "disposition": "Retain; does not validate the local labels or our derived pair list.",
+      "source_url": "https://doi.org/10.1109/TBIOM.2023.3242085",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 11,
+      "key": "surveyocc",
+      "title": "A survey of face recognition techniques under occlusion",
+      "role": "Occlusion survey",
+      "relevance": "direct",
+      "reason": "Organizes methods for face recognition under occlusion.",
+      "disposition": "Retain as a 2021 publication; removed the unsupported claim of exhaustive coverage through 2021.",
+      "source_url": "https://www.danzeng.org/files/2021Survey.pdf",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 12,
+      "key": "from2022",
+      "title": "End2End occluded face recognition by masking corrupted features",
+      "role": "Occlusion recognition",
+      "relevance": "direct",
+      "reason": "Learns masks to suppress corrupted facial features under occlusion.",
+      "disposition": "Retain as related recognition work, not a reproduced baseline.",
+      "source_url": "https://arxiv.org/abs/2108.09468",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 13,
+      "key": "masklearn",
+      "title": "Occlusion robust face recognition based on mask learning with pairwise differential Siamese network",
+      "role": "Occlusion recognition",
+      "relevance": "direct",
+      "reason": "Pairwise differential Siamese mask learning discards occlusion-corrupted features.",
+      "disposition": "Retain as a distinct earlier occlusion strategy.",
+      "source_url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Song_Occlusion_Robust_Face_Recognition_Based_on_Mask_Learning_With_Pairwise_ICCV_2019_paper.pdf",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 14,
+      "key": "umr",
+      "title": "Self-restrained triplet loss for accurate masked face recognition",
+      "role": "Occlusion recognition",
+      "relevance": "direct",
+      "reason": "Embedding unmasking with a self-restrained triplet objective for masked-face recognition.",
+      "disposition": "Retain corrected final journal title/DOI from the preceding audit.",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S003132032100649X",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 15,
+      "key": "focusface",
+      "title": "FocusFace: Multi-task contrastive learning for masked face recognition",
+      "role": "Occlusion recognition",
+      "relevance": "direct",
+      "reason": "Multi-task contrastive learning for masked/unmasked face verification.",
+      "disposition": "Retain; related objective and task, not our training loss.",
+      "source_url": "https://arxiv.org/abs/2110.14940",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 16,
+      "key": "beyondmasks",
+      "title": "Beyond masks: On the generalization of masked face recognition models to occluded face recognition",
+      "role": "Occlusion recognition",
+      "relevance": "direct",
+      "reason": "Examines transfer between masked-face and broader occluded-face recognition.",
+      "disposition": "Retain; directly relevant to cross-condition generalization.",
+      "source_url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/b05e6948-e660-4956-a90c-b6aa8e2e6c78/content",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 17,
+      "key": "mfr2021",
+      "title": "MFR 2021: Masked face recognition competition",
+      "role": "Masked benchmark",
+      "relevance": "direct",
+      "reason": "Competition evaluates recognition under real masks.",
+      "disposition": "Retain for evaluation context; no score comparison across unmatched protocols.",
+      "source_url": "https://www-igd.igd.fraunhofer.de/files/media/biblio/2021/2021_boutros_mfr_2021.pdf",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 18,
+      "key": "insightfacemfr",
+      "title": "Masked face recognition challenge: The InsightFace track report",
+      "role": "Masked benchmark",
+      "relevance": "direct",
+      "reason": "Documents a large-scale masked-face recognition challenge.",
+      "disposition": "Retain for evaluation context; challenge identities/protocol are not our test cohort.",
+      "source_url": "https://openaccess.thecvf.com/content/ICCV2021W/MFR/html/Deng_Masked_Face_Recognition_Challenge_The_InsightFace_Track_Report_ICCVW_2021_paper.html",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 19,
+      "key": "hsu2022",
+      "title": "Masked face recognition from synthesis to reality",
+      "role": "Occlusion recognition",
+      "relevance": "direct",
+      "reason": "Studies synthetic-mask training and evaluation on real masked faces.",
+      "disposition": "Retain; replaced vague synthesis-to-reality wording with the specific supported claim.",
+      "source_url": "https://www.researchgate.net/publication/363074637_Masked_Face_Recognition_From_Synthesis_to_Reality",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 20,
+      "key": "rof",
+      "title": "On recognizing occluded faces in the wild",
+      "role": "Dataset",
+      "relevance": "direct",
+      "reason": "Source study of the ROF masks/sunglasses data used for training and evaluation.",
+      "disposition": "Retain; reconstructed local protocol is distinguished from the original benchmark.",
+      "source_url": "https://research.itu.edu.tr/tr/publications/on-recognizing-occluded-faces-in-the-wild-2/",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 21,
+      "key": "fbr2024",
+      "title": "Flexible biometrics recognition: Bridging the multimodality gap through attention alignment and prompt tuning",
+      "role": "Closest prior work",
+      "relevance": "direct",
+      "reason": "Face/periocular fusion, transformer attention, prompt tuning and cross-modality matching.",
+      "disposition": "Retain; essential novelty comparator, not reproduced experimentally here.",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Tiong_Flexible_Biometrics_Recognition_Bridging_the_Multimodality_Gap_through_Attention_Alignment_CVPR_2024_paper.html",
+      "citation_lines": [
+        40
+      ]
+    },
+    {
+      "number": 22,
+      "key": "periocular",
+      "title": "Periocular biometrics in the visible spectrum",
+      "role": "Closest prior work",
+      "relevance": "direct",
+      "reason": "Studies periocular matching, eyebrow cues, face/periocular fusion and partial occlusion.",
+      "disposition": "Retain; removed the uncited BTAS-2009 aside rather than conflating two publications.",
+      "source_url": "https://cse.msu.edu/~rossarun/pubs/ParkPeriocularBiometrics_TIFS2011.pdf",
+      "citation_lines": [
+        43
+      ]
+    },
+    {
+      "number": 23,
+      "key": "ckd2024",
+      "title": "Periocular embedding learning with consistent knowledge distillation from face",
+      "role": "Closest prior work",
+      "relevance": "direct",
+      "reason": "Transfers face identity information into periocular embeddings through distillation.",
+      "disposition": "Retain; does not imply that this manuscript implements CKD.",
+      "source_url": "https://yonsei.elsevierpure.com/en/publications/periocular-embedding-learning-with-consistent-knowledge-distillat/",
+      "citation_lines": [
+        43
+      ]
+    },
+    {
+      "number": 24,
+      "key": "ocularcrop2025",
+      "title": "Leveraging large-scale face datasets for deep periocular recognition via ocular cropping",
+      "role": "Closest prior work",
+      "relevance": "direct",
+      "reason": "Trains periocular recognition from crops of large face datasets; acquisition/crop protocol matters.",
+      "disposition": "Retain the identified arXiv version; no cross-protocol numerical ranking.",
+      "source_url": "https://arxiv.org/abs/2510.26294",
+      "citation_lines": [
+        45
+      ]
+    },
+    {
+      "number": 25,
+      "key": "dino",
+      "title": "Emerging properties in self-supervised vision transformers",
+      "role": "Visual pretraining background",
+      "relevance": "context",
+      "reason": "Self-supervised vision-transformer predecessor to DINOv2.",
+      "disposition": "Retain as backbone lineage, not an evaluated model.",
+      "source_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.html",
+      "citation_lines": [
+        48
+      ]
+    },
+    {
+      "number": 26,
+      "key": "mae",
+      "title": "Masked autoencoders are scalable vision learners",
+      "role": "Visual pretraining background",
+      "relevance": "context",
+      "reason": "Learns visual features through masked-patch reconstruction.",
+      "disposition": "Retain as a different pretraining approach, not evidence of face-occlusion performance.",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html",
+      "citation_lines": [
+        48
+      ]
+    },
+    {
+      "number": 27,
+      "key": "simclr",
+      "title": "A simple framework for contrastive learning of visual representations",
+      "role": "Visual pretraining background",
+      "relevance": "context",
+      "reason": "Contrasts augmented image views to learn representations.",
+      "disposition": "Retain; wording now states its image-based objective separately from CLIP.",
+      "source_url": "https://proceedings.mlr.press/v119/chen20j.html",
+      "citation_lines": [
+        48
+      ]
+    },
+    {
+      "number": 28,
+      "key": "clip",
+      "title": "Learning transferable visual models from natural language supervision",
+      "role": "Visual pretraining background",
+      "relevance": "context",
+      "reason": "Learns transferable representations from paired images and natural language.",
+      "disposition": "Retain as broader background; corrected natural-language supervision and stated not evaluated here.",
+      "source_url": "https://proceedings.mlr.press/v139/radford21a.html",
+      "citation_lines": [
+        48
+      ]
+    },
+    {
+      "number": 29,
+      "key": "vpt",
+      "title": "Visual prompt tuning",
+      "role": "Adaptation alternatives",
+      "relevance": "context",
+      "reason": "Learns prompts for frozen vision transformers.",
+      "disposition": "Retain as a visual adaptation alternative; not tested in the ablation grid.",
+      "source_url": "https://researchprofiles.ku.dk/en/publications/visual-prompt-tuning-2/",
+      "citation_lines": [
+        51
+      ]
+    },
+    {
+      "number": 30,
+      "key": "prompt",
+      "title": "The power of scale for parameter-efficient prompt tuning",
+      "role": "Cross-field adaptation background",
+      "relevance": "context",
+      "reason": "Soft-prompt tuning of frozen language models.",
+      "disposition": "Least direct reference; defensible only as broader adaptation context. Explicitly marked language-model work, not face/periocular evidence.",
+      "source_url": "https://aclanthology.org/2021.emnlp-main.243/",
+      "citation_lines": [
+        51
+      ]
+    },
+    {
+      "number": 31,
+      "key": "adaptformer",
+      "title": "AdaptFormer: Adapting vision transformers for scalable visual recognition",
+      "role": "Adaptation alternatives",
+      "relevance": "context",
+      "reason": "Lightweight adapters for pretrained visual transformers.",
+      "disposition": "Retain as an alternative to LoRA; not implemented in this study.",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/69e2f49ab0837b71b0e0cb7c555990f8-Abstract-Conference.html",
+      "citation_lines": [
+        51
+      ]
+    },
+    {
+      "number": 32,
+      "key": "fusionRossJain",
+      "title": "Information fusion in biometrics",
+      "role": "Fusion foundations",
+      "relevance": "direct",
+      "reason": "Studies biometric matching-score fusion.",
+      "disposition": "Retain the narrower matching-score attribution; our implemented fusion combines embeddings.",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0167865503000795",
+      "citation_lines": [
+        54
+      ]
+    },
+    {
+      "number": 33,
+      "key": "quality",
+      "title": "Quality measures in biometric systems",
+      "role": "Fusion foundations",
+      "relevance": "direct",
+      "reason": "Reviews biometric sample utility and quality-dependent processing/fusion.",
+      "disposition": "Retain; Tables II/III and Section VII support the qualified statement, not measured quality-awareness of our gate.",
+      "source_url": "https://arxiv.org/pdf/2111.08704",
+      "citation_lines": [
+        54
+      ]
+    },
+    {
+      "number": 34,
+      "key": "sface",
+      "title": "SFace: Sigmoid-constrained hypersphere loss for robust face recognition",
+      "role": "Executed diagnostic",
+      "relevance": "direct",
+      "reason": "Face-recognition method underlying the actual OpenCV SFace diagnostic.",
+      "disposition": "Retain; paper and checkpoint implementation details serve different provenance roles.",
+      "source_url": "https://arxiv.org/abs/2205.12010",
+      "citation_lines": [
+        363
+      ]
+    },
+    {
+      "number": 35,
+      "key": "yunet",
+      "title": "YuNet: A tiny millisecond-level face detector",
+      "role": "Executed diagnostic",
+      "relevance": "direct",
+      "reason": "Face detector used in the SFace preprocessing pipeline.",
+      "disposition": "Retain as an implementation-source citation; not a verification competitor.",
+      "source_url": "https://link.springer.com/article/10.1007/s11633-023-1423-y",
+      "citation_lines": [
+        363
+      ]
+    }
+  ],
+  "scope": "Reference-by-reference topic fit and support for the short attributed claim using primary publisher/author abstracts, indexed primary-source extracts and accessible papers. Not a full systematic review or line-by-line verification of all cited full texts. Access failures and prior metadata limits remain in REFERENCE_CHECKS.json.",
+  "conclusion": "22 directly relevant sources and 13 contextual sources. No wholly unrelated reference identified after qualified wording. Lester prompt tuning is the least direct and optional; relevance does not mean experimental comparability or novelty clearance."
+}

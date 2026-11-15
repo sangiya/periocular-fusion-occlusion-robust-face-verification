@@ -15,3 +15,5 @@ The targeted submission review and prepared author materials are in [submission_
 The academic-writing revision adds an extended thesis draft under document/thesis/. Ten measured table blocks and all 35 bibliography keys are retained. The thesis shares the completed experiment and adds explanatory appendices; it does not introduce new measurements or institutional declarations.
 
 A broader recheck on 16 November 2026 independently reproduced all 120 score-file AUCs and ten paired intervals, checked the plotted data and byte-identical figure regeneration, and corrected a reference title/DOI and a fusion attribution. See [the comprehensive recheck](COMPREHENSIVE_RECHECK_2026-11-16.md). No licensed plagiarism report or AI-detector clearance was obtained; ethics/permissions and author scientific approval remain unresolved.
+
+The subsequent [reference relevance review](submission_preparation/REFERENCE_RELEVANCE_AUDIT.md) checks every one of the 35 citations: 22 directly relevant and 13 contextual. Claim wording and first-citation bibliography order were corrected; no measured values changed. Contextual references are not represented as evaluated baselines.

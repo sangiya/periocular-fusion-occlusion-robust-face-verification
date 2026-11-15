@@ -208,5 +208,7 @@
   "corrections": [
     "umr final journal title and DOI",
     "fusionRossJain matching-score attribution"
-  ]
+  ],
+  "claim_relevance_review": "REFERENCE_RELEVANCE_AUDIT.json",
+  "claim_review_scope": "All 35 entries assessed against their cited claim and topic; accessible primary-source abstracts/extracts and selected full texts, not a line-by-line full-text audit of every paper."
 }

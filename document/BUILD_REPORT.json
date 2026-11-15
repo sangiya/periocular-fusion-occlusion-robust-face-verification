@@ -7,23 +7,23 @@
     "--keep-logs"
   ],
   "inputs": {
-    "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex": "3a538a96a51ecc9955bbf5b35eb65d2199c6608fb3df5523ea7afa4419e1f0bf",
-    "document/arXiv_Preprint_10Page_Final.tex": "2645a2320e511a3f2deee5ee6b0332af96c7090ffb7f009ee7fe8e02c109f3f1",
+    "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex": "58675d61c9f0ac4ed2a8ca9e83479cf9c09e5a768a5ab382dfb09787a443a804",
+    "document/arXiv_Preprint_10Page_Final.tex": "0d50b2fecfa9475180a128e7bba989239b14987fa5ecb03096285ed7a7e5bd70",
     "document/cpu_followup/CPU_Integrity_Followup.tex": "d72c283d244a7054b5a85b87967d3ede1ab12a91e9c44d7147c660b9bbd0e08f",
     "submission_ieee_10page/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
     "submission_ieee_10page/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
     "submission_ieee_10page/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
     "submission_ieee_10page/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
     "submission_ieee_10page/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
-    "document/thesis/Research_Thesis_Draft.tex": "70b1aaea291e75e262e72ba8bf0452a8bceded044648cc9e1e0c1c077229fa54"
+    "document/thesis/Research_Thesis_Draft.tex": "0b329d1475dba3800fc2994e5370cd8e87c39ed0d6b2bf711d7b8cebc4a02450"
   },
   "pdfs": [
     {
       "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf",
-      "sha256": "96b757f1e3b976f740bb24fcc14a0025ac63f6bf1e23c03ded38fb420fc12e89",
+      "sha256": "2050bfa1ae363a4df04c0b3d989e9257e5830a14f2af2d46a86f48b5d606ff69",
       "pages": 10,
       "source": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
-      "source_sha256": "3a538a96a51ecc9955bbf5b35eb65d2199c6608fb3df5523ea7afa4419e1f0bf",
+      "source_sha256": "58675d61c9f0ac4ed2a8ca9e83479cf9c09e5a768a5ab382dfb09787a443a804",
       "log": "document/build_logs/IEEE_TBIOM_Submission_10Page_Final.log",
       "overfull_boxes": 0,
       "underfull_messages": 4,
@@ -31,10 +31,10 @@
     },
     {
       "file": "document/arXiv_Preprint_10Page_Final.pdf",
-      "sha256": "806939bfc1a1748cd62e48389ece2624903fac8b214e283e1403aad1d43ed431",
+      "sha256": "463f0d113af17e4c4b9cbe3ad3d760f6523931b582c5d2cda362e9de0a565782",
       "pages": 10,
       "source": "document/arXiv_Preprint_10Page_Final.tex",
-      "source_sha256": "2645a2320e511a3f2deee5ee6b0332af96c7090ffb7f009ee7fe8e02c109f3f1",
+      "source_sha256": "0d50b2fecfa9475180a128e7bba989239b14987fa5ecb03096285ed7a7e5bd70",
       "log": "document/build_logs/arXiv_Preprint_10Page_Final.log",
       "overfull_boxes": 0,
       "underfull_messages": 4,
@@ -53,16 +53,16 @@
     "undefined_references_or_citations": false
   },
   "shared_substantive_tex": true,
-  "visual_inspection": "Both 10-page manuscripts rendered and checked in page contact sheets; tables, plots, and margins inspected. Completed supplement separately rendered.",
+  "visual_inspection": "Current IEEE/arXiv/thesis PDFs rendered after the reference pass. Related-work and bibliography pages inspected in detail; earlier full-document overview covers unchanged numerical figures and tables.",
   "note": "No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain.",
   "thesis": {
     "file": "document/thesis/Research_Thesis_Draft.pdf",
-    "sha256": "448988b5b239b227761d09e7d97b84b6c10b1f372cffe2b276e0815888fb06c0",
+    "sha256": "f3e7b4325267b0f59ebebf2e9f45cd9dabf893d8a055bcc33b85657d91e9eb12",
     "pages": 54,
     "source": "document/thesis/Research_Thesis_Draft.tex",
-    "source_sha256": "70b1aaea291e75e262e72ba8bf0452a8bceded044648cc9e1e0c1c077229fa54",
+    "source_sha256": "0b329d1475dba3800fc2994e5370cd8e87c39ed0d6b2bf711d7b8cebc4a02450",
     "overfull_boxes": 0,
     "status": "Generic research thesis draft; institution-specific template and author declarations remain pending."
   },
-  "recheck": "Citation corrections rebuilt and checked; existing 21 regression tests passed, 56 Python files parsed."
+  "recheck": "Full 35-reference relevance and citation-order revision; measured tables unchanged; 21 tests pass."
 }

@@ -17,6 +17,6 @@ test_no_report_is_not_a_completed_model (test_cpu_recovery.RecoveryGuards.test_n
 test_observed_interruption_has_only_three_retries (test_cpu_recovery.RecoveryGuards.test_observed_interruption_has_only_three_retries) ... ok
 
 ----------------------------------------------------------------------
-Ran 15 tests in 0.679s
+Ran 15 tests in 0.590s
 
 OK

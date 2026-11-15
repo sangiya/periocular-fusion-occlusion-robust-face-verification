@@ -4,36 +4,42 @@
   "documents": [
     {
       "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
-      "sha256": "3a538a96a51ecc9955bbf5b35eb65d2199c6608fb3df5523ea7afa4419e1f0bf",
+      "sha256": "58675d61c9f0ac4ed2a8ca9e83479cf9c09e5a768a5ab382dfb09787a443a804",
       "bibliography_keys": 35,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
       "undefined_labels": [],
       "prompt_residue": [],
       "duplicate_long_paragraphs": [],
-      "ai_assistance_disclosed": true
+      "ai_assistance_disclosed": true,
+      "bibliography_order_matches_first_citation": true,
+      "last_checked": "2026-11-16; full citation relevance pass"
     },
     {
       "file": "document/arXiv_Preprint_10Page_Final.tex",
-      "sha256": "2645a2320e511a3f2deee5ee6b0332af96c7090ffb7f009ee7fe8e02c109f3f1",
+      "sha256": "0d50b2fecfa9475180a128e7bba989239b14987fa5ecb03096285ed7a7e5bd70",
       "bibliography_keys": 35,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
       "undefined_labels": [],
       "prompt_residue": [],
       "duplicate_long_paragraphs": [],
-      "ai_assistance_disclosed": true
+      "ai_assistance_disclosed": true,
+      "bibliography_order_matches_first_citation": true,
+      "last_checked": "2026-11-16; full citation relevance pass"
     },
     {
       "file": "document/thesis/Research_Thesis_Draft.tex",
-      "sha256": "70b1aaea291e75e262e72ba8bf0452a8bceded044648cc9e1e0c1c077229fa54",
+      "sha256": "0b329d1475dba3800fc2994e5370cd8e87c39ed0d6b2bf711d7b8cebc4a02450",
       "bibliography_keys": 35,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
       "undefined_labels": [],
       "prompt_residue": [],
       "duplicate_long_paragraphs": [],
-      "ai_assistance_disclosed": true
+      "ai_assistance_disclosed": true,
+      "bibliography_order_matches_first_citation": true,
+      "last_checked": "2026-11-16; full citation relevance pass"
     }
   ],
   "web_phrase_checks": {
@@ -47,5 +53,6 @@
     "limitation": "A few web-indexed phrase searches do not cover paywalled literature, unpublished work, institutional repositories or a licensed similarity database; no percentage or clearance inferred."
   },
   "licensed_similarity_report": null,
-  "ai_authorship_percentage": null
+  "ai_authorship_percentage": null,
+  "reference_relevance_audit": "submission_preparation/REFERENCE_RELEVANCE_AUDIT.json"
 }

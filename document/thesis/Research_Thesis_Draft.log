@@ -495,20 +495,20 @@ om-dataset. Cap-tured
 
 ] [41
 
-] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 656--657
+]
+Underfull \hbox (badness 10000) in paragraph at lines 649--650
 []\OT1/ptm/m/n/12 F. Boutros et al., ``MFR 2021: Masked face recog-ni-tion com-
 pe-ti-tion,''
  []
 
 
-Underfull \hbox (badness 5637) in paragraph at lines 656--657
+Underfull \hbox (badness 5637) in paragraph at lines 649--650
 \OT1/ptm/m/n/12 in \OT1/ptm/m/it/12 Proc. IEEE Int. Joint Conf. Bio-met-rics (I
 JCB)\OT1/ptm/m/n/12 , 2021, pp. 1--10, doi:
  []
 
-[43] [44] (Research_Thesis_Draft.aux)
+[42] [43] [44] (Research_Thesis_Draft.aux)
 Package rerunfilecheck Info: File `Research_Thesis_Draft.out' has not changed.
-(rerunfilecheck)             Checksum: 62FA0A76885CE5F5156BD5D2D268881A;10185.
+(rerunfilecheck)             Checksum: 1423A1EDAE801D05D70C50A4215F5CDA;10160.
  )
-Output written on Research_Thesis_Draft.xdv (54 pages, 165652 bytes).
+Output written on Research_Thesis_Draft.xdv (54 pages, 166148 bytes).
