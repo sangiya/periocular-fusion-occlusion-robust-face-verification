@@ -5,6 +5,8 @@ import hashlib,json,re,shutil
 ROOT=Path(__file__).resolve().parent.parent
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
+    if (ROOT/'results/shared_crop_sface/REPORT.json').exists():
+        raise SystemExit('This editorial template predates the scientific strengthening revision. Edit the current TeX sources; do not overwrite the new controls and literature positioning.')
     source=ROOT/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex'
     history=ROOT/'document/history/before_academic_writing_revision'
     if not history.exists():

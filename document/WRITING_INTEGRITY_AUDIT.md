@@ -11,3 +11,6 @@ The academic prose revision rewrites the argument and interpretation while prese
 A broader recheck on 16 November 2026 independently reproduced all 120 score-file AUCs and ten paired intervals, checked the plotted data and byte-identical figure regeneration, and corrected a reference title/DOI and a fusion attribution. See [the comprehensive recheck](COMPREHENSIVE_RECHECK_2026-11-16.md). No licensed plagiarism report or AI-detector clearance was obtained; ethics/permissions and author scientific approval remain unresolved.
 
 The subsequent [reference relevance review](submission_preparation/REFERENCE_RELEVANCE_AUDIT.md) checks every one of the 35 citations: 22 directly relevant and 13 contextual. Claim wording and first-citation bibliography order were corrected; no measured values changed. Contextual references are not represented as evaluated baselines.
+
+
+The later [scientific strengthening revision](SCIENTIFIC_STRENGTHENING_REPORT.md) supersedes the earlier bibliography count and thesis pagination: 38 references, a 55-page thesis, shared-crop SFace and masked identity-deletion controls. The original ten measurement tables remain unchanged.

@@ -4,8 +4,8 @@
   "documents": [
     {
       "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
-      "sha256": "58675d61c9f0ac4ed2a8ca9e83479cf9c09e5a768a5ab382dfb09787a443a804",
-      "bibliography_keys": 35,
+      "sha256": "a74701fb3bfcac668edba0aa0684a5c4d1eb1de596623c1c2af7c3400fd872f2",
+      "bibliography_keys": 38,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
       "undefined_labels": [],
@@ -13,12 +13,12 @@
       "duplicate_long_paragraphs": [],
       "ai_assistance_disclosed": true,
       "bibliography_order_matches_first_citation": true,
-      "last_checked": "2026-11-16; full citation relevance pass"
+      "last_checked": "2026-11-16; scientific strengthening revision"
     },
     {
       "file": "document/arXiv_Preprint_10Page_Final.tex",
-      "sha256": "0d50b2fecfa9475180a128e7bba989239b14987fa5ecb03096285ed7a7e5bd70",
-      "bibliography_keys": 35,
+      "sha256": "8816ea043ab800d5b9a249fe628ebeff03afdb4ee1286cab5cdc78179ac7fb39",
+      "bibliography_keys": 38,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
       "undefined_labels": [],
@@ -26,12 +26,12 @@
       "duplicate_long_paragraphs": [],
       "ai_assistance_disclosed": true,
       "bibliography_order_matches_first_citation": true,
-      "last_checked": "2026-11-16; full citation relevance pass"
+      "last_checked": "2026-11-16; scientific strengthening revision"
     },
     {
       "file": "document/thesis/Research_Thesis_Draft.tex",
-      "sha256": "0b329d1475dba3800fc2994e5370cd8e87c39ed0d6b2bf711d7b8cebc4a02450",
-      "bibliography_keys": 35,
+      "sha256": "70b5587b4ed4a4314a8b5e1623b441917fc6d0787c57d129ec5e87a3c0fb9f86",
+      "bibliography_keys": 38,
       "missing_citations": [],
       "uncited_bibliography_keys": [],
       "undefined_labels": [],
@@ -39,7 +39,7 @@
       "duplicate_long_paragraphs": [],
       "ai_assistance_disclosed": true,
       "bibliography_order_matches_first_citation": true,
-      "last_checked": "2026-11-16; full citation relevance pass"
+      "last_checked": "2026-11-16; scientific strengthening revision"
     }
   ],
   "web_phrase_checks": {

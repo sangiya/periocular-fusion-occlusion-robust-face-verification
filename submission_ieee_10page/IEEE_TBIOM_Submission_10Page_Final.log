@@ -533,14 +533,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
+Underfull \hbox (badness 2401) in paragraph at lines 47--48
+\TU/phv/b/n/9.53561 periocular recognition [[]]. Our study instead exam-
+ []
+
 [2]
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 63.
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 65.
 
  [3]
-
-LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 135.
-
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
 (Font)              using `TU/ppl/bx/n' instead on input line 137.
@@ -550,52 +550,48 @@ LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
 (Font)              using `TU/ppl/bx/n' instead on input line 139.
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 139--140
+LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
+(Font)              using `TU/ppl/bx/n' instead on input line 141.
+
+
+Underfull \hbox (badness 1681) in paragraph at lines 141--142
 []\TU/phv/b/n/9.53561 Execution and recovery. The executed environment
  []
 
 [4]
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 181.
-
-
-LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 181.
-
-
-LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
 (Font)              using `TU/ppl/bx/n' instead on input line 183.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
 (Font)              using `TU/ppl/bx/n' instead on input line 183.
+
+
+LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
+(Font)              using `TU/ppl/bx/n' instead on input line 185.
+
+
+LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
+(Font)              using `TU/ppl/bx/n' instead on input line 185.
 
 File: fig_rof_masked_roc.pdf Graphic file (type pdf)
 <use fig_rof_masked_roc.pdf>
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 208.
+(Font)              using `TU/ppl/bx/n' instead on input line 212.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 210.
+(Font)              using `TU/ppl/bx/n' instead on input line 214.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 210.
+(Font)              using `TU/ppl/bx/n' instead on input line 214.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 211.
-
-
-LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 224.
-
-
-LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 225.
+(Font)              using `TU/ppl/bx/n' instead on input line 215.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
@@ -603,56 +599,65 @@ LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 228.
+(Font)              using `TU/ppl/bx/n' instead on input line 229.
+
+
+LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
+(Font)              using `TU/ppl/bx/n' instead on input line 232.
+
+
+LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
+(Font)              using `TU/ppl/bx/n' instead on input line 232.
 
 File: fig_rof_sunglasses_roc.pdf Graphic file (type pdf)
 <use fig_rof_sunglasses_roc.pdf>
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 255.
+(Font)              using `TU/ppl/bx/n' instead on input line 259.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 255.
+(Font)              using `TU/ppl/bx/n' instead on input line 259.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 256.
+(Font)              using `TU/ppl/bx/n' instead on input line 260.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 256.
+(Font)              using `TU/ppl/bx/n' instead on input line 260.
 
 File: fig_mfr2_roc.pdf Graphic file (type pdf)
 <use fig_mfr2_roc.pdf>
+[5]
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 283.
-
-
-LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 283.
+(Font)              using `TU/ppl/bx/n' instead on input line 287.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 284.
+(Font)              using `TU/ppl/bx/n' instead on input line 287.
 
 
 LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/bx/n' instead on input line 284.
+(Font)              using `TU/ppl/bx/n' instead on input line 288.
+
+
+LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
+(Font)              using `TU/ppl/bx/n' instead on input line 288.
 
 File: fig_auc_cross_dataset.pdf Graphic file (type pdf)
 <use fig_auc_cross_dataset.pdf>
-[5]
+[6]
 File: fig_rof_masked_scores.pdf Graphic file (type pdf)
 <use fig_rof_masked_scores.pdf>
- [6] [7] [8] [9]
-Underfull \hbox (badness 1509) in paragraph at lines 476--477
+ [7] [8] [9]
+Underfull \hbox (badness 1509) in paragraph at lines 482--483
 []\TU/phv/b/n/8.03 M. E. Erakın, U. Demir, and H. K. Ekenel, “On rec-
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 476--477
+Underfull \hbox (badness 2310) in paragraph at lines 482--483
 \TU/phv/b/n/8.03 Biometrics Special Interest Group (BIOSIG), 2021, doi:
  []
 
@@ -664,5 +669,5 @@ Package rerunfilecheck Info: File `IEEE_TBIOM_Submission_10Page_Final.out' has
 not changed.
 (rerunfilecheck)             Checksum: B1B4C70FDCD67D1FFE197FB34BEAC0C7;7212.
  )
-Output written on IEEE_TBIOM_Submission_10Page_Final.xdv (10 pages, 554428 byte
+Output written on IEEE_TBIOM_Submission_10Page_Final.xdv (10 pages, 580512 byte
 s).

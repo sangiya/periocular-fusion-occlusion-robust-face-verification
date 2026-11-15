@@ -13,8 +13,15 @@
       "sface_score_files": 8,
       "auxiliary_manuscript_tables": 5
     },
+    "strengthening": {
+      "shared_crop_score_files": 8,
+      "shared_crop_images": 3402,
+      "calibrated_operating_points": 20,
+      "masked_identity_subsets": 9,
+      "per_seed_subset_aucs": 135
+    },
     "sensitivity_table_numbers": 25,
-    "thesis_pages": 54
+    "thesis_pages": 55
   },
   "failures": [],
   "scope": "Artifact arithmetic, raw-score alignment, table values, recorded provenance mappings, corrected inference and clean input checks; not publication approval."

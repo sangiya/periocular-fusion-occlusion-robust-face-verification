@@ -33,7 +33,7 @@ def main():
     assert 'Math' in '\n'.join(texts) and 'Experiment Register' in '\n'.join(texts)
     record.update({'pdf_sha256':sha(pdf),'pages':len(reader.pages),'overfull_boxes':0,'missing_characters':0,
         'undefined_references_or_citations':False,'verified_measured_table_blocks':len(labels),'verified_register_rows':25,
-        'references':35,'compiler':'Tectonic 0.17.0; cached report class and fonts',
+        'references':len(re.findall(r'\\bibitem\{([^}]+)\}',journal)),'compiler':'Tectonic 0.17.0; cached report class and fonts',
         'layout':'A4, 12-point Times, 1.25 line spacing; generic draft, not an institutional template',
         'scope':'Shared measurement tables, register arithmetic, provenance bindings, PDF structure and compilation; no institution or publication approval.'})
     (folder/'THESIS_SOURCE_RECORD.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')

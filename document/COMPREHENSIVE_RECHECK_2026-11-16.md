@@ -23,3 +23,6 @@ The IEEE paper and preprint remain ten pages each, and the generic thesis draft 
 Submission is still pending a factual ethics/consent and permissions declaration, the author's approval of the scientific contribution and references, and correspondence/submission details. Public availability through Kaggle or GitHub does not establish image rights or a committee decision. The small masked identity set, uncertain semantic labels/pretraining overlap, stronger unmatched SFace diagnostic, and limited evidence for learned gating remain scientific limitations. No new training is needed to complete the specified 15-model grid; stronger journal claims could require additional research.
 
 The subsequent [reference relevance review](submission_preparation/REFERENCE_RELEVANCE_AUDIT.md) checks every one of the 35 citations: 22 directly relevant and 13 contextual. Claim wording and first-citation bibliography order were corrected; no measured values changed. Contextual references are not represented as evaluated baselines.
+
+
+The later [scientific strengthening revision](SCIENTIFIC_STRENGTHENING_REPORT.md) supersedes the earlier bibliography count and thesis pagination: 38 references, a 55-page thesis, shared-crop SFace and masked identity-deletion controls. The original ten measurement tables remain unchanged.

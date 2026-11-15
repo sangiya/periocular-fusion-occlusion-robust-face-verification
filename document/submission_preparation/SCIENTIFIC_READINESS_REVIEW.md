@@ -17,3 +17,6 @@ Targeted reference checks confirmed FBR (CVPR 2024), CKD (Neurocomputing 2024), 
 No licensed similarity report or detector clearance has been obtained. The next concrete step is author review of contribution, image labels and declarations, followed by submission preparation using the factual metadata and cover-letter draft. No messages were sent to editors and no repository visibility was changed.
 
 A subsequent search of the project guides and captured run paths located the specific Kaggle mount identifiers and original dataset pages. See DATASET_SOURCE_TRACE.md. This clarifies provenance; it does not supply a committee decision, exact image-use permissions, or individual consent.
+
+
+Update, 16 November 2026: [additional scientific controls](../SCIENTIFIC_STRENGTHENING_REPORT.md) now address input-crop and individual-identity influence. The [closer literature comparison](NOVELTY_COMPARISON.md) adds FRoundation, Sony et al. 2025, and Prasad et al. 2026. These additions improve attribution and narrow novelty claims; they do not establish matched pretraining/training, expand the identity cohort or resolve ethics declarations. The current reference relevance audit covers 38 entries.

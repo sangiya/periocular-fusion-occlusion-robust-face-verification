@@ -12,7 +12,7 @@
 - [ ] Complete factual ethics-review/consent explanation; do not infer exemption from public availability.
 - [ ] Establish and approve the journal-level novelty argument; see submission_preparation/SCIENTIFIC_READINESS_REVIEW.md.
 - [x] Academic prose revision complete; measured tables preserved.
-- [x] Extended 54-page thesis draft compiled, checked, and linked to the shared results.
+- [x] Extended 55-page thesis draft compiled, checked, and linked to the shared results.
 - [ ] Apply the actual university thesis template and confirm institutional front matter, if a degree submission is intended.
 - [ ] Author approves the scientific contribution, label review, citations, and interpretation.
 - [ ] Obtain and review licensed similarity screening if required by the institution/journal.
@@ -21,3 +21,6 @@
 Compilation, arithmetic checks, and regression outcomes are recorded separately in BUILD_REPORT.json, VERIFICATION_REPORT.json, and TEST_REPORT.json. A checked artifact task does not imply journal acceptance or detector clearance.
 
 - [x] 16 November independent AUC/figure/paired-interval and citation-linkage recheck completed; see COMPREHENSIVE_RECHECK_2026-11-16.md.
+
+- [x] Three close 2025/2026 works added and contribution boundaries revised; 38 references assessed.
+- [x] Shared-input-crop SFace CPU inference and nine masked identity-deletion subsets completed and independently checked.

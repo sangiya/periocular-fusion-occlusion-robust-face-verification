@@ -1,6 +1,6 @@
 {
   "checked_on": "2026-11-16",
-  "scope": "35 bibliography keys mapped to source evidence, including earlier targeted checks and a broader bibliographic identity check. Metadata/abstract checks vary by accessible source; not all fields or full-text claims are independently certified. Earlier limited and blocked records retain their explicit limits.",
+  "scope": "38 references after broader novelty/currency search. Bibliographic identity and cited-claim relevance checked using primary sources with source-specific access limits; not every full text audited.",
   "sources": [
     {
       "key": "fbr2024",
@@ -203,6 +203,24 @@
       "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/69e2f49ab0837b71b0e0cb7c555990f8-Abstract-Conference.html",
       "checked_on": "2026-11-16",
       "checked": "Bibliographic identity checked against indexed primary publisher/author/institution record; not a full-text claim-by-claim review."
+    },
+    {
+      "key": "froundation2025",
+      "url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/7e4c7e15-dfc1-47e5-bca4-493e46bbfeee/content",
+      "checked_on": "2026-11-16",
+      "checked": "Primary full-text first page and method: authors, 2025 volume 156 article 105453 DOI, DINOv2/CLIP LoRA face adaptation."
+    },
+    {
+      "key": "foundationcomparison2025",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025W/FoundGen-Bio/html/Sony_Foundation_versus_Domain-specific_Models_Performance_Comparison_Fusion_and_Explainability_in_ICCVW_2025_paper.html",
+      "checked_on": "2026-11-16",
+      "checked": "Primary CVF abstract/BibTeX: authors, workshop publication pp.3715-3725; crop, fusion and face-specific comparator findings."
+    },
+    {
+      "key": "perilora2026",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/03772063.2026.2695248",
+      "checked_on": "2026-11-16",
+      "checked": "Indexed primary publisher abstract/author/date evidence; online 5 Aug 2026, DOI confirmed with author institution publication list. Cross-spectral enrollment-template QAGF, LoRA DINOv2; full-text direct fetch blocked. No unsupported numerical comparison or page range used."
     }
   ],
   "corrections": [

@@ -23,7 +23,7 @@ def main():
     tests=json.loads((ROOT/'document/TEST_REPORT.json').read_text())
     citations=json.loads((ROOT/'document/submission_preparation/REFERENCE_RELEVANCE_AUDIT.json').read_text())
     assert not verifier['failures'] and tests['regression_status']=='passed'
-    assert citations['references_reviewed']==35 and citations['bibliography_order_matches_first_citation']
+    assert citations['references_reviewed']==len(re.findall(r'\\bibitem\{([^}]+)\}',(ROOT/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex').read_text(encoding='utf-8'))) and citations['bibliography_order_matches_first_citation']
     records=build['pdfs']+[build['supplement'],build['thesis']]
     for record in records:
         assert digest((ROOT/record['file']).read_bytes())==record['sha256']
@@ -51,6 +51,10 @@ def main():
         'audit/FIGURE_DATA_AUDIT.json':'document/FIGURE_DATA_AUDIT.json',
         'audit/PAIRED_INTERVAL_AUDIT.json':'document/PAIRED_INTERVAL_AUDIT.json',
         'audit/TEXT_INTEGRITY_RECHECK.json':'document/TEXT_INTEGRITY_RECHECK.json',
+        'audit/SCIENTIFIC_STRENGTHENING_REPORT.md':'document/SCIENTIFIC_STRENGTHENING_REPORT.md',
+        'audit/NOVELTY_COMPARISON.md':'document/submission_preparation/NOVELTY_COMPARISON.md',
+        'audit/MASKED_IDENTITY_SENSITIVITY.json':'results/strengthening/MASKED_IDENTITY_SENSITIVITY.json',
+        'audit/SHARED_CROP_SFACE_REPORT.json':'results/shared_crop_sface/REPORT.json',
     }
     items={name:(ROOT/rel).read_bytes() for name,rel in mapping.items()}
     source=ROOT/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex'
@@ -82,16 +86,16 @@ def main():
         items['audit/STANDALONE_IEEE_SOURCE_CHECK.json']=(json.dumps(check,indent=2)+'\n').encode('utf-8')
     readme='''# Final publication delivery — 16 November 2026
 
-The journal manuscript is `IEEE_TBIOM_Paper.pdf` (10 pages). This is the latest citation-reviewed version. Use this journal paper for T-BIOM; the separate 54-page generic thesis draft is reference material, not the journal manuscript.
+The journal manuscript is `IEEE_TBIOM_Paper.pdf` (10 pages). This is the latest scientifically revised version. Use this journal paper for T-BIOM; the separate __THESIS_PAGES__-page generic thesis draft is reference material, not the journal manuscript.
 
 - `IEEE_TBIOM_Source.zip`: the matching TeX source and five vector figures (six flat files).
 - `IEEE_TBIOM_Supplement.pdf`: separate two-page research supplement.
 - `arxiv/`: the matching ten-page preprint and flat TeX source archive.
-- `thesis/`: the 54-page generic research thesis draft and its source archive. Institution-specific formatting remains pending.
+- `thesis/`: the __THESIS_PAGES__-page generic research thesis draft and its source archive. Institution-specific formatting remains pending.
 - `audit/`: numerical, compilation, test, figure, interval and reference evidence.
 - `author_review/`: factual metadata, dataset trace and an unsent cover-letter draft. These contain outstanding author declarations and are not finished editor-facing documents.
 
-All 15 CPU models are complete. Recorded arithmetic checks and 21 regression tests pass. All 35 references were assessed for relevance (22 directly relevant, 13 contextual), and the bibliography follows first citation. Numerical tables are unchanged. AI assistance is disclosed.
+All 15 CPU models are complete. Recorded arithmetic checks and 21 regression tests pass. All __REFERENCES__ references were assessed for relevance, and the bibliography follows first citation. The original numerical tables are unchanged. New CPU controls evaluate shared-crop SFace (3,402 images/eight protocols) and masked identity deletion (nine subsets). Preprocessing is controlled only in input-file selection; pretraining, resolution and target supervision still differ. AI assistance is disclosed.
 
 This is the final technical delivery for author review; formal submission clearance remains pending. Resolve factual ethics/consent and dataset-use permissions, approve the scientific contribution and citations, and supply correspondence and submission declarations. No licensed similarity report or AI-detector clearance is asserted. Nothing has been submitted to IEEE or arXiv.
 
@@ -99,10 +103,11 @@ Do not upload this entire delivery archive as the manuscript: it also contains a
 
 The complete code/raw-score release remains in the sibling `publication_release` directory and `publication_release.zip`. This smaller delivery bundle does not duplicate datasets or model/checkpoint binaries.
 '''
+    readme=readme.replace('__THESIS_PAGES__',str(build['thesis']['pages'])).replace('__REFERENCES__',str(citations['references_reviewed']))
     items['READ_ME_FIRST.md']=readme.encode('utf-8')
     manifest={'date':'2026-11-16','status':'technical_delivery_complete_author_clearance_pending',
-              'journal_pages':10,'preprint_pages':10,'supplement_pages':2,'thesis_pages':54,
-              'references_reviewed':35,'regression_tests':21,
+              'journal_pages':10,'preprint_pages':10,'supplement_pages':2,'thesis_pages':build['thesis']['pages'],
+              'references_reviewed':citations['references_reviewed'],'regression_tests':21,
               'source_mapping':mapping,
               'files':{name:{'sha256':digest(data),'bytes':len(data)} for name,data in sorted(items.items())}}
     items['DELIVERY_MANIFEST.json']=(json.dumps(manifest,indent=2)+'\n').encode('utf-8')

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "syntax_files": 57,
+  "syntax_files": 61,
   "regression_tests": 21,
   "regression_status": "passed",
   "test_logs": [
@@ -15,5 +15,5 @@
   "device": "cpu",
   "historical_results_separate": true,
   "scope": "Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json.",
-  "recheck": "Full 35-reference relevance and citation-order revision; measured tables unchanged; 21 tests pass."
+  "recheck": "Scientific strengthening revision: original 15-model experiment unchanged, additional shared-crop inference and identity-deletion controls; 38 references."
 }

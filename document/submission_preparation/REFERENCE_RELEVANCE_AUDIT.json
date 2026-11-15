@@ -1,9 +1,9 @@
 {
   "date": "2026-11-16",
-  "journal_source_sha256": "58675d61c9f0ac4ed2a8ca9e83479cf9c09e5a768a5ab382dfb09787a443a804",
-  "references_reviewed": 35,
+  "journal_source_sha256": "a74701fb3bfcac668edba0aa0684a5c4d1eb1de596623c1c2af7c3400fd872f2",
+  "references_reviewed": 38,
   "counts": {
-    "direct": 22,
+    "direct": 25,
     "context": 13
   },
   "all_references_cited": true,
@@ -20,7 +20,7 @@
       "source_url": "https://arxiv.org/abs/2304.07193",
       "citation_lines": [
         26,
-        48
+        50
       ]
     },
     {
@@ -34,7 +34,7 @@
       "source_url": "https://arxiv.org/abs/2106.09685",
       "citation_lines": [
         26,
-        51
+        53
       ]
     },
     {
@@ -87,7 +87,7 @@
       "source_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Kim_AdaFace_Quality_Adaptive_Margin_for_Face_Recognition_CVPR_2022_paper.html",
       "citation_lines": [
         37,
-        54
+        56
       ]
     },
     {
@@ -101,7 +101,7 @@
       "source_url": "https://openaccess.thecvf.com/content/CVPR2021/html/Meng_MagFace_A_Universal_Representation_for_Face_Recognition_and_Quality_Assessment_CVPR_2021_paper.html",
       "citation_lines": [
         37,
-        54
+        56
       ]
     },
     {
@@ -327,6 +327,20 @@
     },
     {
       "number": 25,
+      "key": "perilora2026",
+      "title": "Robust cross-spectral periocular biometric recognition using LoRA-adapted DINOv2 and quality-aware fusion",
+      "role": "Closest prior work",
+      "relevance": "direct",
+      "reason": "Combines LoRA DINOv2 periocular features with quality-aware enrollment-template fusion in cross-spectral recognition.",
+      "disposition": "Added from the publisher abstract; distinguish its template/spectral setting from our visible-occlusion branch-weight controls. Full text not independently reviewed.",
+      "source_url": "https://www.tandfonline.com/doi/full/10.1080/03772063.2026.2695248",
+      "citation_lines": [
+        47,
+        429
+      ]
+    },
+    {
+      "number": 26,
       "key": "dino",
       "title": "Emerging properties in self-supervised vision transformers",
       "role": "Visual pretraining background",
@@ -335,11 +349,11 @@
       "disposition": "Retain as backbone lineage, not an evaluated model.",
       "source_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.html",
       "citation_lines": [
-        48
+        50
       ]
     },
     {
-      "number": 26,
+      "number": 27,
       "key": "mae",
       "title": "Masked autoencoders are scalable vision learners",
       "role": "Visual pretraining background",
@@ -348,11 +362,11 @@
       "disposition": "Retain as a different pretraining approach, not evidence of face-occlusion performance.",
       "source_url": "https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html",
       "citation_lines": [
-        48
+        50
       ]
     },
     {
-      "number": 27,
+      "number": 28,
       "key": "simclr",
       "title": "A simple framework for contrastive learning of visual representations",
       "role": "Visual pretraining background",
@@ -361,11 +375,11 @@
       "disposition": "Retain; wording now states its image-based objective separately from CLIP.",
       "source_url": "https://proceedings.mlr.press/v119/chen20j.html",
       "citation_lines": [
-        48
+        50
       ]
     },
     {
-      "number": 28,
+      "number": 29,
       "key": "clip",
       "title": "Learning transferable visual models from natural language supervision",
       "role": "Visual pretraining background",
@@ -374,11 +388,38 @@
       "disposition": "Retain as broader background; corrected natural-language supervision and stated not evaluated here.",
       "source_url": "https://proceedings.mlr.press/v139/radford21a.html",
       "citation_lines": [
-        48
+        50
       ]
     },
     {
-      "number": 29,
+      "number": 30,
+      "key": "froundation2025",
+      "title": "FRoundation: Are foundation models ready for face recognition?",
+      "role": "Closest prior work",
+      "relevance": "direct",
+      "reason": "Already adapts DINOv2 and CLIP to face recognition using LoRA.",
+      "disposition": "Added after broader currency search; essential boundary on claims of novel backbone adaptation.",
+      "source_url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/7e4c7e15-dfc1-47e5-bca4-493e46bbfeee/content",
+      "citation_lines": [
+        50,
+        429
+      ]
+    },
+    {
+      "number": 31,
+      "key": "foundationcomparison2025",
+      "title": "Foundation versus domain-specific models: Performance comparison, fusion, and explainability in face recognition",
+      "role": "Closest prior work",
+      "relevance": "direct",
+      "reason": "Studies generic versus face-specific models, crop context and fusion.",
+      "disposition": "Added to explain preprocessing and pretraining confounds; no cross-protocol performance claim.",
+      "source_url": "https://openaccess.thecvf.com/content/ICCV2025W/FoundGen-Bio/html/Sony_Foundation_versus_Domain-specific_Models_Performance_Comparison_Fusion_and_Explainability_in_ICCVW_2025_paper.html",
+      "citation_lines": [
+        50
+      ]
+    },
+    {
+      "number": 32,
       "key": "vpt",
       "title": "Visual prompt tuning",
       "role": "Adaptation alternatives",
@@ -387,11 +428,11 @@
       "disposition": "Retain as a visual adaptation alternative; not tested in the ablation grid.",
       "source_url": "https://researchprofiles.ku.dk/en/publications/visual-prompt-tuning-2/",
       "citation_lines": [
-        51
+        53
       ]
     },
     {
-      "number": 30,
+      "number": 33,
       "key": "prompt",
       "title": "The power of scale for parameter-efficient prompt tuning",
       "role": "Cross-field adaptation background",
@@ -400,11 +441,11 @@
       "disposition": "Least direct reference; defensible only as broader adaptation context. Explicitly marked language-model work, not face/periocular evidence.",
       "source_url": "https://aclanthology.org/2021.emnlp-main.243/",
       "citation_lines": [
-        51
+        53
       ]
     },
     {
-      "number": 31,
+      "number": 34,
       "key": "adaptformer",
       "title": "AdaptFormer: Adapting vision transformers for scalable visual recognition",
       "role": "Adaptation alternatives",
@@ -413,11 +454,11 @@
       "disposition": "Retain as an alternative to LoRA; not implemented in this study.",
       "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/69e2f49ab0837b71b0e0cb7c555990f8-Abstract-Conference.html",
       "citation_lines": [
-        51
+        53
       ]
     },
     {
-      "number": 32,
+      "number": 35,
       "key": "fusionRossJain",
       "title": "Information fusion in biometrics",
       "role": "Fusion foundations",
@@ -426,11 +467,11 @@
       "disposition": "Retain the narrower matching-score attribution; our implemented fusion combines embeddings.",
       "source_url": "https://www.sciencedirect.com/science/article/pii/S0167865503000795",
       "citation_lines": [
-        54
+        56
       ]
     },
     {
-      "number": 33,
+      "number": 36,
       "key": "quality",
       "title": "Quality measures in biometric systems",
       "role": "Fusion foundations",
@@ -439,11 +480,11 @@
       "disposition": "Retain; Tables II/III and Section VII support the qualified statement, not measured quality-awareness of our gate.",
       "source_url": "https://arxiv.org/pdf/2111.08704",
       "citation_lines": [
-        54
+        56
       ]
     },
     {
-      "number": 34,
+      "number": 37,
       "key": "sface",
       "title": "SFace: Sigmoid-constrained hypersphere loss for robust face recognition",
       "role": "Executed diagnostic",
@@ -452,11 +493,11 @@
       "disposition": "Retain; paper and checkpoint implementation details serve different provenance roles.",
       "source_url": "https://arxiv.org/abs/2205.12010",
       "citation_lines": [
-        363
+        367
       ]
     },
     {
-      "number": 35,
+      "number": 38,
       "key": "yunet",
       "title": "YuNet: A tiny millisecond-level face detector",
       "role": "Executed diagnostic",
@@ -465,10 +506,10 @@
       "disposition": "Retain as an implementation-source citation; not a verification competitor.",
       "source_url": "https://link.springer.com/article/10.1007/s11633-023-1423-y",
       "citation_lines": [
-        363
+        367
       ]
     }
   ],
   "scope": "Reference-by-reference topic fit and support for the short attributed claim using primary publisher/author abstracts, indexed primary-source extracts and accessible papers. Not a full systematic review or line-by-line verification of all cited full texts. Access failures and prior metadata limits remain in REFERENCE_CHECKS.json.",
-  "conclusion": "22 directly relevant sources and 13 contextual sources. No wholly unrelated reference identified after qualified wording. Lester prompt tuning is the least direct and optional; relevance does not mean experimental comparability or novelty clearance."
+  "conclusion": "25 directly relevant sources and 13 contextual sources. Three closer 2025/2026 works were added after a broader currency search; the earlier 35-reference fit review did not establish literature completeness. Lester prompt tuning is the least direct and optional; relevance does not mean experimental comparability or novelty clearance."
 }

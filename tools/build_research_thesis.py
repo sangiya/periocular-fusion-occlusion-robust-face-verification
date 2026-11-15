@@ -52,7 +52,7 @@ def main():
 \vspace*{12mm}
 {\Large Research Thesis Draft\par}
 \vspace{15mm}
-{\LARGE Parameter-Efficient Periocular Fusion for Cross-Condition and Cross-Dataset Occlusion-Robust Face Verification\par}
+{\LARGE Regional Complementarity and Learned Weighting for Occluded Face Verification: A Controlled Study\par}
 \vspace{20mm}
 {\Large Pararajasingham Sangiya\par}
 \vspace{5mm}

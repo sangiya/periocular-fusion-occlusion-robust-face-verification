@@ -25,12 +25,15 @@
   "experimental_code_modified": false,
   "ai_disclosure_retained": true,
   "ethics_or_permission_claims_invented": false,
-  "journal_source_sha256": "58675d61c9f0ac4ed2a8ca9e83479cf9c09e5a768a5ab382dfb09787a443a804",
+  "journal_source_sha256": "a74701fb3bfcac668edba0aa0684a5c4d1eb1de596623c1c2af7c3400fd872f2",
   "historical_source_sha256": "f2e8b046e10351f42aa9aac21b8c6639cc3ccb0f195e92e3cc04631364a0219e",
   "last_checked": "2026-11-16",
   "citation_corrections": [
     "umr final journal title and DOI",
     "Ross-Jain matching-score fusion attribution"
   ],
-  "reference_relevance_pass": "All 35 assessed; claim wording narrowed, contextual roles explicit, first-citation order fixed; measured tables unchanged."
+  "reference_relevance_pass": "All 35 assessed; claim wording narrowed, contextual roles explicit, first-citation order fixed; measured tables unchanged.",
+  "additional_references": 3,
+  "current_references": 38,
+  "scientific_revision": "Controlled empirical contribution; shared-input-crop SFace and masked identity deletion; no original table values changed; ethics/AI disclosures retained."
 }

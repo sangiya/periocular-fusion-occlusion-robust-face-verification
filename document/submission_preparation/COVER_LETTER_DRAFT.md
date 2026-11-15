@@ -2,9 +2,9 @@
 
 Dear Editor,
 
-Please consider "Parameter-Efficient Periocular Fusion for Cross-Condition and Cross-Dataset Occlusion-Robust Face Verification" as a regular paper for IEEE Transactions on Biometrics, Behavior, and Identity Science.
+Please consider "Regional Complementarity and Learned Weighting for Occluded Face Verification: A Controlled Study" as a regular paper for IEEE Transactions on Biometrics, Behavior, and Identity Science.
 
-The paper presents a controlled study of frozen and LoRA-adapted whole-face/periocular representations, fixed fusion, and embedding-conditioned learned fusion. Fifteen models were trained on CPU using three seeds and a manifest that excludes known content conflicts. Results include validation-calibrated acceptance counts, two-endpoint identity-resampling sensitivities, and same-branch gate controls. The conclusions are condition-dependent, and the paper explicitly reports negative gate findings and a stronger unmatched face-recognition diagnostic.
+The paper presents a controlled study of frozen and LoRA-adapted whole-face/periocular representations, fixed fusion, and embedding-conditioned learned fusion. Fifteen models were trained on CPU using three seeds and a manifest that excludes known content conflicts. Results include validation-calibrated acceptance counts, two-endpoint identity-resampling sensitivities, and same-branch gate controls. A new shared-input-crop SFace control and masked identity-deletion analysis distinguish preprocessing and cohort influence. The work is positioned against FRoundation and recent periocular DINOv2--LoRA fusion rather than claiming a first combination. The conclusions are condition-dependent, and the paper explicitly reports negative gate findings and a stronger unmatched face-recognition diagnostic.
 
 The accompanying artifact contains frozen protocols, raw scores, executed source snapshots, and provenance. Local workflow/log records identify Kaggle-hosted execution copies; the source trace distinguishes those copies from the original dataset repositories. Dataset images and model/checkpoint binaries are excluded. Exact known MFR2 training-name overlap and RMFRD cross-label content conflicts are removed; remaining semantic labels, unknown identity aliases and pretraining overlap are disclosed as limitations.
 

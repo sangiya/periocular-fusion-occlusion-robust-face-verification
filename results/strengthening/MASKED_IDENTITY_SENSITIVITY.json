@@ -1,0 +1,506 @@
+{
+  "date": "2026-11-16",
+  "method": "Leave one identity node out of masked ROF test; delete all incident pairs; average AUC over three existing checkpoints; no retraining or threshold reselection.",
+  "scope": "Post-hoc finite-protocol influence diagnostic, not independent identities, population uncertainty, or additional training seeds.",
+  "input_sha256": {
+    "results/cpu_clean/evaluation/seed7_frozen_whole/test_masked_raw_scores.csv": "1abdb0bc51545b80f73a50cab936cbe7e4bc93a3ea34e85217b75fe86214f8b0",
+    "results/cpu_clean/evaluation/seed7_whole_lora/test_masked_raw_scores.csv": "5189ec1ba61f5172f2285336869fb854b2d55a91fb461d9f9564b51dc43abc53",
+    "results/cpu_clean/evaluation/seed7_peri_lora/test_masked_raw_scores.csv": "943f680c35eb11a45514c4c85ee9bb048f10d28885d61675f094586997670cc1",
+    "results/cpu_clean/evaluation/seed7_fixed_fusion/test_masked_raw_scores.csv": "d6c38da147460f76c24b4fc490def90b0355f3e00c2ab9d2e0c40d23591b6103",
+    "results/cpu_clean/evaluation/seed7_gated_fusion/test_masked_raw_scores.csv": "a9eb0a1c86f94dfed82e1448803624b50c9a76c5bcb174dab881b8ca7b4d7897",
+    "results/cpu_clean/evaluation/seed42_frozen_whole/test_masked_raw_scores.csv": "26365e0606fe34ae45951be1adf5f84c8a18160c37fa3f7ca15e9c4b3299922e",
+    "results/cpu_clean/evaluation/seed42_whole_lora/test_masked_raw_scores.csv": "6afcd21dd6fa1269f15504fe6adb5a8a45dce7d9ad67900f138c54e3d2efb2bc",
+    "results/cpu_clean/evaluation/seed42_peri_lora/test_masked_raw_scores.csv": "c8dbb7be48e86855192ed9f24f13df41a7409d72334648d84823d877ef55a375",
+    "results/cpu_clean/evaluation/seed42_fixed_fusion/test_masked_raw_scores.csv": "e2906d6278d1c84db9fcb52aa5233d71ed072b3814f0922dca15cc9998fcff78",
+    "results/cpu_clean/evaluation/seed42_gated_fusion/test_masked_raw_scores.csv": "a04c36025f941f2f5970f89207101705036852ac847c5d938204d4da5b110153",
+    "results/cpu_clean/evaluation/seed123_frozen_whole/test_masked_raw_scores.csv": "d26091ab11b4f8b2cda04aca0dc1b6c5eca9440351f9c39cb98bc3db809b512e",
+    "results/cpu_clean/evaluation/seed123_whole_lora/test_masked_raw_scores.csv": "f1c59f9e69503843a4cf82a93e521c8062efb2e9ecb790fce508bb75c41fda64",
+    "results/cpu_clean/evaluation/seed123_peri_lora/test_masked_raw_scores.csv": "5f74a68e19e1ee9defa974d223a54bfdf777b74027918c019e892d45ac8a85e9",
+    "results/cpu_clean/evaluation/seed123_fixed_fusion/test_masked_raw_scores.csv": "9665de15a9b821d93f3fd35f86193b6cd03a5f2d2045c2170870f10320df3fc3",
+    "results/cpu_clean/evaluation/seed123_gated_fusion/test_masked_raw_scores.csv": "1c5ba5e1f776a44f9209382c847de95225609bab535562e4e99cbfe7af13b56d"
+  },
+  "identity_nodes": 9,
+  "subsets": [
+    {
+      "removed_identity": "bernie_sanders",
+      "retained_pairs": 352,
+      "retained_genuine": 44,
+      "retained_impostor": 308,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.7956759149940966,
+            0.842311097992916,
+            0.8463695395513572
+          ],
+          "auc_mean": 0.8281188508461232
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.8731552538370703,
+            0.8731552538370706,
+            0.875959268004724
+          ],
+          "auc_mean": 0.8740899252262883
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9129279811097988,
+            0.9153630460448635,
+            0.9104191263282168
+          ],
+          "auc_mean": 0.912903384494293
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.9039994096812289,
+            0.9011953955135763,
+            0.9151416765053124
+          ],
+          "auc_mean": 0.9067788272333726
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.8903482880755623,
+            0.8911599763872491,
+            0.888724911452185
+          ],
+          "auc_mean": 0.8900777253049988
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.016701101928373707,
+      "highest_mean_auc_variant": "peri_lora"
+    },
+    {
+      "removed_identity": "fahrettin_koca",
+      "retained_pairs": 360,
+      "retained_genuine": 45,
+      "retained_impostor": 315,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.806560846560846,
+            0.851216931216931,
+            0.8595414462081127
+          ],
+          "auc_mean": 0.8391064079952966
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.8843033509700163,
+            0.8862081128747782,
+            0.8879012345679006
+          ],
+          "auc_mean": 0.886137566137565
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9134391534391532,
+            0.917601410934744,
+            0.9097001763668425
+          ],
+          "auc_mean": 0.9135802469135799
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.9097707231040557,
+            0.9070899470899464,
+            0.9194356261022926
+          ],
+          "auc_mean": 0.9120987654320982
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.9010229276895938,
+            0.8974955908289234,
+            0.8986948853615514
+          ],
+          "auc_mean": 0.8990711346266895
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.013027630805408696,
+      "highest_mean_auc_variant": "peri_lora"
+    },
+    {
+      "removed_identity": "fernando_alonso",
+      "retained_pairs": 360,
+      "retained_genuine": 45,
+      "retained_impostor": 315,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.8112874779541444,
+            0.8498765432098764,
+            0.8596825396825395
+          ],
+          "auc_mean": 0.8402821869488534
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.8944620811287465,
+            0.884091710758376,
+            0.9009523809523802
+          ],
+          "auc_mean": 0.8931687242798342
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9266313932980598,
+            0.9245149911816576,
+            0.9177425044091705
+          ],
+          "auc_mean": 0.9229629629629627
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.9118871252204578,
+            0.911604938271604,
+            0.9223985890652555
+          ],
+          "auc_mean": 0.9152968841857725
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.9064550264550261,
+            0.9013756613756606,
+            0.9028571428571422
+          ],
+          "auc_mean": 0.9035626102292763
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.011734273956496177,
+      "highest_mean_auc_variant": "peri_lora"
+    },
+    {
+      "removed_identity": "giannis_antetokounmpo",
+      "retained_pairs": 360,
+      "retained_genuine": 45,
+      "retained_impostor": 315,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.8025396825396822,
+            0.8396472663139328,
+            0.846137566137566
+          ],
+          "auc_mean": 0.8294415049970604
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.8876895943562598,
+            0.880917107583773,
+            0.8926278659611986
+          ],
+          "auc_mean": 0.8870781893004105
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9372134038800704,
+            0.9393298059964723,
+            0.9287477954144615
+          ],
+          "auc_mean": 0.9350970017636681
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.9131569664902991,
+            0.9236684303350962,
+            0.9281128747795413
+          ],
+          "auc_mean": 0.9216460905349788
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.9049029982363312,
+            0.9012345679012338,
+            0.9039153439153432
+          ],
+          "auc_mean": 0.9033509700176361
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.018295120517342722,
+      "highest_mean_auc_variant": "peri_lora"
+    },
+    {
+      "removed_identity": "immanuel_macron",
+      "retained_pairs": 248,
+      "retained_genuine": 31,
+      "retained_impostor": 217,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.8957930726921355,
+            0.8908874684108808,
+            0.8943065259402398
+          ],
+          "auc_mean": 0.8936623556810854
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.879738367771665,
+            0.8813735691987498,
+            0.9042663891779388
+          ],
+          "auc_mean": 0.8884594420494512
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9060502452802134,
+            0.8947524899658088,
+            0.8834547346514039
+          ],
+          "auc_mean": 0.8947524899658087
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.8998067489222527,
+            0.9149695257915857,
+            0.9066448639809715
+          ],
+          "auc_mean": 0.9071403795649366
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.8769139289430643,
+            0.8873197562063319,
+            0.8843466627025413
+          ],
+          "auc_mean": 0.8828601159506458
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.02428026361429081,
+      "highest_mean_auc_variant": "fixed_fusion"
+    },
+    {
+      "removed_identity": "kamala_haris",
+      "retained_pairs": 312,
+      "retained_genuine": 39,
+      "retained_impostor": 273,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.7343852728468113,
+            0.7712031558185405,
+            0.7821921668075519
+          ],
+          "auc_mean": 0.7625935318243012
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.8525406217713946,
+            0.8468113083497736,
+            0.850192542500236
+          ],
+          "auc_mean": 0.849848157540468
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.8971541279233587,
+            0.9073917535456003,
+            0.8902977364515823
+          ],
+          "auc_mean": 0.8982812059735138
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.8735794120409524,
+            0.8778059547290322,
+            0.8875739644970422
+          ],
+          "auc_mean": 0.8796531104223423
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.8655020193481754,
+            0.8670987132525608,
+            0.8619329388560167
+          ],
+          "auc_mean": 0.864844557152251
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.01480855327009134,
+      "highest_mean_auc_variant": "peri_lora"
+    },
+    {
+      "removed_identity": "lebron_james",
+      "retained_pairs": 368,
+      "retained_genuine": 46,
+      "retained_impostor": 322,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.7948285174183092,
+            0.8319605725087764,
+            0.8397920604914929
+          ],
+          "auc_mean": 0.8221937168061928
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.8846880907372383,
+            0.8766540642722114,
+            0.8895490143127172
+          ],
+          "auc_mean": 0.8836303897740556
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9353227113151491,
+            0.9429516608155546,
+            0.928908992708614
+          ],
+          "auc_mean": 0.9357277882797725
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.9096678368890085,
+            0.9208074534161484,
+            0.9243181204428834
+          ],
+          "auc_mean": 0.9182644702493468
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.9039292465568443,
+            0.8965703483661882,
+            0.8987982716716154
+          ],
+          "auc_mean": 0.8997659555315493
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.01849851471779751,
+      "highest_mean_auc_variant": "peri_lora"
+    },
+    {
+      "removed_identity": "lewis_hamilton",
+      "retained_pairs": 304,
+      "retained_genuine": 38,
+      "retained_impostor": 266,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.7946181242580131,
+            0.8455678670360112,
+            0.8455678670360116
+          ],
+          "auc_mean": 0.8285846194433453
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.9022556390977461,
+            0.887613771270282,
+            0.9085872576177249
+          ],
+          "auc_mean": 0.8994855559952509
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9462801741195098,
+            0.9536011080332414,
+            0.932231895528295
+          ],
+          "auc_mean": 0.9440377258936821
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.9184804115552033,
+            0.9293628808864264,
+            0.9458844479620111
+          ],
+          "auc_mean": 0.931242580134547
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.9322318955282922,
+            0.9273842500989302,
+            0.9263949347051816
+          ],
+          "auc_mean": 0.9286703601108014
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.002572220023745575,
+      "highest_mean_auc_variant": "peri_lora"
+    },
+    {
+      "removed_identity": "rafael_nadal",
+      "retained_pairs": 344,
+      "retained_genuine": 43,
+      "retained_impostor": 301,
+      "metrics": {
+        "frozen_whole": {
+          "seed_aucs": [
+            0.8166576527852892,
+            0.8509619099126939,
+            0.8561384532179555
+          ],
+          "auc_mean": 0.8412526719719795
+        },
+        "whole_lora": {
+          "seed_aucs": [
+            0.9057405547400131,
+            0.9023410337634233,
+            0.9071312678667999
+          ],
+          "auc_mean": 0.9050709521234122
+        },
+        "peri_lora": {
+          "seed_aucs": [
+            0.9303870818202887,
+            0.9337093409565013,
+            0.9381905276983694
+          ],
+          "auc_mean": 0.9340956501583865
+        },
+        "fixed_fusion": {
+          "seed_aucs": [
+            0.9246697056323877,
+            0.9243606582708794,
+            0.9312369620644363
+          ],
+          "auc_mean": 0.9267557753225678
+        },
+        "gated_fusion": {
+          "seed_aucs": [
+            0.9191068531252413,
+            0.9056632928996362,
+            0.9153982847871431
+          ],
+          "auc_mean": 0.9133894769373402
+        }
+      },
+      "gated_minus_fixed_mean_auc": -0.013366298385227626,
+      "highest_mean_auc_variant": "peri_lora"
+    }
+  ],
+  "summary": {
+    "frozen_whole": {
+      "minimum_auc_mean": 0.7625935318243012,
+      "maximum_auc_mean": 0.8936623556810854,
+      "highest_mean_count": 0
+    },
+    "whole_lora": {
+      "minimum_auc_mean": 0.849848157540468,
+      "maximum_auc_mean": 0.9050709521234122,
+      "highest_mean_count": 0
+    },
+    "peri_lora": {
+      "minimum_auc_mean": 0.8947524899658087,
+      "maximum_auc_mean": 0.9440377258936821,
+      "highest_mean_count": 8
+    },
+    "fixed_fusion": {
+      "minimum_auc_mean": 0.8796531104223423,
+      "maximum_auc_mean": 0.931242580134547,
+      "highest_mean_count": 1
+    },
+    "gated_fusion": {
+      "minimum_auc_mean": 0.864844557152251,
+      "maximum_auc_mean": 0.9286703601108014,
+      "highest_mean_count": 0
+    }
+  },
+  "gated_minus_fixed_range": [
+    -0.02428026361429081,
+    -0.002572220023745575
+  ]
+}

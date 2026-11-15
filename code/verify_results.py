@@ -147,6 +147,9 @@ def verify(root,results):
     if (root/"results/cpu_clean/RESULTS_SUMMARY.json").exists():
         from verify_completed_cpu import verify_completed
         check("completed CPU experiment",lambda:counts.update({"completed_cpu":verify_completed(root)}))
+        if (root/'results/shared_crop_sface/REPORT.json').exists():
+            from verify_strengthening import verify_strengthening
+            check('additional preprocessing and identity controls',lambda:counts.update({'strengthening':verify_strengthening(root)}))
         for s in SEEDS:
             for v in VARIANTS:
                 completed[(s,v)]=json.loads((root/f"results/cpu_clean/evaluation/seed{s}_{v}/EVALUATION_REPORT.json").read_text())

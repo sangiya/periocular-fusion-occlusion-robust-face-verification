@@ -10,6 +10,9 @@ import hashlib,json,re
 ROOT=Path(__file__).resolve().parent.parent
 # key: role, relevance, reason, citation disposition
 ASSESSMENTS={
+ 'froundation2025':('Closest prior work','direct','Already adapts DINOv2 and CLIP to face recognition using LoRA.','Added after broader currency search; essential boundary on claims of novel backbone adaptation.'),
+ 'foundationcomparison2025':('Closest prior work','direct','Studies generic versus face-specific models, crop context and fusion.','Added to explain preprocessing and pretraining confounds; no cross-protocol performance claim.'),
+ 'perilora2026':('Closest prior work','direct','Combines LoRA DINOv2 periocular features with quality-aware enrollment-template fusion in cross-spectral recognition.','Added from the publisher abstract; distinguish its template/spectral setting from our visible-occlusion branch-weight controls. Full text not independently reviewed.'),
  'dinov2':('Executed component','direct','Backbone actually used; transferable self-supervised visual features.','Retain; also cited at introduction of the experimental system.'),
  'lora':('Executed component','direct','Low-rank adaptation mechanism actually used, despite its original language-model experiments.','Retain; explicitly distinguish original language-model work from our visual adaptation.'),
  'rof':('Dataset','direct','Source study of the ROF masks/sunglasses data used for training and evaluation.','Retain; reconstructed local protocol is distinguished from the original benchmark.'),
@@ -53,7 +56,7 @@ def main():
     entries=re.findall(r'\\bibitem\{([^}]+)\}([^\n]*)',text)
     first=list(dict.fromkeys(k.strip() for group in re.findall(r'\\cite\{([^}]+)\}',body) for k in group.split(',')))
     keys=[key for key,_ in entries]
-    assert len(keys)==len(set(keys))==35
+    assert len(keys)==len(set(keys))==len(ASSESSMENTS)
     assert keys==first,'IEEE bibliography must follow first citation order'
     assert set(keys)==set(ASSESSMENTS),'Assessment coverage differs from bibliography'
     refs=json.loads((ROOT/'document/submission_preparation/REFERENCE_CHECKS.json').read_text())
@@ -81,17 +84,17 @@ def main():
             'references_reviewed':len(rows),'counts':dict(counts),'all_references_cited':True,
             'bibliography_order_matches_first_citation':True,'references':rows,
             'scope':'Reference-by-reference topic fit and support for the short attributed claim using primary publisher/author abstracts, indexed primary-source extracts and accessible papers. Not a full systematic review or line-by-line verification of all cited full texts. Access failures and prior metadata limits remain in REFERENCE_CHECKS.json.',
-            'conclusion':'22 directly relevant sources and 13 contextual sources. No wholly unrelated reference identified after qualified wording. Lester prompt tuning is the least direct and optional; relevance does not mean experimental comparability or novelty clearance.'}
+            'conclusion':f"{counts['direct']} directly relevant sources and {counts['context']} contextual sources. Three closer 2025/2026 works were added after a broader currency search; the earlier 35-reference fit review did not establish literature completeness. Lester prompt tuning is the least direct and optional; relevance does not mean experimental comparability or novelty clearance."}
     folder=ROOT/'document/submission_preparation'
     (folder/'REFERENCE_RELEVANCE_AUDIT.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     lines=['# Citation relevance review — 16 November 2026','',report['conclusion'],'',report['scope'],'',
-           'The numerical results and ten measured table blocks are unchanged. All 35 references are retained, cited, and ordered by first appearance. The IEEE, preprint and thesis versions are synchronized.','',
+           f'The original numerical results and ten measured table blocks are unchanged. All {len(rows)} references are cited and ordered by first appearance. Additional CPU controls and interpretation are reported separately. The IEEE, preprint and thesis versions are synchronized.','',
            '| Ref. / key | Paper | Role | Why it belongs / disposition |','|---|---|---|---|']
     for row in rows:
         lines.append(f"| [{row['number']}] `{row['key']}` | [{row['title']}]({row['source_url']}) | {row['role']} ({row['relevance']}) | {row['reason']} {row['disposition']} |")
     lines+=['','Corrections made in this pass: distinguish CLIP language supervision from SimCLR self-supervision; identify original LoRA and Lester prompt tuning as language-model work; distinguish MAFA detection from verification; qualify margin mechanisms and the survey coverage; remove an uncited BTAS-2009 aside; qualify held-out identity language; reorder the bibliography by first citation.','',
             'The earlier Boutros title/DOI and Ross–Jain matching-score corrections remain. The Park primary-source abstract now supports the retained qualitative description; the previously removed numerical aside is unnecessary and is not restored.','',
-            'The closest research comparators are face/periocular fusion (FBR), face-to-periocular distillation (CKD), visible-spectrum periocular recognition (Park et al.) and ocular cropping (Alonso-Fernandez et al.). Citing them establishes context; it does not establish that this study outperforms them. No new baseline training or literature-wide superiority claim is implied.','']
+            'The closest research comparators include FRoundation, the 2026 LoRA/periocular/template-fusion paper, the 2025 foundation-versus-domain comparison, FBR, CKD, Park et al. and ocular cropping. Their existence narrows the contribution to controlled experimental attribution, not first use of DINOv2/LoRA or periocular fusion. Citing them does not establish that this study outperforms them. No literature-wide superiority claim is implied.','']
     (folder/'REFERENCE_RELEVANCE_AUDIT.md').write_text('\n'.join(lines),encoding='utf-8')
     print(json.dumps({'references_reviewed':len(rows),'counts':dict(counts),'first_citation_order':True},indent=2))
 
