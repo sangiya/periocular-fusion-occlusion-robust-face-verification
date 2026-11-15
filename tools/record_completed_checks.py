@@ -25,7 +25,9 @@ def main():
     for p in (ROOT/'submission_ieee_10page').glob('fig_*.pdf'):inputs[p.relative_to(ROOT).as_posix()]=sha(p)
     ieee=(ROOT/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex').read_text(encoding='utf-8')
     arxiv=(ROOT/'document/arXiv_Preprint_10Page_Final.tex').read_text(encoding='utf-8')
-    arxiv=arxiv.replace('\\noindent\\textit{Preprint submitted for scholarly dissemination.}\\par\n','').replace('\\graphicspath{{../submission_ieee_10page/}}','\\graphicspath{{./}}')
+    for status in ['submitted','prepared']:
+        arxiv=arxiv.replace('\\noindent\\textit{Preprint '+status+' for scholarly dissemination.}\\par\n','')
+    arxiv=arxiv.replace('\\graphicspath{{../submission_ieee_10page/}}','\\graphicspath{{./}}')
     assert ieee==arxiv,'Substantive manuscript text differs'
     for value in ['0.9221','0.8950','0.9458','0.9548','0.7240']:
         assert value in ieee

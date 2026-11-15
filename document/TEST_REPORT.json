@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "syntax_files": 49,
+  "syntax_files": 50,
   "regression_tests": 21,
   "regression_status": "passed",
   "test_logs": [

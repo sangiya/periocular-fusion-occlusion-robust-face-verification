@@ -11,3 +11,5 @@ Training and evaluation are complete. Current IEEE/arXiv text, figures, and metr
 Submission readiness still requires author scientific review and any required licensed similarity screening. No automated pass certifies novelty, semantic image labels, journal acceptance, or AI-detector clearance. Matched strong face-recognition baselines and broader independent identities remain substantive limitations, not pending CPU jobs.
 
 Check `VERIFICATION_REPORT.json`, `TEST_REPORT.json`, and `BUILD_REPORT.json` for explicit numerical, regression, and compilation evidence. Historical evidence is preserved rather than silently relabeled. No additional training is required to finish the specified 15-model grid.
+
+The targeted submission review and prepared author materials are in [submission_preparation](submission_preparation/SCIENTIFIC_READINESS_REVIEW.md). Journal-level novelty and the factual ethics/consent declaration remain unresolved; downloading data from online sources does not establish review or consent. The author reports no previous submission.

@@ -7,3 +7,5 @@
 - `regenerate_publication_assets.py`, `run_seed_sweep.py`, older train/evaluate scripts: historical operations retained for audit, not the current paper entry point.
 
 The recorded source hashes must remain unchanged for resume/provenance validation. Do not overwrite historical measurements with new numbers. Full checkpoint and image files are intentionally excluded from Git; score-level verification needs neither.
+
+After regenerating a completed-results manuscript with the preserved promotion script, run `python tools/prepare_submission_review.py` to reapply the checked citation additions and preprint-preparation notice. These source edits require recompilation and refreshed build/verification records before packaging. The source packager includes only referenced TeX inputs and figures.

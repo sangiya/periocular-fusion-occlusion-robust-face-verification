@@ -9,6 +9,8 @@
 - [x] Executed sources, frozen inputs, results and provenance included in the Git artifact.
 - [x] IEEE and arXiv PDFs recompiled to 10 pages each; vector plots and rendered pages checked.
 - [x] All artifact checks and 21 regression tests pass.
+- [ ] Complete factual ethics-review/consent explanation; do not infer exemption from public availability.
+- [ ] Establish and approve the journal-level novelty argument; see submission_preparation/SCIENTIFIC_READINESS_REVIEW.md.
 - [ ] Author approves the scientific contribution, label review, citations, and interpretation.
 - [ ] Obtain and review licensed similarity screening if required by the institution/journal.
 - [ ] Confirm current journal formatting, submission declarations, and dataset rights at submission.

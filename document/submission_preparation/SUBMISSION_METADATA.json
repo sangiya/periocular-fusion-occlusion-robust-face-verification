@@ -1,0 +1,18 @@
+{
+  "title": "Parameter-Efficient Periocular Fusion for Cross-Condition and Cross-Dataset Occlusion-Robust Face Verification",
+  "author": "Pararajasingham Sangiya",
+  "affiliation": "Independent Researcher",
+  "orcid": "0009-0005-3407-2154",
+  "target": "IEEE Transactions on Biometrics, Behavior, and Identity Science",
+  "article_type": "Regular paper",
+  "abstract": "Face verification under masks and sunglasses requires representations that retain identity information across different visible regions. We compare frozen DINOv2 with a trained projection, whole-face LoRA, periocular LoRA, fixed dual-branch fusion, and learned fusion. Fifteen new models are trained on CPU for five complete epochs, using three seeds and a frozen 6,171-row ROF manifest that excludes exact-content duplicates and a confirmed cross-split near-identical photograph. On the new test pairs, periocular LoRA leads masked ROC-AUC (0.9221 +/- 0.0046), fixed fusion leads sunglasses AUC (0.8950 +/- 0.0021), and learned gating leads neutral AUC (0.9458 +/- 0.0026). Known training-name-overlap exclusion leaves 802 MFR2 pairs, on which gating achieves 0.9548 +/- 0.0022; exact-conflict exclusion leaves 21,798 exploratory RMFRD pairs, where fixed fusion achieves 0.7240 +/- 0.0099. Validation-calibrated operating points are distinguished from retrospective ROC summaries. Same-branch controls show that learned gating does not consistently improve on constant or permuted weights. A separate pretrained SFace baseline is stronger on several protocols, with different training and alignment. These findings support condition-dependent benefits of adaptation and complementary regions, while limiting claims about adaptive reliability, low-FAR deployment, and state-of-the-art performance.",
+  "keywords": "Face verification, occlusion robustness, masked-face verification, periocular representation, DINOv2, LoRA, learned fusion, cross-dataset evaluation.",
+  "prior_submission_status": "Author stated on 2026-11-15 that this work has not been submitted anywhere.",
+  "submission_performed": false,
+  "ethics_review_and_consent": "Awaiting direct confirmation of whether a committee reviewed the project; no approval, exemption, consent, or legal clearance inferred.",
+  "prior_public_thesis_or_preprint": "Not established; disclose any such version at submission.",
+  "corresponding_author_email": "Not provided",
+  "license_and_access_choices": "Author selection at submission",
+  "ai_assistance": "Disclosed in manuscript Acknowledgments; ChatGPT, named sections and implementation/checking assistance.",
+  "dataset_acquisition_author_statement": "Author reports downloading all datasets from online sources described as ethical; this is not evidence of IRB approval or individual consent."
+}

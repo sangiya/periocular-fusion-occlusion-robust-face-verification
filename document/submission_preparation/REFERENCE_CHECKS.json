@@ -1,0 +1,46 @@
+{
+  "checked_on": "2026-11-15",
+  "scope": "Targeted core and newly cited references; not all bibliography entries",
+  "sources": [
+    {
+      "key": "fbr2024",
+      "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Tiong_Flexible_Biometrics_Recognition_Bridging_the_Multimodality_Gap_through_Attention_Alignment_CVPR_2024_paper.html",
+      "checked": "Authors, title, CVPR 2024 pages 267-276"
+    },
+    {
+      "key": "ckd2024",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231224000341",
+      "checked": "Author list and publication identity; DOI confirmed by author-institution record"
+    },
+    {
+      "key": "dinov2",
+      "url": "https://openreview.net/forum?id=a68SUt6zFt",
+      "checked": "TMLR 2024 paper"
+    },
+    {
+      "key": "sface",
+      "url": "https://ieeexplore.ieee.org/document/9318547",
+      "checked": "IEEE TIP 2021 volume 30 pages 2587-2598, DOI 10.1109/TIP.2020.3048632; authors also confirmed in author preprint arXiv:2205.12010"
+    },
+    {
+      "key": "yunet",
+      "url": "https://link.springer.com/article/10.1007/s11633-023-1423-y",
+      "checked": "Authors and 2023 volume 20 pages 656-665"
+    },
+    {
+      "key": "ocularcrop2025",
+      "url": "https://arxiv.org/abs/2510.26294",
+      "checked": "Authors, title, 2025 preprint record"
+    },
+    {
+      "key": "periocular",
+      "url": "https://cse.msu.edu/~rossarun/pubs/ParkPeriocularBiometrics_TIFS2011.pdf",
+      "checked": "Author-hosted abstract indexed; specific 87.3%/FRGC assertion not verified and removed"
+    },
+    {
+      "key": "rmfrd",
+      "url": "https://doi.org/10.1109/TBIOM.2023.3242085",
+      "checked": "DOI resolved to IEEE document 10036007; publisher page blocked by robot check, so full metadata not certified in this check"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 ﻿"""Build deterministic arXiv/source and release archives from current checked files."""
 from pathlib import Path
-import argparse,hashlib,json,zipfile
+import argparse,hashlib,json,re,zipfile
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def zip_bytes(p,items):
@@ -18,10 +18,16 @@ def main():
     if archive.is_relative_to(root):raise SystemExit("Release ZIP must be outside its input directory")
     text=(root/"document/arXiv_Preprint_10Page_Final.tex").read_text(encoding="utf-8")
     text=text.replace("\\graphicspath{{../submission_ieee_10page/}}","\\graphicspath{{./}}")
-    arxiv={"arXiv_Preprint_10Page_Final.tex":text.encode("utf-8"),
-           "integrity_sensitivity.tex":(root/"document/integrity_sensitivity.tex").read_bytes()}
-    arxiv.update({p.name:p.read_bytes() for p in (root/"submission_ieee_10page").glob("fig_*.pdf")})
-    if len(arxiv)!=7:raise SystemExit("Expected arXiv main source, sensitivity table and five vector figures")
+    arxiv={"arXiv_Preprint_10Page_Final.tex":text.encode("utf-8")}
+    for name in re.findall(r"\\input\{([^}]+)\}",text):
+        name=name if name.endswith('.tex') else name+'.tex'
+        if Path(name).name!=name:raise SystemExit('Expected flat source input: '+name)
+        arxiv[name]=(root/'document'/name).read_bytes()
+    figures=re.findall(r"\\includegraphics(?:\[[^]]*\])?\{([^}]+)\}",text)
+    for name in figures:
+        if Path(name).name!=name:raise SystemExit('Expected flat figure filename: '+name)
+        arxiv[name]=(root/'submission_ieee_10page'/name).read_bytes()
+    if len(set(figures))!=5:raise SystemExit('Expected five referenced vector figures')
     zip_bytes(root/"arxiv_source.zip",arxiv)
     files={}
     payloads={}

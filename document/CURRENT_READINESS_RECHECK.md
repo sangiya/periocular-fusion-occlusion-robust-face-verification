@@ -9,3 +9,5 @@ Periocular LoRA leads masked mean AUC (0.922061); fixed fusion leads sunglasses 
 Training and evaluation are complete. Current IEEE/arXiv text, figures, and metric tables have been updated and checked against the completed evidence. Both manuscripts compile to 10 pages, 21 regression tests pass, and the artifact verifier reports ALL CHECKS PASSED. Build/verification records identify the exact checked bytes. This status supersedes the interim reports under `history/`.
 
 Submission readiness still requires author scientific review and any required licensed similarity screening. No automated pass certifies novelty, semantic image labels, journal acceptance, or AI-detector clearance. Matched strong face-recognition baselines and broader independent identities remain substantive limitations, not pending CPU jobs.
+
+The targeted submission review and prepared author materials are in [submission_preparation](submission_preparation/SCIENTIFIC_READINESS_REVIEW.md). Journal-level novelty and the factual ethics/consent declaration remain unresolved; downloading data from online sources does not establish review or consent. The author reports no previous submission.

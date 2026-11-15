@@ -11,8 +11,8 @@
       "bytes": 782
     },
     "arxiv_source.zip": {
-      "sha256": "7e9bbb1f7979835b4fe050b939e80a277cc3f344f5d2b51605b6e702ef4beb70",
-      "bytes": 127594
+      "sha256": "297414002486db232e41b7e6f2e3a17b051690daad27cd7200db69d8e61a8ed0",
+      "bytes": 127401
     },
     "CITATION.cff": {
       "sha256": "444f398660252221b0a6154e5028f7285c100e6058028f6fd4269ab3de70146b",
@@ -83,8 +83,8 @@
       "bytes": 3568
     },
     "code/README_source.md": {
-      "sha256": "a108792b2688f4b9ef3671c29ca0a9684e391934b10b9c2186723495092208a9",
-      "bytes": 947
+      "sha256": "2749024503fbc6453b8e9c64a587f766861ecce757bb52dc39505fab9329a349",
+      "bytes": 1329
     },
     "code/regenerate_completed_assets.py": {
       "sha256": "9859be7d051d9accc551a247d52a6054b9bba352d35e83f52143d1b650cbc649",
@@ -135,19 +135,19 @@
       "bytes": 1525
     },
     "document/arXiv_Preprint_10Page_Final.log": {
-      "sha256": "eb528ac4b1d22577d507117cfd5d7bd9baf7929141b586a14a8014b5b288d2f3",
+      "sha256": "6ee216d176f276b7d02a91ee9a46a255d60844e7a8e68a19e581e93cb428e8d7",
       "bytes": 22862
     },
     "document/arXiv_Preprint_10Page_Final.pdf": {
-      "sha256": "4afd560eb1e1555c13c33f7090cdb45bbc698260d6abdece704e4e902f24b248",
-      "bytes": 220871
+      "sha256": "cc9882a02c71013a66661d1218084d3ff79648d81aba3673a9c97f1cbd1b71d4",
+      "bytes": 222252
     },
     "document/arXiv_Preprint_10Page_Final.tex": {
-      "sha256": "d7069321829e77bb5051b1942434133d76c080a5185213fd23cf3dcb5ec3a527",
-      "bytes": 58270
+      "sha256": "e6c3f2003c5dbda0ff57963453a720e29e0902dcd5c79099d31759ce0291c7a5",
+      "bytes": 59528
     },
     "document/build_logs/arXiv_Preprint_10Page_Final.log": {
-      "sha256": "1b8d3ab71f56072336ee8c9de5212e3c96d3f8b15555b63115be37a929f9dea5",
+      "sha256": "b34b26068cc7456ff919fb960e89a4c1381b561c18c92eb8cea60685439c6c84",
       "bytes": 23535
     },
     "document/build_logs/asset_build.txt": {
@@ -159,11 +159,11 @@
       "bytes": 9418
     },
     "document/build_logs/completed_cpu_tests.txt": {
-      "sha256": "0b043bea91a38e16a60e896fa81a7c5cde7a6bbad96485cf70caaf2c45a318a4",
+      "sha256": "42831bd406a66fc824078f9f70f4d33463302334cc42c788bb511b2dac18eada",
       "bytes": 2167
     },
     "document/build_logs/completed_release_tests.txt": {
-      "sha256": "671c94249cdbf34aee5db970e937353ca9a948765fa4e5b1153f7e3bd4d59c9d",
+      "sha256": "80fc5c45ac5c184acf5977dccf20b3a12b36308106172944242b7692f28ce108",
       "bytes": 851
     },
     "document/build_logs/CPU_Integrity_Followup.log": {
@@ -179,8 +179,8 @@
       "bytes": 414
     },
     "document/build_logs/IEEE_TBIOM_Submission_10Page_Final.log": {
-      "sha256": "faf2f0af44302527a75293d84268e73ca7811b29d9bc691d94f692dbba3f7714",
-      "bytes": 23380
+      "sha256": "fab1070077f1df8fc7f32e36b0914f2671bf650bbf80487bbdb348e4d575fcb6",
+      "bytes": 23323
     },
     "document/build_logs/mfr2_quality_v2_run.txt": {
       "sha256": "45100ef56b45ce44a3a963a15f78a59ce55e62c2efb3270b851bd41203724258",
@@ -199,7 +199,7 @@
       "bytes": 1252
     },
     "document/BUILD_REPORT.json": {
-      "sha256": "f45dde7b14eab6d2a120268638875a76f0368b249e0d6b85f3bb772ccf2e08be",
+      "sha256": "ca0fb7324a57466cc3606b03d383a1ac96447cf6bc98becfe7874dec0036a9b5",
       "bytes": 3113
     },
     "document/cpu_followup/ARCHIVED_REEVALUATION_REPORT.json": {
@@ -251,8 +251,8 @@
       "bytes": 17555
     },
     "document/CURRENT_READINESS_RECHECK.md": {
-      "sha256": "6da2eb8e052c950e817d48c54a58dce74898eb09d05bed36b25de4af35e38c60",
-      "bytes": 2161
+      "sha256": "60d697984b9fd0e050be946f23499f9301e0f49c2c3968b742ab1c84daf72f4f",
+      "bytes": 2515
     },
     "document/figures/fig_auc_cross_dataset.pdf": {
       "sha256": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
@@ -295,12 +295,28 @@
       "bytes": 112348
     },
     "document/FINAL_PUBLICATION_AUDIT.md": {
-      "sha256": "e8759b06ed2fe68948c5ec8c67d5f20c59c7396b25bbedf4fa4d518a222fac18",
-      "bytes": 2435
+      "sha256": "dfe60c1e468e944041dc6f6b193018db1a701c09936620f628782c73f0b2fa3c",
+      "bytes": 2789
     },
     "document/FINAL_SUBMISSION_CHECKLIST.md": {
-      "sha256": "93c020d13ffdb98b307851b779141dc8aaa643d1542d7200ab01a05039efcd5c",
-      "bytes": 1332
+      "sha256": "33020f7d3421c11390ef2a7bb812ab90c171d1db2257f6452ed7e28cb30da3da",
+      "bytes": 1564
+    },
+    "document/history/completed_cpu_before_submission_review/arXiv_Preprint_10Page_Final.pdf": {
+      "sha256": "4afd560eb1e1555c13c33f7090cdb45bbc698260d6abdece704e4e902f24b248",
+      "bytes": 220871
+    },
+    "document/history/completed_cpu_before_submission_review/arXiv_Preprint_10Page_Final.tex": {
+      "sha256": "d7069321829e77bb5051b1942434133d76c080a5185213fd23cf3dcb5ec3a527",
+      "bytes": 58270
+    },
+    "document/history/completed_cpu_before_submission_review/IEEE_TBIOM_Submission_10Page_Final.pdf": {
+      "sha256": "e5515e6aa92206231aded9377b348465d4817a75890f7ebf88ed1b7e483434fa",
+      "bytes": 221379
+    },
+    "document/history/completed_cpu_before_submission_review/IEEE_TBIOM_Submission_10Page_Final.tex": {
+      "sha256": "215876d7a18ffd6ef8d21dcb1e6215e31fbecf084673abb431082993bfebc139",
+      "bytes": 58175
     },
     "document/history/mfr2_error.txt": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -394,8 +410,24 @@
       "sha256": "777856154584c1f4a90c838f417fb627222d678ea0fb57956e0839fa70f787a3",
       "bytes": 814
     },
+    "document/submission_preparation/COVER_LETTER_DRAFT.md": {
+      "sha256": "11484a3a89bdc9584861b46de79dd72d2eb61a2b15f8c860fdef74deef1d2661",
+      "bytes": 1959
+    },
+    "document/submission_preparation/REFERENCE_CHECKS.json": {
+      "sha256": "00b30c26ec73394e9d2b0c790279055a26043bf371778e08087e11f3c50d012a",
+      "bytes": 1857
+    },
+    "document/submission_preparation/SCIENTIFIC_READINESS_REVIEW.md": {
+      "sha256": "39937ec329e31c046f44e1c064ace45dc085e564b683fec5998736b40ad0ed2d",
+      "bytes": 3854
+    },
+    "document/submission_preparation/SUBMISSION_METADATA.json": {
+      "sha256": "8fb02e54c8adcb22831ef70cde15533a1d707ec36bc2ae734fef69a91aa0418b",
+      "bytes": 2795
+    },
     "document/TEST_REPORT.json": {
-      "sha256": "d9611c77b25e6e6bfcbd14fc0d0c1029c2cbf9dd4a48c871b8be525f319a07aa",
+      "sha256": "f4c1af4582a04097961076efeebc4c595b89552d32d9b87a956e96156948dd7d",
       "bytes": 629
     },
     "document/VERIFICATION_REPORT.json": {
@@ -587,8 +619,8 @@
       "bytes": 2621587
     },
     "README.md": {
-      "sha256": "fd0fd4f8cb63edfbff3817303496dab5a63e08522bb50752be0739bcc01a05a1",
-      "bytes": 3326
+      "sha256": "630e1134bd74cfe083d73b4f6bd18c340c37fd7bab6325bb4a293d7c2dc92817",
+      "bytes": 3655
     },
     "reproduction/README.md": {
       "sha256": "71585396961fb29a0bb875f7165abeb831f5eb2af271a3c9775fa3d5a21aee8c",
@@ -2555,28 +2587,32 @@
       "bytes": 112348
     },
     "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.log": {
-      "sha256": "ecaaf72d317d520063087d6e6068407c57243ff13414c3fc60bda63137053b36",
-      "bytes": 22706
+      "sha256": "416501c4f59689f51c695f04dacccdbd8b187d0cd16127d600ec0059a92f3bb3",
+      "bytes": 22652
     },
     "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf": {
-      "sha256": "e5515e6aa92206231aded9377b348465d4817a75890f7ebf88ed1b7e483434fa",
-      "bytes": 221379
+      "sha256": "88c7432b7b1ccddd149035a88a8b56c3c0ae41650381526331b1ecdcd6bc504d",
+      "bytes": 222219
     },
     "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex": {
-      "sha256": "215876d7a18ffd6ef8d21dcb1e6215e31fbecf084673abb431082993bfebc139",
-      "bytes": 58175
+      "sha256": "f2e8b046e10351f42aa9aac21b8c6639cc3ccb0f195e92e3cc04631364a0219e",
+      "bytes": 59434
     },
     "submission_ieee_10page/integrity_sensitivity.tex": {
       "sha256": "777856154584c1f4a90c838f417fb627222d678ea0fb57956e0839fa70f787a3",
       "bytes": 814
     },
     "tools/package_release.py": {
-      "sha256": "cc4f5038af8bb54efd2d8bbf29739b6e96326792f100ef43af51cb44b35548ee",
-      "bytes": 2732
+      "sha256": "a8e1a692b9b402ae08575d264bc751030011711fdcbcd4f88343742e0eb8f5ab",
+      "bytes": 3033
+    },
+    "tools/prepare_submission_review.py": {
+      "sha256": "9fea239177e9805084a376bedf6e87be10adf55f9ea2d6f6d88b2fe576c5b21e",
+      "bytes": 13186
     },
     "tools/record_completed_checks.py": {
-      "sha256": "614c135ed3cc7b44e248df03e0b835878b60b4322409ee3f11411e4ffba3e413",
-      "bytes": 4435
+      "sha256": "025ff568414e3f698d7e1e25552fa7a11cdbc5f38408fd93f29588eda66aa4ea",
+      "bytes": 4500
     },
     "WINDOWS_REPRODUCTION_GUIDE.md": {
       "sha256": "aaf15183d0c7ea2c300d318d3fcb46c54df52a2c2d0aaf8e3393f1382e54875d",
