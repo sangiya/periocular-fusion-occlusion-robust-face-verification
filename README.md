@@ -1,6 +1,6 @@
 # Occlusion-robust face verification research artifact
 
-Updated 15 November 2026. Target venue: IEEE T-BIOM; submission or acceptance is not asserted.
+Updated 21 November 2026. Target venue: IEEE T-BIOM; submission or acceptance is not asserted.
 
 All 15 CPU models (seeds 7, 42, 123; five variants) completed five full epochs and evaluation on eight frozen protocols. The current paper uses these new models, not historical score-filtered runs. The manifest has 6,171 rows: 4,405 train, 844 validation, 922 test. All 15 final training records report 1,380 optimizer steps, no smoke cap, and CPU execution.
 
@@ -22,9 +22,21 @@ Periocular LoRA leads masked mean AUC (0.922061); fixed fusion leads sunglasses 
 
 ## Verify and regenerate
 
-```powershell
+Run from the repository root with Python 3.10 or newer on Windows or Linux:
+
+```sh
 python code/verify_results.py --report document/VERIFICATION_REPORT.json
+python code/verify_completed_cpu.py
 python -m unittest discover -s code/tests -v
+```
+
+Historical report paths contain Windows backslashes. The verifiers now interpret stored separators independently of the host OS and retain the original result records and hashes unchanged. Derived identity-sensitivity AUCs use a strict absolute tolerance of 1e-12 for final-bit summation differences across Python versions; file hashes and discrete counts remain exact. Nine release unit tests cover both separator styles, doubled/mixed separators, invalid paths and the 15 recorded report bindings. The additional 15 CPU pipeline/recovery tests bring the local regression total to 24.
+
+The Windows/Linux CI matrix in `.github/workflows/verify-release.yml` runs both full verifier entry points as well as the unit tests. Local before/after native-Linux and Windows outcomes are recorded in `document/PORTABILITY_REPORT_2026-11-21.json`; this is separate from a hosted CI run.
+
+Plot generation is optional and requires NumPy and Matplotlib:
+
+```sh
 python code/regenerate_completed_assets.py
 ```
 

@@ -50,16 +50,19 @@ def verify_strengthening(root):
                 kept=[x for x in rows if node not in [x['probe_identity'],x['enroll_identity']]]
                 assert len(kept)==item['retained_pairs'] and sum(x['label']=='1' for x in kept)==item['retained_genuine']
                 aucs.append(score_metrics(kept)['auc']);subset_count+=1
-            expected=item['metrics'][variant];assert aucs==expected['seed_aucs']
-            means[variant]=statistics.mean(aucs);assert means[variant]==expected['auc_mean'];results[variant].append(means[variant])
+            # Python versions can differ in final-bit floating-point summation.
+            # Keep exact hashes/counts, but compare derived AUCs to 1e-12.
+            expected=item['metrics'][variant]
+            assert len(aucs)==len(expected['seed_aucs']) and all(math.isclose(a,b,rel_tol=0,abs_tol=1e-12) for a,b in zip(aucs,expected['seed_aucs'])),(node,variant,'seed AUCs')
+            means[variant]=statistics.mean(aucs);assert math.isclose(means[variant],expected['auc_mean'],rel_tol=0,abs_tol=1e-12),(node,variant,'mean AUC');results[variant].append(means[variant])
         winner=max(variants,key=means.get);winners.append(winner);assert winner==item['highest_mean_auc_variant']
-        delta=means['gated_fusion']-means['fixed_fusion'];assert delta==item['gated_minus_fixed_mean_auc'];deltas.append(delta)
+        delta=means['gated_fusion']-means['fixed_fusion'];assert math.isclose(delta,item['gated_minus_fixed_mean_auc'],rel_tol=0,abs_tol=1e-12),(node,'AUC contrast');deltas.append(delta)
     assert len(winners)==sensitivity['identity_nodes']==9
     for variant in variants:
         row=sensitivity['summary'][variant]
-        assert row['minimum_auc_mean']==min(results[variant]) and row['maximum_auc_mean']==max(results[variant])
+        assert math.isclose(row['minimum_auc_mean'],min(results[variant]),rel_tol=0,abs_tol=1e-12) and math.isclose(row['maximum_auc_mean'],max(results[variant]),rel_tol=0,abs_tol=1e-12),(variant,'AUC range')
         assert row['highest_mean_count']==winners.count(variant)
-    assert sensitivity['gated_minus_fixed_range']==[min(deltas),max(deltas)]
+    assert len(sensitivity['gated_minus_fixed_range'])==2 and all(math.isclose(a,b,rel_tol=0,abs_tol=1e-12) for a,b in zip(sensitivity['gated_minus_fixed_range'],[min(deltas),max(deltas)])),'AUC contrast range'
     tex=(root/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex').read_text(encoding='utf-8')
     for name in ['test_masked','test_sunglasses','test_neutral','mfr2','rmfrd']:
         assert f"{report['protocols'][name]['metrics']['auc']:.4f}" in tex

@@ -1,7 +1,7 @@
 """Independent standard-library verification of completed CPU evidence and calibration."""
 from pathlib import Path
 import csv,hashlib,json,math,statistics
-from verify_results import SEEDS,VARIANTS,KEYS,score_metrics,align,read,digest
+from verify_results import SEEDS,VARIANTS,KEYS,score_metrics,align,read,digest,recorded_relative_path
 
 def verify_completed(root):
     base=root/'results/cpu_clean';src=root/'reproduction/research_completion_2026-11-02'
@@ -35,7 +35,7 @@ def verify_completed(root):
                 if condition=='mfr2':pairs=root/'manifests/cleaned/mfr2_official_complete_pairs.csv'
                 if condition=='rmfrd':pairs=root/'manifests/cleaned/rmfrd_pairs.csv'
                 assert digest(pairs)==item['pairs_sha256']==r['signature']['pairs_sha256'][condition]
-                raw=folder/item['raw_scores'];assert digest(raw)==item['raw_scores_sha256']
+                raw=folder/recorded_relative_path(item['raw_scores']);assert digest(raw)==item['raw_scores_sha256']
                 rows=read(raw);align(rows,read(pairs));loaded[condition]=rows
                 m=score_metrics(rows)
                 for key in KEYS+['n_pairs','n_genuine','n_impostor']:
@@ -88,7 +88,7 @@ def verify_completed(root):
         assert sum(x['split']==split for x in rows)==total
     # Shipped report paths are recorded relative to the original execution folder.
     for path,value in summary['evaluation_report_hashes'].items():
-        assert digest(base/Path(path).relative_to('cpu_runs'))==value
+        assert digest(base/recorded_relative_path(path,prefix='cpu_runs'))==value
     tex=(root/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex').read_text(encoding='utf-8')
     def lines(label):
         return [x for x in tex.split('\\label{tab:'+label+'}')[1].split('\\bottomrule')[0].splitlines() if '&' in x and not x.startswith(('Protocol','Configuration'))]

@@ -1,0 +1,157 @@
+{
+  "date": "2026-11-21",
+  "status": "local_windows_and_native_linux_checks_passed",
+  "root_cause": "15 evaluation_report_hashes keys in results/cpu_clean/RESULTS_SUMMARY.json use Windows backslashes. Path(...).relative_to(cpu_runs) failed on Linux. RELEASE_MANIFEST.json itself already uses POSIX separators.",
+  "fix": "Normalize relative artifact separators at read time; reject absolute/drive/traversal paths. Preserve recorded result bytes, signed execution sources, hashes and manuscript measurements.",
+  "additional_issue": "Native Python 3.12 exposed exact floating-point equality comparisons in the identity-deletion AUC checks, originally recorded with Python 3.11. Derived AUCs, means and contrasts now use absolute tolerance 1e-12; hashes, discrete counts and winning-variant checks remain exact.",
+  "roundoff_diagnostic": {
+    "comparisons": 135,
+    "max_absolute_auc_difference": 3.6637359812630166e-15,
+    "nonzero_differences": 131,
+    "python": "3.12.16 (main, Nov 11 2026, 00:13:18) [Clang 23.1.3 ]"
+  },
+  "baseline_commit": "a691725",
+  "scientific_artifacts_unchanged_from_baseline": true,
+  "training_performed_for_this_fix": false,
+  "checked_verifier_sha256": {
+    "verify_results.py": "d131b1aa20eb49b70a6ca53a4f4aa11eaeae46824e772d70011ba759dd2c22da",
+    "verify_completed_cpu.py": "6b38964e9a5486bdf54dd4e88f19581d58c0da08d7d8708755680bf657ae19a0",
+    "verify_strengthening.py": "fc2a03fc42a2f53eadb69804d99e56d2f6bef8fc32bc9f49faf5634cc8f756e6"
+  },
+  "windows": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "full_verifier": {
+      "counts": {
+        "archived_metrics": 90,
+        "raw_files": 75,
+        "table_numbers": 200,
+        "correction_runs": 3,
+        "sensitivity_runs": 75,
+        "completed_cpu": {
+          "models": 15,
+          "raw_score_files": 120,
+          "calibrated_operating_points": 150,
+          "paired_point_comparisons": 10,
+          "sface_score_files": 8,
+          "auxiliary_manuscript_tables": 5
+        },
+        "strengthening": {
+          "shared_crop_score_files": 8,
+          "shared_crop_images": 3402,
+          "calibrated_operating_points": 20,
+          "masked_identity_subsets": 9,
+          "per_seed_subset_aucs": 135
+        },
+        "sensitivity_table_numbers": 25,
+        "thesis_pages": 55
+      },
+      "failures": [],
+      "scope": "Artifact arithmetic, raw-score alignment, table values, recorded provenance mappings, corrected inference and clean input checks; not publication approval."
+    },
+    "standalone_completed_cpu_verifier": "passed",
+    "release_tests": 9,
+    "cpu_pipeline_tests": 15,
+    "total_regression_tests": 24
+  },
+  "native_linux": {
+    "date": "2026-11-21",
+    "platform": "linux",
+    "python": "3.12.16 (main, Nov 11 2026, 00:13:18) [Clang 23.1.3 ]",
+    "machine": "x86_64",
+    "runtime": "Docker Desktop WSL, isolated CPython musl from python-build-standalone; no installed system Python",
+    "results": [
+      {
+        "command": "before_main",
+        "returncode": 1,
+        "expected_failure": true,
+        "elapsed_seconds": 39.26337325399999,
+        "log_sha256": "dbedd80129c948aefac77cd8d413bb41e12bd4d0b97f6de3d4b8b150c8b671a9"
+      },
+      {
+        "command": "before_completed",
+        "returncode": 1,
+        "expected_failure": true,
+        "elapsed_seconds": 23.118733356999996,
+        "log_sha256": "7bfef6294a3ededfa4881c07b3969be4ce337d415b3d4235c2b9fd80a71d6301"
+      },
+      {
+        "command": "after_main",
+        "returncode": 0,
+        "expected_failure": false,
+        "elapsed_seconds": 41.30887450999995,
+        "log_sha256": "3afe4ec06f6d20947f69ba42cc979cdede58b18d6f45cd2ade9f808c9fe69e3f"
+      },
+      {
+        "command": "after_completed",
+        "returncode": 0,
+        "expected_failure": false,
+        "elapsed_seconds": 25.310955154,
+        "log_sha256": "3c4b80c93c2d0b2d6d960ca121034a696e374481ae9932a5b19bd9afc2131a8c"
+      },
+      {
+        "command": "after_unit_tests",
+        "returncode": 0,
+        "expected_failure": false,
+        "elapsed_seconds": 4.334625598999992,
+        "log_sha256": "0cdcaf6301be981cd02862340ee106b1e2d9a49334ac701f2f1d50d5ecbc8435"
+      }
+    ],
+    "verification": {
+      "counts": {
+        "archived_metrics": 90,
+        "raw_files": 75,
+        "table_numbers": 200,
+        "correction_runs": 3,
+        "sensitivity_runs": 75,
+        "completed_cpu": {
+          "models": 15,
+          "raw_score_files": 120,
+          "calibrated_operating_points": 150,
+          "paired_point_comparisons": 10,
+          "sface_score_files": 8,
+          "auxiliary_manuscript_tables": 5
+        },
+        "strengthening": {
+          "shared_crop_score_files": 8,
+          "shared_crop_images": 3402,
+          "calibrated_operating_points": 20,
+          "masked_identity_subsets": 9,
+          "per_seed_subset_aucs": 135
+        },
+        "sensitivity_table_numbers": 25,
+        "thesis_pages": 55
+      },
+      "failures": [],
+      "scope": "Artifact arithmetic, raw-score alignment, table values, recorded provenance mappings, corrected inference and clean input checks; not publication approval."
+    },
+    "scope": "Native Linux execution on a case-sensitive Linux temporary filesystem, using a release ZIP snapshot; original separators reproduced as failures, fixed verifiers and nine release unit tests pass.",
+    "runtime_source": {
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.12.16%2B20261110-x86_64-unknown-linux-musl-install_only.tar.gz",
+      "sha256": "4f38d67f42dd29535e49b0ccdd6bc25ac7748b2c4550de78d8879ea4076ee9b3",
+      "scope": "Isolated Linux musl Python for verifier tests; not part of the research environment or release."
+    },
+    "temporary_checkout": "/dev/shm/codex-periocular-portability-2026-11-21-10/release",
+    "checked_verifier_sha256": {
+      "verify_results.py": "d131b1aa20eb49b70a6ca53a4f4aa11eaeae46824e772d70011ba759dd2c22da",
+      "verify_completed_cpu.py": "6b38964e9a5486bdf54dd4e88f19581d58c0da08d7d8708755680bf657ae19a0",
+      "verify_strengthening.py": "fc2a03fc42a2f53eadb69804d99e56d2f6bef8fc32bc9f49faf5634cc8f756e6"
+    }
+  },
+  "evidence_logs_sha256": {
+    "document/build_logs/linux_portability_before_main.txt": "dbedd80129c948aefac77cd8d413bb41e12bd4d0b97f6de3d4b8b150c8b671a9",
+    "document/build_logs/linux_portability_before_completed.txt": "7bfef6294a3ededfa4881c07b3969be4ce337d415b3d4235c2b9fd80a71d6301",
+    "document/build_logs/linux_portability_after_main.txt": "3afe4ec06f6d20947f69ba42cc979cdede58b18d6f45cd2ade9f808c9fe69e3f",
+    "document/build_logs/linux_portability_after_completed.txt": "3c4b80c93c2d0b2d6d960ca121034a696e374481ae9932a5b19bd9afc2131a8c",
+    "document/build_logs/linux_portability_after_unit_tests.txt": "0cdcaf6301be981cd02862340ee106b1e2d9a49334ac701f2f1d50d5ecbc8435"
+  },
+  "hosted_ci": {
+    "workflow": ".github/workflows/verify-release.yml",
+    "platforms": [
+      "ubuntu-latest",
+      "windows-latest"
+    ],
+    "python": "3.12",
+    "status": "added_locally_not_yet_executed_on_GitHub"
+  },
+  "submission_clearance": "Pending factual ethics/consent and dataset permissions, author declarations and scientific assessment. Limited independent identities, unmatched baseline/pretraining, semantic labels, pretraining overlap and novelty remain limitations. This report establishes artifact verification, not submission approval."
+}

@@ -56,6 +56,7 @@ def main():
         'audit/MASKED_IDENTITY_SENSITIVITY.json':'results/strengthening/MASKED_IDENTITY_SENSITIVITY.json',
         'audit/SHARED_CROP_SFACE_REPORT.json':'results/shared_crop_sface/REPORT.json',
         'audit/FINAL_RECHECK.json':'document/FINAL_RECHECK_2026-11-16.json',
+        'audit/PORTABILITY_REPORT.json':'document/PORTABILITY_REPORT_2026-11-21.json',
     }
     items={name:(ROOT/rel).read_bytes() for name,rel in mapping.items()}
     source=ROOT/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex'
@@ -96,7 +97,9 @@ The journal manuscript is `IEEE_TBIOM_Paper.pdf` (10 pages). This is the latest 
 - `audit/`: numerical, compilation, test, figure, interval and reference evidence.
 - `author_review/`: factual metadata, dataset trace and an unsent cover-letter draft. These contain outstanding author declarations and are not finished editor-facing documents.
 
-All 15 CPU models are complete. Recorded arithmetic checks and 21 regression tests pass. All __REFERENCES__ references were assessed for relevance, and the bibliography follows first citation. The original numerical tables are unchanged. New CPU controls evaluate shared-crop SFace (3,402 images/eight protocols) and masked identity deletion (nine subsets). Preprocessing is controlled only in input-file selection; pretraining, resolution and target supervision still differ. AI assistance is disclosed.
+All 15 CPU models are complete. Recorded arithmetic checks and __TESTS__ regression tests pass. All __REFERENCES__ references were assessed for relevance, and the bibliography follows first citation. The original numerical tables are unchanged. New CPU controls evaluate shared-crop SFace (3,402 images/eight protocols) and masked identity deletion (nine subsets). Preprocessing is controlled only in input-file selection; pretraining, resolution and target supervision still differ. AI assistance is disclosed.
+
+Last technical recheck: 21 November 2026. The verifier portability correction and native Linux/Windows check outcomes are recorded in `audit/PORTABILITY_REPORT.json`. Stored Windows path separators are normalized when reading historical evidence; recorded numerical results and their hashes are preserved.
 
 This is the final technical delivery for author review; formal submission clearance remains pending. Resolve factual ethics/consent and dataset-use permissions, approve the scientific contribution and citations, and supply correspondence and submission declarations. No licensed similarity report or AI-detector clearance is asserted. Nothing has been submitted to IEEE or arXiv.
 
@@ -104,11 +107,11 @@ Do not upload this entire delivery archive as the manuscript: it also contains a
 
 The complete code/raw-score release remains in the sibling `publication_release` directory and `publication_release.zip`. This smaller delivery bundle does not duplicate datasets or model/checkpoint binaries.
 '''
-    readme=readme.replace('__THESIS_PAGES__',str(build['thesis']['pages'])).replace('__REFERENCES__',str(citations['references_reviewed']))
+    readme=readme.replace('__THESIS_PAGES__',str(build['thesis']['pages'])).replace('__REFERENCES__',str(citations['references_reviewed'])).replace('__TESTS__',str(tests['regression_tests']))
     items['READ_ME_FIRST.md']=readme.encode('utf-8')
-    manifest={'date':'2026-11-16','status':'technical_delivery_complete_author_clearance_pending',
+    manifest={'date':'2026-11-16','last_portability_recheck':'2026-11-21','status':'technical_delivery_complete_author_clearance_pending',
               'journal_pages':10,'preprint_pages':10,'supplement_pages':2,'thesis_pages':build['thesis']['pages'],
-              'references_reviewed':citations['references_reviewed'],'regression_tests':21,
+              'references_reviewed':citations['references_reviewed'],'regression_tests':tests['regression_tests'],
               'source_mapping':mapping,
               'files':{name:{'sha256':digest(data),'bytes':len(data)} for name,data in sorted(items.items())}}
     items['DELIVERY_MANIFEST.json']=(json.dumps(manifest,indent=2)+'\n').encode('utf-8')

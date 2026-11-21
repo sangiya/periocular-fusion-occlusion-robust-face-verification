@@ -4,7 +4,7 @@ ALL CHECKS PASSED means these explicit artifact checks pass, not journal readine
 """
 from __future__ import annotations
 import argparse,csv,hashlib,itertools,json,math,re,statistics
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 SEEDS=[7,42,123]
 VARIANTS=["frozen_whole","whole_lora","peri_lora","fixed_fusion","gated_fusion"]
@@ -12,6 +12,23 @@ KEYS=["auc","eer","tar_far_1e-2","tar_far_1e-3"]
 ROOT=Path(__file__).resolve().parent.parent
 
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+
+def recorded_relative_path(value, prefix=None):
+    """Interpret stored artifact paths independently of the current OS.
+
+    Historical Windows records contain backslashes (sometimes doubled). Keep
+    those signed records unchanged; normalize separators only when reading.
+    Absolute paths, drive paths and parent traversal are not release-relative.
+    """
+    if not isinstance(value,str) or '\x00' in value:
+        raise ValueError('Recorded artifact path must be a relative string')
+    path=PurePosixPath(value.replace('\\','/'))
+    if not path.parts or path.is_absolute() or PureWindowsPath(value).drive or '..' in path.parts:
+        raise ValueError(f'Not a release-relative artifact path: {value!r}')
+    if prefix is not None:
+        path=path.relative_to(PurePosixPath(prefix))
+        if not path.parts:raise ValueError('Recorded artifact path must name a file below its prefix')
+    return path
 def read(p):
     with p.open(encoding="utf-8-sig",newline="") as f:return list(csv.DictReader(f))
 def score_metrics(rows):
@@ -202,16 +219,16 @@ def verify(root,results):
     else:failures.append("Missing sensitivity_summary.json")
     build=json.loads((root/"document/BUILD_REPORT.json").read_text())
     for name,hash_value in build["inputs"].items():
-        check("PDF build input "+name,lambda name=name,hash_value=hash_value:require(digest(root/name)==hash_value,"PDF build input changed since compilation"))
+        check("PDF build input "+name,lambda name=name,hash_value=hash_value:require(digest(root/recorded_relative_path(name))==hash_value,"PDF build input changed since compilation"))
     for record in build["pdfs"]:
         check(record["file"]+" compiled binding",lambda record=record:(
-            require(digest(root/record["file"])==record["sha256"],"PDF hash differs from successful build"),
+            require(digest(root/recorded_relative_path(record["file"]))==record["sha256"],"PDF hash differs from successful build"),
             require(record["pages"]==10,"Expected ten-page manuscript")))
     thesis_path=root/"document/thesis/THESIS_SOURCE_RECORD.json"
     if thesis_path.exists():
         def thesis_binding():
             record=json.loads(thesis_path.read_text())
-            require(record['journal_source_sha256']==digest(root/record['journal_source']),'Thesis cites stale journal source')
+            require(record['journal_source_sha256']==digest(root/recorded_relative_path(record['journal_source'])),'Thesis cites stale journal source')
             require(record['thesis_source_sha256']==digest(root/'document/thesis/Research_Thesis_Draft.tex'),'Thesis source changed since checking')
             require(record['pdf_sha256']==digest(root/'document/thesis/Research_Thesis_Draft.pdf'),'Thesis PDF changed since compilation')
             require(record['method_diagram_sha256']==digest(root/'document/thesis/fig_gated_architecture.pdf'),'Thesis method diagram changed since checking')

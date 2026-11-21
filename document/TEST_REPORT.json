@@ -1,13 +1,13 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-21",
   "syntax_files": 61,
-  "regression_tests": 21,
+  "regression_tests": 24,
   "regression_status": "passed",
   "test_logs": [
     "document/build_logs/completed_release_tests.txt",
     "document/build_logs/completed_cpu_tests.txt"
   ],
-  "new_model_training_performed": true,
+  "new_model_training_performed": false,
   "new_models_fully_trained_and_evaluated": 15,
   "new_raw_score_files": 120,
   "epochs_per_model": 5,
@@ -15,5 +15,5 @@
   "device": "cpu",
   "historical_results_separate": true,
   "scope": "Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json.",
-  "last_recheck": "Full final validation rerun; fresh compilations text-identical to distributed PDFs."
+  "training_record_scope": "The 15 completed models are existing experimental evidence; this check does not perform training."
 }

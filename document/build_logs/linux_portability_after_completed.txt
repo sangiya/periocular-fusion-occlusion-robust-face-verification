@@ -1,0 +1,8 @@
+{
+  "models": 15,
+  "raw_score_files": 120,
+  "calibrated_operating_points": 150,
+  "paired_point_comparisons": 10,
+  "sface_score_files": 8,
+  "auxiliary_manuscript_tables": 5
+}

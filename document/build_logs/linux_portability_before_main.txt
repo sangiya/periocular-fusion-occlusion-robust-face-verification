@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "archived_metrics": 90,
+    "raw_files": 75,
+    "table_numbers": 200,
+    "correction_runs": 3,
+    "sensitivity_runs": 75,
+    "sensitivity_table_numbers": 25,
+    "thesis_pages": 55
+  },
+  "failures": [
+    "completed CPU experiment: 'cpu_runs\\\\evaluation\\\\seed123_fixed_fusion\\\\EVALUATION_REPORT.json' is not in the subpath of 'cpu_runs'",
+    "additional preprocessing and identity controls: "
+  ],
+  "scope": "Artifact arithmetic, raw-score alignment, table values, recorded provenance mappings, corrected inference and clean input checks; not publication approval."
+}
+RESULT: CHECKS FAILED

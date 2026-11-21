@@ -1,11 +1,39 @@
 ﻿"""Standard-library regression checks for metric validity and unsafe input rejection."""
-from pathlib import Path
+from pathlib import Path,PurePosixPath
 import ast,csv,importlib.util,os,sys,unittest
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/"code"))
-from verify_results import score_metrics,align
+from verify_results import score_metrics,align,recorded_relative_path,digest
 
 class ArtifactGuards(unittest.TestCase):
+    def test_recorded_paths_accept_both_separator_styles_on_any_host(self):
+        expected=PurePosixPath('evaluation/seed7_gated_fusion/EVALUATION_REPORT.json')
+        for path in ['cpu_runs/evaluation/seed7_gated_fusion/EVALUATION_REPORT.json',
+                     r'cpu_runs\evaluation\seed7_gated_fusion\EVALUATION_REPORT.json',
+                     r'cpu_runs\\evaluation\\seed7_gated_fusion\\EVALUATION_REPORT.json',
+                     r'cpu_runs/evaluation\seed7_gated_fusion/EVALUATION_REPORT.json']:
+            with self.subTest(path=path):
+                self.assertEqual(recorded_relative_path(path,prefix='cpu_runs'),expected)
+        self.assertEqual(recorded_relative_path(r'document\BUILD_REPORT.json'),PurePosixPath('document/BUILD_REPORT.json'))
+
+    def test_recorded_paths_reject_outside_release_and_wrong_prefix(self):
+        for path in ['', '.', '../outside.json', r'cpu_runs\..\outside.json',
+                     '/tmp/outside.json',r'C:\outside.json',r'C:outside.json',
+                     r'\\server\share\outside.json',r'\outside.json','bad\x00path']:
+            with self.subTest(path=path),self.assertRaises(ValueError):recorded_relative_path(path)
+        for path in ['elsewhere/report.json','cpu_runs_other/report.json','cpu_runs']:
+            with self.subTest(path=path),self.assertRaises(ValueError):recorded_relative_path(path,prefix='cpu_runs')
+
+    def test_actual_historical_report_paths_resolve_and_keep_hashes(self):
+        import json
+        base=ROOT/'results/cpu_clean'
+        reports=json.loads((base/'RESULTS_SUMMARY.json').read_text())['evaluation_report_hashes']
+        self.assertEqual(len(reports),15)
+        for path,expected in reports.items():
+            relative=recorded_relative_path(path,prefix='cpu_runs')
+            self.assertEqual(relative.parts[0],'evaluation')
+            self.assertEqual(digest(base/relative),expected)
+
     def test_perfect_and_reversed_scores(self):
         good=[{"score":s,"label":y} for s,y in [(.9,1),(.8,1),(.2,0),(.1,0)]]
         self.assertEqual(score_metrics(good)["auc"],1)

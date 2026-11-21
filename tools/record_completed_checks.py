@@ -1,6 +1,7 @@
 """Record current compilation bindings and actually run source regression checks."""
 from pathlib import Path
 import argparse,ast,hashlib,json,re,subprocess,sys
+from datetime import date
 from pypdf import PdfReader
 
 ROOT=Path(__file__).resolve().parent.parent
@@ -31,7 +32,7 @@ def main():
     assert ieee==arxiv,'Substantive manuscript text differs'
     for value in ['0.9221','0.8950','0.9458','0.9548','0.7240']:
         assert value in ieee
-    build={'date':'2026-11-15','compiler':'Tectonic 0.17.0','flags':['--only-cached','--untrusted','--keep-logs'],
+    build={'date':date.today().isoformat(),'compiler':'Tectonic 0.17.0','flags':['--only-cached','--untrusted','--keep-logs'],
         'inputs':inputs,'pdfs':pdfs[:2],'supplement':pdfs[2], 'shared_substantive_tex':True,
         'visual_inspection':'Both 10-page manuscripts rendered and checked in page contact sheets; tables, plots, and margins inspected. Completed supplement separately rendered.',
         'note':'No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain.'}
@@ -49,19 +50,20 @@ def main():
     (ROOT/'document/BUILD_REPORT.json').write_text(json.dumps(build,indent=2)+'\n',encoding='utf-8')
     files=[p for folder in ['code','tools','reproduction'] for p in (ROOT/folder).rglob('*.py')]+[ROOT/'run_seed_sweep.py']
     for p in files:ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p))
-    commands=[('completed_release_tests.txt',[sys.executable,'-m','unittest','discover','-s',str(ROOT/'code/tests'),'-v'],6),
+    commands=[('completed_release_tests.txt',[sys.executable,'-m','unittest','discover','-s',str(ROOT/'code/tests'),'-v'],9),
               ('completed_cpu_tests.txt',[args.research_python,'-m','unittest','discover','-s',str(ROOT/'reproduction/research_completion_2026-11-02'),'-p','test_cpu*.py','-v'],15)]
     for name,cmd,n in commands:
         result=subprocess.run(cmd,cwd=ROOT,capture_output=True,text=True,errors='replace')
         text=result.stdout+result.stderr;(logs/name).write_text(text,encoding='utf-8')
         assert result.returncode==0 and f'Ran {n} tests' in text,(name,text)
-    report={'date':'2026-11-15','syntax_files':len(files),'regression_tests':21,'regression_status':'passed',
+    report={'date':date.today().isoformat(),'syntax_files':len(files),'regression_tests':sum(x[2] for x in commands),'regression_status':'passed',
         'test_logs':['document/build_logs/'+x[0] for x in commands],
-        'new_model_training_performed':True,'new_models_fully_trained_and_evaluated':15,
+        'new_model_training_performed':False,'new_models_fully_trained_and_evaluated':15,
+        'training_record_scope':'The 15 completed models are existing experimental evidence; this check does not perform training.',
         'new_raw_score_files':120,'epochs_per_model':5,'optimizer_steps_per_model':1380,'device':'cpu',
         'historical_results_separate':True,
         'scope':'Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json.'}
     (ROOT/'document/TEST_REPORT.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps({'pdf_pages':[x['pages'] for x in pdfs],'regression_tests':21,'syntax_files':len(files)},indent=2))
+    print(json.dumps({'pdf_pages':[x['pages'] for x in pdfs],'regression_tests':report['regression_tests'],'syntax_files':len(files)},indent=2))
 
 if __name__=='__main__':main()
