@@ -6,7 +6,8 @@ Separate supporting PDF: submission_ieee/IEEE_TBIOM_Supplement.pdf (3 pages).
 LaTeX: submission_ieee/main.tex and submission_ieee/supplement.tex.
 Source upload: submission_ieee/IEEE_TBIOM_Source.zip (two TeX files and six used vector figure PDFs).
 Word alternatives: IEEE_TBIOM_Paper.docx and IEEE_TBIOM_Supplement.docx.
-Cover letter and metadata are author-review drafts; complete factual declarations before sending. Submit the paper, not a thesis. Supporting material must be separate from the main IEEE PDF.
+Cover letter: submission_ieee/COVER_LETTER.docx.
+Cover letter and metadata record the confirmed author facts; unresolved permissions/review requirements and final approval still need resolution before submission. Submit the paper, not a thesis. Supporting material must be separate from the main IEEE PDF.
 
 arXiv
 Review PDF: submission_arxiv/arXiv_Preprint.pdf (13 pages).
@@ -21,9 +22,12 @@ The main scientific text, all thirteen measured tables, all six scientific figur
 
 AUTHOR CHECKLIST
 [ ] Confirm intended dataset/image use, source permissions and applicable ethics-review/consent position.
-[ ] Supply funding and competing-interest declarations; approve final author name order, contents and numbers.
+[x] Author reports no external funding and confirms sole authorship as Sangiya Pararajasingham.
+[x] Author confirms no competing interests.
+[ ] Approve final contents and numbers.
 [x] Correspondence email supplied: asan935para@gmail.com.
-[ ] Reconfirm no simultaneous journal/conference submission; disclose any public preprint/thesis version.
+[x] Author confirms not under review elsewhere and no formal journal/conference publication.
+[ ] Disclose any additional public preprint version; GitHub research drafts are noted.
 [ ] Resolve required publication declarations and select account/access/copyright/license choices.
 [ ] Record final Git commit with git rev-parse HEAD and inspect any server-generated PDF before completing submission.
 No external submission or acceptance is asserted.
@@ -34,3 +38,5 @@ https://info.arxiv.org/help/submit_tex.html
 https://info.arxiv.org/help/faq/texlive.html
 https://info.arxiv.org/help/ancillary_files.html
 https://info.arxiv.org/help/license/index.html
+
+Confirmed on 22 November 2026: no external funding; no competing interests; sole author Sangiya Pararajasingham; no committee review; no current review elsewhere; no formal journal/conference publication. Image-use permissions and the applicable ethics-review requirement remain unverified.

@@ -42,3 +42,8 @@ publication_release_*.zip
 # Local user report and Office locks are not release artifacts.
 verify_output.txt
 ~$*
+
+# Transient compiler output; named final PDFs remain tracked.
+/submission_ieee/main.pdf
+/submission_ieee/supplement.pdf
+/submission_arxiv/main.pdf

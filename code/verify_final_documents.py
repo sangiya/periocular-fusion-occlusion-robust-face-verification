@@ -29,7 +29,8 @@ def verify_documents(root):
     assert 'no known exact-name overlap remains' in main and 'RMFRD is exploratory' in main
     assert 'Aligned SFace diagnostic' in main and 'Shared-crop SFace preprocessing control' in main
     assert 'post-hoc exploratory cohort-composition sensitivity analysis' in main
-    assert 'ethics approval or exemption' in main and 'Data provenance and ethics records' in supp
+    assert 'No ethics committee reviewed this project' in main and 'Data provenance and ethics records' in supp
+    assert 'This research received no external funding.' in main and 'The author declares no competing interests.' in main
     keys=re.findall(r'\\bibitem\{([^}]+)\}',main);seen=[]
     assert len(keys)==len(set(keys))==38
     for group in re.findall(r'\\cite\{([^}]+)\}',main):
@@ -70,6 +71,10 @@ def verify_documents(root):
             assert z.testzip() is None and set(z.namelist())==expected|figures
             for name in z.namelist():assert z.read(name)==(folder/name).read_bytes()
         meta=json.loads((folder/'SUBMISSION_METADATA.json').read_text(encoding='utf-8'));assert meta['corresponding_author_email']=='asan935para@gmail.com'
+        assert meta['funding_declaration']=='This research received no external funding.'
+        assert meta['competing_interests']=='The author declares no competing interests.'
+        assert meta['currently_under_review_elsewhere'] is False and meta['formally_published_previously'] is False
+        assert meta['ethics_committee_review_conducted'] is False
     build=json.loads((root/'document/BUILD_REPORT.json').read_text())
     for name,value in build['inputs'].items():assert digest(root/recorded_relative_path(name))==value,('build input changed',name)
     expected={'submission_ieee/IEEE_TBIOM_Paper.pdf':10,'submission_ieee/IEEE_TBIOM_Supplement.pdf':3,'submission_arxiv/arXiv_Preprint.pdf':13}

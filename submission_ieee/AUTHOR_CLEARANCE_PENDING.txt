@@ -1,9 +1,5 @@
-PACKAGED FOR AUTHOR REVIEW; NOT SUBMITTED
+AUTHOR DECLARATIONS RECORDED
 
-Scientific values and source builds pass the recorded checks. Dataset/image permissions, applicable ethics/consent facts, final author approval, funding and competing-interest declarations remain pending. No account, publication license or access option has been selected. Canonical manuscript and supplement are included in this repository; use git rev-parse HEAD for the final revision.
+Confirmed: sole author Sangiya Pararajasingham; no external funding; no competing interests; not currently under review elsewhere; not formally published in a journal or conference; no committee review conducted. Corresponding email: asan935para@gmail.com.
 
-Final policy declarations remain the author's responsibility; no submission clearance is asserted.
-
-Upload the main PDF and supplement separately after clearance; source ZIP is IEEE_TBIOM_Source.zip. Cover letter is a draft with unresolved fields.
-
-Corresponding-author email confirmed by author: asan935para@gmail.com.
+Datasets were reported downloaded from public repositories. Complete image-use permission/consent records and the applicable ethics-review requirement remain unverified. No formal approval or exemption is claimed. Final author review and publication/account/license selections remain pending. No external submission performed.

@@ -9,7 +9,7 @@ Updated 22 November 2026. Publication files are prepared; submission, permission
 | IEEE T-BIOM | [10-page paper](submission_ieee/IEEE_TBIOM_Paper.pdf) and [separate 3-page supplement](submission_ieee/IEEE_TBIOM_Supplement.pdf) | [main.tex](submission_ieee/main.tex), [supplement.tex](submission_ieee/supplement.tex) | [IEEE_TBIOM_Source.zip](submission_ieee/IEEE_TBIOM_Source.zip) |
 | arXiv | [13-page preprint, including supporting material](submission_arxiv/arXiv_Preprint.pdf) | [main.tex](submission_arxiv/main.tex) includes [supplement_body.tex](submission_arxiv/supplement_body.tex) | [arXiv_Source.zip](submission_arxiv/arXiv_Source.zip) |
 
-Editable IEEE Word documents, submission metadata and an unfinished cover-letter draft are in `submission_ieee/`. Corresponding-author email: asan935para@gmail.com. Use [SUBMISSION_GUIDE.txt](SUBMISSION_GUIDE.txt) for exact file selections and unresolved author fields.
+Editable IEEE Word documents, submission metadata and an cover letter for final author review are in `submission_ieee/`. Corresponding-author email: asan935para@gmail.com. Use [SUBMISSION_GUIDE.txt](SUBMISSION_GUIDE.txt) for exact file selections and unresolved author fields.
 
 arXiv does not mandate a separate supplement. This preprint includes the supporting material because the text refers to its architecture diagram, parameter table, SFace controls and provenance records. `supplement_body.tex` is a required source input for this version, not a second article or separate upload. IEEE keeps the same material in a separate PDF to respect the regular-paper limit. References are inline in the TeX; no separate BibTeX file is required by these sources.
 
@@ -53,6 +53,10 @@ Regenerate current vector figures with `python code/regenerate_completed_assets.
 
 ## Remaining author facts
 
-Dataset/image permissions, project ethics/consent position, funding, competing interests, final author approval, and publication/account/license choices remain unresolved. The small masked cohort, semantic labels, unknown aliases and pretraining overlap remain scientific limitations. See [current readiness](document/CURRENT_READINESS_RECHECK.md) and [dataset source records](document/DATASET_SOURCE_TRACE.md).
+Dataset/image permissions, the applicable ethics-review requirement, consent documentation, final content approval, and publication/account/license choices remain unresolved. The small masked cohort, semantic labels, unknown aliases and pretraining overlap remain scientific limitations. See [current readiness](document/CURRENT_READINESS_RECHECK.md) and [dataset source records](document/DATASET_SOURCE_TRACE.md).
 
 The active tree contains only current publication versions and current result families. Superseded papers, old sweeps and obsolete writing tools were removed; earlier versions remain recoverable through Git. `document/CLEANUP_RECORD.json` records the cleanup and an external local recovery archive. The previous untracked `verify_output.txt` is preserved locally and is not part of release archives.
+
+Author-confirmed declarations: no external funding; sole author Sangiya Pararajasingham.
+
+Confirmed on 22 November 2026: no external funding; no competing interests; sole author Sangiya Pararajasingham; no committee review; no current review elsewhere; no formal journal/conference publication. Image-use permissions and the applicable ethics-review requirement remain unverified.

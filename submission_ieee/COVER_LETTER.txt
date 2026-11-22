@@ -1,4 +1,4 @@
-AUTHOR REVIEW DRAFT - DO NOT SEND UNTIL FACTUAL FIELDS ARE COMPLETED
+COVER LETTER - FINAL AUTHOR REVIEW; DATA-USE CLEARANCE STILL UNVERIFIED
 
 Dear Editor,
 
@@ -8,11 +8,13 @@ The manuscript studies when whole-face and periocular representations complement
 
 The artifact records frozen protocols, raw scores, exclusion ledgers, and source/checkpoint hashes. Source face images and checkpoint binaries are not redistributed. The ten-page manuscript is accompanied by a separate supplement containing the inference schematic, parameter accounting, preprocessing controls, and provenance records.
 
-[AUTHOR TO COMPLETE: confirm the applicable ethics-review position, consent/provenance documentation, and dataset/image-use permissions. The current manuscript transparently reports unresolved records; that is not a clearance statement.]
+The release contains code, manifests, hashes, derived scores, and manuscript figures; source face images and trained checkpoint binaries are excluded. No ethics committee reviewed this project, and no formal approval or exemption is claimed. The study reused existing ROF, MFR2, and RMFRD datasets downloaded from public repositories. The reviewed records do not establish individual participant consent or complete image-use permissions. The applicable ethics-review requirement remains unverified.
 
-[AUTHOR TO CONFIRM: the work is original and is not currently under review elsewhere. Disclose any public preprint or thesis version, including an arXiv identifier if posted before journal submission.]
+The author confirms sole authorship, that the work has not been formally published in a journal or conference, and that it is not currently under review elsewhere. The project GitHub repository includes research drafts and experimental artifacts: https://github.com/sangiya/periocular-fusion-occlusion-robust-face-verification.
 
-[AUTHOR TO COMPLETE: funding and competing-interest declarations and any editorial conflicts.]
+This research received no external funding. The sole author is Sangiya Pararajasingham.
+
+The author declares no competing interests.
 
 The author must approve all final content, measurements, and declarations before submission.
 
