@@ -1295,8 +1295,8 @@
       "bytes": 64232
     },
     "submission_arxiv/SUBMISSION_METADATA.json": {
-      "sha256": "56885ae4736e72fb43868266ea16ba751a81c29a056351089c42aa0daa3c50c1",
-      "bytes": 3464
+      "sha256": "d3a68d462d355c4128d10b06e5397969519690c31e8bc1e6bd99bd2e1d283cfb",
+      "bytes": 3476
     },
     "submission_arxiv/supplement_body.tex": {
       "sha256": "86f6f8b7c50f0b29c1d1e94e7195313960770742e89bfbc3287365cd1e05c890",
@@ -1307,7 +1307,7 @@
       "bytes": 2231
     },
     "SUBMISSION_GUIDE.txt": {
-      "sha256": "ed26c60849b401d2310cdbd1f423b0690a19a50de152173ff795cf3e0c8adc53",
+      "sha256": "66e5ca77e88e43463d2db1a6c225d257b16b4ce267fdfb3c275dbcf153c93e55",
       "bytes": 3331
     },
     "submission_ieee/AUTHOR_CLEARANCE_PENDING.txt": {
@@ -1375,8 +1375,8 @@
       "bytes": 64268
     },
     "submission_ieee/SUBMISSION_METADATA.json": {
-      "sha256": "49a184cbc610078f383e68eda4e0fe9f5028db6db99af5bc2f1b30be44f8a79b",
-      "bytes": 3257
+      "sha256": "96ae51eb11872eb3edd8ec42c88b23019d4dc0a0294286bc65e3ebf7aa6eed65",
+      "bytes": 3269
     },
     "submission_ieee/supplement.tex": {
       "sha256": "80f981c69893e5f4fc30120397c50ea620a8844ab0e289e7ea2fd48e720cb4a9",
