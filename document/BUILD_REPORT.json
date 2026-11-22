@@ -8,7 +8,7 @@
     "submission_ieee/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
     "submission_ieee/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
     "submission_ieee/main.tex": "9d388ac3be5fe57ac9b2ac454cad4728615490bbde2105b7697bb1bf67b9e31b",
-    "submission_ieee/supplement.tex": "e59e9f3adb97b6b5be6e4686a182f77a786a84b6efe5a6e6a18fd648c810bde7",
+    "submission_ieee/supplement.tex": "1582d6c7ee925848c51a575fc2ca24c54ed1a6a59c38b68fdaa076b38cd747de",
     "submission_arxiv/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
     "submission_arxiv/fig_gated_architecture.pdf": "7d7ccffd3d4b8a3b454f174a24da127e223d6f2a3a0476bee2d4dd51873a062d",
     "submission_arxiv/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
@@ -16,7 +16,7 @@
     "submission_arxiv/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
     "submission_arxiv/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
     "submission_arxiv/main.tex": "0a42276f407ad8d4691fa6eeb68bce7af516b0e0d7822ddc4f346c7fa073b355",
-    "submission_arxiv/supplement_body.tex": "de24e9e015ff789eb828993f8efaa1e975030a0c64dfda938f7b0945c0d6ad9f"
+    "submission_arxiv/supplement_body.tex": "e8c2678d68467b58a82e12264c5d72bbc4025b9a6ef4347cc748f87399945395"
   },
   "pdfs": [
     {
@@ -26,25 +26,25 @@
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Fresh updated declaration builds; source archive recheck recorded separately."
+      "source_archive_compile": "Author-uploaded supplement revision compiled locally; matching source ZIP recheck recorded separately."
     },
     {
       "file": "submission_ieee/IEEE_TBIOM_Supplement.pdf",
-      "sha256": "96b04f934cedd4cbb545ee3c0a8fa396291ce5b789e0fc44fd1aa83c5e855541",
+      "sha256": "0fb49eefa2f27ebcddd0733999877f8ee8bbf7c0cd7b5218b9ce8bf7c34371a2",
       "pages": 3,
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Fresh updated declaration builds; source archive recheck recorded separately."
+      "source_archive_compile": "Author-uploaded supplement revision compiled locally; matching source ZIP recheck recorded separately."
     },
     {
       "file": "submission_arxiv/arXiv_Preprint.pdf",
-      "sha256": "76ba713e38d8cfaf31726f0bbcb77ae220f51efad64b796a149c1d2d9668f97a",
+      "sha256": "061e40ecd25a4589ac37a8174eca7bf23df61a0e40ff72a6a7480e1419792f64",
       "pages": 13,
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Fresh updated declaration builds; source archive recheck recorded separately."
+      "source_archive_compile": "Author-uploaded supplement revision compiled locally; matching source ZIP recheck recorded separately."
     }
   ],
   "validation": "Local Tectonic builds after author-confirmed declarations; not portal validation."
