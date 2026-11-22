@@ -46,7 +46,7 @@ def main():
         assert len(deltas)==contrast['valid_replicates']
         results.append({'condition':condition,'contrast':contrast['contrast'],'ci95':actual.tolist(),'valid_replicates':len(deltas)})
         print(condition,contrast['contrast'],'interval matches',flush=True)
-    record={'date':'2026-11-16','status':'passed','comparisons':results,
+    record={'date':'2026-11-22','status':'passed','comparisons':results,
             'scope':'Independent NumPy midrank reconstruction from raw scores with the recorded two-endpoint multinomial resampling rule and shared three-seed weights. Conditional sensitivity intervals, not population confidence or corrected multiple-testing inference.'}
     (ROOT/'document/PAIRED_INTERVAL_AUDIT.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
 

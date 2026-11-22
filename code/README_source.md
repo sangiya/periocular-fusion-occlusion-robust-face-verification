@@ -1,13 +1,12 @@
-# Source entry points
+# Final source entry points
 
-- `verify_results.py`: historical and current evidence, manuscript tables, compiled bindings.
-- `verify_completed_cpu.py`: independent arithmetic/calibration checks for all 15 new models and 120 raw score files.
-- `regenerate_completed_assets.py`: current five publication figures from the new scores.
-- `../reproduction/research_completion_2026-11-02/`: exact executed CPU trainer, evaluator, coordinator, tests, and runtime snapshots; copy next to the release as described in the Windows guide.
-- `regenerate_publication_assets.py`, `run_seed_sweep.py`, older train/evaluate scripts: historical operations retained for audit, not the current paper entry point.
+- `verify_results.py`: final CPU/SFace evidence, final manuscript tables, source dependencies and build bindings.
+- `verify_completed_cpu.py`: all fifteen completed models, 120 raw scores and calibrated operating points.
+- `verify_strengthening.py`: shared-crop SFace and nine-identity cohort sensitivity.
+- `verify_final_documents.py`: thirteen measured tables, matching IEEE/arXiv sources, thirty-eight references and two source ZIPs.
+- `regenerate_completed_assets.py`: the five measured publication plots.
+- `evaluate_shared_crop_sface.py` and `analyze_masked_identity_sensitivity.py`: recorded additional controls; their signed source bytes are retained.
+- Remaining data/preprocessing modules and frozen input manifests preserve protocol construction and auditing. The final training input is exclusively `manifests/cpu_followup/training_manifest.csv`; original audit inputs must not be substituted.
+- `../reproduction/research_completion_2026-11-02/`: byte-preserved executed CPU sources and runtime. Follow the root reproduction guide; do not edit signed source bytes or misrepresent old weights as newly trained models.
 
-The recorded source hashes must remain unchanged for resume/provenance validation. Do not overwrite historical measurements with new numbers. Full checkpoint and image files are intentionally excluded from Git; score-level verification needs neither.
-
-After regenerating a completed-results manuscript with the preserved promotion script, run `python tools/prepare_submission_review.py` to reapply the checked citation additions and preprint-preparation notice. These source edits require recompilation and refreshed build/verification records before packaging. The source packager includes only referenced TeX inputs and figures.
-
-For the academic revision, apply `tools/polish_academic_manuscript.py` after the submission-review pass. Then generate `tools/draw_thesis_method.py`, build `tools/build_research_thesis.py`, and compile `document/thesis/Research_Thesis_Draft.tex`. `tools/verify_thesis_document.py` checks the shared measured tables, register, and compiled PDF bindings. The main artifact verifier also checks those thesis bindings. Font/PDF generation needs Tectonic; diagrams need Matplotlib; PDF structure checking needs pypdf.
+No training is needed for score-level verification. Image and checkpoint binaries are excluded. Obsolete paper-generation and old-sweep asset writers have been removed from the active release.

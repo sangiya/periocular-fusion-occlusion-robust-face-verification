@@ -22,10 +22,9 @@ def empirical_roc(y,s):
     return np.r_[0,np.cumsum(1-y)[ends]/sum(1-y)],np.r_[0,np.cumsum(y)[ends]/sum(y)]
 
 def save(fig,name):
-    for directory in [ROOT/'submission_ieee_10page',ROOT/'document/figures']:
+    for directory in [ROOT/'submission_ieee',ROOT/'submission_arxiv']:
         directory.mkdir(parents=True,exist_ok=True)
         fig.savefig(directory/(name+'.pdf'),bbox_inches='tight',metadata={'CreationDate':None,'ModDate':None})
-        fig.savefig(directory/(name+'.png'),bbox_inches='tight',dpi=200)
     plt.close(fig)
 
 def main():
@@ -59,6 +58,6 @@ def main():
         ax.hist(s[y==cls],bins=bins,density=True,alpha=.5,label=f'{label} (n={sum(y==cls)})',color=color)
     ax.set(xlabel='Cosine score',ylabel='Within-class density',title='New ROF masked gated scores; seed 42')
     ax.legend();ax.grid(alpha=.15);fig.tight_layout();save(fig,'fig_rof_masked_scores')
-    print('Regenerated five vector figures and previews from completed CPU results.')
+    print('Regenerated five vector figures from completed CPU results.')
 
 if __name__=='__main__':main()

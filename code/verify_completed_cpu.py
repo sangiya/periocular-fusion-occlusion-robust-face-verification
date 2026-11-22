@@ -89,11 +89,11 @@ def verify_completed(root):
     # Shipped report paths are recorded relative to the original execution folder.
     for path,value in summary['evaluation_report_hashes'].items():
         assert digest(base/recorded_relative_path(path,prefix='cpu_runs'))==value
-    tex=(root/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex').read_text(encoding='utf-8')
+    tex=(root/'submission_ieee/main.tex').read_text(encoding='utf-8')
     def lines(label):
         return [x for x in tex.split('\\label{tab:'+label+'}')[1].split('\\bottomrule')[0].splitlines() if '&' in x and not x.startswith(('Protocol','Configuration'))]
     conditions=['test_masked','test_sunglasses','test_neutral','mfr2','rmfrd']
-    for c,line in zip(conditions,lines('calibration')):
+    for c,line in zip(conditions,lines('checked8')):
         key='validation_calibrated' if c.startswith('test_') else 'transferred_rof_validation_thresholds'
         values=[records[(s,'gated_fusion')]['protocols'][c][key]['0.01'] for s in SEEDS]
         values=[x['test'] if 'test' in x else x for x in values];cells=[x.strip().rstrip('\\') for x in line.split('&')]
@@ -101,11 +101,11 @@ def verify_completed(root):
         assert abs(float(cells[2])-statistics.mean(x['far'] for x in values))<=.000050001
         assert cells[3]=='/'.join(str(x['true_accepts']) for x in values)
         assert cells[4]=='/'.join(str(x['false_accepts']) for x in values)
-    for c,line in zip(conditions,lines('gatecontrols')):
-        for key,cell in zip(['learned','constant_0.5_same_branches','validation_mean_gate_same_branches','permuted_gate_same_branches'],line.split('&')[1:]):
+    for c,line in zip(conditions,lines('checked9')):
+        for key,cell in zip(['constant_0.5_same_branches','learned','validation_mean_gate_same_branches','permuted_gate_same_branches'],line.split('&')[1:]):
             expected=statistics.mean(records[(s,'gated_fusion')]['gate_controls'][c][key]['auc'] for s in SEEDS)
             assert abs(float(cell.strip().rstrip('\\'))-expected)<=.000050001
-    for item,line in zip(summary['paired_auc_comparisons'],lines('paired')):
+    for item,line in zip(summary['paired_auc_comparisons'],lines('checked12')):
         values=[item['mean_auc_difference']]+item['paired_two_endpoint_identity_bootstrap_ci95']
         for expected,cell in zip(values,line.split('&')[2:]):
             assert abs(float(cell.strip().rstrip('\\'))-expected)<=.000050001
@@ -117,12 +117,12 @@ def verify_completed(root):
         if c=='rmfrd':pairs=root/'manifests/cleaned/rmfrd_pairs.csv'
         assert digest(pairs)==item['pairs_sha256'];rows=read(raw);align(rows,read(pairs));m=score_metrics(rows)
         for key in KEYS:assert abs(m[key]-item['all_pairs_metrics'][key])<1e-8
-    for c,line in zip(conditions,lines('sface')):
+    for c,line in zip(conditions,lines('checked11')):
         cells=[x.strip().rstrip('\\') for x in line.split('&')]
         assert abs(float(cells[1])-baseline['protocols'][c]['all_pairs_metrics']['auc'])<=.000050001
         assert int(cells[2])==baseline['protocols'][c]['failed_pairs']
     counts['sface_score_files']=len(baseline['protocols'])
-    counts['auxiliary_manuscript_tables']=5
+    counts['auxiliary_manuscript_tables']=4
     return counts
 
 if __name__=='__main__':

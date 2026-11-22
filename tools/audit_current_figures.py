@@ -64,14 +64,14 @@ def main():
                 assert abs(np.sum(heights*np.diff(bins))-1) < 1e-12
         buffer = io.BytesIO()
         fig.savefig(buffer,format='pdf',bbox_inches='tight',metadata={'CreationDate':None,'ModDate':None})
-        current = ROOT/'submission_ieee_10page'/(name+'.pdf')
+        current = ROOT/'submission_ieee'/(name+'.pdf')
         assert buffer.getvalue() == current.read_bytes(), 'Figure differs from current generator: '+name
-        assert current.read_bytes() == (ROOT/'document/figures'/current.name).read_bytes()
+        assert current.read_bytes() == (ROOT/'submission_arxiv'/current.name).read_bytes()
         figures.append({'file':current.relative_to(ROOT).as_posix(),'sha256':sha(current.read_bytes()),'recreated_pdf_byte_identical':True})
         module.plt.close(fig)
     module.save = inspect
     module.main()
-    output = {'date':'2026-11-16','status':'passed','independent_auc_library':'scikit-learn',
+    output = {'date':'2026-11-22','status':'passed','independent_auc_library':'scikit-learn',
               'raw_score_files':checked,'figures':figures,
               'scope':'Independent library AUC/ROC checks; plotted means/error bars and histogram inputs; exact regenerated PDF bytes. Does not validate semantic image labels, unseen identities, or repeat neural inference.'}
     (ROOT/'document/FIGURE_DATA_AUDIT.json').write_text(json.dumps(output,indent=2)+'\n',encoding='utf-8')

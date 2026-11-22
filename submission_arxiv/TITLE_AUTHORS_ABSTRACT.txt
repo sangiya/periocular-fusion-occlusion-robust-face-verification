@@ -1,0 +1,17 @@
+TITLE
+Regional Complementarity and Learned Weighting for Occluded Face Verification
+
+AUTHOR
+Sangiya Pararajasingham
+Independent Researcher
+ORCID: 0009-0005-3407-2154
+Corresponding-author email: asan935para@gmail.com
+
+ABSTRACT
+We explore the complementary nature of different facial regions in occluded face verification. Multiple DINOv2 fusion approaches, including no fusion, fixed fusion, and learned fusion, were employed. Five model configurations were trained; frozen encoders with trained projection layers, full face LoRA, periocular LoRA, and dual branch models with equal fusion weights/learned fusion. All models were trained with three seeds on the identity-disjoint ROF training split (4405 of 6171 manifest images) and evaluated using frozen ROF, MFR2, and RMFRD verification protocols. The best performance for masked data was found in the periocular LoRA model (0.9221 ± 0.0046). For sunglasses, the best performance was with the fixed fusion approach (0.8950 ± 0.0021). Neutral data had the best performance in the learned fusion model (0.9458 ± 0.0026). With learned fusion, 0.9548 ± 0.0022 performance was achieved in 802 MFR2 pair comparisons after a known training-name overlap was excluded. Fixed fusion achieved best performance (0.7240 ± 0.0099) from 21798 RMFRD pair comparisons with exact content duplicates removed. When ensuring that the branches in the model were consistently trained, a varying weighted fusion does not guarantee performance gains over a constant weighted fusion. Validation-calibrated thresholds reveal shifts in test false acceptance rates that retrospective AUC summaries do not establish. Separate aligned-SFace and shared-crop SFace evaluations show sensitivity to preprocessing; their AUCs do not establish architectural superiority. Evidence of complementary data in different conditions is provided. We show that using learned fusion gates with high AUCs alone does not guarantee reliable performance in occluded verification.
+
+PROPOSED CATEGORY
+cs.CV (author/moderator confirmation required)
+
+Journal reference and DOI: leave blank; not published or accepted.
+License: author must choose after confirming rights; no license selected by this preparation.

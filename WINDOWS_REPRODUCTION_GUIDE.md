@@ -32,4 +32,6 @@ The coordinator trains then evaluates each model, updates its summary, and advan
 
 Keep the laptop powered and awake during a reproduction. Different hardware/software may change floating-point results; bitwise equality across systems is not promised. Do not copy this release's completed reports into a fresh training folder to pretend new work is complete. For verification of existing completed outputs, use the standard-library verifier instead.
 
-Current plot generation: `python code/regenerate_completed_assets.py`. Historical asset generation remains a legacy operation and must not overwrite the current figures. `run_seed_sweep.py` and the older generic clean driver are historical/alternative entry points; the exact CPU experiment is defined by the preserved coordinator and experiment plan.
+Current plot generation: `python code/regenerate_completed_assets.py`. Final documents are in `submission_ieee/` and `submission_arxiv/`. The root `run_seed_sweep.py` is now a status/guarded launcher for the exact preserved CPU coordinator; the superseded historical driver has been removed.
+
+When reconstructing a fresh runtime folder, also copy `manifests/cpu_followup/` into `research_completion_2026-11-02/experiment/`, and retain `cpu_runs/runtime/` from the executed snapshot. The original frozen experiment-plan status predates training; completion is established by the fifteen final records, not by editing that signed plan. Do not copy final scores/progress into a fresh runtime to impersonate a completed reproduction.

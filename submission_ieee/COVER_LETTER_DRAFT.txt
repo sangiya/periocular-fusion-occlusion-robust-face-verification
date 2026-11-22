@@ -1,0 +1,23 @@
+AUTHOR REVIEW DRAFT - DO NOT SEND UNTIL FACTUAL FIELDS ARE COMPLETED
+
+Dear Editor,
+
+Please consider "Regional Complementarity and Learned Weighting for Occluded Face Verification" as a regular paper for IEEE Transactions on Biometrics, Behavior, and Identity Science.
+
+The manuscript studies when whole-face and periocular representations complement one another under masks, sunglasses, and neutral conditions. Five configurations were trained on CPU with three seeds each. Same-branch weighting controls distinguish representation learning from the inference fusion rule, and validation-calibrated operating points reveal threshold-transfer limitations. The manuscript reports negative gating findings, exploratory cohort sensitivity, and separate aligned and shared-crop SFace diagnostics. It does not claim a first combination of DINOv2, LoRA, and periocular fusion or universal superiority.
+
+The artifact records frozen protocols, raw scores, exclusion ledgers, and source/checkpoint hashes. Source face images and checkpoint binaries are not redistributed. The ten-page manuscript is accompanied by a separate supplement containing the inference schematic, parameter accounting, preprocessing controls, and provenance records.
+
+[AUTHOR TO COMPLETE: confirm the applicable ethics-review position, consent/provenance documentation, and dataset/image-use permissions. The current manuscript transparently reports unresolved records; that is not a clearance statement.]
+
+[AUTHOR TO CONFIRM: the work is original and is not currently under review elsewhere. Disclose any public preprint or thesis version, including an arXiv identifier if posted before journal submission.]
+
+[AUTHOR TO COMPLETE: funding and competing-interest declarations and any editorial conflicts.]
+
+The author must approve all final content, measurements, and declarations before submission.
+
+Sincerely,
+Sangiya Pararajasingham
+Independent Researcher
+ORCID: 0009-0005-3407-2154
+Corresponding-author email: asan935para@gmail.com

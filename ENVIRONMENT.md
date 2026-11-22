@@ -8,4 +8,4 @@ Training rows are 4,405; validation 844; test 922. The 6,171-row manifest exclud
 
 Wall-clock durations in the records include interruptions/sleep and are not uninterrupted benchmark timings. Peak memory was not instrumented. Exact optimizer/RNG continuation was tested within the recorded runtime; equality across hardware/package versions is not claimed. The periocular-only new trainer skips an unused whole-face forward pass, so it is not bitwise identical to the historical trainer.
 
-Historical 7,295-row training, 6,173-row exact-hash-only cleaning, historical 10-thread records, corrected MFR2 inference, and post-hoc sensitivities remain separate audit stages. None of those stage counts defines the current new experiment.
+Original input manifests remain as cleaning provenance. Superseded score sweeps and manuscripts have been removed from the active tree and remain recoverable in Git history. None of the original input-stage counts defines the final experiment.

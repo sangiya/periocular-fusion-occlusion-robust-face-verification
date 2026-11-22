@@ -1,68 +1,51 @@
 {
-  "date": "2026-11-16",
-  "compiler": "Tectonic 0.17.0",
-  "flags": [
-    "--only-cached",
-    "--untrusted",
-    "--keep-logs"
-  ],
+  "date": "2026-11-22",
   "inputs": {
-    "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex": "199dc51e9500b9dc36e1ee283cfd115c340302661179542cee145640a75f1338",
-    "document/arXiv_Preprint_10Page_Final.tex": "f914bdcfb15768755c1d6f55442b4a7d1722ddda6952a9c7e2896b8d9ab5a6e2",
-    "document/cpu_followup/CPU_Integrity_Followup.tex": "d72c283d244a7054b5a85b87967d3ede1ab12a91e9c44d7147c660b9bbd0e08f",
-    "submission_ieee_10page/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
-    "submission_ieee_10page/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
-    "submission_ieee_10page/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
-    "submission_ieee_10page/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
-    "submission_ieee_10page/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
-    "document/thesis/Research_Thesis_Draft.tex": "02e25ceea2a98b7f51e174ef079fb6117e7139d86e41987b79df7d905481cf77"
+    "submission_ieee/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
+    "submission_ieee/fig_gated_architecture.pdf": "7d7ccffd3d4b8a3b454f174a24da127e223d6f2a3a0476bee2d4dd51873a062d",
+    "submission_ieee/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
+    "submission_ieee/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
+    "submission_ieee/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
+    "submission_ieee/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
+    "submission_ieee/main.tex": "a3eed0759c7f0cfc318ecaeed6104f6fa4187ee97e21cbcc580ac99994ee1065",
+    "submission_ieee/supplement.tex": "80f981c69893e5f4fc30120397c50ea620a8844ab0e289e7ea2fd48e720cb4a9",
+    "submission_arxiv/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
+    "submission_arxiv/fig_gated_architecture.pdf": "7d7ccffd3d4b8a3b454f174a24da127e223d6f2a3a0476bee2d4dd51873a062d",
+    "submission_arxiv/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
+    "submission_arxiv/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
+    "submission_arxiv/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
+    "submission_arxiv/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
+    "submission_arxiv/main.tex": "6a13182655710d61d0f4dc654244eac16c270cd9539c54641783ab10235afec3",
+    "submission_arxiv/supplement_body.tex": "86f6f8b7c50f0b29c1d1e94e7195313960770742e89bfbc3287365cd1e05c890"
   },
   "pdfs": [
     {
-      "file": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.pdf",
-      "sha256": "a4da689f43bbfeeda6107477cba0d6034aff60d0c9ceddd64f995d8ca2beceb5",
+      "file": "submission_ieee/IEEE_TBIOM_Paper.pdf",
+      "sha256": "1f262c1fd6c02404d04bcd8c54065a1f69dbd6ba031fd3665f480eba851d7bc5",
       "pages": 10,
-      "source": "submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex",
-      "source_sha256": "199dc51e9500b9dc36e1ee283cfd115c340302661179542cee145640a75f1338",
-      "log": "document/build_logs/IEEE_TBIOM_Submission_10Page_Final.log",
       "overfull_boxes": 0,
-      "underfull_messages": 6,
-      "undefined_references_or_citations": false
+      "missing_characters": 0,
+      "undefined_citations_or_references": false,
+      "source_archive_compile": "checked offline from actual source ZIPs before repository synchronization"
     },
     {
-      "file": "document/arXiv_Preprint_10Page_Final.pdf",
-      "sha256": "1c659b1acb7b735ce89bf1b8de8eea36d4ee6b077e31a8c53b5d8d8d14bfe314",
-      "pages": 10,
-      "source": "document/arXiv_Preprint_10Page_Final.tex",
-      "source_sha256": "f914bdcfb15768755c1d6f55442b4a7d1722ddda6952a9c7e2896b8d9ab5a6e2",
-      "log": "document/build_logs/arXiv_Preprint_10Page_Final.log",
+      "file": "submission_ieee/IEEE_TBIOM_Supplement.pdf",
+      "sha256": "1deb6c63290b740da1b0508c1494d9a12d653db2a4023f59cab261a56435588d",
+      "pages": 3,
       "overfull_boxes": 0,
-      "underfull_messages": 6,
-      "undefined_references_or_citations": false
+      "missing_characters": 0,
+      "undefined_citations_or_references": false,
+      "source_archive_compile": "checked offline from actual source ZIPs before repository synchronization"
+    },
+    {
+      "file": "submission_arxiv/arXiv_Preprint.pdf",
+      "sha256": "56abc5f04bdd45f46e115023a256c631713582f3424930b0faa8be16c246febf",
+      "pages": 13,
+      "overfull_boxes": 0,
+      "missing_characters": 0,
+      "undefined_citations_or_references": false,
+      "source_archive_compile": "checked offline from actual source ZIPs before repository synchronization"
     }
   ],
-  "supplement": {
-    "file": "document/cpu_followup/CPU_Integrity_Followup.pdf",
-    "sha256": "3cbc3a5aacdc401134ac8fa65969512dd1509766bbe2408140826306e21dd4bd",
-    "pages": 2,
-    "source": "document/cpu_followup/CPU_Integrity_Followup.tex",
-    "source_sha256": "d72c283d244a7054b5a85b87967d3ede1ab12a91e9c44d7147c660b9bbd0e08f",
-    "log": "document/build_logs/CPU_Integrity_Followup.log",
-    "overfull_boxes": 0,
-    "underfull_messages": 0,
-    "undefined_references_or_citations": false
-  },
-  "shared_substantive_tex": true,
-  "visual_inspection": "Updated IEEE page 10 rendered and inspected; acknowledgment complete on one page, 38 references fit. Prior full-document/figure reviews remain applicable.",
-  "note": "No overfull boxes or undefined references/citations. Minor underfull spacing messages and nonfatal Fontconfig message remain.",
-  "thesis": {
-    "file": "document/thesis/Research_Thesis_Draft.pdf",
-    "sha256": "155609de1d1d977a6a1de107fd956f454f8f33faad21ba272ecb8aedb68ed78c",
-    "pages": 55,
-    "source": "document/thesis/Research_Thesis_Draft.tex",
-    "source_sha256": "02e25ceea2a98b7f51e174ef079fb6117e7139d86e41987b79df7d905481cf77",
-    "overfull_boxes": 0,
-    "status": "Generic research thesis draft; institution-specific template and author declarations remain pending."
-  },
-  "last_recheck": "Acknowledgment condensed, scope retained, paragraph kept on one page; IEEE/arXiv/thesis rebuilt. Experimental values and code unchanged."
+  "validation": "Local Tectonic/XeLaTeX-compatible builds and source-archive fresh compilations; not arXiv-server/IEEE-portal validation."
 }

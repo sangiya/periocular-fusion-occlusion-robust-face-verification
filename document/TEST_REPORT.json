@@ -1,19 +1,21 @@
 {
-  "date": "2026-11-21",
-  "syntax_files": 61,
-  "regression_tests": 24,
-  "regression_status": "passed",
-  "test_logs": [
-    "document/build_logs/completed_release_tests.txt",
-    "document/build_logs/completed_cpu_tests.txt"
-  ],
-  "new_model_training_performed": false,
-  "new_models_fully_trained_and_evaluated": 15,
-  "new_raw_score_files": 120,
-  "epochs_per_model": 5,
-  "optimizer_steps_per_model": 1380,
-  "device": "cpu",
-  "historical_results_separate": true,
-  "scope": "Regression, syntax and executed completion records; arithmetic/provenance and table checks are in VERIFICATION_REPORT.json.",
-  "training_record_scope": "The 15 completed models are existing experimental evidence; this check does not perform training."
+  "date": "2026-11-22",
+  "release_guards": {
+    "tests": 9,
+    "failures": 0
+  },
+  "CPU_pipeline_recovery": {
+    "tests": 15,
+    "failures": 0
+  },
+  "code_compile": "passed",
+  "training_started": false,
+  "independent_figures": {
+    "raw_score_files": 120,
+    "byte_identical_figures": 5
+  },
+  "paired_interval_reconstruction": {
+    "comparisons": 10,
+    "passed": true
+  }
 }

@@ -63,10 +63,10 @@ def verify_strengthening(root):
         assert math.isclose(row['minimum_auc_mean'],min(results[variant]),rel_tol=0,abs_tol=1e-12) and math.isclose(row['maximum_auc_mean'],max(results[variant]),rel_tol=0,abs_tol=1e-12),(variant,'AUC range')
         assert row['highest_mean_count']==winners.count(variant)
     assert len(sensitivity['gated_minus_fixed_range'])==2 and all(math.isclose(a,b,rel_tol=0,abs_tol=1e-12) for a,b in zip(sensitivity['gated_minus_fixed_range'],[min(deltas),max(deltas)])),'AUC contrast range'
-    tex=(root/'submission_ieee_10page/IEEE_TBIOM_Submission_10Page_Final.tex').read_text(encoding='utf-8')
+    tex=(root/'submission_ieee/main.tex').read_text(encoding='utf-8')
     for name in ['test_masked','test_sunglasses','test_neutral','mfr2','rmfrd']:
         assert f"{report['protocols'][name]['metrics']['auc']:.4f}" in tex
-    assert 'eight of nine' in tex and '0.8948--0.9440' in tex
+    assert '8/9 subsets' in tex and 'post-hoc exploratory cohort-composition sensitivity analysis' in tex
     return {'shared_crop_score_files':len(loaded),'shared_crop_images':len(ledger),'calibrated_operating_points':points,
             'masked_identity_subsets':9,'per_seed_subset_aucs':subset_count}
 

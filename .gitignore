@@ -38,3 +38,7 @@ publication_release_*.zip
 
 # Preserve build evidence logs under the document folder.
 !document/build_logs/*.log
+
+# Local user report and Office locks are not release artifacts.
+verify_output.txt
+~$*

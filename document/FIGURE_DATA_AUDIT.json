@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-22",
   "status": "passed",
   "independent_auc_library": "scikit-learn",
   "raw_score_files": [
@@ -606,27 +606,27 @@
   ],
   "figures": [
     {
-      "file": "submission_ieee_10page/fig_rof_masked_roc.pdf",
+      "file": "submission_ieee/fig_rof_masked_roc.pdf",
       "sha256": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
       "recreated_pdf_byte_identical": true
     },
     {
-      "file": "submission_ieee_10page/fig_rof_sunglasses_roc.pdf",
+      "file": "submission_ieee/fig_rof_sunglasses_roc.pdf",
       "sha256": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
       "recreated_pdf_byte_identical": true
     },
     {
-      "file": "submission_ieee_10page/fig_mfr2_roc.pdf",
+      "file": "submission_ieee/fig_mfr2_roc.pdf",
       "sha256": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
       "recreated_pdf_byte_identical": true
     },
     {
-      "file": "submission_ieee_10page/fig_auc_cross_dataset.pdf",
+      "file": "submission_ieee/fig_auc_cross_dataset.pdf",
       "sha256": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
       "recreated_pdf_byte_identical": true
     },
     {
-      "file": "submission_ieee_10page/fig_rof_masked_scores.pdf",
+      "file": "submission_ieee/fig_rof_masked_scores.pdf",
       "sha256": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
       "recreated_pdf_byte_identical": true
     }

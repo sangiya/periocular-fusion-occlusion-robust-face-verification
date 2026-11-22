@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-22",
+  "status": "passed",
+  "source_archive_builds": [
+    {
+      "folder": "submission_ieee",
+      "entry_point": "main.tex",
+      "pages": 10,
+      "fresh_source_archive_compile": "passed",
+      "PDF_text_matches_canonical": true
+    },
+    {
+      "folder": "submission_ieee",
+      "entry_point": "supplement.tex",
+      "pages": 3,
+      "fresh_source_archive_compile": "passed",
+      "PDF_text_matches_canonical": true
+    },
+    {
+      "folder": "submission_arxiv",
+      "entry_point": "main.tex",
+      "pages": 13,
+      "fresh_source_archive_compile": "passed",
+      "PDF_text_matches_canonical": true
+    }
+  ],
+  "retained_current_result_manifest_and_signed_core_source_bytes_unchanged_from_base_commit": true,
+  "IEEE_main_arXiv_main_tables_identical": true,
+  "supplement_tables_identical": true,
+  "figure_PDFs_identical_across_venues": 6,
+  "references": 38,
+  "current_primary_result_grid": 15,
+  "base_commit": "669c708642f5aa1c121e99a53c6be8f892460eaa",
+  "public_submission_performed": false,
+  "author_clearance": "Pending factual permissions, applicable ethics/consent, funding/competing-interest declarations and final approval."
+}

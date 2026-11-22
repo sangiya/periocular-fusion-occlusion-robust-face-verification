@@ -1,0 +1,9 @@
+PACKAGED FOR AUTHOR REVIEW; NOT SUBMITTED
+
+Scientific values and source builds pass the recorded checks. Dataset/image permissions, applicable ethics/consent facts, final author approval, funding and competing-interest declarations remain pending. No account, publication license or access option has been selected. Canonical manuscript and supplement are included in this repository; use git rev-parse HEAD for the final revision.
+
+Final policy declarations remain the author's responsibility; no submission clearance is asserted.
+
+After clearance, upload the inner arXiv_Source.zip, select main.tex and XeLaTeX, choose your license, and inspect the server PDF. The outer arXiv_Package.zip also contains author-only metadata and instructions; do not upload that outer ZIP as the TeX submission.
+
+Corresponding-author email confirmed by author: asan935para@gmail.com.

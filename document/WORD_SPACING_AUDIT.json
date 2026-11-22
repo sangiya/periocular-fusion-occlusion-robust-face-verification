@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-22",
+  "source_packages": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\SUBMISSION_PACKAGES_2026-11-22",
+  "new_packages": "D:\\Sangiya\\NIV-2026\\Thesis\\Claude\\2026- Latest Research\\manus\\data_plan\\SUBMISSION_PACKAGES_2026-11-22_PROOFREAD",
+  "abstract_wording": "reliable performance in occluded verification.",
+  "spacing_change": "The original source already contained a space. The PDF line break is removed by boxing occluded verification with a normal internal space; Word uses a nonbreaking space.",
+  "changes": [
+    {
+      "file": "IEEE_TBIOM\\source\\main.tex",
+      "before": "imposter identities",
+      "after": "impostor identities",
+      "occurrences": 1
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\main.tex",
+      "before": "permutated weighting",
+      "after": "permuted weighting",
+      "occurrences": 1
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\main.tex",
+      "before": "kept in for auditing",
+      "after": "kept for auditing",
+      "occurrences": 1
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\main.tex",
+      "before": "cohort make up",
+      "after": "cohort composition",
+      "occurrences": 1
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\main.tex",
+      "before": "occluded verification (ordinary space; previously wrapped over a line break)",
+      "after": "occluded verification (unbreakable box with normal internal word space)"
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\supplement.tex",
+      "before": "Pytorch",
+      "after": "PyTorch",
+      "occurrences": 1
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\supplement.tex",
+      "before": "must be setup",
+      "after": "must be set up",
+      "occurrences": 1
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\supplement.tex",
+      "before": "licenced data",
+      "after": "licensed data",
+      "occurrences": 1
+    },
+    {
+      "file": "IEEE_TBIOM\\source\\supplement.tex",
+      "before": "licenced source data",
+      "after": "licensed source data",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\main.tex",
+      "before": "imposter identities",
+      "after": "impostor identities",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\main.tex",
+      "before": "permutated weighting",
+      "after": "permuted weighting",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\main.tex",
+      "before": "kept in for auditing",
+      "after": "kept for auditing",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\main.tex",
+      "before": "cohort make up",
+      "after": "cohort composition",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\main.tex",
+      "before": "occluded verification (ordinary space; previously wrapped over a line break)",
+      "after": "occluded verification (unbreakable box with normal internal word space)"
+    },
+    {
+      "file": "arXiv\\source\\supplement_body.tex",
+      "before": "Pytorch",
+      "after": "PyTorch",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\supplement_body.tex",
+      "before": "must be setup",
+      "after": "must be set up",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\supplement_body.tex",
+      "before": "licenced data",
+      "after": "licensed data",
+      "occurrences": 1
+    },
+    {
+      "file": "arXiv\\source\\supplement_body.tex",
+      "before": "licenced source data",
+      "after": "licensed source data",
+      "occurrences": 1
+    }
+  ],
+  "typo_dictionary_source": "https://raw.githubusercontent.com/codespell-project/codespell/main/codespell_lib/data/dictionary.txt",
+  "typo_dictionary_sha256": "ce9d7368312fbba462bac7b3eb282398c507556e8f703b61f029caedf0e19071",
+  "tokens_scanned": 8840,
+  "remaining_typo_dictionary_or_targeted_joined_word_matches": [],
+  "targeted_joined_forms": [
+    "occludedverification",
+    "guaranteereliable",
+    "faceverification",
+    "knownoverlap",
+    "thefollowing",
+    "inthe",
+    "withthe",
+    "onthe",
+    "forthe",
+    "tothe",
+    "ofthe",
+    "fromthe",
+    "bythe",
+    "andthe",
+    "isused",
+    "areused",
+    "isnot",
+    "doesnot",
+    "hasbeen",
+    "havebeen",
+    "aswell",
+    "canbe",
+    "willbe",
+    "weuse",
+    "thepaper"
+  ],
+  "scope": "Local conservative typo-dictionary and explicit joined-word scan of manuscript/supplement paragraphs, plus manual terminology review. Not a proof of absence of every possible grammatical/spelling error. Bibliographic titles and all measured data are preserved.",
+  "no_new_training_or_inference": true
+}

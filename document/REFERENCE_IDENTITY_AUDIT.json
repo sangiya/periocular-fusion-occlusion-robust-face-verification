@@ -1,0 +1,969 @@
+{
+  "date": "2026-11-22",
+  "references": [
+    {
+      "number": 1,
+      "key": "dinov2",
+      "title": "DINOv2: Learning robust visual features without supervision",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Executed component",
+      "claim_relevance": "Backbone actually used; transferable self-supervised visual features.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\dinov2_source.html",
+          "title": "DINOv2: Learning Robust Visual Features without Supervision",
+          "matches_reference_identity": true
+        },
+        {
+          "type": "Primary publication PDF indexed on web",
+          "url": "https://openreview.net/pdf?id=a68SUt6zFt",
+          "venue": "Transactions on Machine Learning Research, 01/2024",
+          "access_limit": "Forum/API browser checks blocked direct reads; public indexed PDF confirms venue header."
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 2,
+      "key": "lora",
+      "title": "LoRA: Low-rank adaptation of large language models",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Executed component",
+      "claim_relevance": "Low-rank adaptation mechanism actually used, despite its original language-model experiments.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\lora_source.html",
+          "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+          "matches_reference_identity": true
+        },
+        {
+          "type": "Author institution publication page",
+          "url": "https://www.microsoft.com/en-us/research/publication/lora-low-rank-adaptation-of-large-language-models/",
+          "venue": "ICLR 2022, April 2022"
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 3,
+      "key": "sphereface",
+      "title": "SphereFace: Deep hypersphere embedding for face recognition",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Face-embedding background",
+      "claim_relevance": "Multiplicative angular-margin face-recognition loss.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\sphereface_source.html",
+          "title": "SphereFace: Deep Hypersphere Embedding for Face Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 4,
+      "key": "cosface",
+      "title": "CosFace: Large margin cosine loss for deep face recognition",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Face-embedding background",
+      "claim_relevance": "Additive cosine-margin face-recognition loss.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\cosface_source.html",
+          "title": "CosFace: Large Margin Cosine Loss for Deep Face Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 5,
+      "key": "arcface",
+      "title": "ArcFace: Additive angular margin loss for deep face recognition",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Face-embedding background",
+      "claim_relevance": "Additive angular-margin face-recognition loss.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\arcface_source.html",
+          "title": "ArcFace: Additive Angular Margin Loss for Deep Face Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 6,
+      "key": "adaface",
+      "title": "AdaFace: Quality adaptive margin for face recognition",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Face-embedding background",
+      "claim_relevance": "Quality-adaptive face-recognition margin.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\adaface_source.html",
+          "title": "AdaFace: Quality Adaptive Margin for Face Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 7,
+      "key": "magface",
+      "title": "MagFace: A universal representation for face recognition and quality assessment",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Face-embedding background",
+      "claim_relevance": "Magnitude-aware face embeddings connect feature magnitude and image quality.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\magface_source.html",
+          "title": "MagFace: A Universal Representation for Face Recognition and Quality Assessment",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 8,
+      "key": "mfr2",
+      "title": "Masked face recognition for secure authentication",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Dataset",
+      "claim_relevance": "Introduces MaskTheFace and MFR2, an external evaluation dataset in this study.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\mfr2_source.html",
+          "title": "Masked Face Recognition for Secure Authentication",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 9,
+      "key": "llecnn",
+      "title": "Detecting masked faces in the wild with LLE-CNNs",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Detection background",
+      "claim_relevance": "MAFA and LLE-CNNs address masked-face localization/detection.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\llecnn_source.html",
+          "title": "Detecting Masked Faces in the Wild With LLE-CNNs",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 10,
+      "key": "rmfrd",
+      "title": "Masked face recognition dataset and application",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Dataset",
+      "claim_relevance": "Original dataset family and maintainer-requested journal citation for RMFRD.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\rmfrd_crossref.json",
+          "title": [
+            "Masked Face Recognition Dataset and Application"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/tbiom.2023.3242085",
+          "year": {
+            "date-parts": [
+              [
+                2023,
+                4
+              ]
+            ]
+          },
+          "volume": "5",
+          "issue": "2",
+          "page": "298-304"
+        },
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\rmfrd_source.html",
+          "title": "",
+          "matches_reference_identity": false
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 11,
+      "key": "surveyocc",
+      "title": "A survey of face recognition techniques under occlusion",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Occlusion survey",
+      "claim_relevance": "Organizes methods for face recognition under occlusion.",
+      "evidence": [
+        {
+          "type": "Author/publication PDF",
+          "file": "audit\\reference_sources\\surveyocc_source.pdf",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 12,
+      "key": "from2022",
+      "title": "End2End occluded face recognition by masking corrupted features",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Occlusion recognition",
+      "claim_relevance": "Learns masks to suppress corrupted facial features under occlusion.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\from2022_crossref.json",
+          "title": [
+            "End2End Occluded Face Recognition by Masking Corrupted Features"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/tpami.2021.3098962",
+          "year": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                1
+              ]
+            ]
+          },
+          "volume": "44",
+          "issue": "10",
+          "page": "6939-6952"
+        },
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\from2022_source.html",
+          "title": "End2End Occluded Face Recognition by Masking Corrupted Features",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 13,
+      "key": "masklearn",
+      "title": "Occlusion robust face recognition based on mask learning with pairwise differential Siamese network",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Occlusion recognition",
+      "claim_relevance": "Pairwise differential Siamese mask learning discards occlusion-corrupted features.",
+      "evidence": [
+        {
+          "type": "Author/publication PDF",
+          "file": "audit\\reference_sources\\masklearn_source.pdf",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 14,
+      "key": "umr",
+      "title": "Self-restrained triplet loss for accurate masked face recognition",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Occlusion recognition",
+      "claim_relevance": "Embedding unmasking with a self-restrained triplet objective for masked-face recognition.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\umr_crossref.json",
+          "title": [
+            "Self-restrained triplet loss for accurate masked face recognition"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1016/j.patcog.2021.108473",
+          "year": {
+            "date-parts": [
+              [
+                2022,
+                4
+              ]
+            ]
+          },
+          "volume": "124",
+          "issue": null,
+          "page": "108473"
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 15,
+      "key": "focusface",
+      "title": "FocusFace: Multi-task contrastive learning for masked face recognition",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Occlusion recognition",
+      "claim_relevance": "Multi-task contrastive learning for masked/unmasked face verification.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\focusface_source.html",
+          "title": "FocusFace: Multi-task Contrastive Learning for Masked Face Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 16,
+      "key": "beyondmasks",
+      "title": "Beyond masks: On the generalization of masked face recognition models to occluded face recognition",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Occlusion recognition",
+      "claim_relevance": "Examines transfer between masked-face and broader occluded-face recognition.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\beyondmasks_crossref.json",
+          "title": [
+            "Beyond Masks: On the Generalization of Masked Face Recognition Models to Occluded Face Recognition"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/access.2022.3199014",
+          "year": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "volume": "10",
+          "issue": null,
+          "page": "86222-86233"
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 17,
+      "key": "mfr2021",
+      "title": "MFR 2021: Masked face recognition competition",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Masked benchmark",
+      "claim_relevance": "Competition evaluates recognition under real masks.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\mfr2021_crossref.json",
+          "title": [
+            "MFR 2021: Masked Face Recognition Competition"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/ijcb52358.2021.9484337",
+          "year": {
+            "date-parts": [
+              [
+                2021,
+                8,
+                4
+              ]
+            ]
+          },
+          "volume": null,
+          "issue": null,
+          "page": "1-10"
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 18,
+      "key": "insightfacemfr",
+      "title": "Masked face recognition challenge: The InsightFace track report",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Masked benchmark",
+      "claim_relevance": "Documents a large-scale masked-face recognition challenge.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\insightfacemfr_source.html",
+          "title": "Masked Face Recognition Challenge: The InsightFace Track Report",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 19,
+      "key": "hsu2022",
+      "title": "Masked face recognition from synthesis to reality",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Occlusion recognition",
+      "claim_relevance": "Studies synthetic-mask training and evaluation on real masked faces.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\hsu2022_crossref.json",
+          "title": [
+            "Masked Face Recognition From Synthesis to Reality"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/access.2022.3160828",
+          "year": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "volume": "10",
+          "issue": null,
+          "page": "37938-37952"
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 20,
+      "key": "rof",
+      "title": "On recognizing occluded faces in the wild",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Dataset",
+      "claim_relevance": "Source study of the ROF masks/sunglasses data used for training and evaluation.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\rof_crossref.json",
+          "title": [
+            "On Recognizing Occluded Faces in the Wild"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/biosig52210.2021.9548293",
+          "year": {
+            "date-parts": [
+              [
+                2021,
+                9
+              ]
+            ]
+          },
+          "volume": null,
+          "issue": null,
+          "page": "1-5"
+        },
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\rof_source.html",
+          "title": "On Recognizing Occluded Faces in the Wild",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 21,
+      "key": "fbr2024",
+      "title": "Flexible biometrics recognition: Bridging the multimodality gap through attention alignment and prompt tuning",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Closest prior work",
+      "claim_relevance": "Face/periocular fusion, transformer attention, prompt tuning and cross-modality matching.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\fbr2024_source.html",
+          "title": "Flexible Biometrics Recognition: Bridging the Multimodality Gap through Attention Alignment and Prompt Tuning",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 22,
+      "key": "periocular",
+      "title": "Periocular biometrics in the visible spectrum",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Closest prior work",
+      "claim_relevance": "Studies periocular matching, eyebrow cues, face/periocular fusion and partial occlusion.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\periocular_crossref.json",
+          "title": [
+            "Periocular Biometrics in the Visible Spectrum"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/tifs.2010.2096810",
+          "year": {
+            "date-parts": [
+              [
+                2011,
+                3
+              ]
+            ]
+          },
+          "volume": "6",
+          "issue": "1",
+          "page": "96-106"
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 23,
+      "key": "ckd2024",
+      "title": "Periocular embedding learning with consistent knowledge distillation from face",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Closest prior work",
+      "claim_relevance": "Transfers face identity information into periocular embeddings through distillation.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\ckd2024_crossref.json",
+          "title": [
+            "Periocular embedding learning with consistent knowledge distillation from face"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1016/j.neucom.2024.127263",
+          "year": {
+            "date-parts": [
+              [
+                2024,
+                3
+              ]
+            ]
+          },
+          "volume": "575",
+          "issue": null,
+          "page": "127263"
+        },
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\ckd2024_source.html",
+          "title": "Periocular embedding learning with consistent knowledge distillation from face",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 24,
+      "key": "ocularcrop2025",
+      "title": "Leveraging large-scale face datasets for deep periocular recognition via ocular cropping",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Closest prior work",
+      "claim_relevance": "Trains periocular recognition from crops of large face datasets; acquisition/crop protocol matters.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\ocularcrop2025_source.html",
+          "title": "Leveraging Large-Scale Face Datasets for Deep Periocular Recognition via Ocular Cropping",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 25,
+      "key": "perilora2026",
+      "title": "Robust cross-spectral periocular biometric recognition using LoRA-adapted DINOv2 and quality-aware fusion",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Closest prior work",
+      "claim_relevance": "Combines LoRA DINOv2 periocular features with quality-aware enrollment-template fusion in cross-spectral recognition.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\perilora2026_crossref.json",
+          "title": [
+            "Robust Cross-Spectral Periocular Biometric Recognition using LoRA-Adapted DINOv2 and Quality-Aware Fusion"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1080/03772063.2026.2695248",
+          "year": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                5
+              ]
+            ]
+          },
+          "volume": "72",
+          "issue": "10",
+          "page": "2788-2798"
+        },
+        {
+          "type": "Current final-issue metadata",
+          "volume": "72",
+          "issue": "10",
+          "pages": "2788–2798",
+          "year": 2026
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 26,
+      "key": "dino",
+      "title": "Emerging properties in self-supervised vision transformers",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Visual pretraining background",
+      "claim_relevance": "Self-supervised vision-transformer predecessor to DINOv2.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\dino_source.html",
+          "title": "Emerging Properties in Self-Supervised Vision Transformers",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 27,
+      "key": "mae",
+      "title": "Masked autoencoders are scalable vision learners",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Visual pretraining background",
+      "claim_relevance": "Learns visual features through masked-patch reconstruction.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\mae_source.html",
+          "title": "Masked Autoencoders Are Scalable Vision Learners",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 28,
+      "key": "simclr",
+      "title": "A simple framework for contrastive learning of visual representations",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Visual pretraining background",
+      "claim_relevance": "Contrasts augmented image views to learn representations.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\simclr_source.html",
+          "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 29,
+      "key": "clip",
+      "title": "Learning transferable visual models from natural language supervision",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Visual pretraining background",
+      "claim_relevance": "Learns transferable representations from paired images and natural language.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\clip_source.html",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 30,
+      "key": "froundation2025",
+      "title": "FRoundation: Are foundation models ready for face recognition?",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Closest prior work",
+      "claim_relevance": "Already adapts DINOv2 and CLIP to face recognition using LoRA.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\froundation2025_crossref.json",
+          "title": [
+            "FRoundation: Are foundation models ready for face recognition?"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1016/j.imavis.2025.105453",
+          "year": {
+            "date-parts": [
+              [
+                2025,
+                4
+              ]
+            ]
+          },
+          "volume": "156",
+          "issue": null,
+          "page": "105453"
+        },
+        {
+          "type": "Author/publication PDF",
+          "file": "audit\\reference_sources\\froundation2025_source.pdf",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 31,
+      "key": "foundationcomparison2025",
+      "title": "Foundation versus domain-specific models: Performance comparison, fusion, and explainability in face recognition",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Closest prior work",
+      "claim_relevance": "Studies generic versus face-specific models, crop context and fusion.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\foundationcomparison2025_source.html",
+          "title": "Foundation versus Domain-specific Models: Performance Comparison, Fusion, and Explainability in Face Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 32,
+      "key": "vpt",
+      "title": "Visual prompt tuning",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Adaptation alternatives",
+      "claim_relevance": "Learns prompts for frozen vision transformers.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\vpt_source.html",
+          "title": "Visual Prompt Tuning",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 33,
+      "key": "prompt",
+      "title": "The power of scale for parameter-efficient prompt tuning",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Cross-field adaptation background",
+      "claim_relevance": "Soft-prompt tuning of frozen language models.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\prompt_source.html",
+          "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 34,
+      "key": "adaptformer",
+      "title": "AdaptFormer: Adapting vision transformers for scalable visual recognition",
+      "identity_confirmed": true,
+      "relevance": "context",
+      "role": "Adaptation alternatives",
+      "claim_relevance": "Lightweight adapters for pretrained visual transformers.",
+      "evidence": [
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\adaptformer_source.html",
+          "title": "AdaptFormer: Adapting Vision Transformers for Scalable Visual Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 35,
+      "key": "fusionRossJain",
+      "title": "Information fusion in biometrics",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Fusion foundations",
+      "claim_relevance": "Studies biometric matching-score fusion.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\fusionRossJain_crossref.json",
+          "title": [
+            "Information fusion in biometrics"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1016/s0167-8655(03)00079-5",
+          "year": {
+            "date-parts": [
+              [
+                2003,
+                9
+              ]
+            ]
+          },
+          "volume": "24",
+          "issue": "13",
+          "page": "2115-2125"
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 36,
+      "key": "quality",
+      "title": "Quality measures in biometric systems",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Fusion foundations",
+      "claim_relevance": "Reviews biometric sample utility and quality-dependent processing/fusion.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\quality_crossref.json",
+          "title": [
+            "Quality Measures in Biometric Systems"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/msp.2011.178",
+          "year": {
+            "date-parts": [
+              [
+                2011
+              ]
+            ]
+          },
+          "volume": null,
+          "issue": null,
+          "page": null
+        },
+        {
+          "type": "Author/publication PDF",
+          "file": "audit\\reference_sources\\quality_source.pdf",
+          "matches_reference_identity": true
+        },
+        {
+          "type": "Final published author PDF",
+          "file": "audit/reference_sources/quality_author_final.pdf",
+          "journal_issue": "IEEE Security & Privacy, Nov./Dec. 2012; pages 52–62",
+          "note": "Use final 2012 issue; Crossref early-publication metadata says 2011 without volume/pages."
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 37,
+      "key": "sface",
+      "title": "SFace: Sigmoid-constrained hypersphere loss for robust face recognition",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Executed diagnostic",
+      "claim_relevance": "Face-recognition method underlying the actual OpenCV SFace diagnostic.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\sface_crossref.json",
+          "title": [
+            "SFace: Sigmoid-Constrained Hypersphere Loss for Robust Face Recognition"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1109/tip.2020.3048632",
+          "year": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "volume": "30",
+          "issue": null,
+          "page": "2587-2598"
+        },
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\sface_source.html",
+          "title": "SFace: Sigmoid-Constrained Hypersphere Loss for Robust Face Recognition",
+          "matches_reference_identity": true
+        }
+      ],
+      "access_limits": []
+    },
+    {
+      "number": 38,
+      "key": "yunet",
+      "title": "YuNet: A tiny millisecond-level face detector",
+      "identity_confirmed": true,
+      "relevance": "direct",
+      "role": "Executed diagnostic",
+      "claim_relevance": "Face detector used in the SFace preprocessing pipeline.",
+      "evidence": [
+        {
+          "type": "DOI registration metadata",
+          "file": "audit\\reference_sources\\yunet_crossref.json",
+          "title": [
+            "YuNet: A Tiny Millisecond-level Face Detector"
+          ],
+          "matches_reference_identity": true,
+          "DOI": "10.1007/s11633-023-1423-y",
+          "year": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                19
+              ]
+            ]
+          },
+          "volume": "20",
+          "issue": "5",
+          "page": "656-665"
+        },
+        {
+          "type": "Primary publication page",
+          "file": "audit\\reference_sources\\yunet_source.html",
+          "title": "",
+          "matches_reference_identity": false
+        }
+      ],
+      "access_limits": []
+    }
+  ],
+  "identity_confirmed": 38,
+  "scope": "All 38 reference identities and relevance dispositions checked against captured primary records/DOI metadata and previous claim audit. This is not a new full-text review of every paper. Publisher and forum access limits are documented. Titles, author initials/order and publication identifiers in the corrected bibliography use these records."
+}

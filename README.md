@@ -1,51 +1,58 @@
-# Occlusion-robust face verification research artifact
+# Occlusion-robust face verification - final publication release
 
-Updated 21 November 2026. Target venue: IEEE T-BIOM; submission or acceptance is not asserted.
+Updated 22 November 2026. Publication files are prepared; submission, permissions clearance and acceptance are not asserted.
 
-All 15 CPU models (seeds 7, 42, 123; five variants) completed five full epochs and evaluation on eight frozen protocols. The current paper uses these new models, not historical score-filtered runs. The manifest has 6,171 rows: 4,405 train, 844 validation, 922 test. All 15 final training records report 1,380 optimizer steps, no smoke cap, and CPU execution.
+## Final manuscripts and LaTeX
 
-The new release contains 120 raw-score CSVs, 15 evaluation reports, 15 training completion records, a 25-row five-condition summary, ten paired AUC contrasts, calibration thresholds/counts, same-branch gate controls, and image/source/checkpoint provenance. Known MFR2 training-name-overlap exclusion retains 802 pairs. RMFRD exact-conflict exclusion retains 21,798 pairs. Unknown aliases, semantic label correctness, exhaustive perceptual duplicates, and pretraining overlap remain unresolved.
+| Target | Read | LaTeX entry point | Upload source |
+| --- | --- | --- | --- |
+| IEEE T-BIOM | [10-page paper](submission_ieee/IEEE_TBIOM_Paper.pdf) and [separate 3-page supplement](submission_ieee/IEEE_TBIOM_Supplement.pdf) | [main.tex](submission_ieee/main.tex), [supplement.tex](submission_ieee/supplement.tex) | [IEEE_TBIOM_Source.zip](submission_ieee/IEEE_TBIOM_Source.zip) |
+| arXiv | [13-page preprint, including supporting material](submission_arxiv/arXiv_Preprint.pdf) | [main.tex](submission_arxiv/main.tex) includes [supplement_body.tex](submission_arxiv/supplement_body.tex) | [arXiv_Source.zip](submission_arxiv/arXiv_Source.zip) |
 
-Periocular LoRA leads masked mean AUC (0.922061); fixed fusion leads sunglasses (0.894972) and exploratory RMFRD (0.724015); learned gating leads neutral (0.945826) and retained MFR2 (0.954794). The gate is embedding-conditioned with a constant auxiliary vector. Constant and permuted controls limit claims of adaptive reliability. The separate SFace baseline is stronger by AUC on these protocols, with unmatched pretraining/alignment. No state-of-the-art or population low-FAR guarantee is claimed.
+Editable IEEE Word documents, submission metadata and an unfinished cover-letter draft are in `submission_ieee/`. Corresponding-author email: asan935para@gmail.com. Use [SUBMISSION_GUIDE.txt](SUBMISSION_GUIDE.txt) for exact file selections and unresolved author fields.
 
-## Current files
+arXiv does not mandate a separate supplement. This preprint includes the supporting material because the text refers to its architecture diagram, parameter table, SFace controls and provenance records. `supplement_body.tex` is a required source input for this version, not a second article or separate upload. IEEE keeps the same material in a separate PDF to respect the regular-paper limit. References are inline in the TeX; no separate BibTeX file is required by these sources.
 
-- `document/arXiv_Preprint_10Page_Final.pdf` and `.tex`: current preprint.
-- `submission_ieee_10page/`: synchronized IEEE source, PDF, and five vector figures.
-- `results/cpu_clean/`: completed new training and evaluation evidence.
-- `manifests/cpu_followup/`: exact new training/ROF pair manifests and plan.
-- `reproduction/research_completion_2026-11-02/`: byte-preserved executed source/runtime.
-- `code/regenerate_completed_assets.py`: regenerate current plots from new scores.
-- `results/sface/`: diagnostic pretrained SFace evidence.
-- `results/seed_sweep/` and `results/corrections/`: separate historical evidence.
-- `document/history/`: superseded manuscript and audit snapshots.
+## Final experiments
 
-## Verify and regenerate
+All fifteen CPU models completed five epochs: five configurations, seeds 7/42/123, 1,380 optimizer steps per model. The frozen ROF manifest has 6,171 rows: 4,405 training, 844 validation and 922 test. Retained external protocols contain 802 MFR2 pairs and 21,798 exploratory RMFRD pairs.
 
-Run from the repository root with Python 3.10 or newer on Windows or Linux:
+- `results/cpu_clean/`: 120 raw-score files, 15 evaluation reports, training records, 25 summary rows, ten paired AUC contrasts and validation-calibrated operating points.
+- `results/sface/`: aligned YuNet/SFace diagnostic.
+- `results/shared_crop_sface/`: separate shared-crop preprocessing control.
+- `results/strengthening/`: nine masked identity-deletion sensitivity subsets.
+- `manifests/cpu_followup/`: final training and ROF protocols. Its plan is the original frozen pre-training record; final completion is established by `results/cpu_clean/`.
+- `manifests/cleaned/`: retained external pairs and exclusion evidence.
+- Other frozen manifests document original input and cleaning provenance; they are not the current training protocol.
+- `reproduction/research_completion_2026-11-02/`: byte-preserved executed CPU trainer, evaluator, coordinator, runtime and recovery tests.
+
+Periocular LoRA leads masked mean AUC (0.922061); fixed fusion leads sunglasses (0.894972) and exploratory RMFRD (0.724015); learned fusion leads neutral (0.945826) and retained MFR2 (0.954794). Constant/permuted gate controls and the unmatched SFace diagnostics bound the interpretation. No universal robustness, state-of-the-art or population low-FAR security claim is made.
+
+## Verify
+
+From the repository root, Python 3.10 or newer, Windows or Linux:
 
 ```sh
-python code/verify_results.py --report document/VERIFICATION_REPORT.json
+python code/verify_results.py
 python code/verify_completed_cpu.py
 python -m unittest discover -s code/tests -v
 ```
 
-Historical report paths contain Windows backslashes. The verifiers now interpret stored separators independently of the host OS and retain the original result records and hashes unchanged. Derived identity-sensitivity AUCs use a strict absolute tolerance of 1e-12 for final-bit summation differences across Python versions; file hashes and discrete counts remain exact. Nine release unit tests cover both separator styles, doubled/mixed separators, invalid paths and the 15 recorded report bindings. The additional 15 CPU pipeline/recovery tests bring the local regression total to 24.
+The final-only verifier checks current raw-score arithmetic, alignment, thresholds, counts, summaries, all headline mean/SD cells, auxiliary tables, frozen source hashes, matching venue sources, source ZIP dependencies and compiled-PDF bindings. It uses only the Python standard library. It does not regenerate embeddings, establish semantic identity truth or grant data-use rights. Stored Windows separators are read portably without altering signed original records.
 
-The Windows/Linux CI matrix in `.github/workflows/verify-release.yml` runs both full verifier entry points as well as the unit tests. Local before/after native-Linux and Windows outcomes are recorded in `document/PORTABILITY_REPORT_2026-11-21.json`; this is separate from a hosted CI run.
-
-Plot generation is optional and requires NumPy and Matplotlib:
+Optional independent plot checks need NumPy, Matplotlib and scikit-learn:
 
 ```sh
-python code/regenerate_completed_assets.py
+python tools/audit_current_figures.py
+python tools/audit_paired_intervals.py
 ```
 
-Verification uses only the Python standard library, without images or trained weights. Plot generation needs NumPy and Matplotlib. The verifier recomputes all new ROC point metrics, validation thresholds, acceptance counts, summaries and table values. Conditional bootstrap intervals and gate controls are generated by the recorded evaluator; verification does not independently recreate embeddings or establish real-person labels.
+Regenerate current vector figures with `python code/regenerate_completed_assets.py`. Any source/figure change requires recompilation and refreshed build bindings before packaging. Package final upload sources and a deterministic release with `python tools/package_release.py`.
 
-See [Windows reproduction instructions](WINDOWS_REPRODUCTION_GUIDE.md) and [current readiness report](document/CURRENT_READINESS_RECHECK.md). Dataset images and model/checkpoint binaries are excluded; obtain licensed originals and official pretrained weights. The arXiv source ZIP and release ZIP are generated by `tools/package_release.py`. No licensed plagiarism-screening certificate or reliable AI-authorship percentage is available.
+`run_seed_sweep.py --status` reports the recorded final grid. Reproduction of training requires licensed image/crop inputs and pretrained weights; use the exact preserved coordinator as explained in [WINDOWS_REPRODUCTION_GUIDE.md](WINDOWS_REPRODUCTION_GUIDE.md). No image or checkpoint binaries are redistributed.
 
-Submission-preparation drafts and the targeted scientific review are in [document/submission_preparation](document/submission_preparation/SCIENTIFIC_READINESS_REVIEW.md). The author reports no earlier submission. Ethics/consent facts and the journal-level novelty argument remain pending; the cover letter is an unsent draft.
+## Remaining author facts
 
-## Academic writing and thesis draft
+Dataset/image permissions, project ethics/consent position, funding, competing interests, final author approval, and publication/account/license choices remain unresolved. The small masked cohort, semantic labels, unknown aliases and pretraining overlap remain scientific limitations. See [current readiness](document/CURRENT_READINESS_RECHECK.md) and [dataset source records](document/DATASET_SOURCE_TRACE.md).
 
-The journal and preprint have been revised for clearer academic prose while retaining the measured result tables. An expanded [research thesis draft](document/thesis/Research_Thesis_Draft.pdf), [editable TeX](document/thesis/Research_Thesis_Draft.tex), and [review guide](document/thesis/README.md) include mathematical foundations, a vector inference diagram, and the experiment register. The thesis uses generic A4 report formatting; institution-specific details and approval are not asserted. The AI disclosure and unresolved ethics/permissions facts remain explicit.
+The active tree contains only current publication versions and current result families. Superseded papers, old sweeps and obsolete writing tools were removed; earlier versions remain recoverable through Git. `document/CLEANUP_RECORD.json` records the cleanup and an external local recovery archive. The previous untracked `verify_output.txt` is preserved locally and is not part of release archives.

@@ -1,0 +1,36 @@
+FINAL SUBMISSION FILE GUIDE ? 22 NOVEMBER 2026
+
+IEEE T-BIOM
+Main review PDF: submission_ieee/IEEE_TBIOM_Paper.pdf (10 pages).
+Separate supporting PDF: submission_ieee/IEEE_TBIOM_Supplement.pdf (3 pages).
+LaTeX: submission_ieee/main.tex and submission_ieee/supplement.tex.
+Source upload: submission_ieee/IEEE_TBIOM_Source.zip (two TeX files and six used vector figure PDFs).
+Word alternatives: IEEE_TBIOM_Paper.docx and IEEE_TBIOM_Supplement.docx.
+Cover letter and metadata are author-review drafts; complete factual declarations before sending. Submit the paper, not a thesis. Supporting material must be separate from the main IEEE PDF.
+
+arXiv
+Review PDF: submission_arxiv/arXiv_Preprint.pdf (13 pages).
+Upload: submission_arxiv/arXiv_Source.zip.
+Select main.tex, XeLaTeX and an offered compatible TeX Live (checked guidance: 2025). main.tex includes supplement_body.tex. The archive also contains all six referenced vector figures.
+A separate supplemental upload is not mandatory for arXiv. This version appends the supporting material to preserve the parameter table, architecture figure, SFace preprocessing table and provenance sections referenced by the main text. Do not omit supplement_body.tex or separately upload the IEEE supplement for this version.
+Do not upload cover letters, metadata drafts, compiled manuscript PDFs, logs, old manuscripts or the complete repository as the arXiv TeX source submission. Figure PDFs belong in the source archive. Bibliography entries are inline; a .bib or .bbl is not used.
+Inspect the actual arXiv-server-generated PDF, including the appended material. Local compilation does not certify the server build. Choose your license personally and obtain account/category endorsement if requested. Proposed category cs.CV remains subject to author/moderator choice. Leave journal-reference and DOI fields blank unless actually assigned.
+
+ALIGNMENT
+The main scientific text, all thirteen measured tables, all six scientific figures/schematics, thirty-eight references and frozen results agree across the two venue versions. Formatting and supporting-material placement differ. Source archives are regenerated from the canonical folders, not copied from an older draft. document/BUILD_REPORT.json binds the checked source inputs and three PDFs; RELEASE_MANIFEST.json binds packaged files.
+
+AUTHOR CHECKLIST
+[ ] Confirm intended dataset/image use, source permissions and applicable ethics-review/consent position.
+[ ] Supply funding and competing-interest declarations; approve final author name order, contents and numbers.
+[x] Correspondence email supplied: asan935para@gmail.com.
+[ ] Reconfirm no simultaneous journal/conference submission; disclose any public preprint/thesis version.
+[ ] Resolve required publication declarations and select account/access/copyright/license choices.
+[ ] Record final Git commit with git rev-parse HEAD and inspect any server-generated PDF before completing submission.
+No external submission or acceptance is asserted.
+
+Official guidance checked 22 November 2026:
+https://ieee-biometrics.org/publications/t-biom/author-instructions/
+https://info.arxiv.org/help/submit_tex.html
+https://info.arxiv.org/help/faq/texlive.html
+https://info.arxiv.org/help/ancillary_files.html
+https://info.arxiv.org/help/license/index.html

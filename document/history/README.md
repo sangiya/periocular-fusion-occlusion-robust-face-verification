@@ -1,1 +1,0 @@
-Historical audit statements and unsuccessful rerun logs are retained for traceability. They are superseded by the current FINAL_PUBLICATION_AUDIT.md and FINAL_SUBMISSION_CHECKLIST.md. Their old readiness claims must not be treated as current verification.
