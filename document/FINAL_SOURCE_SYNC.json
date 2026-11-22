@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "status": "passed",
   "source_archive_builds": [
     {
@@ -13,14 +13,14 @@
       "folder": "submission_ieee",
       "entry_point": "supplement.tex",
       "pages": 3,
-      "fresh_source_archive_compile": "passed after author-uploaded supplement revision",
+      "fresh_source_archive_compile": "passed after faithful uploaded-text correction on 2026-11-23",
       "PDF_text_matches_canonical": true
     },
     {
       "folder": "submission_arxiv",
       "entry_point": "main.tex",
       "pages": 13,
-      "fresh_source_archive_compile": "passed after author-uploaded supplement revision",
+      "fresh_source_archive_compile": "passed after faithful uploaded-text correction on 2026-11-23",
       "PDF_text_matches_canonical": true
     }
   ],
@@ -34,5 +34,6 @@
   "public_submission_performed": false,
   "author_clearance": "Author confirms sole authorship, no external funding, no competing interests, no committee review, no formal publication and no current review elsewhere. Image-use permissions, the applicable ethics-review requirement and final content approval remain unverified/pending.",
   "supplement_revision_record": "document/SUPPLEMENT_REVISION_RECORD.json",
-  "main_IEEE_manuscript_and_results_unchanged_by_supplement_revision": true
+  "main_IEEE_manuscript_and_results_unchanged_by_supplement_revision": true,
+  "uploaded_supplement_wording_preserved": "document/SUPPLEMENT_REVISION_RECORD.json"
 }

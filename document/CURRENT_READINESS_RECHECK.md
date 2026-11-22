@@ -1,4 +1,4 @@
-# Current publication release - 22 November 2026
+# Current publication release - 23 November 2026
 
 The canonical manuscripts are `submission_ieee/main.tex` and `submission_arxiv/main.tex`. IEEE has a ten-page main paper and a separate three-page supplement. The arXiv preprint is thirteen pages and includes the same supporting material. The numerical tables, figures, frozen protocols and reference entries agree across these versions.
 
@@ -11,3 +11,5 @@ Superseded manuscripts, old result sweeps and obsolete release-writing tools wer
 Author update: the study received no external funding; Sangiya Pararajasingham confirms sole authorship. The author reports public-repository downloads. The latter does not establish image-use permissions, consent or an ethics-review determination.
 
 Further author confirmations: no competing interests; no committee review conducted; not currently under review elsewhere; no formal journal/conference publication. No approval/exemption or complete image permission is inferred.
+
+Supplement correction, 23 November 2026: the newly supplied supplement text and writing instructions were used directly. Unaffected wording was retained; factual, grammar and extraction errors were corrected. All three native Word tables and numerical results remain unchanged. See `SUPPLEMENT_REVISION_RECORD.json` for the edit record.

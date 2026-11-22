@@ -29,7 +29,9 @@ def verify_documents(root):
     assert 'no known exact-name overlap remains' in main and 'RMFRD is exploratory' in main
     assert 'Aligned SFace diagnostic' in main and 'Shared-crop SFace preprocessing control' in main
     assert 'post-hoc exploratory cohort-composition sensitivity analysis' in main
-    assert 'No ethics committee reviewed this project' in main and 'Data provenance and ethics records' in supp
+    assert 'No ethics committee reviewed this project' in main
+    assert r'\section{Provenance}' in supp and 'no ethics committee reviewed this project' in supp
+    assert 'image-use permissions remain unverified' in supp
     assert 'This research received no external funding.' in main and 'The author declares no competing interests.' in main
     keys=re.findall(r'\\bibitem\{([^}]+)\}',main);seen=[]
     assert len(keys)==len(set(keys))==38
