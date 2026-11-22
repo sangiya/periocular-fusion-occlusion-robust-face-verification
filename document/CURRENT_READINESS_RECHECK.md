@@ -13,3 +13,5 @@ Author update: the study received no external funding; Sangiya Pararajasingham c
 Further author confirmations: no competing interests; no committee review conducted; not currently under review elsewhere; no formal journal/conference publication. No approval/exemption or complete image permission is inferred.
 
 Supplement correction, 23 November 2026: the newly supplied supplement text and writing instructions were used directly. Unaffected wording was retained; factual, grammar and extraction errors were corrected. All three native Word tables and numerical results remain unchanged. See `SUPPLEMENT_REVISION_RECORD.json` for the edit record.
+
+Second supplement correction pass: sentence fragments and remaining grammar were repaired; same-branch controls and the gate inputs were described more precisely. Word table cells were compared directly with the preceding commit and are unchanged. Both extracted source archives compile to the same text as the delivered PDFs.

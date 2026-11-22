@@ -139,16 +139,16 @@
       "bytes": 1525
     },
     "document/BUILD_REPORT.json": {
-      "sha256": "66a61e10b0b6bf1b9d083168f47e2abbcde67976881d9e0f9bf71c77219342c4",
-      "bytes": 3332
+      "sha256": "b87a68bc9181f464aa468dedaf392082826bb21c171904c40cf0d7e238d6c331",
+      "bytes": 3390
     },
     "document/CLEANUP_RECORD.json": {
       "sha256": "275d5ac0c8373f4be8b80bd87e4834c9ab55091fdb5b434ea6daddb04ae3bfb4",
       "bytes": 85023
     },
     "document/CURRENT_READINESS_RECHECK.md": {
-      "sha256": "1985cbd8523045acea647b3ae3bdf2b4c99e1847d0ae20def43a95924815e2dc",
-      "bytes": 2366
+      "sha256": "74a457d6c4cfa58478ad48308f16cf03a22d903a333a175253a029fdd8db9867",
+      "bytes": 2696
     },
     "document/DATASET_PROVENANCE.json": {
       "sha256": "91b1921b7721b31d5d8cd5b54c024f8166bd9671d0a52abbf995ca59009a0148",
@@ -163,8 +163,8 @@
       "bytes": 28392
     },
     "document/FINAL_SOURCE_SYNC.json": {
-      "sha256": "0f3d5aaa5df1879dca7c7a70def26a0198e44d886f26ab6f60a1f27770abacbb",
-      "bytes": 1729
+      "sha256": "f754de706c1908b62c267f9c6688ab7e55913f5be935039bfbc5ea258495b1a5",
+      "bytes": 1894
     },
     "document/LOCAL_SOURCE_EVIDENCE.json": {
       "sha256": "b47b721793c579603833246a524a423f0854c4d9a12cc5c0ac7626028e6bb1f3",
@@ -183,8 +183,8 @@
       "bytes": 22696
     },
     "document/SUPPLEMENT_REVISION_RECORD.json": {
-      "sha256": "b16a541fe5712c924ec8e53bd2daf2bb902b5ca14f1ded3ea59afc28e2ba4d9b",
-      "bytes": 17285
+      "sha256": "30a514528d86e8b5575b7ff6eca8c1107f9e1ecfd4434afdc8079ce533014640",
+      "bytes": 33964
     },
     "document/TEST_REPORT.json": {
       "sha256": "6b2e396ddeb78b47ae226b3a69ed690e96298f7dd5a21931bce6ab50ca5a8620",
@@ -1255,12 +1255,12 @@
       "bytes": 1858
     },
     "submission_arxiv/arXiv_Preprint.pdf": {
-      "sha256": "b6278b51ace30eb2dd45a6160cdf7374e7bf27700f8e4ab0a0f852aafed8c1b5",
-      "bytes": 254244
+      "sha256": "1ba06a9ddb4af35453fa2a870c9230a4c23d10ad7628810b18babde1d078c85c",
+      "bytes": 253219
     },
     "submission_arxiv/arXiv_Source.zip": {
-      "sha256": "910dacd18cd4533c2e5254d3ba9bf91fad8bfa7778938aaccf3305cfc5290002",
-      "bytes": 152618
+      "sha256": "3b58ed7fc0226a18d96c88afdceecfc85228c957a29f46bf2aeb69308e039d36",
+      "bytes": 152309
     },
     "submission_arxiv/AUTHOR_CLEARANCE_PENDING.txt": {
       "sha256": "69d385a74eb099beecc9d4ad3f6d84cf042b40442671740f435b488725378bc4",
@@ -1303,8 +1303,8 @@
       "bytes": 4496
     },
     "submission_arxiv/supplement_body.tex": {
-      "sha256": "c5346c0d60e9772ec0ac43dca9337a76d8bbfd14e4ef1028c1f2538532f178e7",
-      "bytes": 14360
+      "sha256": "cce2103ad48819ebe7dbfc21f6d5dc9323b637189f8a2b93d24f503ef3a15f67",
+      "bytes": 13516
     },
     "submission_arxiv/TITLE_AUTHORS_ABSTRACT.txt": {
       "sha256": "1fe28aadc1276be6550940e5c2f1b1ee8b4a2660d94bb2049939a8d7ea6ad338",
@@ -1363,16 +1363,16 @@
       "bytes": 301024
     },
     "submission_ieee/IEEE_TBIOM_Source.zip": {
-      "sha256": "0ba372677286750a6849354885cdf06c7a951bc53bc987968086c65b45b767b1",
-      "bytes": 152792
+      "sha256": "69e6c567aafd499aa3723a8e327672d6b2ead9e428e47f2ca0741a40a5ca6735",
+      "bytes": 152485
     },
     "submission_ieee/IEEE_TBIOM_Supplement.docx": {
-      "sha256": "592f6dfd7d1aa2ccb6d960b1cc56f8a36347992839390f13be8186e75e3e4ec6",
-      "bytes": 139189
+      "sha256": "97102657255bbb0c9adc4f405a16097ba162b43e7cca90a660ba7a2d95fac564",
+      "bytes": 138869
     },
     "submission_ieee/IEEE_TBIOM_Supplement.pdf": {
-      "sha256": "0451979c176a8f1485e3a59bbf93cbfac99e2e0542bc01b62e719ef04b491906",
-      "bytes": 101260
+      "sha256": "45ffcc10b83e79fbca6d56cfa34c02cb3b572dc0488a9a0c7dda17ed6f6dc29c",
+      "bytes": 100270
     },
     "submission_ieee/main.tex": {
       "sha256": "9d388ac3be5fe57ac9b2ac454cad4728615490bbde2105b7697bb1bf67b9e31b",
@@ -1383,8 +1383,8 @@
       "bytes": 4315
     },
     "submission_ieee/supplement.tex": {
-      "sha256": "ae6520051b3f28c6744882dc8e63c0061c6592e624e7cb577e36478d7fda46a2",
-      "bytes": 14539
+      "sha256": "ebb4ee16dc1a6e619d3637419a310cd1c926bb3602a1fb8c07ec32f904695c4d",
+      "bytes": 13695
     },
     "tools/audit_current_figures.py": {
       "sha256": "9c4d0bea8e8a315ee3b4709e1c6a9a14d5ea65c083ac1e246dfe970bd044aac1",

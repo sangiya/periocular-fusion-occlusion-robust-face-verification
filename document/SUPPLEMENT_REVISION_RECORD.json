@@ -36,6 +36,12 @@
       "reason": "Correct the measurement wording."
     },
     {
+      "section": "Parameter efficiency",
+      "before": "within a double encoder model (175M).",
+      "after": "within a dual-encoder model (175M).",
+      "reason": "Use the established architecture term."
+    },
+    {
       "section": "Execution and recovery records",
       "before": "Checkpoints are atomic containing",
       "after": "Checkpoints are saved atomically and contain",
@@ -78,6 +84,30 @@
       "reason": "Limit this statement to the historical-trainer comparison."
     },
     {
+      "section": "Execution and recovery records",
+      "before": "Execution environment: PyTorch (version 2.14.0+cpu), deterministic.",
+      "after": "The runs used PyTorch 2.14.0+cpu with deterministic algorithms enabled.",
+      "reason": "Replace the sentence fragment with the recorded execution setting."
+    },
+    {
+      "section": "Execution and recovery records",
+      "before": "ordered data samples, next batch index, loss in current epoch",
+      "after": "the sample order, next batch index, accumulated loss for the current epoch",
+      "reason": "Specify the checkpoint contents in grammatical form."
+    },
+    {
+      "section": "Execution and recovery records",
+      "before": "Periocular only training means that full face encoder was not used in forward passes.",
+      "after": "In periocular-only training, the full-face encoder was not used in forward passes.",
+      "reason": "Repair the article and technical modifiers."
+    },
+    {
+      "section": "Execution and recovery records",
+      "before": "Therefore it cannot be claimed that bitwise optimisation identical to the historical trainer was performed.",
+      "after": "Bitwise equivalence to the historical trainer is therefore not claimed.",
+      "reason": "Remove the awkward passive construction without changing the limitation."
+    },
+    {
       "section": "Reproducibility details",
       "before": "To reproduce this work licensed data must be obtained.",
       "after": "To reproduce this work, you must obtain licensed data.",
@@ -103,6 +133,30 @@
     },
     {
       "section": "Reproducibility details",
+      "before": "The correct facial/periocular paths must be recreated.",
+      "after": "Recreate the face and periocular image paths specified in the manifests.",
+      "reason": "Make the reproduction instruction specific."
+    },
+    {
+      "section": "Reproducibility details",
+      "before": "Frozen training and pair manifests must be verified.",
+      "after": "Verify the frozen training and pair manifests.",
+      "reason": "Use a direct reproduction instruction."
+    },
+    {
+      "section": "Reproducibility details",
+      "before": "The CPU coordinator must be run. All models will be trained for 5 epochs. Models will be scored for each protocol. Model summaries will only be created once all evaluations have been performed.",
+      "after": "Run the CPU coordinator to train each model for five epochs and score it on each protocol. The coordinator creates summaries only after all evaluations are complete.",
+      "reason": "Join repetitive sentences into complete, practical instructions."
+    },
+    {
+      "section": "Reproducibility details",
+      "before": "To reproduce inference, access to binaries must be provided.",
+      "after": "To reproduce inference, you need the corresponding weight binaries.",
+      "reason": "Identify the files needed without implying they are included."
+    },
+    {
+      "section": "Reproducibility details",
       "before": "recreates ROC scores",
       "after": "recalculates ROC metrics from archived raw scores",
       "reason": "The verifier does not regenerate neural scores."
@@ -121,6 +175,24 @@
     },
     {
       "section": "Reproducibility details",
+      "before": "without torch, images and checkpoints",
+      "after": "without PyTorch, images or checkpoints",
+      "reason": "Use the library name and correct the conjunction."
+    },
+    {
+      "section": "Reproducibility details",
+      "before": "checks alignment and checksums of pairs, recalculates mean/SD of seeds, and checks values in the table of the manuscript.",
+      "after": "checks pair alignment and recorded checksums, recalculates means and sample standard deviations across seeds, and checks the manuscript table values.",
+      "reason": "Clarify what is aligned, recomputed and compared."
+    },
+    {
+      "section": "Reproducibility details",
+      "before": "However, no guarantees can be made that this work is novel, accepted for publication, and that images have semantically correct labels.",
+      "after": "These checks do not establish novelty or semantic label correctness.",
+      "reason": "Remove an editorial acceptance statement from the scientific verification scope."
+    },
+    {
+      "section": "Reproducibility details",
       "before": "can be found in the history folder.",
       "after": "can be found in Git history.",
       "reason": "The active history folder was removed during cleanup."
@@ -132,10 +204,40 @@
       "reason": "Remove an inaccurate statement about prose regeneration."
     },
     {
+      "section": "Reproducibility details",
+      "before": "Claims or numerically tabulated data within these files are now out-of-date with the full CPU experiment in this paper.",
+      "after": "Their claims and tabulated values may differ from the completed CPU experiment reported here.",
+      "reason": "Do not imply every historical statement is obsolete."
+    },
+    {
+      "section": "Reproducibility details",
+      "before": "No new training is represented by filtered scores in historic files.",
+      "after": "Filtered historical scores do not represent new training.",
+      "reason": "Repair the passive construction."
+    },
+    {
       "section": "Additional interpretation and result records",
       "before": "whole face LoRA performs better than frozen projection models",
       "after": "whole face LoRA has a higher mean AUC than frozen projection models",
       "reason": "The ordering holds for mean AUC, not every operating-point metric."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "whole face LoRA has a higher mean AUC than frozen projection models",
+      "after": "whole-face LoRA has a higher mean AUC than the frozen encoder with a trained projection",
+      "reason": "Name the actual frozen baseline."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "Supervised adaptation thus appears to be beneficial in this experiment.",
+      "after": "Supervised adaptation improved mean AUC in these experiments.",
+      "reason": "Keep the claim tied to the measured metric."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "It cannot be determined that adapting general visual encoders (as opposed to face specific pre-trained models) is beneficial in this experiment.",
+      "after": "These experiments do not establish whether adapting a general visual encoder is preferable to using a face-specific pretrained model.",
+      "reason": "Clarify the comparison that was not controlled."
     },
     {
       "section": "Additional interpretation and result records",
@@ -157,9 +259,39 @@
     },
     {
       "section": "Additional interpretation and result records",
+      "before": "but performs poorly in sunglasses and loses useful information in neutral.",
+      "after": "but performs worse under sunglasses and on neutral faces than whole-face LoRA.",
+      "reason": "Replace vague condition names with the measured comparison."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "Upper face features provide useful information for distinguishing between subjects in lower face occlusion scenarios.",
+      "after": "Upper-face features help distinguish identities when the lower face is occluded.",
+      "reason": "Correct the modifiers and simplify the same interpretation."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "However, they do not provide a good representation in all 3 conditions.",
+      "after": "Their performance advantage does not extend to all three conditions.",
+      "reason": "Avoid a vague representation-quality claim."
+    },
+    {
+      "section": "Additional interpretation and result records",
       "before": "From results in SFace, it appears that greater ranking performance can be achieved by training the model specifically on faces.",
       "after": "The aligned SFace diagnostic has higher AUCs in these protocols.",
       "reason": "Do not attribute an unmatched comparison to face-specific training alone."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "Therefore this work should be considered as an ablation study and study of reproducibility.",
+      "after": "This work is an ablation and reproducibility study.",
+      "reason": "Repair repetitive phrasing."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "In order to claim competition within face recognition, comparisons must be made with equivalent baseline models, with more identities and verified labels.",
+      "after": "Broader performance claims require matched baseline comparisons, more identities and verified labels.",
+      "reason": "Replace awkward wording with the same concrete limitation."
     },
     {
       "section": "Additional interpretation and result records",
@@ -169,9 +301,27 @@
     },
     {
       "section": "Additional interpretation and result records",
+      "before": "Although the gate can react to embeddings, no evidence can be provided that quality cues improve performance.",
+      "after": "The gate can react to embeddings, but these experiments do not test whether image-specific quality descriptors improve performance.",
+      "reason": "Distinguish an untested descriptor effect from a negative experimental result."
+    },
+    {
+      "section": "Additional interpretation and result records",
       "before": "Variance in AUC between seeds, bootstrap and conditional confidence intervals is included.",
       "after": "Variation in AUC between seeds and conditional identity-resampling sensitivity intervals is included.",
       "reason": "Match the recorded uncertainty analysis and main-paper terminology."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "Records for 15 models in the grid have been included. 120 ordered raw-score files across 8 validation/test/external protocols. Evaluation reports, final training progression information, checksums of checkpoints and a table summarising 5 conditions with 25 rows. 10 comparisons of AUC in pairs with 3 seeds. Variation in AUC between seeds and conditional identity-resampling sensitivity intervals is included.",
+      "after": "The release contains records for all 15 models, including 120 ordered raw-score files across eight validation, test and external protocols. It also includes evaluation reports, final training progress, checkpoint checksums and a 25-row summary covering five conditions and five variants. Ten paired AUC comparisons use three seeds each. The reports include variation across seeds and conditional identity-resampling sensitivity intervals.",
+      "reason": "Repair four sentence fragments and state what the 25 summary rows represent."
+    },
+    {
+      "section": "Additional interpretation and result records",
+      "before": "Fixed versions of trainer, evaluator, common utilities, models and metrics have been included. Checksums are provided for each. If any of these sources change, execution signatures will become invalid.",
+      "after": "The executed versions of the trainer, evaluator, common utilities, models and metrics are included with checksums. Changes to these files invalidate their recorded execution signatures.",
+      "reason": "Clarify that fixed means recorded executed source versions."
     },
     {
       "section": "Same-branch comparison context",
@@ -190,6 +340,24 @@
       "before": "representations and inferences will be useful in tandem.",
       "after": "representations and the inference weighting rule will be useful in tandem.",
       "reason": "Keep the same inference terminology."
+    },
+    {
+      "section": "Same-branch comparison context",
+      "before": "As different weights are applied in the fixed and gated fusion models, different features may also be learnt in each branch.",
+      "after": "The fixed and gated fusion models combine their branches differently during training, so their branches may learn different representations.",
+      "reason": "Explain why separately trained models do not isolate inference weighting."
+    },
+    {
+      "section": "Same-branch comparison context",
+      "before": "By applying different weights to the gated models, but keeping the same branches, it was found that equal weighting in the gated branches performs better than learned weighting in masked ROF pairs.",
+      "after": "With the trained gated branches held fixed, equal weighting gives a higher mean AUC than the learned gate on masked ROF pairs.",
+      "reason": "Make the controlled comparison and metric explicit."
+    },
+    {
+      "section": "Same-branch comparison context",
+      "before": "However, no assumptions are made on whether representations and the inference weighting rule will be useful in tandem.",
+      "after": "This control does not isolate the effect of the gate during joint training.",
+      "reason": "Replace an unclear statement with the actual limit of an inference-only control."
     },
     {
       "section": "Extended interpretation and source-image review",
@@ -217,6 +385,30 @@
     },
     {
       "section": "Extended interpretation and source-image review",
+      "before": "The methods used to produce fusion, LoRA and weighted models are well known.",
+      "after": "Fusion, LoRA and learned weighting are established methods.",
+      "reason": "Correct the awkward method description."
+    },
+    {
+      "section": "Extended interpretation and source-image review",
+      "before": "Given FRoundation and recent applications of DINOv2-LoRA to periocular recognition [25, 30], it can no longer be stated that novel contributions to this work come from adaptation within the backbone.",
+      "after": "Prior work includes DINOv2-LoRA periocular recognition [25] and FRoundation [30]. Backbone adaptation alone is therefore not claimed as a novel contribution.",
+      "reason": "Separate the two references and avoid the editorial-history phrasing."
+    },
+    {
+      "section": "Extended interpretation and source-image review",
+      "before": "whether a similar robustness can be achieved",
+      "after": "whether robustness under occlusion can be achieved",
+      "reason": "Remove the undefined comparison implied by similar."
+    },
+    {
+      "section": "Extended interpretation and source-image review",
+      "before": "If two joint models perform similarly, it cannot be inferred that differences in performance come from adaptations to the weights.",
+      "after": "Comparing separately trained fusion models does not isolate the effect of their inference weights.",
+      "reason": "Correct the contradictory comparison wording."
+    },
+    {
+      "section": "Extended interpretation and source-image review",
       "before": "However, there is no insight available as to which identities caused these errors, or why they occurred.",
       "after": "However, the plots do not show which identities caused these errors or why they occurred.",
       "reason": "Replace a flagged vague noun with the concrete limitation."
@@ -240,6 +432,24 @@
       "reason": "Correct the false image-quality statement."
     },
     {
+      "section": "Extended interpretation and source-image review",
+      "before": "Score distributions allow observation of overlap between genuine and impostor scores.",
+      "after": "Score distributions show overlap between genuine and impostor scores.",
+      "reason": "Use a direct verb."
+    },
+    {
+      "section": "Extended interpretation and source-image review",
+      "before": "Qualitative conclusions must be made by manual inspection of annotated identities in licensed source data. This is possible from the manifests and exclusion ledgers saved, meaning that private or restricted facial images do not need to be distributed in the repository.",
+      "after": "Qualitative error analysis requires manual inspection of annotated identities in appropriately licensed source data. The saved manifests and exclusion ledgers support that inspection without redistributing restricted face images.",
+      "reason": "Describe the inspection task without implying all permissions have been established."
+    },
+    {
+      "section": "Extended interpretation and source-image review",
+      "before": "Since a constant auxiliary vector is used, caution should be taken in interpreting results. The supplied auxiliary descriptors are constant; this does not mean that the images themselves have uniform quality. While the gate can be influenced by embeddings, it cannot be proved that quality information improves performance.",
+      "after": "As noted in Section IV, constant auxiliary descriptors do not imply uniform image quality. The gate remains embedding-dependent.",
+      "reason": "Remove the repeated quality-descriptor discussion while retaining the distinction."
+    },
+    {
       "section": "Shared-crop preprocessing for SFace",
       "before": "Furthermore, neither protocol is a fair comparison to DINOv2 at training",
       "after": "Neither protocol is a matched-training comparison with DINOv2",
@@ -256,6 +466,18 @@
       "before": "(in this order) (See Supplemental Table S3).",
       "after": "for masked ROF, sunglasses ROF, neutral ROF, MFR2 and RMFRD, respectively (Supplemental Table S3).",
       "reason": "Make the order of the five reported AUCs explicit."
+    },
+    {
+      "section": "Shared-crop preprocessing for SFace",
+      "before": "The exact DINOv2 full face files were scaled to 112x112 to create SFace images,",
+      "after": "The same full-face crops used by DINOv2 were resized to 112 by 112 pixels for SFace,",
+      "reason": "Use the precise shared-crop preprocessing description."
+    },
+    {
+      "section": "Shared-crop preprocessing for SFace",
+      "before": "the AUC values cannot be considered directly comparable baseline values.",
+      "after": "the two sets of AUCs describe different preprocessing pipelines.",
+      "reason": "State what the comparison measures without implying the values cannot be compared descriptively."
     },
     {
       "section": "Provenance",
@@ -283,6 +505,18 @@
     },
     {
       "section": "Provenance",
+      "before": "Data from existing sources have been used within this project (ROF, MFR2, RMFRD).",
+      "after": "This project used existing ROF, MFR2 and RMFRD datasets.",
+      "reason": "Correct the indirect construction."
+    },
+    {
+      "section": "Provenance",
+      "before": "A complete trace as to how the images were obtained was not able to be found. Identifiers relating to source data and exclusion ledgers remain.",
+      "after": "A complete image-acquisition trail was not found in the reviewed records. Source identifiers and exclusion ledgers are retained.",
+      "reason": "Clarify the scope of the missing provenance."
+    },
+    {
+      "section": "Provenance",
       "before": "licenced",
       "after": "licensed",
       "reason": "Correct the verb spelling."
@@ -292,6 +526,18 @@
       "before": "MFR2 maintenance page",
       "after": "MFR2 maintainer page",
       "reason": "Correct the term."
+    },
+    {
+      "section": "Provenance",
+      "before": "In the MFR2 maintainer page,",
+      "after": "On the MFR2 maintainer page,",
+      "reason": "Correct the preposition."
+    },
+    {
+      "section": "Provenance",
+      "before": "No clear licence information was found, however, regarding using the images. As such, it cannot be confirmed with certainty that all images used within this project have the correct licensing to be used, nor that the redistribution rules are definitively applicable to all images.",
+      "after": "The reviewed records did not establish complete image-use or redistribution permissions for these datasets.",
+      "reason": "Remove redundant wording without changing the unresolved permissions status."
     },
     {
       "section": "Provenance",
@@ -308,14 +554,14 @@
     {
       "section": "Figure S1 caption",
       "before": "In this case, there is no variability in image specific quality. Fig. S1 shows the inference flowchart for this model. The embeddings from both branches, along with the constant auxiliary vector, are passed into the gated sum. The weighted sum is normalised. In the enrolment image, the model is identical. During inference, the training-only identity classifier has been removed.",
-      "after": "The auxiliary vector contains no image-specific quality variation. The embeddings from both branches, along with the constant auxiliary vector, are passed into the gated sum. The weighted sum is normalised. The same model processes the enrolment image. During inference, the training-only identity classifier has been removed.",
+      "after": "The auxiliary vector contains no image-specific quality variation. The gate takes both branch embeddings and the constant auxiliary vector as inputs. Its output weights the embeddings before their sum is normalised. The same model processes the enrolment image. During inference, the training-only identity classifier has been removed.",
       "reason": "Repair extraction spacing and describe constant auxiliary inputs, not constant image quality."
     }
   ],
   "normalized_source_prose_words": 1510,
-  "corrected_prose_words": 1516,
-  "length_ratio": 1.0039735099337748,
-  "source_words_preserved_in_order_fraction": 0.8145695364238411,
+  "corrected_prose_words": 1347,
+  "length_ratio": 0.8920529801324504,
+  "source_words_preserved_in_order_fraction": 0.47086092715231787,
   "writing_rule_scan": {
     "banned_term_matches": [],
     "em_dashes": 0,

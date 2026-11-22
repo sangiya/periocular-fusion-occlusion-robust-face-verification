@@ -8,7 +8,7 @@
     "submission_ieee/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
     "submission_ieee/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
     "submission_ieee/main.tex": "9d388ac3be5fe57ac9b2ac454cad4728615490bbde2105b7697bb1bf67b9e31b",
-    "submission_ieee/supplement.tex": "ae6520051b3f28c6744882dc8e63c0061c6592e624e7cb577e36478d7fda46a2",
+    "submission_ieee/supplement.tex": "ebb4ee16dc1a6e619d3637419a310cd1c926bb3602a1fb8c07ec32f904695c4d",
     "submission_arxiv/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
     "submission_arxiv/fig_gated_architecture.pdf": "7d7ccffd3d4b8a3b454f174a24da127e223d6f2a3a0476bee2d4dd51873a062d",
     "submission_arxiv/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
@@ -16,7 +16,7 @@
     "submission_arxiv/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
     "submission_arxiv/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
     "submission_arxiv/main.tex": "0a42276f407ad8d4691fa6eeb68bce7af516b0e0d7822ddc4f346c7fa073b355",
-    "submission_arxiv/supplement_body.tex": "c5346c0d60e9772ec0ac43dca9337a76d8bbfd14e4ef1028c1f2538532f178e7"
+    "submission_arxiv/supplement_body.tex": "cce2103ad48819ebe7dbfc21f6d5dc9323b637189f8a2b93d24f503ef3a15f67"
   },
   "pdfs": [
     {
@@ -30,21 +30,21 @@
     },
     {
       "file": "submission_ieee/IEEE_TBIOM_Supplement.pdf",
-      "sha256": "0451979c176a8f1485e3a59bbf93cbfac99e2e0542bc01b62e719ef04b491906",
+      "sha256": "45ffcc10b83e79fbca6d56cfa34c02cb3b572dc0488a9a0c7dda17ed6f6dc29c",
       "pages": 3,
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Rebuilt from the faithfully edited uploaded supplement; fresh source ZIP compilation checked separately."
+      "source_archive_compile": "Second correction pass: rebuilt after grammar, fragment and scientific wording corrections; fresh ZIP compilation checked separately."
     },
     {
       "file": "submission_arxiv/arXiv_Preprint.pdf",
-      "sha256": "b6278b51ace30eb2dd45a6160cdf7374e7bf27700f8e4ab0a0f852aafed8c1b5",
+      "sha256": "1ba06a9ddb4af35453fa2a870c9230a4c23d10ad7628810b18babde1d078c85c",
       "pages": 13,
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Rebuilt from the faithfully edited uploaded supplement; fresh source ZIP compilation checked separately."
+      "source_archive_compile": "Second correction pass: rebuilt after grammar, fragment and scientific wording corrections; fresh ZIP compilation checked separately."
     }
   ],
   "validation": "Supplement and combined arXiv rebuilt locally on 2026-11-23; unchanged IEEE main retains prior compilation evidence. Not portal validation."
