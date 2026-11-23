@@ -7,45 +7,45 @@
     "submission_ieee/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
     "submission_ieee/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
     "submission_ieee/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
-    "submission_ieee/main.tex": "9d388ac3be5fe57ac9b2ac454cad4728615490bbde2105b7697bb1bf67b9e31b",
-    "submission_ieee/supplement.tex": "b116f9949dffd45c18cc1e11372ef2b3460ef5b234cd5fb540ca1455e525b7f0",
+    "submission_ieee/main.tex": "5acabfdade5ffda31df205853cbad2a3fe8b8e70e33dc3e02ecf5fc6c1a0623e",
+    "submission_ieee/supplement.tex": "06eea33f395b17e6a5715473aeda7a879aff5e5c7e5ed40728878333c83fd41a",
     "submission_arxiv/fig_auc_cross_dataset.pdf": "8b41719e1a2184a76481349493ce1e45ad58479210660dcefc301683ead8c8ef",
     "submission_arxiv/fig_gated_architecture.pdf": "7d7ccffd3d4b8a3b454f174a24da127e223d6f2a3a0476bee2d4dd51873a062d",
     "submission_arxiv/fig_mfr2_roc.pdf": "ee42a96e84af8f9cd57c1a0d5887746c6fc30f7c8de44882d7f49f5ae3e1c651",
     "submission_arxiv/fig_rof_masked_roc.pdf": "2e5cc4147c03965e8bc7ea0ab10821ffd3effef8a02cfbb75288c048b81bd0ee",
     "submission_arxiv/fig_rof_masked_scores.pdf": "8f2955c4f5c792c0be40869472f6a4ee29db3e3b7e7e41084bc612c421037336",
     "submission_arxiv/fig_rof_sunglasses_roc.pdf": "54a55a61d472ab94e972e553c25a42c4130d63ba824f1c1c6a55998a9f8fe74d",
-    "submission_arxiv/main.tex": "0a42276f407ad8d4691fa6eeb68bce7af516b0e0d7822ddc4f346c7fa073b355",
-    "submission_arxiv/supplement_body.tex": "397a6c4a670fb30316e2fe5cc28178154c9eed98b54f0e4a3b94063aac1f057f"
+    "submission_arxiv/main.tex": "c6ab728a1db17d9c4b1080ff1cd35ec357f872dcf9460629e18b69a7a329fa01",
+    "submission_arxiv/supplement_body.tex": "846570be01dda62a4a4e4109a0d7a92195d68db1b2dabeb526920a9e41afe044"
   },
   "pdfs": [
     {
       "file": "submission_ieee/IEEE_TBIOM_Paper.pdf",
-      "sha256": "65b1d10699a4bb5c7262beb9285e958db6e6314fdfe94b5076fdb0f22b742ca2",
+      "sha256": "e3ff8b40ace4c60bf8f7ecbb909f1c03b6cb512d14543c4efa6ce80e5b0e658d",
       "pages": 10,
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Author-uploaded supplement revision compiled locally; matching source ZIP recheck recorded separately."
+      "source_archive_compile": "All three PDFs recompiled from the latest canonical sources; extracted-source ZIP compilation checked separately."
     },
     {
       "file": "submission_ieee/IEEE_TBIOM_Supplement.pdf",
-      "sha256": "d83ab2b36e1576e3bd5cb2a30a520e1ccef1180d48044b7afc5582dedde4a1fa",
+      "sha256": "247f950eeade3a74d62720f845f330609c934545df811ae68c7adc4b4e17f1a4",
       "pages": 3,
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Rebuilt after latest author text was corrected against all 18 factual-review items; fresh ZIP compile checked separately."
+      "source_archive_compile": "All three PDFs recompiled from the latest canonical sources; extracted-source ZIP compilation checked separately."
     },
     {
       "file": "submission_arxiv/arXiv_Preprint.pdf",
-      "sha256": "46e152a85d310118007e793b10034a39e11f5d260f16af6b2bdc8b4cefcf9a54",
+      "sha256": "8a8853fb3238bd120a76a8ddc6cfa7dc5307a2620a7ad1dade70b0134e5c9995",
       "pages": 13,
       "overfull_boxes": 0,
       "missing_characters": 0,
       "undefined_citations_or_references": false,
-      "source_archive_compile": "Rebuilt after latest author text was corrected against all 18 factual-review items; fresh ZIP compile checked separately."
+      "source_archive_compile": "All three PDFs recompiled from the latest canonical sources; extracted-source ZIP compilation checked separately."
     }
   ],
-  "validation": "Supplement and combined arXiv rebuilt locally on 2026-11-23; unchanged IEEE main retains prior compilation evidence. Not portal validation."
+  "validation": "All three manuscripts rebuilt locally on 2026-11-23. Author-uploaded supplement retained with two local recovery corrections. Not portal/server validation."
 }

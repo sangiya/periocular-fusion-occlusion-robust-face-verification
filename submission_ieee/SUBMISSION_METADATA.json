@@ -32,5 +32,10 @@
   "prior_public_versions": "The project GitHub repository includes research drafts and artifacts. No arXiv identifier has been supplied.",
   "cover_letter": "COVER_LETTER.docx",
   "declarations_confirmed_on": "2026-11-22",
-  "author_name_order_confirmed": true
+  "author_name_order_confirmed": true,
+  "supplement_wording_approved_by_author": true,
+  "supplement_revision_record": "document/SUPPLEMENT_REVISION_RECORD.json",
+  "prepared_release_date": "2026-11-23",
+  "supplement_sections": 8,
+  "release_status": "Packaged and locally verified; image-use/consent records and the applicable ethics-review requirement remain unverified; actual submission not performed."
 }

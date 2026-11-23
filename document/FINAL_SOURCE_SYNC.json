@@ -6,36 +6,34 @@
       "folder": "submission_ieee",
       "entry_point": "main.tex",
       "pages": 10,
-      "fresh_source_archive_compile": "passed",
+      "fresh_source_archive_compile": "passed on 2026-11-23",
       "PDF_text_matches_canonical": true
     },
     {
       "folder": "submission_ieee",
       "entry_point": "supplement.tex",
       "pages": 3,
-      "fresh_source_archive_compile": "passed after latest author upload was corrected against the 18-item review on 2026-11-23",
+      "fresh_source_archive_compile": "passed on 2026-11-23",
       "PDF_text_matches_canonical": true
     },
     {
       "folder": "submission_arxiv",
       "entry_point": "main.tex",
       "pages": 13,
-      "fresh_source_archive_compile": "passed after latest author upload was corrected against the 18-item review on 2026-11-23",
+      "fresh_source_archive_compile": "passed on 2026-11-23",
       "PDF_text_matches_canonical": true
     }
   ],
-  "retained_current_result_manifest_and_signed_core_source_bytes_unchanged_from_base_commit": true,
-  "IEEE_main_arXiv_main_tables_identical": true,
-  "supplement_tables_identical": true,
-  "figure_PDFs_identical_across_venues": 6,
+  "supplement_basis": "Latest author-approved upload, with exactly two local recovery clarifications. Main pointer changed from Section IX to VIII.",
+  "numerical_table_values_unchanged": 65,
   "references": 38,
+  "figure_PDFs_identical_across_venues": 6,
   "current_primary_result_grid": 15,
+  "retained_current_result_manifest_and_signed_core_source_bytes_unchanged_from_base_commit": true,
   "base_commit": "669c708642f5aa1c121e99a53c6be8f892460eaa",
-  "public_submission_performed": false,
-  "author_clearance": "Author confirms sole authorship, no external funding, no competing interests, no committee review, no formal publication and no current review elsewhere. Image-use permissions, the applicable ethics-review requirement and final content approval remain unverified/pending.",
+  "main_scientific_text_change": "Supplemental Section IX -> VIII only.",
   "supplement_revision_record": "document/SUPPLEMENT_REVISION_RECORD.json",
-  "main_IEEE_manuscript_and_results_unchanged_by_supplement_revision": true,
-  "uploaded_supplement_wording_preserved": "document/SUPPLEMENT_REVISION_RECORD.json",
-  "supplement_second_pass": "Sentence fragments, technical comparisons, descriptor interpretation and gate caption corrected; all numerical table cells retained.",
-  "latest_supplement_correction": "All 18 review items addressed in text; all 65 numerical table values retained. Dataset permissions and applicable ethics-review requirement remain unverified."
+  "public_submission_performed": false,
+  "author_supplement_wording_approved": true,
+  "unresolved_clearance": "Image-use permissions, consent and the applicable ethics-review requirement remain unverified; no committee approval or exemption claimed."
 }

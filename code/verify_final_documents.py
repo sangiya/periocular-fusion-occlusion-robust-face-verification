@@ -30,8 +30,12 @@ def verify_documents(root):
     assert 'Aligned SFace diagnostic' in main and 'Shared-crop SFace preprocessing control' in main
     assert 'post-hoc exploratory cohort-composition sensitivity analysis' in main
     assert 'No ethics committee reviewed this project' in main
-    assert r'\section{Provenance}' in supp and 'no ethics committee reviewed this project' in supp
-    assert 'image-use permissions remain unverified' in supp
+    assert r'\section{Provenance}' in supp
+    assert 'This project was not assessed by an ethical review board.' in supp
+    assert 'There was no formal approval or exemption obtained.' in supp
+    assert 'Consent from individuals or full permission for images in this work could not be verified' in supp
+    assert supp.count(r'\section{') == 8 and r'\section{Provenance}' in supp
+    assert 'Supplemental Section VIII.' in main
     assert 'This research received no external funding.' in main and 'The author declares no competing interests.' in main
     keys=re.findall(r'\\bibitem\{([^}]+)\}',main);seen=[]
     assert len(keys)==len(set(keys))==38

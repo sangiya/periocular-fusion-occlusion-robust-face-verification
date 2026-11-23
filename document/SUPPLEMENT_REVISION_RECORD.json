@@ -1,35 +1,25 @@
 {
   "date": "2026-11-23",
-  "source_sha256": "2b5f1603ab98930bf6b5deddeab458e7f3889a6f16d05d4f44d777515cd881e0",
-  "writing_rules_sha256": "81f08ec4e2bf11683e054f381f2d4e1429f733b1cc88aec4e4c34c1ba2e01950",
-  "basis": "Latest supplied text corrected under the author's explicit instruction, following MEANING_AND_RESULTS_RECHECK.txt.",
-  "review_items_addressed": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18
+  "source_attachment_sha256": "b153048dead0194f281292d9cc99a4932acc896d95b65242cc9abd62d27219b5",
+  "accepted_Word_sha256": "c64998b39af3be5ad93068a89f3b5d9bc3ff90fbafe3a8129ef79acf62ae4ced",
+  "method": "Accepted author-uploaded wording used directly. Only two local factual corrections, listed below. No paragraph rewriting. IEEE/arXiv supplements generated from the same Word content.",
+  "edits": [
+    {
+      "before": "If started multiple times, verified complete runs will be produced, or incomplete runs will be continued.",
+      "after": "If started multiple times, verified complete runs will be retained, or incomplete runs will be continued.",
+      "reason": "Repeated launches retain completed runs; they do not create new independent experiments."
+    },
+    {
+      "before": "including optimiser and random seed.",
+      "after": "including optimiser and random number generator states.",
+      "reason": "Checkpoints restore RNG states, not just a seed."
+    }
   ],
-  "unresolved_factual_clearance": "Dataset/image permissions, participant consent and applicable ethics-review requirement remain unverified; no approval or exemption invented.",
-  "numerical_rows": "All three native Word table data rows preserved exactly from the latest uploaded-text document. Canonical TeX numeric rows unchanged.",
-  "figure": "Existing vector architecture retained and caption corrected.",
-  "writing_rule_scan": {
-    "banned_term_matches": [],
-    "em_dashes": 0
-  },
-  "corrected_prose_words": 1386,
-  "output": "submission_ieee/IEEE_TBIOM_Supplement.docx"
+  "numerical_table_values": 65,
+  "numerical_table_changes": 0,
+  "author_supplement_wording_approved": true,
+  "no_external_submission": true,
+  "remaining_clearance": "Image permissions, consent and the applicable ethics-review requirement remain unverified. No committee approval or exemption claimed.",
+  "main_paper_cross_reference_correction": "Supplemental Section IX -> VIII in both TeX files and the Word main paper; no result changes.",
+  "official_guidance_checked": "2026-11-23"
 }

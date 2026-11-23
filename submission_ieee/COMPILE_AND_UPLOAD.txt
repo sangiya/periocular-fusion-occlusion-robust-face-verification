@@ -1,2 +1,4 @@
 Main file main.tex; supplemental file supplement.tex compiles separately. Use XeLaTeX (or Tectonic locally). Times New Roman is selected when available, with a standard TeX Live TeX Gyre Termes fallback. Upload the main PDF and supplemental PDF as separate files in the journal portal.
-Source ZIP contains only two TeX files and six used vector figure PDFs. References are inline in thebibliography; no BibTeX run, .bib or .bbl is needed. Local compilation is not an arXiv-server or IEEE portal certificate. This package remains pending author facts and permissions.
+Source ZIP contains only two TeX files and six used vector figure PDFs. References are inline in thebibliography; no BibTeX run, .bib or .bbl is needed. Local compilation is not an arXiv-server or IEEE portal certificate. This package remains pending permissions/review-requirement clearance and final portal declarations.
+
+Latest author-uploaded supplement retained with two local recovery clarifications. Paper reference points to Supplemental Section VIII. Official upload guidance rechecked 23 November 2026.

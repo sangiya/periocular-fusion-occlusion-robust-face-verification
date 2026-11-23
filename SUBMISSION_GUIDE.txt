@@ -1,4 +1,4 @@
-FINAL SUBMISSION FILE GUIDE - 22 NOVEMBER 2026
+FINAL SUBMISSION FILE GUIDE - 23 NOVEMBER 2026
 
 IEEE T-BIOM
 Main review PDF: submission_ieee/IEEE_TBIOM_Paper.pdf (10 pages).
@@ -32,7 +32,7 @@ AUTHOR CHECKLIST
 [ ] Record final Git commit with git rev-parse HEAD and inspect any server-generated PDF before completing submission.
 No external submission or acceptance is asserted.
 
-Official guidance checked 22 November 2026:
+Official guidance checked 23 November 2026:
 https://ieee-biometrics.org/publications/t-biom/author-instructions/
 https://info.arxiv.org/help/submit_tex.html
 https://info.arxiv.org/help/faq/texlive.html
@@ -40,3 +40,6 @@ https://info.arxiv.org/help/ancillary_files.html
 https://info.arxiv.org/help/license/index.html
 
 Confirmed on 22 November 2026: no external funding; no competing interests; sole author Sangiya Pararajasingham; no committee review; no current review elsewhere; no formal journal/conference publication. Image-use permissions and the applicable ethics-review requirement remain unverified.
+
+LATEST APPROVED SUPPLEMENT
+The author-approved upload of 23 November 2026 supplies the eight-section supporting text. Two recovery descriptions were clarified locally; no numerical table value changed. The main-paper pointer now identifies Supplemental Section VIII. See document/SUPPLEMENT_REVISION_RECORD.json. IEEE retains a separate supplement; arXiv includes the same supporting content within its 13-page preprint.

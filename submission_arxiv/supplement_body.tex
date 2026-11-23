@@ -12,14 +12,8 @@
 \renewcommand{\thefigure}{S\arabic{figure}}
 
 
-\noindent\textit{References: main-paper numbering.}\par
-
-\section{Parameter efficiency}
-
-M0 has 590,592 trainable parameters out of 87,171,072 total parameters. M2 includes an unused full-face branch. Its active periocular branch has 1,032,960 trainable parameters. The instantiated M2 model has 2,065,920 nominal trainable parameters and 175,226,880 total parameters. Table S1 reports the instantiated counts. The 128-class training-only head has 98,432 parameters and is excluded from the table. Across all adapted models, the maximum trainable count is 2,263,297, or 1.29\% of the dual-encoder model. Hardware details, recorded runtimes, software versions and checkpoint hashes are stored in the artifact. Peak memory usage was not measured.\par
-
 \begin{table}[t]\centering
-\caption{Total and nominal trainable parameter counts, excluding the training-only classifier. M2's nominal count includes its unused full-face branch.}
+\caption{THE TOTAL NUMBER OF PARAMETERS WITHIN MODELS AND PROPORTION TRAINABLE IS GIVEN IN SUPPLEMENTAL TABLE S1. TRAINING ONLY CLASSIFIER HEAD NOT INCLUDED.}
 \label{tab:checked2}
 \footnotesize\setlength{\tabcolsep}{2pt}
 \sbox{\uploadedtablebox}{\begin{tabular}{llll}\toprule
@@ -33,40 +27,8 @@ M4 & 175424257 & 2263297 & 1.29\\
 \ifdim\wd\uploadedtablebox>\columnwidth\resizebox{\columnwidth}{!}{\usebox{\uploadedtablebox}}\else\usebox{\uploadedtablebox}\fi
 \end{table}
 
-\section{Execution and recovery records}
-
-The runs used PyTorch 2.14.0+cpu with deterministic algorithms enabled and cached DINOv2 weights. Checkpoints are saved atomically. They contain model and optimiser states, the sample order, next batch index, losses for the current epoch, and Python, NumPy and PyTorch random-number-generator states. A checkpoint with an incompatible manifest or execution signature is rejected. Training checkpoints are saved before evaluation is complete; the serial coordinator verifies the required hashes before retaining an evaluated run as complete.\par
-
-In periocular-only training, the unused full-face forward pass was skipped. Image hashes were still checked against the frozen manifest. Skipping that forward pass changes random-number consumption relative to the historical trainer, so bitwise equivalence to that trainer is not claimed.\par
-
-\section{Reproducibility details}
-
-To reproduce the experiment, you need permission to use the source images. Recreate the face and periocular paths specified in the manifests, verify the frozen training and pair manifests, and install the recorded software and DINOv2 cache. Run the CPU coordinator to train each model for five epochs and evaluate each protocol. In the recorded Windows environment, file locking prevents concurrent coordinator instances. Restarting the coordinator retains verified completed jobs and resumes valid unfinished jobs. Partial summaries can be written while the grid is incomplete; final paired comparisons require all 15 evaluated models.\par
-
-After an interruption, training resumes from the last valid saved checkpoint, including optimiser and random-number-generator states. Unsaved work may be repeated. Face images, pretrained weight binaries and the 15 newly trained checkpoints are excluded from the release. The local trained checkpoints total 8,598,538,218 bytes, approximately 8.60 GB or 8.01 GiB. Recorded hashes support local lineage checks. Reproducing inference requires the corresponding weight binaries as well as the images and preprocessing.\par
-
-You can check the archived score arithmetic without PyTorch, images or checkpoints. The verifier recalculates ROC metrics from the saved raw scores, checks pair alignment and recorded checksums, recomputes means and sample standard deviations across seeds, and compares the manuscript table values. The active release contains 120 primary CPU raw-score files, both SFace controls and identity-sensitivity results. Passing these checks establishes consistency of the checked artifacts. It does not establish semantic label correctness or reproduce neural inference.\par
-
-Earlier manuscripts and historical sweeps are recoverable through Git history. The superseded sweeps and the old history directory are excluded from the active release. Filtered historical scores do not represent new training, and incomplete or smoke runs do not supply the headline tables. The final tables and vector figures in the IEEE and arXiv versions use the same recorded results.\par
-
-\section{Additional interpretation and result records}
-
-Whole-face LoRA has a higher three-seed mean AUC than the frozen encoder with a trained projection in all five reported test and external conditions. This supports H1 for mean AUC, rather than every metric or threshold. The largest gains occur on MFR2 and masked ROF; the gain on RMFRD is smaller. These experiments do not establish whether adapting a general visual encoder is preferable to using a face-specific pretrained model.\par
-
-The answer to RQ2 depends on which facial region is visible. Periocular LoRA has the highest mean AUC on masked ROF, but performs worse than whole-face LoRA under sunglasses and on neutral faces. H2 therefore needs a condition-specific interpretation. Upper-face features help distinguish identities when the lower face is occluded, while periocular crops discard useful cues in other conditions. Fixed fusion provides a baseline that combines both regions without learning a weighting policy.\par
-
-The aligned SFace diagnostic has higher AUCs in the reported conditions. Differences in training data, architecture and alignment prevent attributing this advantage to face-specific training alone. The comparison is diagnostic, rather than a matched test of architectures or training methods. Broader performance claims require matched baselines, more identities and verified labels.\par
-
-The auxiliary vector is fixed at [1, 0, 0, 1], so it supplies no image-specific quality variation. Actual image quality can still vary, and the gate can respond to the branch embeddings. These experiments do not test whether measured quality descriptors improve performance. Such a test would require validated descriptors, descriptor ablations and evaluation criteria fixed before analysis.\par
-
-Records cover 15 models and 120 ordered raw-score files across eight validation, test and external protocols. The release includes evaluation reports, final training progress, checkpoint hashes and a 25-row summary of five conditions and five variants. Ten paired AUC comparisons use three seeds each. The reports describe variation across training seeds and conditional identity-resampling sensitivity intervals. These intervals do not represent uncertainty over every possible training run or guarantee population-level security. The executed trainer, evaluator, utility, model and metric sources are retained with checksums; changing them breaks the recorded execution signatures.\par
-
-\section{Same-branch comparison context}
-
-Fixed and gated fusion combine their branches differently during training, so separately trained branches may learn different representations. Holding the trained gated branches fixed isolates a narrower question about inference weighting. On masked ROF, equal weighting gives a higher AUC than the learned gate in all three stored seeds. This control separates the inference rule from the choice of trained representations, but does not isolate the gate's contribution during joint training. Table S2 describes the learned full-face weights across unique image endpoints. These weights do not establish calibrated reliability.\par
-
 \begin{table}[t]\centering
-\caption{Mean full-face gate weight for each protocol and seed. Parentheses contain standard deviations across unique image endpoints. The weights are descriptive, rather than calibrated reliability estimates.}
+\caption{AVERAGE WEIGHTING IN FACE BRANCH FOR EACH PROTOCOL AND SEED. STANDARD DEVIATION (IN BRACKETS) ACROSS UNIQUE IMAGE ENDPOINTS. WEIGHTS ARE DESCRIPTIVE AND DO NOT INDICATE CALIBRATED RELIABILITY.}
 \label{tab:checked10}
 \footnotesize\setlength{\tabcolsep}{2pt}
 \sbox{\uploadedtablebox}{\begin{tabular}{llll}\toprule
@@ -80,26 +42,58 @@ RMFRD & 0.745 (0.086) & 0.697 (0.090) & 0.775 (0.071)\\
 \ifdim\wd\uploadedtablebox>\columnwidth\resizebox{\columnwidth}{!}{\usebox{\uploadedtablebox}}\else\usebox{\uploadedtablebox}\fi
 \end{table}
 
-\section{Extended interpretation and source-image review}
+\noindent\textit{References: main-paper numbering.}\par
 
-Fusion, LoRA and learned weighting are established methods. Reference [25] studies DINOv2-LoRA periocular recognition, whereas FRoundation [30] studies foundation-model adaptation for face recognition. Backbone adaptation alone is therefore not claimed as a novel contribution. This study examines regional representations, fusion weights and operating thresholds under occlusion. Comparing separately trained fusion models does not isolate the effect of their inference weights; the same-branch controls address that narrower comparison.\par
+\section{Parameters}
 
-Score distributions show overlap between genuine and impostor comparisons, but do not explain which image characteristics caused an error. Qualitative error analysis requires inspection of annotated identities in appropriately licensed source data. The saved manifests and exclusion ledgers support that inspection without redistributing restricted face images. Constant auxiliary descriptors do not imply uniform image quality.\par
+M0 has 590,592 trainable parameters. M2 includes unused full face modality. There are 1,032,960 trainable parameters in the active periocular branch. The nominal number of trainable parameters in this model instance is 2,065,920. The 128 class head used during training only has 98,432 parameters. The maximum number of trainable parameters across all adapted models is 2.26M (1.29\%). This value occurs in a double encoder model (175M). Hardware details, runtime durations, software versions, and hash values of checkpoints are stored in the artifact. Maximum memory usage is not recorded.\par
 
-\section{Inference architecture}
+\section{Run and Recovery}
 
-Fig. S1 shows the inference pipeline. Both branch embeddings and the fixed auxiliary vector enter the gate. The resulting weight determines the contribution of each embedding before the weighted sum is normalised. The same model processes the enrolment image, and cosine similarity compares the resulting unit embeddings. The identity classifier is used only during training.\par
+This was run in PyTorch (v2.14.0+cpu). The weights were cached from DINOv2. Atomic checkpoints were used containing optimizer states, ordered data samples, index of next batch, loss in current epoch, and random number generator states (Python, NumPy, PyTorch). Checkpoints which are incompatible with the current run (by mismatched manifest and source signature) cannot be recovered. In order to retain an evaluated run as complete in the serial co-ordinator, all required hash comparisons must pass. Periocular only training means that the unused full face forward pass was skipped during training. As such random numbers would have been sampled differently to the historical trainer. It cannot therefore be stated that bitwise identical optimization was carried out.\par
+
+\section{Reproducibility}
+
+Data with licences must be used to reproduce this work. Face / periocular image paths must be identical. Training and pair manifests must be frozen. Software must be set up as described, and cached DINOv2 weights loaded. Models will train for 5 epochs. Models will be scored using each protocol. During the sweep partial model summaries may be created, but all models must be assessed to produce final pair comparisons. File locking has been implemented to ensure only one instance of the coordinator is run in the recorded Windows environment. If started multiple times, verified complete runs will be retained, or incomplete runs will be continued. If stopped, runs will continue from the latest saved state of the model, including optimiser and random number generator states. Unsaved work may be re-run. Face images, pre-trained binary weights and newly trained checkpoints (\textasciitilde{}8.6GB) are not included. However, checksums to verify provenance within your local environment are included. Binary files must also be provided to reproduce inference.\par
+
+Mathematical validation is possible without torch, images and checkpoints. ROC metrics can be recalculated from raw scores within this script, and it can be confirmed that pairs are correct and checksums match. Mean and standard deviation for seed values can be recalculated, and contents of the table in the manuscript can be validated. 120 raw score files from completed CPU runs, sensitivity files and SFace controls are included. If all of these validate, then internal consistency of the validated files can be confirmed. However, there is no guarantee of novelty, acceptance for publication, or semantic correctness of image labelling within this work.\par
+
+Earlier versions of this manuscript and subsequent work can be found in the Git history. Some claims and numerical data within these files are now out of date when compared with the completed CPU experiments in this paper. Newly trained models are not represented in the filtered scores within previous files. Incomplete training / smoke tests will not produce headline tables. Tables and vector plots within IEEE and arXiv versions of this work have been made consistent with recorded results.\par
+
+\section{Further Analysis \& Results}
+
+For all testing protocols, the full face LoRA models have higher mean AUCs than frozen projection models, meaning H1 is supported for mean AUC. Largest performance improvements were made in MFR2 and masked ROF. Smaller improvements were observed in the RMFRD. Supervised adaptation seems to be useful in this experiment. It cannot be determined whether generalized visual encoder adaptation (rather than adaptation of face specific pre-trained models) is useful in this experiment.\par
+
+Depending on the area of the face shown, the answer to RQ2 varies. Periocular LoRA has the highest mean AUC in masked ROF, but performs poorly in sunglasses and loses useful information in neutral. Therefore H2 is only somewhat supported. Upper face features provide useful information for distinguishing between subjects in lower face occlusion scenarios. However, they do not provide a good representation in all 3 conditions. Using fixed fusion provides a good baseline since information in both regions can be preserved without learning a weighting policy.\par
+
+From results in SFace, the aligned diagnostic has higher AUCs in these protocols. However, due to differences in training data and alignment, a fair comparison of model architectures could not be made. Therefore this work should be considered as an ablation study and study of reproducibility. In order to claim competition within face recognition, comparisons must be made with equivalent baseline models, with more identities and verified labels.\par
+
+Since a constant auxiliary vector is used, care must be taken in the interpretation of results. As constant input descriptors are provided, no image-specific quality variation is supplied by them in this experiment. Although the gate can react to embeddings, no evidence can be provided that quality cues improve performance. Future work using quality cues should be designed with validated descriptors and controlled ablation studies on descriptors. Evaluation criteria should also be fixed before investigation.\par
+
+Records for 15 models in the grid have been included. These include 120 ordered raw-score files across 8 validation/test/external protocols. There are also evaluation reports, final training progression information, checksums of checkpoints and a table summarising 5 conditions with 25 rows. There are 10 comparisons of AUC in pairs with 3 seeds. Variation in AUC between seeds and conditional identity-resampling sensitivity intervals is included. Fixed versions of trainer, evaluator, common utilities, models and metrics have been included. Checksums are provided for each. If any of these sources change, execution signatures will become invalid.\par
+
+\section{SAME-BRANCH COMPARISON CONTEXT}
+
+As different weights are applied in the fixed and gated fusion models, different features may be learnt in each branch. By applying different weights to the gated models, but keeping the same branches, it was found that equal weighting in the gated branches gives a higher AUC than learned weighting in masked ROF pairs. This analysis allows understanding of the representations and the inference weighting rule. However, no assumptions are made on whether the gate helps during joint training.\par
+
+\section{EXTENDED INTERPRETATION AND SOURCE-IMAGE REVIEW}
+
+The methods used to produce fusion, LoRA and weighted models are well known.\par
 
 \begin{figure*}[t]\centering
 \includegraphics[width=0.98\textwidth]{fig_gated_architecture.pdf}
-\caption{Inference for the gated model. The gate takes both branch embeddings and the constant auxiliary vector as inputs. Its output weights the embeddings before their sum is normalised. The enrolment image follows the same pipeline. The training-only identity classifier is omitted.}\label{fig:supparchitecture}\end{figure*}
+\caption{In this case, there is no variability in the auxiliary quality descriptors. Fig. S1 shows the inference flowchart for this model. The embeddings from both branches, along with the constant auxiliary vector, are passed into the gate, which weights the two branch embeddings. The weighted sum is normalised. In the enrolment image, the model is identical. During inference, the training-only identity classifier has been removed.}\label{fig:supparchitecture}\end{figure*}
 
-\section{Shared-crop preprocessing for SFace}
+Having explored DINOv2-LoRA periocular models [25] and face recognition models [30], it can no longer be stated that novel contributions to this work come from adaptation within the backbone. However, it remains interesting to investigate whether a similar robustness can be achieved with regionally extracted features, weights and thresholds. When separately trained models are compared, differences cannot be attributed to inference weights alone. Having identical control models in each branch is a better indicator of this.\par
 
-For the shared-crop control, the same full-face crops used by DINOv2 were resized to 112 by 112 pixels for SFace, without YuNet detection or landmark alignment. The AUCs are 0.8408, 0.7775, 0.8689, 0.9513 and 0.6532 for masked ROF, sunglasses ROF, neutral ROF, MFR2 and RMFRD, respectively. Features were extracted successfully from all 3,402 unique images. Table S3 separates this control from the aligned SFace diagnostic. The two sets of AUCs describe different preprocessing pipelines. Neither protocol matches DINOv2 in architecture, pretraining, input resolution and supervision, so neither isolates a model-architecture effect.\par
+Score distributions allow observation of overlap between genuine and impostor scores. However, the plots provide no information as to which identities caused these errors, or why they occurred. Qualitative conclusions must be made by manual inspection of annotated identities in licensed source data. This is possible from the manifests and exclusion ledgers saved, meaning that private/ restricted facial images do not need to be distributed in the repository. Since a constant auxiliary vector is used, caution should be taken in interpreting results. Since constant input descriptors have been provided, no measured image-specific quality variation is supplied by them in this experiment. While the gate can be influenced by embeddings, it cannot be proved that quality information improves performance.\par
+
+\section{Common Preprocessing for SFace}
+
+The exact DINOv2 full face files were scaled to 112x112 to create SFace images, with no YuNet detection or landmark alignment. AUC values of 0.8408, 0.7775, 0.8689, 0.9513 and 0.6532 were found (in this order) (See Supplemental Table S3). Features were successfully extracted from all 3402 unique images. Due to differing preprocessing between protocols, the AUC values cannot be considered directly comparable baseline values. Neither protocol is a fair comparison to DINOv2 at training due to differences in architecture, pre-training, resolution and supervision.\par
 
 \begin{table}[!ht]\centering\footnotesize\setlength{\tabcolsep}{2pt}
-\caption{SFace results under aligned and shared-crop preprocessing. Failed pairs remain in the evaluation with score -1. Failed-pair counts are shown separately. Main-paper Table IX reports the aligned diagnostic.}
+\caption{AUCs from different preprocessing protocols applied to SFace. All pairs with failed comparisons were included in AUC (score -1). Number of failed pairs per protocol is shown. Only aligned comparison diagnostic results are shown in Table IX within the main text.}
 \label{tab:sfaceshared}\begin{tabular}{lrrrr}\toprule
 Protocol & Aligned AUC & Failed & Shared AUC & Failed\\\midrule
 Masked ROF & 0.9399 & 9 & 0.8408 & 0\\
@@ -111,10 +105,8 @@ RMFRD & 0.8187 & 1155 & 0.6532 & 0\\
 
 \section{Provenance}
 
-This project used existing ROF, MFR2 and RMFRD datasets. Project records identify Kaggle execution or staging copies and the original ROF and RMFRD repositories and MFR2 maintainer page. The local ROF annotation files match the audited source snapshot. A complete image-acquisition trail was not found in the reviewed records. Source identifiers, frozen manifests and exclusion ledgers are retained.\par
+Data from existing sources have been used within this project (ROF, MFR2, RMFRD). The Kaggle execution copies can be identified. The source data can be found in the ROF and RMFRD repositories and the MFR2 maintainer page. Within the local ROF annotations, the source audited files are the same. A complete trace as to how the images were obtained was not able to be found. Identifiers relating to source data and exclusion ledgers remain.\par
 
-The reviewed ROF repository includes an MIT licence for software and associated documentation. The reviewed MFR2 maintainer page mentions Creative Commons without specifying the exact licence or image-level terms. The RMFRD README describes collection from online sources. These records do not establish complete image-use or redistribution permissions. Source face images and trained checkpoints are excluded from the release; code, manifests, hashes, derived scores and manuscript figures are included.\par
+Within the ROF repository, software and documents are licensed under MIT. In the MFR2 maintainer page, Creative Commons licensing is mentioned but no further details on the type or terms of the licence are given. In the RMFRD README, it is stated that the data was obtained from online sources. No clear licence information was found, however, regarding using the images. It cannot be guaranteed that all images used have appropriate licenses, and redistribution rules have been applied appropriately. Source data for faces, trained model checkpoints were not provided in this release. Source code, manifests, hashes, processed scores and figures from the manuscript have been provided. This project was not assessed by an ethical review board. There was no formal approval or exemption obtained. Consent from individuals or full permission for images in this work could not be verified from the data reviewed. From the information publicly available, no approvals, waivers, consent or general permission to use images in this data can be inferred. It cannot be ascertained if ethical considerations were made, and permission to use certain datasets/images was given.\par
 
-The author confirms that no ethics committee reviewed this project. No formal approval or exemption is claimed. The reviewed records do not establish individual participant consent, complete image-use permissions or the applicable ethics-review requirement. Public download availability alone does not establish these facts. Complete image-use permissions remain unverified, as does the applicable ethics-review requirement.\par
-
-Source records checked on 22 November 2026: \href{https://github.com/ekremerakin/RealWorldOccludedFaces}{ROF repository}, \href{https://github.com/ekremerakin/RealWorldOccludedFaces/blob/main/LICENSE}{ROF licence}, \href{https://sites.google.com/view/masktheface/mfr2-dataset}{MFR2 maintainer page}, \href{https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset}{RMFRD repository}.\par
+22nd November 2026 [ROF repo, ROF license, MFR2 maintainer page, RMFRD repo]\par
